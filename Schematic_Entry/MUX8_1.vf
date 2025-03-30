@@ -1,0 +1,136 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : MUX8_1.vf
+// /___/   /\     Timestamp : 03/24/2025 16:36:11
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family virtex6 -verilog /home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/MUX8_1.vf -w /home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/MUX8_1.sch
+//Design Name: MUX8_1
+//Device: virtex6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale  100 ps / 10 ps
+
+module OR8_HXILINX_MUX8_1 (O, I0, I1, I2, I3, I4, I5, I6, I7);
+    
+
+   output O;
+
+   input I0;
+   input I1;
+   input I2;
+   input I3;
+   input I4;
+   input I5;
+   input I6;
+   input I7;
+
+assign O = (I0 || I1 || I2 || I3 || I4 || I5 || I6 || I7);
+
+endmodule
+`timescale 1ns / 1ps
+
+module MUX8_1(I0, 
+              I1, 
+              I2, 
+              I3, 
+              I4, 
+              I5, 
+              I6, 
+              I7, 
+              S0, 
+              S1, 
+              S2, 
+              O);
+
+    input I0;
+    input I1;
+    input I2;
+    input I3;
+    input I4;
+    input I5;
+    input I6;
+    input I7;
+    input S0;
+    input S1;
+    input S2;
+   output O;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_7;
+   wire XLXN_9;
+   wire XLXN_11;
+   wire XLXN_32;
+   wire XLXN_52;
+   wire XLXN_57;
+   
+   AND4  XLXI_1 (.I0(I1), 
+                .I1(XLXN_57), 
+                .I2(XLXN_52), 
+                .I3(S0), 
+                .O(XLXN_2));
+   AND4  XLXI_2 (.I0(I2), 
+                .I1(XLXN_57), 
+                .I2(S1), 
+                .I3(XLXN_32), 
+                .O(XLXN_3));
+   AND4  XLXI_3 (.I0(I3), 
+                .I1(XLXN_57), 
+                .I2(S1), 
+                .I3(S0), 
+                .O(XLXN_4));
+   AND4  XLXI_4 (.I0(I4), 
+                .I1(S2), 
+                .I2(XLXN_52), 
+                .I3(XLXN_32), 
+                .O(XLXN_5));
+   AND4  XLXI_5 (.I0(I5), 
+                .I1(S2), 
+                .I2(XLXN_52), 
+                .I3(S0), 
+                .O(XLXN_7));
+   AND4  XLXI_6 (.I0(I6), 
+                .I1(S2), 
+                .I2(S1), 
+                .I3(XLXN_32), 
+                .O(XLXN_9));
+   INV  XLXI_7 (.I(S1), 
+               .O(XLXN_52));
+   (* HU_SET = "XLXI_8_0" *) 
+   OR8_HXILINX_MUX8_1  XLXI_8 (.I0(XLXN_11), 
+                              .I1(XLXN_9), 
+                              .I2(XLXN_7), 
+                              .I3(XLXN_5), 
+                              .I4(XLXN_4), 
+                              .I5(XLXN_3), 
+                              .I6(XLXN_2), 
+                              .I7(XLXN_1), 
+                              .O(O));
+   AND4  XLXI_9 (.I0(I0), 
+                .I1(XLXN_57), 
+                .I2(XLXN_52), 
+                .I3(XLXN_32), 
+                .O(XLXN_1));
+   INV  XLXI_10 (.I(S2), 
+                .O(XLXN_57));
+   INV  XLXI_11 (.I(S0), 
+                .O(XLXN_32));
+   AND4  XLXI_13 (.I0(I7), 
+                 .I1(S2), 
+                 .I2(S1), 
+                 .I3(S0), 
+                 .O(XLXN_11));
+endmodule

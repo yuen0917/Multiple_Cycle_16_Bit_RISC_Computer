@@ -1,0 +1,158 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : DFF_Reg_16bits.vf
+// /___/   /\     Timestamp : 03/24/2025 16:36:11
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family virtex6 -verilog /home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/DFF_Reg_16bits.vf -w /home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/DFF_Reg_16bits.sch
+//Design Name: DFF_Reg_16bits
+//Device: virtex6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module DFF_Reg_16bits(CE, 
+                      clk, 
+                      D_0, 
+                      D_1, 
+                      D_2, 
+                      D_3, 
+                      D_4, 
+                      D_5, 
+                      D_6, 
+                      D_7, 
+                      D_8, 
+                      D_9, 
+                      D_10, 
+                      D_11, 
+                      D_12, 
+                      D_13, 
+                      D_14, 
+                      D_15, 
+                      Q_0, 
+                      Q_1, 
+                      Q_2, 
+                      Q_3, 
+                      Q_4, 
+                      Q_5, 
+                      Q_6, 
+                      Q_7, 
+                      Q_8, 
+                      Q_9, 
+                      Q_10, 
+                      Q_11, 
+                      Q_12, 
+                      Q_13, 
+                      Q_14, 
+                      Q_15);
+
+    input CE;
+    input clk;
+    input D_0;
+    input D_1;
+    input D_2;
+    input D_3;
+    input D_4;
+    input D_5;
+    input D_6;
+    input D_7;
+    input D_8;
+    input D_9;
+    input D_10;
+    input D_11;
+    input D_12;
+    input D_13;
+    input D_14;
+    input D_15;
+   output Q_0;
+   output Q_1;
+   output Q_2;
+   output Q_3;
+   output Q_4;
+   output Q_5;
+   output Q_6;
+   output Q_7;
+   output Q_8;
+   output Q_9;
+   output Q_10;
+   output Q_11;
+   output Q_12;
+   output Q_13;
+   output Q_14;
+   output Q_15;
+   
+   
+   FDE #( .INIT(1'b0) ) XLXI_18 (.C(clk), 
+                .CE(CE), 
+                .D(D_15), 
+                .Q(Q_15));
+   FDE #( .INIT(1'b0) ) XLXI_19 (.C(clk), 
+                .CE(CE), 
+                .D(D_14), 
+                .Q(Q_14));
+   FDE #( .INIT(1'b0) ) XLXI_20 (.C(clk), 
+                .CE(CE), 
+                .D(D_13), 
+                .Q(Q_13));
+   FDE #( .INIT(1'b0) ) XLXI_21 (.C(clk), 
+                .CE(CE), 
+                .D(D_12), 
+                .Q(Q_12));
+   FDE #( .INIT(1'b0) ) XLXI_22 (.C(clk), 
+                .CE(CE), 
+                .D(D_11), 
+                .Q(Q_11));
+   FDE #( .INIT(1'b0) ) XLXI_23 (.C(clk), 
+                .CE(CE), 
+                .D(D_10), 
+                .Q(Q_10));
+   FDE #( .INIT(1'b0) ) XLXI_24 (.C(clk), 
+                .CE(CE), 
+                .D(D_9), 
+                .Q(Q_9));
+   FDE #( .INIT(1'b0) ) XLXI_25 (.C(clk), 
+                .CE(CE), 
+                .D(D_8), 
+                .Q(Q_8));
+   FDE #( .INIT(1'b0) ) XLXI_26 (.C(clk), 
+                .CE(CE), 
+                .D(D_7), 
+                .Q(Q_7));
+   FDE #( .INIT(1'b0) ) XLXI_27 (.C(clk), 
+                .CE(CE), 
+                .D(D_6), 
+                .Q(Q_6));
+   FDE #( .INIT(1'b0) ) XLXI_28 (.C(clk), 
+                .CE(CE), 
+                .D(D_5), 
+                .Q(Q_5));
+   FDE #( .INIT(1'b0) ) XLXI_29 (.C(clk), 
+                .CE(CE), 
+                .D(D_4), 
+                .Q(Q_4));
+   FDE #( .INIT(1'b0) ) XLXI_30 (.C(clk), 
+                .CE(CE), 
+                .D(D_3), 
+                .Q(Q_3));
+   FDE #( .INIT(1'b0) ) XLXI_31 (.C(clk), 
+                .CE(CE), 
+                .D(D_2), 
+                .Q(Q_2));
+   FDE #( .INIT(1'b0) ) XLXI_32 (.C(clk), 
+                .CE(CE), 
+                .D(D_1), 
+                .Q(Q_1));
+   FDE #( .INIT(1'b0) ) XLXI_33 (.C(clk), 
+                .CE(CE), 
+                .D(D_0), 
+                .Q(Q_0));
+endmodule

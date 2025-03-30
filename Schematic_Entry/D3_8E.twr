@@ -1,0 +1,83 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 1 -n
+3 -fastpaths -xml D3_8E.twx D3_8E.ncd -o D3_8E.twr D3_8E.pcf
+
+Design file:              D3_8E.ncd
+Physical constraint file: D3_8E.pcf
+Device,package,speed:     xc6vlx75t,ff484,C,-1 (PRODUCTION 1.17 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+A0             |D0             |    5.219|
+A0             |D1             |    5.500|
+A0             |D2             |    5.565|
+A0             |D3             |    5.620|
+A0             |D4             |    5.469|
+A0             |D5             |    5.361|
+A0             |D6             |    5.939|
+A0             |D7             |    5.738|
+A1             |D0             |    5.530|
+A1             |D1             |    5.642|
+A1             |D2             |    5.702|
+A1             |D3             |    5.824|
+A1             |D4             |    5.578|
+A1             |D5             |    5.660|
+A1             |D6             |    5.941|
+A1             |D7             |    5.854|
+A2             |D0             |    5.247|
+A2             |D1             |    5.694|
+A2             |D2             |    5.439|
+A2             |D3             |    5.697|
+A2             |D4             |    5.393|
+A2             |D5             |    5.558|
+A2             |D6             |    5.873|
+A2             |D7             |    6.045|
+EN             |D0             |    5.562|
+EN             |D1             |    5.645|
+EN             |D2             |    5.907|
+EN             |D3             |    5.463|
+EN             |D4             |    5.449|
+EN             |D5             |    5.767|
+EN             |D6             |    5.397|
+EN             |D7             |    5.453|
+---------------+---------------+---------+
+
+
+Analysis completed Sun Mar 16 05:11:37 2025 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 588 MB
+
+
+

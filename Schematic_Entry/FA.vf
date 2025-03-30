@@ -1,0 +1,54 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : FA.vf
+// /___/   /\     Timestamp : 03/24/2025 16:36:13
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family virtex6 -verilog /home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/FA.vf -w /home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/FA.sch
+//Design Name: FA
+//Device: virtex6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module FA(A, 
+          B, 
+          C_in, 
+          C_out, 
+          S);
+
+    input A;
+    input B;
+    input C_in;
+   output C_out;
+   output S;
+   
+   wire A_xor_B;
+   wire XLXN_23;
+   wire XLXN_24;
+   
+   XOR2  XLXI_5 (.I0(B), 
+                .I1(A), 
+                .O(A_xor_B));
+   XOR2  XLXI_6 (.I0(C_in), 
+                .I1(A_xor_B), 
+                .O(S));
+   OR2  XLXI_7 (.I0(XLXN_24), 
+               .I1(XLXN_23), 
+               .O(C_out));
+   AND2  XLXI_8 (.I0(A), 
+                .I1(B), 
+                .O(XLXN_24));
+   AND2  XLXI_9 (.I0(C_in), 
+                .I1(A_xor_B), 
+                .O(XLXN_23));
+endmodule

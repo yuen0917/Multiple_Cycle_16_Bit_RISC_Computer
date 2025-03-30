@@ -1,0 +1,5 @@
+sch2sym -intstyle ise -family virtex6 -refsym MUX8_1 /home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/MUX8_1.sch /home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/MUX8_1.sym 
+sch2sym -intstyle ise -family virtex6 -refsym MUX8_1 /home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/MUX8_1.sch /home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/MUX8_1.sym 
+sch2sym -intstyle ise -family virtex6 -refsym MUX8_1 /home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/MUX8_1.sch /home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/MUX8_1.sym 
+sch2sym -intstyle ise -family virtex6 -w -refsym MUX8_1 /home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/MUX8_1.sch /home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/MUX8_1.sym 
+sch2sym -intstyle ise -family virtex6 -w -refsym MUX8_1 /home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/MUX8_1.sch /home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/MUX8_1.sym 

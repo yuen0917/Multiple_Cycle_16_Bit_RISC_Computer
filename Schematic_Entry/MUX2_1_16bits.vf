@@ -1,0 +1,126 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : MUX2_1_16bits.vf
+// /___/   /\     Timestamp : 03/24/2025 16:36:21
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family virtex6 -verilog /home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/MUX2_1_16bits.vf -w /home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/MUX2_1_16bits.sch
+//Design Name: MUX2_1_16bits
+//Device: virtex6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module MUX2_1_MUSER_MUX2_1_16bits(I0, 
+                                  I1, 
+                                  S, 
+                                  Output);
+
+    input I0;
+    input I1;
+    input S;
+   output Output;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_7;
+   
+   AND2  XLXI_1 (.I0(XLXN_7), 
+                .I1(I0), 
+                .O(XLXN_1));
+   AND2  XLXI_2 (.I0(S), 
+                .I1(I1), 
+                .O(XLXN_2));
+   OR2  XLXI_3 (.I0(XLXN_2), 
+               .I1(XLXN_1), 
+               .O(Output));
+   INV  XLXI_4 (.I(S), 
+               .O(XLXN_7));
+endmodule
+`timescale 1ns / 1ps
+
+module MUX2_1_16bits(I0, 
+                     I1, 
+                     S, 
+                     Output);
+
+    input [15:0] I0;
+    input [15:0] I1;
+    input S;
+   output [15:0] Output;
+   
+   
+   MUX2_1_MUSER_MUX2_1_16bits  XLXI_1 (.I0(I0[15]), 
+                                      .I1(I1[15]), 
+                                      .S(S), 
+                                      .Output(Output[15]));
+   MUX2_1_MUSER_MUX2_1_16bits  XLXI_2 (.I0(I0[14]), 
+                                      .I1(I1[14]), 
+                                      .S(S), 
+                                      .Output(Output[14]));
+   MUX2_1_MUSER_MUX2_1_16bits  XLXI_3 (.I0(I0[13]), 
+                                      .I1(I1[13]), 
+                                      .S(S), 
+                                      .Output(Output[13]));
+   MUX2_1_MUSER_MUX2_1_16bits  XLXI_4 (.I0(I0[12]), 
+                                      .I1(I1[12]), 
+                                      .S(S), 
+                                      .Output(Output[12]));
+   MUX2_1_MUSER_MUX2_1_16bits  XLXI_5 (.I0(I0[11]), 
+                                      .I1(I1[11]), 
+                                      .S(S), 
+                                      .Output(Output[11]));
+   MUX2_1_MUSER_MUX2_1_16bits  XLXI_6 (.I0(I0[10]), 
+                                      .I1(I1[10]), 
+                                      .S(S), 
+                                      .Output(Output[10]));
+   MUX2_1_MUSER_MUX2_1_16bits  XLXI_7 (.I0(I0[9]), 
+                                      .I1(I1[9]), 
+                                      .S(S), 
+                                      .Output(Output[9]));
+   MUX2_1_MUSER_MUX2_1_16bits  XLXI_8 (.I0(I0[8]), 
+                                      .I1(I1[8]), 
+                                      .S(S), 
+                                      .Output(Output[8]));
+   MUX2_1_MUSER_MUX2_1_16bits  XLXI_9 (.I0(I0[7]), 
+                                      .I1(I1[7]), 
+                                      .S(S), 
+                                      .Output(Output[7]));
+   MUX2_1_MUSER_MUX2_1_16bits  XLXI_10 (.I0(I0[6]), 
+                                       .I1(I1[6]), 
+                                       .S(S), 
+                                       .Output(Output[6]));
+   MUX2_1_MUSER_MUX2_1_16bits  XLXI_11 (.I0(I0[5]), 
+                                       .I1(I1[5]), 
+                                       .S(S), 
+                                       .Output(Output[5]));
+   MUX2_1_MUSER_MUX2_1_16bits  XLXI_12 (.I0(I0[4]), 
+                                       .I1(I1[4]), 
+                                       .S(S), 
+                                       .Output(Output[4]));
+   MUX2_1_MUSER_MUX2_1_16bits  XLXI_13 (.I0(I0[3]), 
+                                       .I1(I1[3]), 
+                                       .S(S), 
+                                       .Output(Output[3]));
+   MUX2_1_MUSER_MUX2_1_16bits  XLXI_14 (.I0(I0[2]), 
+                                       .I1(I1[2]), 
+                                       .S(S), 
+                                       .Output(Output[2]));
+   MUX2_1_MUSER_MUX2_1_16bits  XLXI_15 (.I0(I0[1]), 
+                                       .I1(I1[1]), 
+                                       .S(S), 
+                                       .Output(Output[1]));
+   MUX2_1_MUSER_MUX2_1_16bits  XLXI_16 (.I0(I0[0]), 
+                                       .I1(I1[0]), 
+                                       .S(S), 
+                                       .Output(Output[0]));
+endmodule

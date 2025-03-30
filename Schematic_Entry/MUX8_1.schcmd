@@ -1,0 +1,4 @@
+add instance MUX8_1 304 1232 R0 -sn=1
+undo
+add instance MUX8_1 320 1088 R0 -sn=1
+undo

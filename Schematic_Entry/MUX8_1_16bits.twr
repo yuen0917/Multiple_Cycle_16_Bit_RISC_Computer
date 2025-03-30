@@ -1,0 +1,228 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 1 -n
+3 -fastpaths -xml MUX8_1_16bits.twx MUX8_1_16bits.ncd -o MUX8_1_16bits.twr
+MUX8_1_16bits.pcf
+
+Design file:              MUX8_1_16bits.ncd
+Physical constraint file: MUX8_1_16bits.pcf
+Device,package,speed:     xc6vlx75t,ff484,C,-1 (PRODUCTION 1.17 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+I0_00          |Output<0>      |    9.489|
+I0_01          |Output<1>      |    8.592|
+I0_02          |Output<2>      |    8.685|
+I0_03          |Output<3>      |    8.540|
+I0_04          |Output<4>      |    9.027|
+I0_05          |Output<5>      |    8.466|
+I0_06          |Output<6>      |    7.639|
+I0_07          |Output<7>      |    8.343|
+I0_08          |Output<8>      |    7.005|
+I0_09          |Output<9>      |    7.917|
+I0_10          |Output<10>     |    8.027|
+I0_11          |Output<11>     |    6.968|
+I0_12          |Output<12>     |    8.019|
+I0_13          |Output<13>     |    7.711|
+I0_14          |Output<14>     |    7.707|
+I0_15          |Output<15>     |    9.344|
+I1_00          |Output<0>      |    9.272|
+I1_01          |Output<1>      |    7.985|
+I1_02          |Output<2>      |    8.992|
+I1_03          |Output<3>      |    7.203|
+I1_04          |Output<4>      |    7.992|
+I1_05          |Output<5>      |    9.070|
+I1_06          |Output<6>      |    8.487|
+I1_07          |Output<7>      |    8.689|
+I1_08          |Output<8>      |    6.485|
+I1_09          |Output<9>      |    8.028|
+I1_10          |Output<10>     |    8.781|
+I1_11          |Output<11>     |    8.793|
+I1_12          |Output<12>     |    9.152|
+I1_13          |Output<13>     |    8.388|
+I1_14          |Output<14>     |    8.301|
+I1_15          |Output<15>     |    8.593|
+I2_00          |Output<0>      |    7.869|
+I2_01          |Output<1>      |    8.872|
+I2_02          |Output<2>      |    8.473|
+I2_03          |Output<3>      |    8.254|
+I2_04          |Output<4>      |    7.956|
+I2_05          |Output<5>      |    8.522|
+I2_06          |Output<6>      |    7.936|
+I2_07          |Output<7>      |    6.683|
+I2_08          |Output<8>      |    7.923|
+I2_09          |Output<9>      |    8.049|
+I2_10          |Output<10>     |    9.073|
+I2_11          |Output<11>     |    7.776|
+I2_12          |Output<12>     |    8.783|
+I2_13          |Output<13>     |    8.479|
+I2_14          |Output<14>     |    8.390|
+I2_15          |Output<15>     |    8.076|
+I3_00          |Output<0>      |    9.460|
+I3_01          |Output<1>      |    7.760|
+I3_02          |Output<2>      |    8.187|
+I3_03          |Output<3>      |    8.911|
+I3_04          |Output<4>      |   10.029|
+I3_05          |Output<5>      |    9.146|
+I3_06          |Output<6>      |    8.429|
+I3_07          |Output<7>      |    8.342|
+I3_08          |Output<8>      |    8.221|
+I3_09          |Output<9>      |    8.612|
+I3_10          |Output<10>     |    8.930|
+I3_11          |Output<11>     |    7.528|
+I3_12          |Output<12>     |    7.505|
+I3_13          |Output<13>     |    9.179|
+I3_14          |Output<14>     |    8.262|
+I3_15          |Output<15>     |    8.353|
+I4_00          |Output<0>      |    9.164|
+I4_01          |Output<1>      |    8.808|
+I4_02          |Output<2>      |    9.745|
+I4_03          |Output<3>      |    8.003|
+I4_04          |Output<4>      |    8.912|
+I4_05          |Output<5>      |    7.362|
+I4_06          |Output<6>      |    7.734|
+I4_07          |Output<7>      |    9.088|
+I4_08          |Output<8>      |    8.001|
+I4_09          |Output<9>      |    8.633|
+I4_10          |Output<10>     |    8.207|
+I4_11          |Output<11>     |    8.041|
+I4_12          |Output<12>     |    7.388|
+I4_13          |Output<13>     |    8.522|
+I4_14          |Output<14>     |    7.654|
+I4_15          |Output<15>     |    7.891|
+I5_00          |Output<0>      |    7.609|
+I5_01          |Output<1>      |    7.408|
+I5_02          |Output<2>      |    7.895|
+I5_03          |Output<3>      |    7.886|
+I5_04          |Output<4>      |    6.219|
+I5_05          |Output<5>      |    7.161|
+I5_06          |Output<6>      |    7.762|
+I5_07          |Output<7>      |    6.240|
+I5_08          |Output<8>      |    6.503|
+I5_09          |Output<9>      |    8.306|
+I5_10          |Output<10>     |    8.251|
+I5_11          |Output<11>     |    7.755|
+I5_12          |Output<12>     |    7.624|
+I5_13          |Output<13>     |    7.639|
+I5_14          |Output<14>     |    8.061|
+I5_15          |Output<15>     |    7.810|
+I6_00          |Output<0>      |    8.754|
+I6_01          |Output<1>      |    7.566|
+I6_02          |Output<2>      |    7.891|
+I6_03          |Output<3>      |    7.512|
+I6_04          |Output<4>      |    7.163|
+I6_05          |Output<5>      |    6.732|
+I6_06          |Output<6>      |    6.855|
+I6_07          |Output<7>      |    5.906|
+I6_08          |Output<8>      |    6.968|
+I6_09          |Output<9>      |    8.126|
+I6_10          |Output<10>     |    7.736|
+I6_11          |Output<11>     |    6.770|
+I6_12          |Output<12>     |    7.987|
+I6_13          |Output<13>     |    7.788|
+I6_14          |Output<14>     |    7.689|
+I6_15          |Output<15>     |    7.588|
+I7_00          |Output<0>      |    7.954|
+I7_01          |Output<1>      |    6.574|
+I7_02          |Output<2>      |    8.974|
+I7_03          |Output<3>      |    7.659|
+I7_04          |Output<4>      |    5.859|
+I7_05          |Output<5>      |    6.932|
+I7_06          |Output<6>      |    7.680|
+I7_07          |Output<7>      |    7.523|
+I7_08          |Output<8>      |    6.564|
+I7_09          |Output<9>      |    7.410|
+I7_10          |Output<10>     |    7.617|
+I7_11          |Output<11>     |    6.931|
+I7_12          |Output<12>     |    7.072|
+I7_13          |Output<13>     |    8.102|
+I7_14          |Output<14>     |    7.770|
+I7_15          |Output<15>     |    7.761|
+S0             |Output<0>      |   11.429|
+S0             |Output<1>      |   11.382|
+S0             |Output<2>      |   11.631|
+S0             |Output<3>      |   11.930|
+S0             |Output<4>      |   15.409|
+S0             |Output<5>      |   16.250|
+S0             |Output<6>      |   13.943|
+S0             |Output<7>      |   13.695|
+S0             |Output<8>      |   11.449|
+S0             |Output<9>      |   12.647|
+S0             |Output<10>     |   11.069|
+S0             |Output<11>     |   10.840|
+S0             |Output<12>     |   10.638|
+S0             |Output<13>     |   10.916|
+S0             |Output<14>     |   11.157|
+S0             |Output<15>     |   10.941|
+S1             |Output<0>      |   11.757|
+S1             |Output<1>      |   12.057|
+S1             |Output<2>      |   12.075|
+S1             |Output<3>      |   12.777|
+S1             |Output<4>      |   14.422|
+S1             |Output<5>      |   15.565|
+S1             |Output<6>      |   12.862|
+S1             |Output<7>      |   12.563|
+S1             |Output<8>      |   12.864|
+S1             |Output<9>      |   12.875|
+S1             |Output<10>     |   11.236|
+S1             |Output<11>     |   11.440|
+S1             |Output<12>     |   11.093|
+S1             |Output<13>     |   11.765|
+S1             |Output<14>     |   12.227|
+S1             |Output<15>     |   11.185|
+S2             |Output<0>      |   10.630|
+S2             |Output<1>      |   10.553|
+S2             |Output<2>      |   11.389|
+S2             |Output<3>      |   10.745|
+S2             |Output<4>      |   13.001|
+S2             |Output<5>      |   13.764|
+S2             |Output<6>      |   11.318|
+S2             |Output<7>      |   11.345|
+S2             |Output<8>      |   11.257|
+S2             |Output<9>      |   11.129|
+S2             |Output<10>     |   11.110|
+S2             |Output<11>     |    9.130|
+S2             |Output<12>     |   10.627|
+S2             |Output<13>     |    9.572|
+S2             |Output<14>     |   10.712|
+S2             |Output<15>     |   10.747|
+---------------+---------------+---------+
+
+
+Analysis completed Sun Mar 16 15:52:11 2025 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 589 MB
+
+
+

@@ -1,0 +1,180 @@
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx75t-ff484-1 Eight_Reg_16bits.ngc Eight_Reg_16bits.ngd  
+map -intstyle ise -p xc6vlx75t-ff484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ngd Eight_Reg_16bits.pcf 
+par -w -intstyle ise -ol high -mt off Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ncd Eight_Reg_16bits.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Eight_Reg_16bits.twx Eight_Reg_16bits.ncd -o Eight_Reg_16bits.twr Eight_Reg_16bits.pcf 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx75t-ff484-1 Eight_Reg_16bits.ngc Eight_Reg_16bits.ngd  
+map -intstyle ise -p xc6vlx75t-ff484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ngd Eight_Reg_16bits.pcf 
+par -w -intstyle ise -ol high -mt off Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ncd Eight_Reg_16bits.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Eight_Reg_16bits.twx Eight_Reg_16bits.ncd -o Eight_Reg_16bits.twr Eight_Reg_16bits.pcf 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx75t-ff484-1 Eight_Reg_16bits.ngc Eight_Reg_16bits.ngd  
+map -intstyle ise -p xc6vlx75t-ff484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ngd Eight_Reg_16bits.pcf 
+par -w -intstyle ise -ol high -mt off Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ncd Eight_Reg_16bits.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Eight_Reg_16bits.twx Eight_Reg_16bits.ncd -o Eight_Reg_16bits.twr Eight_Reg_16bits.pcf 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx75t-ff484-1 Eight_Reg_16bits.ngc Eight_Reg_16bits.ngd  
+map -intstyle ise -p xc6vlx75t-ff484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ngd Eight_Reg_16bits.pcf 
+par -w -intstyle ise -ol high -mt off Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ncd Eight_Reg_16bits.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Eight_Reg_16bits.twx Eight_Reg_16bits.ncd -o Eight_Reg_16bits.twr Eight_Reg_16bits.pcf 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx75t-ff484-1 Eight_Reg_16bits.ngc Eight_Reg_16bits.ngd  
+map -intstyle ise -p xc6vlx75t-ff484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ngd Eight_Reg_16bits.pcf 
+par -w -intstyle ise -ol high -mt off Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ncd Eight_Reg_16bits.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Eight_Reg_16bits.twx Eight_Reg_16bits.ncd -o Eight_Reg_16bits.twr Eight_Reg_16bits.pcf 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx75t-ff484-1 Eight_Reg_16bits.ngc Eight_Reg_16bits.ngd  
+map -intstyle ise -p xc6vlx75t-ff484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ngd Eight_Reg_16bits.pcf 
+par -w -intstyle ise -ol high -mt off Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ncd Eight_Reg_16bits.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Eight_Reg_16bits.twx Eight_Reg_16bits.ncd -o Eight_Reg_16bits.twr Eight_Reg_16bits.pcf 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx75t-ff484-1 Eight_Reg_16bits.ngc Eight_Reg_16bits.ngd  
+map -intstyle ise -p xc6vlx75t-ff484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ngd Eight_Reg_16bits.pcf 
+par -w -intstyle ise -ol high -mt off Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ncd Eight_Reg_16bits.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Eight_Reg_16bits.twx Eight_Reg_16bits.ncd -o Eight_Reg_16bits.twr Eight_Reg_16bits.pcf 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx75t-ff484-1 Eight_Reg_16bits.ngc Eight_Reg_16bits.ngd  
+map -intstyle ise -p xc6vlx75t-ff484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ngd Eight_Reg_16bits.pcf 
+par -w -intstyle ise -ol high -mt off Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ncd Eight_Reg_16bits.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Eight_Reg_16bits.twx Eight_Reg_16bits.ncd -o Eight_Reg_16bits.twr Eight_Reg_16bits.pcf 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx75t-ff484-1 Eight_Reg_16bits.ngc Eight_Reg_16bits.ngd  
+map -intstyle ise -p xc6vlx75t-ff484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ngd Eight_Reg_16bits.pcf 
+par -w -intstyle ise -ol high -mt off Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ncd Eight_Reg_16bits.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Eight_Reg_16bits.twx Eight_Reg_16bits.ncd -o Eight_Reg_16bits.twr Eight_Reg_16bits.pcf 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx75t-ff484-1 Eight_Reg_16bits.ngc Eight_Reg_16bits.ngd  
+map -intstyle ise -p xc6vlx75t-ff484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ngd Eight_Reg_16bits.pcf 
+par -w -intstyle ise -ol high -mt off Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ncd Eight_Reg_16bits.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Eight_Reg_16bits.twx Eight_Reg_16bits.ncd -o Eight_Reg_16bits.twr Eight_Reg_16bits.pcf 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx75t-ff484-1 Eight_Reg_16bits.ngc Eight_Reg_16bits.ngd  
+map -intstyle ise -p xc6vlx75t-ff484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ngd Eight_Reg_16bits.pcf 
+par -w -intstyle ise -ol high -mt off Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ncd Eight_Reg_16bits.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Eight_Reg_16bits.twx Eight_Reg_16bits.ncd -o Eight_Reg_16bits.twr Eight_Reg_16bits.pcf 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx75t-ff484-1 Eight_Reg_16bits.ngc Eight_Reg_16bits.ngd  
+map -intstyle ise -p xc6vlx75t-ff484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ngd Eight_Reg_16bits.pcf 
+par -w -intstyle ise -ol high -mt off Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ncd Eight_Reg_16bits.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Eight_Reg_16bits.twx Eight_Reg_16bits.ncd -o Eight_Reg_16bits.twr Eight_Reg_16bits.pcf 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx75t-ff484-1 Eight_Reg_16bits.ngc Eight_Reg_16bits.ngd  
+map -intstyle ise -p xc6vlx75t-ff484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ngd Eight_Reg_16bits.pcf 
+par -w -intstyle ise -ol high -mt off Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ncd Eight_Reg_16bits.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Eight_Reg_16bits.twx Eight_Reg_16bits.ncd -o Eight_Reg_16bits.twr Eight_Reg_16bits.pcf 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx75t-ff484-1 Eight_Reg_16bits.ngc Eight_Reg_16bits.ngd  
+map -intstyle ise -p xc6vlx75t-ff484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ngd Eight_Reg_16bits.pcf 
+par -w -intstyle ise -ol high -mt off Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ncd Eight_Reg_16bits.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Eight_Reg_16bits.twx Eight_Reg_16bits.ncd -o Eight_Reg_16bits.twr Eight_Reg_16bits.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx75t-ff484-1 Eight_Reg_16bits.ngc Eight_Reg_16bits.ngd  
+map -intstyle ise -p xc6vlx75t-ff484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ngd Eight_Reg_16bits.pcf 
+par -w -intstyle ise -ol high -mt off Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ncd Eight_Reg_16bits.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Eight_Reg_16bits.twx Eight_Reg_16bits.ncd -o Eight_Reg_16bits.twr Eight_Reg_16bits.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx75t-ff484-1 Eight_Reg_16bits.ngc Eight_Reg_16bits.ngd  
+map -intstyle ise -p xc6vlx75t-ff484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ngd Eight_Reg_16bits.pcf 
+par -w -intstyle ise -ol high -mt off Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ncd Eight_Reg_16bits.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Eight_Reg_16bits.twx Eight_Reg_16bits.ncd -o Eight_Reg_16bits.twr Eight_Reg_16bits.pcf 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx75t-ff484-1 Eight_Reg_16bits.ngc Eight_Reg_16bits.ngd  
+map -intstyle ise -p xc6vlx75t-ff484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ngd Eight_Reg_16bits.pcf 
+par -w -intstyle ise -ol high -mt off Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ncd Eight_Reg_16bits.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Eight_Reg_16bits.twx Eight_Reg_16bits.ncd -o Eight_Reg_16bits.twr Eight_Reg_16bits.pcf 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx75t-ff484-1 Eight_Reg_16bits.ngc Eight_Reg_16bits.ngd  
+map -intstyle ise -p xc6vlx75t-ff484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ngd Eight_Reg_16bits.pcf 
+par -w -intstyle ise -ol high -mt off Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ncd Eight_Reg_16bits.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Eight_Reg_16bits.twx Eight_Reg_16bits.ncd -o Eight_Reg_16bits.twr Eight_Reg_16bits.pcf 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx75t-ff484-1 Eight_Reg_16bits.ngc Eight_Reg_16bits.ngd  
+map -intstyle ise -p xc6vlx75t-ff484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ngd Eight_Reg_16bits.pcf 
+par -w -intstyle ise -ol high -mt off Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ncd Eight_Reg_16bits.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Eight_Reg_16bits.twx Eight_Reg_16bits.ncd -o Eight_Reg_16bits.twr Eight_Reg_16bits.pcf 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx75t-ff484-1 Eight_Reg_16bits.ngc Eight_Reg_16bits.ngd  
+map -intstyle ise -p xc6vlx75t-ff484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ngd Eight_Reg_16bits.pcf 
+par -w -intstyle ise -ol high -mt off Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ncd Eight_Reg_16bits.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Eight_Reg_16bits.twx Eight_Reg_16bits.ncd -o Eight_Reg_16bits.twr Eight_Reg_16bits.pcf 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx75t-ff484-1 Eight_Reg_16bits.ngc Eight_Reg_16bits.ngd  
+map -intstyle ise -p xc6vlx75t-ff484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ngd Eight_Reg_16bits.pcf 
+par -w -intstyle ise -ol high -mt off Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ncd Eight_Reg_16bits.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Eight_Reg_16bits.twx Eight_Reg_16bits.ncd -o Eight_Reg_16bits.twr Eight_Reg_16bits.pcf 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx75t-ff484-1 Eight_Reg_16bits.ngc Eight_Reg_16bits.ngd  
+map -intstyle ise -p xc6vlx75t-ff484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ngd Eight_Reg_16bits.pcf 
+par -w -intstyle ise -ol high -mt off Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ncd Eight_Reg_16bits.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Eight_Reg_16bits.twx Eight_Reg_16bits.ncd -o Eight_Reg_16bits.twr Eight_Reg_16bits.pcf 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx75t-ff484-1 Eight_Reg_16bits.ngc Eight_Reg_16bits.ngd  
+map -intstyle ise -p xc6vlx75t-ff484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ngd Eight_Reg_16bits.pcf 
+par -w -intstyle ise -ol high -mt off Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ncd Eight_Reg_16bits.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Eight_Reg_16bits.twx Eight_Reg_16bits.ncd -o Eight_Reg_16bits.twr Eight_Reg_16bits.pcf 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx75t-ff484-1 Eight_Reg_16bits.ngc Eight_Reg_16bits.ngd  
+map -intstyle ise -p xc6vlx75t-ff484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ngd Eight_Reg_16bits.pcf 
+par -w -intstyle ise -ol high -mt off Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ncd Eight_Reg_16bits.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Eight_Reg_16bits.twx Eight_Reg_16bits.ncd -o Eight_Reg_16bits.twr Eight_Reg_16bits.pcf 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx75t-ff484-1 Eight_Reg_16bits.ngc Eight_Reg_16bits.ngd  
+map -intstyle ise -p xc6vlx75t-ff484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ngd Eight_Reg_16bits.pcf 
+par -w -intstyle ise -ol high -mt off Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ncd Eight_Reg_16bits.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Eight_Reg_16bits.twx Eight_Reg_16bits.ncd -o Eight_Reg_16bits.twr Eight_Reg_16bits.pcf 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx75t-ff484-1 Eight_Reg_16bits.ngc Eight_Reg_16bits.ngd  
+map -intstyle ise -p xc6vlx75t-ff484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ngd Eight_Reg_16bits.pcf 
+par -w -intstyle ise -ol high -mt off Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ncd Eight_Reg_16bits.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Eight_Reg_16bits.twx Eight_Reg_16bits.ncd -o Eight_Reg_16bits.twr Eight_Reg_16bits.pcf 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx75t-ff484-1 Eight_Reg_16bits.ngc Eight_Reg_16bits.ngd  
+map -intstyle ise -p xc6vlx75t-ff484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ngd Eight_Reg_16bits.pcf 
+par -w -intstyle ise -ol high -mt off Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ncd Eight_Reg_16bits.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Eight_Reg_16bits.twx Eight_Reg_16bits.ncd -o Eight_Reg_16bits.twr Eight_Reg_16bits.pcf 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx75t-ff484-1 Eight_Reg_16bits.ngc Eight_Reg_16bits.ngd  
+map -intstyle ise -p xc6vlx75t-ff484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ngd Eight_Reg_16bits.pcf 
+par -w -intstyle ise -ol high -mt off Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ncd Eight_Reg_16bits.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Eight_Reg_16bits.twx Eight_Reg_16bits.ncd -o Eight_Reg_16bits.twr Eight_Reg_16bits.pcf 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx75t-ff484-1 Eight_Reg_16bits.ngc Eight_Reg_16bits.ngd  
+map -intstyle ise -p xc6vlx75t-ff484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ngd Eight_Reg_16bits.pcf 
+par -w -intstyle ise -ol high -mt off Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ncd Eight_Reg_16bits.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Eight_Reg_16bits.twx Eight_Reg_16bits.ncd -o Eight_Reg_16bits.twr Eight_Reg_16bits.pcf 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx75t-ff484-1 Eight_Reg_16bits.ngc Eight_Reg_16bits.ngd  
+map -intstyle ise -p xc6vlx75t-ff484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ngd Eight_Reg_16bits.pcf 
+par -w -intstyle ise -ol high -mt off Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ncd Eight_Reg_16bits.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Eight_Reg_16bits.twx Eight_Reg_16bits.ncd -o Eight_Reg_16bits.twr Eight_Reg_16bits.pcf 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx75t-ff484-1 Eight_Reg_16bits.ngc Eight_Reg_16bits.ngd  
+map -intstyle ise -p xc6vlx75t-ff484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ngd Eight_Reg_16bits.pcf 
+par -w -intstyle ise -ol high -mt off Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ncd Eight_Reg_16bits.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Eight_Reg_16bits.twx Eight_Reg_16bits.ncd -o Eight_Reg_16bits.twr Eight_Reg_16bits.pcf 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx75t-ff484-1 Eight_Reg_16bits.ngc Eight_Reg_16bits.ngd  
+map -intstyle ise -p xc6vlx75t-ff484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ngd Eight_Reg_16bits.pcf 
+par -w -intstyle ise -ol high -mt off Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ncd Eight_Reg_16bits.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Eight_Reg_16bits.twx Eight_Reg_16bits.ncd -o Eight_Reg_16bits.twr Eight_Reg_16bits.pcf 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx75t-ff484-1 Eight_Reg_16bits.ngc Eight_Reg_16bits.ngd  
+map -intstyle ise -p xc6vlx75t-ff484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ngd Eight_Reg_16bits.pcf 
+par -w -intstyle ise -ol high -mt off Eight_Reg_16bits_map.ncd Eight_Reg_16bits.ncd Eight_Reg_16bits.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Eight_Reg_16bits.twx Eight_Reg_16bits.ncd -o Eight_Reg_16bits.twr Eight_Reg_16bits.pcf 

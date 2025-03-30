@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<DeviceUsageSummary rev="17">
+<DesignStatistics TimeStamp="Tue Mar 25 05:44:33 2025"><group name="MiscellaneousStatistics">
+<item name="AGG_BONDED_IO" rev="17">
+<attrib name="value" value="97"/></item>
+<item name="AGG_IO" rev="17">
+<attrib name="value" value="97"/></item>
+<item name="AGG_SLICE" rev="17">
+<attrib name="value" value="163"/></item>
+<item name="NUM_BONDED_IOB" rev="17">
+<attrib name="value" value="97"/></item>
+<item name="NUM_BSFULL" rev="17">
+<attrib name="value" value="119"/></item>
+<item name="NUM_BSLUTONLY" rev="17">
+<attrib name="value" value="232"/></item>
+<item name="NUM_BSREGONLY" rev="17">
+<attrib name="value" value="57"/></item>
+<item name="NUM_BSUSED" rev="17">
+<attrib name="value" value="408"/></item>
+<item name="NUM_BUFG" rev="17">
+<attrib name="value" value="1"/></item>
+<item name="NUM_LOGIC_O6ONLY" rev="17">
+<attrib name="value" value="351"/></item>
+<item name="NUM_SLICEL" rev="17">
+<attrib name="value" value="163"/></item>
+<item name="NUM_SLICE_CONTROLSET" rev="17">
+<attrib name="value" value="11"/></item>
+<item name="NUM_SLICE_CYINIT" rev="17">
+<attrib name="value" value="351"/></item>
+<item name="NUM_SLICE_FF" rev="17">
+<attrib name="value" value="176"/></item>
+<item name="NUM_SLICE_UNUSEDCTRL" rev="17">
+<attrib name="value" value="90"/></item>
+<item name="NUM_STARTUP" rev="17">
+<attrib name="value" value="1"/></item>
+</group>
+</DesignStatistics>
+<CmdHistory>
+</CmdHistory>
+</DeviceUsageSummary>

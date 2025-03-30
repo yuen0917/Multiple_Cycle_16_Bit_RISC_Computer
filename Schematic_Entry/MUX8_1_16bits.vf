@@ -1,0 +1,598 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : MUX8_1_16bits.vf
+// /___/   /\     Timestamp : 03/24/2025 16:36:16
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family virtex6 -verilog /home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/MUX8_1_16bits.vf -w /home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/MUX8_1_16bits.sch
+//Design Name: MUX8_1_16bits
+//Device: virtex6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale  100 ps / 10 ps
+
+module OR8_HXILINX_MUX8_1_16bits (O, I0, I1, I2, I3, I4, I5, I6, I7);
+    
+
+   output O;
+
+   input I0;
+   input I1;
+   input I2;
+   input I3;
+   input I4;
+   input I5;
+   input I6;
+   input I7;
+
+assign O = (I0 || I1 || I2 || I3 || I4 || I5 || I6 || I7);
+
+endmodule
+`timescale 1ns / 1ps
+
+module MUX8_1_MUSER_MUX8_1_16bits(I0, 
+                                  I1, 
+                                  I2, 
+                                  I3, 
+                                  I4, 
+                                  I5, 
+                                  I6, 
+                                  I7, 
+                                  S0, 
+                                  S1, 
+                                  S2, 
+                                  O);
+
+    input I0;
+    input I1;
+    input I2;
+    input I3;
+    input I4;
+    input I5;
+    input I6;
+    input I7;
+    input S0;
+    input S1;
+    input S2;
+   output O;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_7;
+   wire XLXN_9;
+   wire XLXN_11;
+   wire XLXN_32;
+   wire XLXN_52;
+   wire XLXN_57;
+   
+   AND4  XLXI_1 (.I0(I1), 
+                .I1(XLXN_57), 
+                .I2(XLXN_52), 
+                .I3(S0), 
+                .O(XLXN_2));
+   AND4  XLXI_2 (.I0(I2), 
+                .I1(XLXN_57), 
+                .I2(S1), 
+                .I3(XLXN_32), 
+                .O(XLXN_3));
+   AND4  XLXI_3 (.I0(I3), 
+                .I1(XLXN_57), 
+                .I2(S1), 
+                .I3(S0), 
+                .O(XLXN_4));
+   AND4  XLXI_4 (.I0(I4), 
+                .I1(S2), 
+                .I2(XLXN_52), 
+                .I3(XLXN_32), 
+                .O(XLXN_5));
+   AND4  XLXI_5 (.I0(I5), 
+                .I1(S2), 
+                .I2(XLXN_52), 
+                .I3(S0), 
+                .O(XLXN_7));
+   AND4  XLXI_6 (.I0(I6), 
+                .I1(S2), 
+                .I2(S1), 
+                .I3(XLXN_32), 
+                .O(XLXN_9));
+   INV  XLXI_7 (.I(S1), 
+               .O(XLXN_52));
+   (* HU_SET = "XLXI_8_6" *) 
+   OR8_HXILINX_MUX8_1_16bits  XLXI_8 (.I0(XLXN_11), 
+                                     .I1(XLXN_9), 
+                                     .I2(XLXN_7), 
+                                     .I3(XLXN_5), 
+                                     .I4(XLXN_4), 
+                                     .I5(XLXN_3), 
+                                     .I6(XLXN_2), 
+                                     .I7(XLXN_1), 
+                                     .O(O));
+   AND4  XLXI_9 (.I0(I0), 
+                .I1(XLXN_57), 
+                .I2(XLXN_52), 
+                .I3(XLXN_32), 
+                .O(XLXN_1));
+   INV  XLXI_10 (.I(S2), 
+                .O(XLXN_57));
+   INV  XLXI_11 (.I(S0), 
+                .O(XLXN_32));
+   AND4  XLXI_13 (.I0(I7), 
+                 .I1(S2), 
+                 .I2(S1), 
+                 .I3(S0), 
+                 .O(XLXN_11));
+endmodule
+`timescale 1ns / 1ps
+
+module MUX8_1_16bits(I0_00, 
+                     I0_01, 
+                     I0_02, 
+                     I0_03, 
+                     I0_04, 
+                     I0_05, 
+                     I0_06, 
+                     I0_07, 
+                     I0_08, 
+                     I0_09, 
+                     I0_10, 
+                     I0_11, 
+                     I0_12, 
+                     I0_13, 
+                     I0_14, 
+                     I0_15, 
+                     I1_00, 
+                     I1_01, 
+                     I1_02, 
+                     I1_03, 
+                     I1_04, 
+                     I1_05, 
+                     I1_06, 
+                     I1_07, 
+                     I1_08, 
+                     I1_09, 
+                     I1_10, 
+                     I1_11, 
+                     I1_12, 
+                     I1_13, 
+                     I1_14, 
+                     I1_15, 
+                     I2_00, 
+                     I2_01, 
+                     I2_02, 
+                     I2_03, 
+                     I2_04, 
+                     I2_05, 
+                     I2_06, 
+                     I2_07, 
+                     I2_08, 
+                     I2_09, 
+                     I2_10, 
+                     I2_11, 
+                     I2_12, 
+                     I2_13, 
+                     I2_14, 
+                     I2_15, 
+                     I3_00, 
+                     I3_01, 
+                     I3_02, 
+                     I3_03, 
+                     I3_04, 
+                     I3_05, 
+                     I3_06, 
+                     I3_07, 
+                     I3_08, 
+                     I3_09, 
+                     I3_10, 
+                     I3_11, 
+                     I3_12, 
+                     I3_13, 
+                     I3_14, 
+                     I3_15, 
+                     I4_00, 
+                     I4_01, 
+                     I4_02, 
+                     I4_03, 
+                     I4_04, 
+                     I4_05, 
+                     I4_06, 
+                     I4_07, 
+                     I4_08, 
+                     I4_09, 
+                     I4_10, 
+                     I4_11, 
+                     I4_12, 
+                     I4_13, 
+                     I4_14, 
+                     I4_15, 
+                     I5_00, 
+                     I5_01, 
+                     I5_02, 
+                     I5_03, 
+                     I5_04, 
+                     I5_05, 
+                     I5_06, 
+                     I5_07, 
+                     I5_08, 
+                     I5_09, 
+                     I5_10, 
+                     I5_11, 
+                     I5_12, 
+                     I5_13, 
+                     I5_14, 
+                     I5_15, 
+                     I6_00, 
+                     I6_01, 
+                     I6_02, 
+                     I6_03, 
+                     I6_04, 
+                     I6_05, 
+                     I6_06, 
+                     I6_07, 
+                     I6_08, 
+                     I6_09, 
+                     I6_10, 
+                     I6_11, 
+                     I6_12, 
+                     I6_13, 
+                     I6_14, 
+                     I6_15, 
+                     I7_00, 
+                     I7_01, 
+                     I7_02, 
+                     I7_03, 
+                     I7_04, 
+                     I7_05, 
+                     I7_06, 
+                     I7_07, 
+                     I7_08, 
+                     I7_09, 
+                     I7_10, 
+                     I7_11, 
+                     I7_12, 
+                     I7_13, 
+                     I7_14, 
+                     I7_15, 
+                     S0, 
+                     S1, 
+                     S2, 
+                     Output);
+
+    input I0_00;
+    input I0_01;
+    input I0_02;
+    input I0_03;
+    input I0_04;
+    input I0_05;
+    input I0_06;
+    input I0_07;
+    input I0_08;
+    input I0_09;
+    input I0_10;
+    input I0_11;
+    input I0_12;
+    input I0_13;
+    input I0_14;
+    input I0_15;
+    input I1_00;
+    input I1_01;
+    input I1_02;
+    input I1_03;
+    input I1_04;
+    input I1_05;
+    input I1_06;
+    input I1_07;
+    input I1_08;
+    input I1_09;
+    input I1_10;
+    input I1_11;
+    input I1_12;
+    input I1_13;
+    input I1_14;
+    input I1_15;
+    input I2_00;
+    input I2_01;
+    input I2_02;
+    input I2_03;
+    input I2_04;
+    input I2_05;
+    input I2_06;
+    input I2_07;
+    input I2_08;
+    input I2_09;
+    input I2_10;
+    input I2_11;
+    input I2_12;
+    input I2_13;
+    input I2_14;
+    input I2_15;
+    input I3_00;
+    input I3_01;
+    input I3_02;
+    input I3_03;
+    input I3_04;
+    input I3_05;
+    input I3_06;
+    input I3_07;
+    input I3_08;
+    input I3_09;
+    input I3_10;
+    input I3_11;
+    input I3_12;
+    input I3_13;
+    input I3_14;
+    input I3_15;
+    input I4_00;
+    input I4_01;
+    input I4_02;
+    input I4_03;
+    input I4_04;
+    input I4_05;
+    input I4_06;
+    input I4_07;
+    input I4_08;
+    input I4_09;
+    input I4_10;
+    input I4_11;
+    input I4_12;
+    input I4_13;
+    input I4_14;
+    input I4_15;
+    input I5_00;
+    input I5_01;
+    input I5_02;
+    input I5_03;
+    input I5_04;
+    input I5_05;
+    input I5_06;
+    input I5_07;
+    input I5_08;
+    input I5_09;
+    input I5_10;
+    input I5_11;
+    input I5_12;
+    input I5_13;
+    input I5_14;
+    input I5_15;
+    input I6_00;
+    input I6_01;
+    input I6_02;
+    input I6_03;
+    input I6_04;
+    input I6_05;
+    input I6_06;
+    input I6_07;
+    input I6_08;
+    input I6_09;
+    input I6_10;
+    input I6_11;
+    input I6_12;
+    input I6_13;
+    input I6_14;
+    input I6_15;
+    input I7_00;
+    input I7_01;
+    input I7_02;
+    input I7_03;
+    input I7_04;
+    input I7_05;
+    input I7_06;
+    input I7_07;
+    input I7_08;
+    input I7_09;
+    input I7_10;
+    input I7_11;
+    input I7_12;
+    input I7_13;
+    input I7_14;
+    input I7_15;
+    input S0;
+    input S1;
+    input S2;
+   output [15:0] Output;
+   
+   
+   MUX8_1_MUSER_MUX8_1_16bits  Bit_0th (.I0(I0_00), 
+                                       .I1(I1_00), 
+                                       .I2(I2_00), 
+                                       .I3(I3_00), 
+                                       .I4(I4_00), 
+                                       .I5(I5_00), 
+                                       .I6(I6_00), 
+                                       .I7(I7_00), 
+                                       .S0(S0), 
+                                       .S1(S1), 
+                                       .S2(S2), 
+                                       .O(Output[0]));
+   MUX8_1_MUSER_MUX8_1_16bits  Bit_1st (.I0(I0_01), 
+                                       .I1(I1_01), 
+                                       .I2(I2_01), 
+                                       .I3(I3_01), 
+                                       .I4(I4_01), 
+                                       .I5(I5_01), 
+                                       .I6(I6_01), 
+                                       .I7(I7_01), 
+                                       .S0(S0), 
+                                       .S1(S1), 
+                                       .S2(S2), 
+                                       .O(Output[1]));
+   MUX8_1_MUSER_MUX8_1_16bits  Bit_2nd (.I0(I0_02), 
+                                       .I1(I1_02), 
+                                       .I2(I2_02), 
+                                       .I3(I3_02), 
+                                       .I4(I4_02), 
+                                       .I5(I5_02), 
+                                       .I6(I6_02), 
+                                       .I7(I7_02), 
+                                       .S0(S0), 
+                                       .S1(S1), 
+                                       .S2(S2), 
+                                       .O(Output[2]));
+   MUX8_1_MUSER_MUX8_1_16bits  Bit_3rd (.I0(I0_03), 
+                                       .I1(I1_03), 
+                                       .I2(I2_03), 
+                                       .I3(I3_03), 
+                                       .I4(I4_03), 
+                                       .I5(I5_03), 
+                                       .I6(I6_03), 
+                                       .I7(I7_03), 
+                                       .S0(S0), 
+                                       .S1(S1), 
+                                       .S2(S2), 
+                                       .O(Output[3]));
+   MUX8_1_MUSER_MUX8_1_16bits  Bit_4th (.I0(I0_04), 
+                                       .I1(I1_04), 
+                                       .I2(I2_04), 
+                                       .I3(I3_04), 
+                                       .I4(I4_04), 
+                                       .I5(I5_04), 
+                                       .I6(I6_04), 
+                                       .I7(I7_04), 
+                                       .S0(S0), 
+                                       .S1(S1), 
+                                       .S2(S2), 
+                                       .O(Output[4]));
+   MUX8_1_MUSER_MUX8_1_16bits  Bit_5th (.I0(I0_05), 
+                                       .I1(I1_05), 
+                                       .I2(I2_05), 
+                                       .I3(I3_05), 
+                                       .I4(I4_05), 
+                                       .I5(I5_05), 
+                                       .I6(I6_05), 
+                                       .I7(I7_05), 
+                                       .S0(S0), 
+                                       .S1(S1), 
+                                       .S2(S2), 
+                                       .O(Output[5]));
+   MUX8_1_MUSER_MUX8_1_16bits  Bit_6th (.I0(I0_06), 
+                                       .I1(I1_06), 
+                                       .I2(I2_06), 
+                                       .I3(I3_06), 
+                                       .I4(I4_06), 
+                                       .I5(I5_06), 
+                                       .I6(I6_06), 
+                                       .I7(I7_06), 
+                                       .S0(S0), 
+                                       .S1(S1), 
+                                       .S2(S2), 
+                                       .O(Output[6]));
+   MUX8_1_MUSER_MUX8_1_16bits  Bit_7th (.I0(I0_07), 
+                                       .I1(I1_07), 
+                                       .I2(I2_07), 
+                                       .I3(I3_07), 
+                                       .I4(I4_07), 
+                                       .I5(I5_07), 
+                                       .I6(I6_07), 
+                                       .I7(I7_07), 
+                                       .S0(S0), 
+                                       .S1(S1), 
+                                       .S2(S2), 
+                                       .O(Output[7]));
+   MUX8_1_MUSER_MUX8_1_16bits  Bit_8th (.I0(I0_08), 
+                                       .I1(I1_08), 
+                                       .I2(I2_08), 
+                                       .I3(I3_08), 
+                                       .I4(I4_08), 
+                                       .I5(I5_08), 
+                                       .I6(I6_08), 
+                                       .I7(I7_08), 
+                                       .S0(S0), 
+                                       .S1(S1), 
+                                       .S2(S2), 
+                                       .O(Output[8]));
+   MUX8_1_MUSER_MUX8_1_16bits  Bit_9th (.I0(I0_09), 
+                                       .I1(I1_09), 
+                                       .I2(I2_09), 
+                                       .I3(I3_09), 
+                                       .I4(I4_09), 
+                                       .I5(I5_09), 
+                                       .I6(I6_09), 
+                                       .I7(I7_09), 
+                                       .S0(S0), 
+                                       .S1(S1), 
+                                       .S2(S2), 
+                                       .O(Output[9]));
+   MUX8_1_MUSER_MUX8_1_16bits  Bit_10th (.I0(I0_10), 
+                                        .I1(I1_10), 
+                                        .I2(I2_10), 
+                                        .I3(I3_10), 
+                                        .I4(I4_10), 
+                                        .I5(I5_10), 
+                                        .I6(I6_10), 
+                                        .I7(I7_10), 
+                                        .S0(S0), 
+                                        .S1(S1), 
+                                        .S2(S2), 
+                                        .O(Output[10]));
+   MUX8_1_MUSER_MUX8_1_16bits  Bit_11th (.I0(I0_11), 
+                                        .I1(I1_11), 
+                                        .I2(I2_11), 
+                                        .I3(I3_11), 
+                                        .I4(I4_11), 
+                                        .I5(I5_11), 
+                                        .I6(I6_11), 
+                                        .I7(I7_11), 
+                                        .S0(S0), 
+                                        .S1(S1), 
+                                        .S2(S2), 
+                                        .O(Output[11]));
+   MUX8_1_MUSER_MUX8_1_16bits  Bit_12th (.I0(I0_12), 
+                                        .I1(I1_12), 
+                                        .I2(I2_12), 
+                                        .I3(I3_12), 
+                                        .I4(I4_12), 
+                                        .I5(I5_12), 
+                                        .I6(I6_12), 
+                                        .I7(I7_12), 
+                                        .S0(S0), 
+                                        .S1(S1), 
+                                        .S2(S2), 
+                                        .O(Output[12]));
+   MUX8_1_MUSER_MUX8_1_16bits  Bit_13th (.I0(I0_13), 
+                                        .I1(I1_13), 
+                                        .I2(I2_13), 
+                                        .I3(I3_13), 
+                                        .I4(I4_13), 
+                                        .I5(I5_13), 
+                                        .I6(I6_13), 
+                                        .I7(I7_13), 
+                                        .S0(S0), 
+                                        .S1(S1), 
+                                        .S2(S2), 
+                                        .O(Output[13]));
+   MUX8_1_MUSER_MUX8_1_16bits  Bit_14th (.I0(I0_14), 
+                                        .I1(I1_14), 
+                                        .I2(I2_14), 
+                                        .I3(I3_14), 
+                                        .I4(I4_14), 
+                                        .I5(I5_14), 
+                                        .I6(I6_14), 
+                                        .I7(I7_14), 
+                                        .S0(S0), 
+                                        .S1(S1), 
+                                        .S2(S2), 
+                                        .O(Output[14]));
+   MUX8_1_MUSER_MUX8_1_16bits  Bit_15th (.I0(I0_15), 
+                                        .I1(I1_15), 
+                                        .I2(I2_15), 
+                                        .I3(I3_15), 
+                                        .I4(I4_15), 
+                                        .I5(I5_15), 
+                                        .I6(I6_15), 
+                                        .I7(I7_15), 
+                                        .S0(S0), 
+                                        .S1(S1), 
+                                        .S2(S2), 
+                                        .O(Output[15]));
+endmodule

@@ -1,0 +1,756 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.00 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.00 secs
+ 
+--> 
+Reading design: A_16bits_RF_plus_ALU.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "A_16bits_RF_plus_ALU.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "A_16bits_RF_plus_ALU"
+Output Format                      : NGC
+Target Device                      : xc6vlx75t-1-ff484
+
+---- Source Options
+Top Module Name                    : A_16bits_RF_plus_ALU
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.vf" into library work
+Parsing module <D3_8E>.
+Analyzing Verilog file "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/MUX8_1.vf" into library work
+Parsing module <OR8_HXILINX_MUX8_1>.
+Parsing module <MUX8_1>.
+Analyzing Verilog file "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/MUX4_1.vf" into library work
+Parsing module <MUX4_1>.
+Analyzing Verilog file "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/FA.vf" into library work
+Parsing module <FA>.
+Analyzing Verilog file "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/MUX8_1_16bits.vf" into library work
+Parsing module <OR8_HXILINX_MUX8_1_16bits>.
+Parsing module <MUX8_1_MUSER_MUX8_1_16bits>.
+Parsing module <MUX8_1_16bits>.
+Analyzing Verilog file "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/MUX4_1_16bits.vf" into library work
+Parsing module <MUX4_1_MUSER_MUX4_1_16bits>.
+Parsing module <MUX4_1_16bits>.
+Analyzing Verilog file "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/MUX2_1.vf" into library work
+Parsing module <MUX2_1>.
+Analyzing Verilog file "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/FA_16bits.vf" into library work
+Parsing module <FA_MUSER_FA_16bits>.
+Parsing module <FA_16bits>.
+Analyzing Verilog file "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/DFF_Reg_16bits.vf" into library work
+Parsing module <DFF_Reg_16bits>.
+Analyzing Verilog file "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/MUX2_1_16bits.vf" into library work
+Parsing module <MUX2_1_MUSER_MUX2_1_16bits>.
+Parsing module <MUX2_1_16bits>.
+Analyzing Verilog file "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Imm_Gen.vf" into library work
+Parsing module <MUX4_1_MUSER_Imm_Gen>.
+Parsing module <MUX4_1_16bits_MUSER_Imm_Gen>.
+Parsing module <Imm_Gen>.
+Analyzing Verilog file "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Eight_Reg_16bits.vf" into library work
+Parsing module <OR8_HXILINX_Eight_Reg_16bits>.
+Parsing module <D3_8E_MUSER_Eight_Reg_16bits>.
+Parsing module <MUX8_1_MUSER_Eight_Reg_16bits>.
+Parsing module <MUX8_1_16bits_MUSER_Eight_Reg_16bits>.
+Parsing module <DFF_Reg_16bits_MUSER_Eight_Reg_16bits>.
+Parsing module <Eight_Reg_16bits>.
+Analyzing Verilog file "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/ALU_16bits.vf" into library work
+Parsing module <NOR16_HXILINX_ALU_16bits>.
+Parsing module <FA_MUSER_ALU_16bits>.
+Parsing module <FA_16bits_MUSER_ALU_16bits>.
+Parsing module <ALU_16bits>.
+Analyzing Verilog file "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/A_16bits_RF_plus_ALU.vf" into library work
+Parsing module <NOR16_HXILINX_A_16bits_RF_plus_ALU>.
+Parsing module <OR8_HXILINX_A_16bits_RF_plus_ALU>.
+Parsing module <DFF_Reg_16bits_MUSER_A_16bits_RF_plus_ALU>.
+Parsing module <MUX4_1_MUSER_A_16bits_RF_plus_ALU>.
+Parsing module <MUX4_1_16bits_MUSER_A_16bits_RF_plus_ALU>.
+Parsing module <Imm_Gen_MUSER_A_16bits_RF_plus_ALU>.
+Parsing module <MUX2_1_MUSER_A_16bits_RF_plus_ALU>.
+Parsing module <MUX2_1_16bits_MUSER_A_16bits_RF_plus_ALU>.
+Parsing module <FA_MUSER_A_16bits_RF_plus_ALU>.
+Parsing module <FA_16bits_MUSER_A_16bits_RF_plus_ALU>.
+Parsing module <ALU_16bits_MUSER_A_16bits_RF_plus_ALU>.
+Parsing module <D3_8E_MUSER_A_16bits_RF_plus_ALU>.
+Parsing module <MUX8_1_MUSER_A_16bits_RF_plus_ALU>.
+Parsing module <MUX8_1_16bits_MUSER_A_16bits_RF_plus_ALU>.
+Parsing module <Eight_Reg_16bits_MUSER_A_16bits_RF_plus_ALU>.
+Parsing module <A_16bits_RF_plus_ALU>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <A_16bits_RF_plus_ALU>.
+
+Elaborating module <ALU_16bits_MUSER_A_16bits_RF_plus_ALU>.
+
+Elaborating module <FA_16bits_MUSER_A_16bits_RF_plus_ALU>.
+
+Elaborating module <FA_MUSER_A_16bits_RF_plus_ALU>.
+
+Elaborating module <XOR2>.
+
+Elaborating module <OR2>.
+
+Elaborating module <AND2>.
+
+Elaborating module <NOR16_HXILINX_A_16bits_RF_plus_ALU>.
+
+Elaborating module <XNOR2>.
+
+Elaborating module <BUF>.
+
+Elaborating module <DFF_Reg_16bits_MUSER_A_16bits_RF_plus_ALU>.
+
+Elaborating module <FDE(INIT=1'b0)>.
+
+Elaborating module <MUX2_1_16bits_MUSER_A_16bits_RF_plus_ALU>.
+
+Elaborating module <MUX2_1_MUSER_A_16bits_RF_plus_ALU>.
+
+Elaborating module <INV>.
+
+Elaborating module <MUX4_1_16bits_MUSER_A_16bits_RF_plus_ALU>.
+
+Elaborating module <MUX4_1_MUSER_A_16bits_RF_plus_ALU>.
+
+Elaborating module <AND3>.
+
+Elaborating module <OR4>.
+
+Elaborating module <Eight_Reg_16bits_MUSER_A_16bits_RF_plus_ALU>.
+
+Elaborating module <D3_8E_MUSER_A_16bits_RF_plus_ALU>.
+
+Elaborating module <AND4>.
+
+Elaborating module <MUX8_1_16bits_MUSER_A_16bits_RF_plus_ALU>.
+
+Elaborating module <MUX8_1_MUSER_A_16bits_RF_plus_ALU>.
+
+Elaborating module <OR8_HXILINX_A_16bits_RF_plus_ALU>.
+
+Elaborating module <Imm_Gen_MUSER_A_16bits_RF_plus_ALU>.
+
+Elaborating module <GND>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <A_16bits_RF_plus_ALU>.
+    Related source file is "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/A_16bits_RF_plus_ALU.vf".
+    Summary:
+	no macro.
+Unit <A_16bits_RF_plus_ALU> synthesized.
+
+Synthesizing Unit <ALU_16bits_MUSER_A_16bits_RF_plus_ALU>.
+    Related source file is "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/A_16bits_RF_plus_ALU.vf".
+    Set property "HU_SET = XLXI_72_9" for instance <XLXI_72>.
+INFO:Xst:3210 - "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/A_16bits_RF_plus_ALU.vf" line 763: Output port <C_out> of the instance <For_B2s> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <ALU_16bits_MUSER_A_16bits_RF_plus_ALU> synthesized.
+
+Synthesizing Unit <FA_16bits_MUSER_A_16bits_RF_plus_ALU>.
+    Related source file is "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/A_16bits_RF_plus_ALU.vf".
+    Summary:
+	no macro.
+Unit <FA_16bits_MUSER_A_16bits_RF_plus_ALU> synthesized.
+
+Synthesizing Unit <FA_MUSER_A_16bits_RF_plus_ALU>.
+    Related source file is "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/A_16bits_RF_plus_ALU.vf".
+    Summary:
+	no macro.
+Unit <FA_MUSER_A_16bits_RF_plus_ALU> synthesized.
+
+Synthesizing Unit <NOR16_HXILINX_A_16bits_RF_plus_ALU>.
+    Related source file is "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/A_16bits_RF_plus_ALU.vf".
+    Summary:
+	no macro.
+Unit <NOR16_HXILINX_A_16bits_RF_plus_ALU> synthesized.
+
+Synthesizing Unit <DFF_Reg_16bits_MUSER_A_16bits_RF_plus_ALU>.
+    Related source file is "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/A_16bits_RF_plus_ALU.vf".
+    Summary:
+	no macro.
+Unit <DFF_Reg_16bits_MUSER_A_16bits_RF_plus_ALU> synthesized.
+
+Synthesizing Unit <MUX2_1_16bits_MUSER_A_16bits_RF_plus_ALU>.
+    Related source file is "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/A_16bits_RF_plus_ALU.vf".
+    Summary:
+	no macro.
+Unit <MUX2_1_16bits_MUSER_A_16bits_RF_plus_ALU> synthesized.
+
+Synthesizing Unit <MUX2_1_MUSER_A_16bits_RF_plus_ALU>.
+    Related source file is "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/A_16bits_RF_plus_ALU.vf".
+    Summary:
+	no macro.
+Unit <MUX2_1_MUSER_A_16bits_RF_plus_ALU> synthesized.
+
+Synthesizing Unit <MUX4_1_16bits_MUSER_A_16bits_RF_plus_ALU>.
+    Related source file is "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/A_16bits_RF_plus_ALU.vf".
+    Summary:
+	no macro.
+Unit <MUX4_1_16bits_MUSER_A_16bits_RF_plus_ALU> synthesized.
+
+Synthesizing Unit <MUX4_1_MUSER_A_16bits_RF_plus_ALU>.
+    Related source file is "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/A_16bits_RF_plus_ALU.vf".
+    Summary:
+	no macro.
+Unit <MUX4_1_MUSER_A_16bits_RF_plus_ALU> synthesized.
+
+Synthesizing Unit <Eight_Reg_16bits_MUSER_A_16bits_RF_plus_ALU>.
+    Related source file is "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/A_16bits_RF_plus_ALU.vf".
+    Summary:
+	no macro.
+Unit <Eight_Reg_16bits_MUSER_A_16bits_RF_plus_ALU> synthesized.
+
+Synthesizing Unit <D3_8E_MUSER_A_16bits_RF_plus_ALU>.
+    Related source file is "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/A_16bits_RF_plus_ALU.vf".
+    Summary:
+	no macro.
+Unit <D3_8E_MUSER_A_16bits_RF_plus_ALU> synthesized.
+
+Synthesizing Unit <MUX8_1_16bits_MUSER_A_16bits_RF_plus_ALU>.
+    Related source file is "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/A_16bits_RF_plus_ALU.vf".
+    Summary:
+	no macro.
+Unit <MUX8_1_16bits_MUSER_A_16bits_RF_plus_ALU> synthesized.
+
+Synthesizing Unit <MUX8_1_MUSER_A_16bits_RF_plus_ALU>.
+    Related source file is "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/A_16bits_RF_plus_ALU.vf".
+    Set property "HU_SET = XLXI_8_10" for instance <XLXI_8>.
+    Summary:
+	no macro.
+Unit <MUX8_1_MUSER_A_16bits_RF_plus_ALU> synthesized.
+
+Synthesizing Unit <OR8_HXILINX_A_16bits_RF_plus_ALU>.
+    Related source file is "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/A_16bits_RF_plus_ALU.vf".
+    Summary:
+	no macro.
+Unit <OR8_HXILINX_A_16bits_RF_plus_ALU> synthesized.
+
+Synthesizing Unit <Imm_Gen_MUSER_A_16bits_RF_plus_ALU>.
+    Related source file is "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/A_16bits_RF_plus_ALU.vf".
+    Summary:
+	no macro.
+Unit <Imm_Gen_MUSER_A_16bits_RF_plus_ALU> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 176
+ Flip-Flops                                            : 176
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <A_16bits_RF_plus_ALU> ...
+
+Optimizing unit <MUX4_1_16bits_MUSER_A_16bits_RF_plus_ALU> ...
+
+Optimizing unit <Imm_Gen_MUSER_A_16bits_RF_plus_ALU> ...
+
+Optimizing unit <MUX2_1_16bits_MUSER_A_16bits_RF_plus_ALU> ...
+
+Optimizing unit <Eight_Reg_16bits_MUSER_A_16bits_RF_plus_ALU> ...
+
+Optimizing unit <DFF_Reg_16bits_MUSER_A_16bits_RF_plus_ALU> ...
+
+Optimizing unit <D3_8E_MUSER_A_16bits_RF_plus_ALU> ...
+
+Optimizing unit <MUX8_1_MUSER_A_16bits_RF_plus_ALU> ...
+
+Optimizing unit <ALU_16bits_MUSER_A_16bits_RF_plus_ALU> ...
+
+Optimizing unit <FA_16bits_MUSER_A_16bits_RF_plus_ALU> ...
+
+Optimizing unit <OR8_HXILINX_A_16bits_RF_plus_ALU> ...
+
+Optimizing unit <NOR16_HXILINX_A_16bits_RF_plus_ALU> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block A_16bits_RF_plus_ALU, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 176
+ Flip-Flops                                            : 176
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : A_16bits_RF_plus_ALU.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1004
+#      AND2                        : 129
+#      AND3                        : 128
+#      AND4                        : 264
+#      BUF                         : 41
+#      GND                         : 1
+#      INV                         : 195
+#      LUT3                        : 32
+#      LUT6                        : 35
+#      OR2                         : 64
+#      OR4                         : 32
+#      VCC                         : 1
+#      XNOR2                       : 1
+#      XOR2                        : 81
+# FlipFlops/Latches                : 176
+#      FDE                         : 176
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 96
+#      IBUF                        : 60
+#      OBUF                        : 36
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6vlx75tff484-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             176  out of  93120     0%  
+ Number of Slice LUTs:                  262  out of  46560     0%  
+    Number used as Logic:               262  out of  46560     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    438
+   Number with an unused Flip Flop:     262  out of    438    59%  
+   Number with an unused LUT:           176  out of    438    40%  
+   Number of fully used LUT-FF pairs:     0  out of    438     0%  
+   Number of unique control sets:        11
+
+IO Utilization: 
+ Number of IOs:                         105
+ Number of bonded IOBs:                  97  out of    240    40%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 176   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 30.538ns (Maximum Frequency: 32.746MHz)
+   Minimum input arrival time before clock: 32.866ns
+   Maximum output required time after clock: 32.222ns
+   Maximum combinational path delay: 34.550ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 30.538ns (frequency: 32.746MHz)
+  Total number of paths / destination ports: 896 / 176
+-------------------------------------------------------------------------
+Delay:               30.538ns (Levels of Logic = 35)
+  Source:            ReadB_data_DFF/XLXI_33 (FF)
+  Destination:       ALUOut/XLXI_18 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: ReadB_data_DFF/XLXI_33 to ALUOut/XLXI_18
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.375   0.778  ReadB_data_DFF/XLXI_33 (I0<0>)
+     AND3:I0->O            1   0.068   0.581  DataB_MUX/XLXI_24/XLXI_1 (DataB_MUX/XLXI_24/XLXN_2)
+     OR4:I3->O             1   0.265   0.775  DataB_MUX/XLXI_24/XLXI_5 (B<0>)
+     XOR2:I1->O            4   0.071   0.798  ALU/XLXI_18 (ALU/B1s<0>)
+     XOR2:I0->O            2   0.068   0.781  ALU/XLXI_29/FA_0/XLXI_5 (ALU/XLXI_29/FA_0/A_xor_B)
+     AND2:I1->O            1   0.071   0.775  ALU/XLXI_29/FA_0/XLXI_9 (ALU/XLXI_29/FA_0/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_0/XLXI_7 (ALU/XLXI_29/XLXN_16)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_1/XLXI_9 (ALU/XLXI_29/FA_1/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_1/XLXI_7 (ALU/XLXI_29/XLXN_15)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_2/XLXI_9 (ALU/XLXI_29/FA_2/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_2/XLXI_7 (ALU/XLXI_29/XLXN_14)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_3/XLXI_9 (ALU/XLXI_29/FA_3/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_3/XLXI_7 (ALU/XLXI_29/XLXN_13)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_4/XLXI_9 (ALU/XLXI_29/FA_4/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_4/XLXI_7 (ALU/XLXI_29/XLXN_12)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_5/XLXI_9 (ALU/XLXI_29/FA_5/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_5/XLXI_7 (ALU/XLXI_29/XLXN_11)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_6/XLXI_9 (ALU/XLXI_29/FA_6/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_6/XLXI_7 (ALU/XLXI_29/XLXN_10)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_7/XLXI_9 (ALU/XLXI_29/FA_7/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_7/XLXI_7 (ALU/XLXI_29/XLXN_9)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_8/XLXI_9 (ALU/XLXI_29/FA_8/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_8/XLXI_7 (ALU/XLXI_29/XLXN_8)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_9/XLXI_9 (ALU/XLXI_29/FA_9/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_9/XLXI_7 (ALU/XLXI_29/XLXN_7)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_10/XLXI_9 (ALU/XLXI_29/FA_10/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_10/XLXI_7 (ALU/XLXI_29/XLXN_6)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_11/XLXI_9 (ALU/XLXI_29/FA_11/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_11/XLXI_7 (ALU/XLXI_29/XLXN_5)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_12/XLXI_9 (ALU/XLXI_29/FA_12/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_12/XLXI_7 (ALU/XLXI_29/XLXN_3)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_13/XLXI_9 (ALU/XLXI_29/FA_13/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_13/XLXI_7 (ALU/XLXI_29/XLXN_2)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_14/XLXI_9 (ALU/XLXI_29/FA_14/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_14/XLXI_7 (ALU/XLXI_29/XLXN_1)
+     XOR2:I0->O            5   0.068   0.426  ALU/XLXI_29/FA_15/XLXI_6 (ALU_S_15_OBUF)
+     FDE:D                     0.011          ALUOut/XLXI_18
+    ----------------------------------------
+    Total                     30.538ns (3.014ns logic, 27.524ns route)
+                                       (9.9% logic, 90.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 7552 / 352
+-------------------------------------------------------------------------
+Offset:              32.866ns (Levels of Logic = 39)
+  Source:            Imm_Sel<0> (PAD)
+  Destination:       ALUOut/XLXI_18 (FF)
+  Destination Clock: clk rising
+
+  Data Path: Imm_Sel<0> to ALUOut/XLXI_18
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            48   0.003   0.555  Imm_Sel_0_IBUF (Imm_Sel_0_IBUF)
+     INV:I->O              2   0.447   0.781  S50_S81_Z82_Zero3/XLXI_1/XLXI_24/XLXI_7 (S50_S81_Z82_Zero3/XLXI_1/XLXI_24/XLXN_12)
+     AND3:I1->O            1   0.071   0.775  S50_S81_Z82_Zero3/XLXI_1/XLXI_24/XLXI_3 (S50_S81_Z82_Zero3/XLXI_1/XLXI_24/XLXN_4)
+     OR4:I1->O             1   0.071   0.778  S50_S81_Z82_Zero3/XLXI_1/XLXI_24/XLXI_5 (XLXN_86<0>)
+     AND3:I0->O            1   0.068   0.638  DataB_MUX/XLXI_24/XLXI_2 (DataB_MUX/XLXI_24/XLXN_3)
+     OR4:I2->O             1   0.208   0.775  DataB_MUX/XLXI_24/XLXI_5 (B<0>)
+     XOR2:I1->O            4   0.071   0.798  ALU/XLXI_18 (ALU/B1s<0>)
+     XOR2:I0->O            2   0.068   0.781  ALU/XLXI_29/FA_0/XLXI_5 (ALU/XLXI_29/FA_0/A_xor_B)
+     AND2:I1->O            1   0.071   0.775  ALU/XLXI_29/FA_0/XLXI_9 (ALU/XLXI_29/FA_0/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_0/XLXI_7 (ALU/XLXI_29/XLXN_16)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_1/XLXI_9 (ALU/XLXI_29/FA_1/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_1/XLXI_7 (ALU/XLXI_29/XLXN_15)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_2/XLXI_9 (ALU/XLXI_29/FA_2/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_2/XLXI_7 (ALU/XLXI_29/XLXN_14)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_3/XLXI_9 (ALU/XLXI_29/FA_3/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_3/XLXI_7 (ALU/XLXI_29/XLXN_13)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_4/XLXI_9 (ALU/XLXI_29/FA_4/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_4/XLXI_7 (ALU/XLXI_29/XLXN_12)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_5/XLXI_9 (ALU/XLXI_29/FA_5/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_5/XLXI_7 (ALU/XLXI_29/XLXN_11)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_6/XLXI_9 (ALU/XLXI_29/FA_6/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_6/XLXI_7 (ALU/XLXI_29/XLXN_10)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_7/XLXI_9 (ALU/XLXI_29/FA_7/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_7/XLXI_7 (ALU/XLXI_29/XLXN_9)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_8/XLXI_9 (ALU/XLXI_29/FA_8/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_8/XLXI_7 (ALU/XLXI_29/XLXN_8)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_9/XLXI_9 (ALU/XLXI_29/FA_9/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_9/XLXI_7 (ALU/XLXI_29/XLXN_7)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_10/XLXI_9 (ALU/XLXI_29/FA_10/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_10/XLXI_7 (ALU/XLXI_29/XLXN_6)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_11/XLXI_9 (ALU/XLXI_29/FA_11/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_11/XLXI_7 (ALU/XLXI_29/XLXN_5)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_12/XLXI_9 (ALU/XLXI_29/FA_12/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_12/XLXI_7 (ALU/XLXI_29/XLXN_3)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_13/XLXI_9 (ALU/XLXI_29/FA_13/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_13/XLXI_7 (ALU/XLXI_29/XLXN_2)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_14/XLXI_9 (ALU/XLXI_29/FA_14/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_14/XLXI_7 (ALU/XLXI_29/XLXN_1)
+     XOR2:I0->O            5   0.068   0.426  ALU/XLXI_29/FA_15/XLXI_6 (ALU_S_15_OBUF)
+     FDE:D                     0.011          ALUOut/XLXI_18
+    ----------------------------------------
+    Total                     32.866ns (3.174ns logic, 29.692ns route)
+                                       (9.7% logic, 90.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 1261 / 36
+-------------------------------------------------------------------------
+Offset:              32.222ns (Levels of Logic = 38)
+  Source:            ReadB_data_DFF/XLXI_33 (FF)
+  Destination:       NZVC<1> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: ReadB_data_DFF/XLXI_33 to NZVC<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.375   0.778  ReadB_data_DFF/XLXI_33 (I0<0>)
+     AND3:I0->O            1   0.068   0.581  DataB_MUX/XLXI_24/XLXI_1 (DataB_MUX/XLXI_24/XLXN_2)
+     OR4:I3->O             1   0.265   0.775  DataB_MUX/XLXI_24/XLXI_5 (B<0>)
+     XOR2:I1->O            4   0.071   0.798  ALU/XLXI_18 (ALU/B1s<0>)
+     XOR2:I0->O            2   0.068   0.781  ALU/XLXI_29/FA_0/XLXI_5 (ALU/XLXI_29/FA_0/A_xor_B)
+     AND2:I1->O            1   0.071   0.775  ALU/XLXI_29/FA_0/XLXI_9 (ALU/XLXI_29/FA_0/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_0/XLXI_7 (ALU/XLXI_29/XLXN_16)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_1/XLXI_9 (ALU/XLXI_29/FA_1/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_1/XLXI_7 (ALU/XLXI_29/XLXN_15)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_2/XLXI_9 (ALU/XLXI_29/FA_2/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_2/XLXI_7 (ALU/XLXI_29/XLXN_14)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_3/XLXI_9 (ALU/XLXI_29/FA_3/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_3/XLXI_7 (ALU/XLXI_29/XLXN_13)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_4/XLXI_9 (ALU/XLXI_29/FA_4/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_4/XLXI_7 (ALU/XLXI_29/XLXN_12)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_5/XLXI_9 (ALU/XLXI_29/FA_5/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_5/XLXI_7 (ALU/XLXI_29/XLXN_11)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_6/XLXI_9 (ALU/XLXI_29/FA_6/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_6/XLXI_7 (ALU/XLXI_29/XLXN_10)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_7/XLXI_9 (ALU/XLXI_29/FA_7/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_7/XLXI_7 (ALU/XLXI_29/XLXN_9)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_8/XLXI_9 (ALU/XLXI_29/FA_8/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_8/XLXI_7 (ALU/XLXI_29/XLXN_8)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_9/XLXI_9 (ALU/XLXI_29/FA_9/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_9/XLXI_7 (ALU/XLXI_29/XLXN_7)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_10/XLXI_9 (ALU/XLXI_29/FA_10/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_10/XLXI_7 (ALU/XLXI_29/XLXN_6)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_11/XLXI_9 (ALU/XLXI_29/FA_11/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_11/XLXI_7 (ALU/XLXI_29/XLXN_5)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_12/XLXI_9 (ALU/XLXI_29/FA_12/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_12/XLXI_7 (ALU/XLXI_29/XLXN_3)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_13/XLXI_9 (ALU/XLXI_29/FA_13/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_13/XLXI_7 (ALU/XLXI_29/XLXN_2)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_14/XLXI_9 (ALU/XLXI_29/FA_14/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_14/XLXI_7 (ALU/XLXI_29/XLXN_1)
+     XOR2:I0->O            5   0.068   0.805  ALU/XLXI_29/FA_15/XLXI_6 (ALU_S_15_OBUF)
+     XOR2:I0->O            1   0.068   0.775  ALU/XLXI_75 (ALU/XLXN_196)
+     AND2:I1->O            1   0.071   0.399  ALU/XLXI_76 (NZVC_1_OBUF)
+     OBUF:I->O                 0.003          NZVC_1_OBUF (NZVC<1>)
+    ----------------------------------------
+    Total                     32.222ns (3.145ns logic, 29.077ns route)
+                                       (9.8% logic, 90.2% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 14411 / 20
+-------------------------------------------------------------------------
+Delay:               34.550ns (Levels of Logic = 42)
+  Source:            Imm_Sel<0> (PAD)
+  Destination:       NZVC<1> (PAD)
+
+  Data Path: Imm_Sel<0> to NZVC<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            48   0.003   0.555  Imm_Sel_0_IBUF (Imm_Sel_0_IBUF)
+     INV:I->O              2   0.447   0.781  S50_S81_Z82_Zero3/XLXI_1/XLXI_24/XLXI_7 (S50_S81_Z82_Zero3/XLXI_1/XLXI_24/XLXN_12)
+     AND3:I1->O            1   0.071   0.775  S50_S81_Z82_Zero3/XLXI_1/XLXI_24/XLXI_3 (S50_S81_Z82_Zero3/XLXI_1/XLXI_24/XLXN_4)
+     OR4:I1->O             1   0.071   0.778  S50_S81_Z82_Zero3/XLXI_1/XLXI_24/XLXI_5 (XLXN_86<0>)
+     AND3:I0->O            1   0.068   0.638  DataB_MUX/XLXI_24/XLXI_2 (DataB_MUX/XLXI_24/XLXN_3)
+     OR4:I2->O             1   0.208   0.775  DataB_MUX/XLXI_24/XLXI_5 (B<0>)
+     XOR2:I1->O            4   0.071   0.798  ALU/XLXI_18 (ALU/B1s<0>)
+     XOR2:I0->O            2   0.068   0.781  ALU/XLXI_29/FA_0/XLXI_5 (ALU/XLXI_29/FA_0/A_xor_B)
+     AND2:I1->O            1   0.071   0.775  ALU/XLXI_29/FA_0/XLXI_9 (ALU/XLXI_29/FA_0/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_0/XLXI_7 (ALU/XLXI_29/XLXN_16)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_1/XLXI_9 (ALU/XLXI_29/FA_1/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_1/XLXI_7 (ALU/XLXI_29/XLXN_15)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_2/XLXI_9 (ALU/XLXI_29/FA_2/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_2/XLXI_7 (ALU/XLXI_29/XLXN_14)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_3/XLXI_9 (ALU/XLXI_29/FA_3/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_3/XLXI_7 (ALU/XLXI_29/XLXN_13)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_4/XLXI_9 (ALU/XLXI_29/FA_4/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_4/XLXI_7 (ALU/XLXI_29/XLXN_12)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_5/XLXI_9 (ALU/XLXI_29/FA_5/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_5/XLXI_7 (ALU/XLXI_29/XLXN_11)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_6/XLXI_9 (ALU/XLXI_29/FA_6/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_6/XLXI_7 (ALU/XLXI_29/XLXN_10)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_7/XLXI_9 (ALU/XLXI_29/FA_7/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_7/XLXI_7 (ALU/XLXI_29/XLXN_9)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_8/XLXI_9 (ALU/XLXI_29/FA_8/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_8/XLXI_7 (ALU/XLXI_29/XLXN_8)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_9/XLXI_9 (ALU/XLXI_29/FA_9/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_9/XLXI_7 (ALU/XLXI_29/XLXN_7)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_10/XLXI_9 (ALU/XLXI_29/FA_10/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_10/XLXI_7 (ALU/XLXI_29/XLXN_6)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_11/XLXI_9 (ALU/XLXI_29/FA_11/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_11/XLXI_7 (ALU/XLXI_29/XLXN_5)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_12/XLXI_9 (ALU/XLXI_29/FA_12/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_12/XLXI_7 (ALU/XLXI_29/XLXN_3)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_13/XLXI_9 (ALU/XLXI_29/FA_13/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_13/XLXI_7 (ALU/XLXI_29/XLXN_2)
+     AND2:I0->O            1   0.068   0.775  ALU/XLXI_29/FA_14/XLXI_9 (ALU/XLXI_29/FA_14/XLXN_23)
+     OR2:I1->O             2   0.071   0.784  ALU/XLXI_29/FA_14/XLXI_7 (ALU/XLXI_29/XLXN_1)
+     XOR2:I0->O            5   0.068   0.805  ALU/XLXI_29/FA_15/XLXI_6 (ALU_S_15_OBUF)
+     XOR2:I0->O            1   0.068   0.775  ALU/XLXI_75 (ALU/XLXN_196)
+     AND2:I1->O            1   0.071   0.399  ALU/XLXI_76 (NZVC_1_OBUF)
+     OBUF:I->O                 0.003          NZVC_1_OBUF (NZVC<1>)
+    ----------------------------------------
+    Total                     34.550ns (3.305ns logic, 31.245ns route)
+                                       (9.6% logic, 90.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   30.538|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 0.31 secs
+ 
+--> 
+
+
+Total memory usage is 500852 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

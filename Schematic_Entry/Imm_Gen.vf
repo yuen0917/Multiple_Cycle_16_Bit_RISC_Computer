@@ -1,0 +1,304 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Imm_Gen.vf
+// /___/   /\     Timestamp : 03/24/2025 16:36:21
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family virtex6 -verilog /home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Imm_Gen.vf -w /home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Imm_Gen.sch
+//Design Name: Imm_Gen
+//Device: virtex6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module MUX4_1_MUSER_Imm_Gen(I0, 
+                            I1, 
+                            I2, 
+                            I3, 
+                            S, 
+                            O);
+
+    input I0;
+    input I1;
+    input I2;
+    input I3;
+    input [1:0] S;
+   output O;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_9;
+   wire XLXN_12;
+   
+   AND3  XLXI_1 (.I0(I0), 
+                .I1(XLXN_12), 
+                .I2(XLXN_9), 
+                .O(XLXN_2));
+   AND3  XLXI_2 (.I0(I1), 
+                .I1(S[0]), 
+                .I2(XLXN_9), 
+                .O(XLXN_3));
+   AND3  XLXI_3 (.I0(I2), 
+                .I1(XLXN_12), 
+                .I2(S[1]), 
+                .O(XLXN_4));
+   AND3  XLXI_4 (.I0(I3), 
+                .I1(S[0]), 
+                .I2(S[1]), 
+                .O(XLXN_1));
+   OR4  XLXI_5 (.I0(XLXN_1), 
+               .I1(XLXN_4), 
+               .I2(XLXN_3), 
+               .I3(XLXN_2), 
+               .O(O));
+   INV  XLXI_6 (.I(S[1]), 
+               .O(XLXN_9));
+   INV  XLXI_7 (.I(S[0]), 
+               .O(XLXN_12));
+endmodule
+`timescale 1ns / 1ps
+
+module MUX4_1_16bits_MUSER_Imm_Gen(I0, 
+                                   I1, 
+                                   I2, 
+                                   I3, 
+                                   S, 
+                                   O);
+
+    input [15:0] I0;
+    input [15:0] I1;
+    input [15:0] I2;
+    input [15:0] I3;
+    input [1:0] S;
+   output [15:0] O;
+   
+   
+   MUX4_1_MUSER_Imm_Gen  XLXI_9 (.I0(I0[15]), 
+                                .I1(I1[15]), 
+                                .I2(I2[15]), 
+                                .I3(I3[15]), 
+                                .S(S[1:0]), 
+                                .O(O[15]));
+   MUX4_1_MUSER_Imm_Gen  XLXI_10 (.I0(I0[14]), 
+                                 .I1(I1[14]), 
+                                 .I2(I2[14]), 
+                                 .I3(I3[14]), 
+                                 .S(S[1:0]), 
+                                 .O(O[14]));
+   MUX4_1_MUSER_Imm_Gen  XLXI_11 (.I0(I0[13]), 
+                                 .I1(I1[13]), 
+                                 .I2(I2[13]), 
+                                 .I3(I3[13]), 
+                                 .S(S[1:0]), 
+                                 .O(O[13]));
+   MUX4_1_MUSER_Imm_Gen  XLXI_12 (.I0(I0[12]), 
+                                 .I1(I1[12]), 
+                                 .I2(I2[12]), 
+                                 .I3(I3[12]), 
+                                 .S(S[1:0]), 
+                                 .O(O[12]));
+   MUX4_1_MUSER_Imm_Gen  XLXI_13 (.I0(I0[11]), 
+                                 .I1(I1[11]), 
+                                 .I2(I2[11]), 
+                                 .I3(I3[11]), 
+                                 .S(S[1:0]), 
+                                 .O(O[11]));
+   MUX4_1_MUSER_Imm_Gen  XLXI_14 (.I0(I0[10]), 
+                                 .I1(I1[10]), 
+                                 .I2(I2[10]), 
+                                 .I3(I3[10]), 
+                                 .S(S[1:0]), 
+                                 .O(O[10]));
+   MUX4_1_MUSER_Imm_Gen  XLXI_15 (.I0(I0[9]), 
+                                 .I1(I1[9]), 
+                                 .I2(I2[9]), 
+                                 .I3(I3[9]), 
+                                 .S(S[1:0]), 
+                                 .O(O[9]));
+   MUX4_1_MUSER_Imm_Gen  XLXI_16 (.I0(I0[8]), 
+                                 .I1(I1[8]), 
+                                 .I2(I2[8]), 
+                                 .I3(I3[8]), 
+                                 .S(S[1:0]), 
+                                 .O(O[8]));
+   MUX4_1_MUSER_Imm_Gen  XLXI_17 (.I0(I0[7]), 
+                                 .I1(I1[7]), 
+                                 .I2(I2[7]), 
+                                 .I3(I3[7]), 
+                                 .S(S[1:0]), 
+                                 .O(O[7]));
+   MUX4_1_MUSER_Imm_Gen  XLXI_18 (.I0(I0[6]), 
+                                 .I1(I1[6]), 
+                                 .I2(I2[6]), 
+                                 .I3(I3[6]), 
+                                 .S(S[1:0]), 
+                                 .O(O[6]));
+   MUX4_1_MUSER_Imm_Gen  XLXI_19 (.I0(I0[5]), 
+                                 .I1(I1[5]), 
+                                 .I2(I2[5]), 
+                                 .I3(I3[5]), 
+                                 .S(S[1:0]), 
+                                 .O(O[5]));
+   MUX4_1_MUSER_Imm_Gen  XLXI_20 (.I0(I0[4]), 
+                                 .I1(I1[4]), 
+                                 .I2(I2[4]), 
+                                 .I3(I3[4]), 
+                                 .S(S[1:0]), 
+                                 .O(O[4]));
+   MUX4_1_MUSER_Imm_Gen  XLXI_21 (.I0(I0[3]), 
+                                 .I1(I1[3]), 
+                                 .I2(I2[3]), 
+                                 .I3(I3[3]), 
+                                 .S(S[1:0]), 
+                                 .O(O[3]));
+   MUX4_1_MUSER_Imm_Gen  XLXI_22 (.I0(I0[2]), 
+                                 .I1(I1[2]), 
+                                 .I2(I2[2]), 
+                                 .I3(I3[2]), 
+                                 .S(S[1:0]), 
+                                 .O(O[2]));
+   MUX4_1_MUSER_Imm_Gen  XLXI_23 (.I0(I0[1]), 
+                                 .I1(I1[1]), 
+                                 .I2(I2[1]), 
+                                 .I3(I3[1]), 
+                                 .S(S[1:0]), 
+                                 .O(O[1]));
+   MUX4_1_MUSER_Imm_Gen  XLXI_24 (.I0(I0[0]), 
+                                 .I1(I1[0]), 
+                                 .I2(I2[0]), 
+                                 .I3(I3[0]), 
+                                 .S(S[1:0]), 
+                                 .O(O[0]));
+endmodule
+`timescale 1ns / 1ps
+
+module Imm_Gen(Imm_Sel, 
+               Instr, 
+               Imm_Out);
+
+    input [1:0] Imm_Sel;
+    input [15:0] Instr;
+   output [15:0] Imm_Out;
+   
+   wire [15:0] Imm5_SE;
+   wire [15:0] Imm8_SE;
+   wire [15:0] Imm8_ZE;
+   wire [15:0] XLXN_113;
+   wire [15:0] Instr_DUMMY;
+   
+   assign XLXN_113 = 16'h0000;
+   assign Instr_DUMMY[15:0] = Instr[15:0];
+   MUX4_1_16bits_MUSER_Imm_Gen  XLXI_1 (.I0(Imm5_SE[15:0]), 
+                                       .I1(Imm8_SE[15:0]), 
+                                       .I2(Imm8_ZE[15:0]), 
+                                       .I3(XLXN_113[15:0]), 
+                                       .S(Imm_Sel[1:0]), 
+                                       .O(Imm_Out[15:0]));
+   GND  XLXI_9 (.G(Instr_DUMMY[8]));
+   GND  XLXI_10 (.G(Instr_DUMMY[9]));
+   GND  XLXI_11 (.G(Instr_DUMMY[10]));
+   GND  XLXI_12 (.G(Instr_DUMMY[11]));
+   GND  XLXI_14 (.G(Instr_DUMMY[12]));
+   GND  XLXI_15 (.G(Instr_DUMMY[13]));
+   GND  XLXI_16 (.G(Instr_DUMMY[14]));
+   GND  XLXI_17 (.G(Instr_DUMMY[15]));
+   BUF  XLXI_18 (.I(Instr_DUMMY[7]), 
+                .O(Imm8_SE[7]));
+   BUF  XLXI_19 (.I(Instr_DUMMY[6]), 
+                .O(Imm8_SE[6]));
+   BUF  XLXI_20 (.I(Instr_DUMMY[5]), 
+                .O(Imm8_SE[5]));
+   BUF  XLXI_21 (.I(Instr_DUMMY[4]), 
+                .O(Imm8_SE[4]));
+   BUF  XLXI_22 (.I(Instr_DUMMY[3]), 
+                .O(Imm8_SE[3]));
+   BUF  XLXI_23 (.I(Instr_DUMMY[2]), 
+                .O(Imm8_SE[2]));
+   BUF  XLXI_24 (.I(Instr_DUMMY[1]), 
+                .O(Imm8_SE[1]));
+   BUF  XLXI_25 (.I(Instr_DUMMY[0]), 
+                .O(Imm8_SE[0]));
+   BUF  XLXI_42 (.I(Instr_DUMMY[7]), 
+                .O(Imm8_ZE[7]));
+   BUF  XLXI_43 (.I(Instr_DUMMY[6]), 
+                .O(Imm8_ZE[6]));
+   BUF  XLXI_44 (.I(Instr_DUMMY[5]), 
+                .O(Imm8_ZE[5]));
+   BUF  XLXI_45 (.I(Instr_DUMMY[4]), 
+                .O(Imm8_ZE[4]));
+   BUF  XLXI_46 (.I(Instr_DUMMY[3]), 
+                .O(Imm8_ZE[3]));
+   BUF  XLXI_47 (.I(Instr_DUMMY[2]), 
+                .O(Imm8_ZE[2]));
+   BUF  XLXI_48 (.I(Instr_DUMMY[1]), 
+                .O(Imm8_ZE[1]));
+   BUF  XLXI_49 (.I(Instr_DUMMY[0]), 
+                .O(Imm8_ZE[0]));
+   BUF  XLXI_50 (.I(Instr_DUMMY[0]), 
+                .O(Imm5_SE[0]));
+   BUF  XLXI_51 (.I(Instr_DUMMY[1]), 
+                .O(Imm5_SE[1]));
+   BUF  XLXI_52 (.I(Instr_DUMMY[2]), 
+                .O(Imm5_SE[2]));
+   BUF  XLXI_53 (.I(Instr_DUMMY[3]), 
+                .O(Imm5_SE[3]));
+   BUF  XLXI_54 (.I(Instr_DUMMY[4]), 
+                .O(Imm5_SE[4]));
+   BUF  XLXI_55 (.I(Instr_DUMMY[7]), 
+                .O(Imm8_SE[8]));
+   BUF  XLXI_56 (.I(Instr_DUMMY[7]), 
+                .O(Imm8_SE[9]));
+   BUF  XLXI_57 (.I(Instr_DUMMY[7]), 
+                .O(Imm8_SE[10]));
+   BUF  XLXI_58 (.I(Instr_DUMMY[7]), 
+                .O(Imm8_SE[11]));
+   BUF  XLXI_59 (.I(Instr_DUMMY[7]), 
+                .O(Imm8_SE[12]));
+   BUF  XLXI_60 (.I(Instr_DUMMY[7]), 
+                .O(Imm8_SE[13]));
+   BUF  XLXI_61 (.I(Instr_DUMMY[7]), 
+                .O(Imm8_SE[14]));
+   BUF  XLXI_62 (.I(Instr_DUMMY[7]), 
+                .O(Imm8_SE[15]));
+   GND  XLXI_63 (.G(Imm8_ZE[8]));
+   GND  XLXI_64 (.G(Imm8_ZE[9]));
+   GND  XLXI_65 (.G(Imm8_ZE[10]));
+   GND  XLXI_66 (.G(Imm8_ZE[11]));
+   GND  XLXI_67 (.G(Imm8_ZE[12]));
+   GND  XLXI_68 (.G(Imm8_ZE[13]));
+   GND  XLXI_69 (.G(Imm8_ZE[14]));
+   GND  XLXI_70 (.G(Imm8_ZE[15]));
+   BUF  XLXI_71 (.I(Instr_DUMMY[4]), 
+                .O(Imm5_SE[5]));
+   BUF  XLXI_72 (.I(Instr_DUMMY[4]), 
+                .O(Imm5_SE[6]));
+   BUF  XLXI_73 (.I(Instr_DUMMY[4]), 
+                .O(Imm5_SE[7]));
+   BUF  XLXI_74 (.I(Instr_DUMMY[4]), 
+                .O(Imm5_SE[8]));
+   BUF  XLXI_75 (.I(Instr_DUMMY[4]), 
+                .O(Imm5_SE[9]));
+   BUF  XLXI_76 (.I(Instr_DUMMY[4]), 
+                .O(Imm5_SE[10]));
+   BUF  XLXI_77 (.I(Instr_DUMMY[4]), 
+                .O(Imm5_SE[11]));
+   BUF  XLXI_78 (.I(Instr_DUMMY[4]), 
+                .O(Imm5_SE[12]));
+   BUF  XLXI_79 (.I(Instr_DUMMY[4]), 
+                .O(Imm5_SE[13]));
+   BUF  XLXI_80 (.I(Instr_DUMMY[4]), 
+                .O(Imm5_SE[14]));
+   BUF  XLXI_81 (.I(Instr_DUMMY[4]), 
+                .O(Imm5_SE[15]));
+endmodule

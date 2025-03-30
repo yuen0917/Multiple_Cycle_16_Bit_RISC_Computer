@@ -1,0 +1,5 @@
+verilog work "MUX8_1.vf"
+verilog work "MUX8_1_16bits.vf"
+verilog work "DFF_Reg_16bits.vf"
+verilog work "D3_8E.vf"
+verilog work "Eight_Reg_16bits.vf"

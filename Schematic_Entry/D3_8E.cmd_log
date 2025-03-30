@@ -1,0 +1,34 @@
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.syr" 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.syr" 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.syr" 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.syr" 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.syr" 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.syr" 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.syr" 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.syr" 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.syr" 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.syr" 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.syr" 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.syr" 
+sch2sym -intstyle ise -family virtex6 -refsym D3_8E /home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.sch /home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.sym 
+sch2hdl -intstyle ise -family virtex6 -verilog D3_8E_drc.vf -w /home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.sch 
+sch2sym -intstyle ise -family virtex6 -refsym D3_8E /home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.sch /home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.sym 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.syr" 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.syr" 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.syr" 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.syr" 
+sch2sym -intstyle ise -family virtex6 -refsym D3_8E /home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.sch /home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.sym 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.syr" 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx75t-ff484-1 D3_8E.ngc D3_8E.ngd  
+map -intstyle ise -p xc6vlx75t-ff484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o D3_8E_map.ncd D3_8E.ngd D3_8E.pcf 
+par -w -intstyle ise -ol high -mt off D3_8E_map.ncd D3_8E.ncd D3_8E.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml D3_8E.twx D3_8E.ncd -o D3_8E.twr D3_8E.pcf 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.syr" 
+xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx75t-ff484-1 D3_8E.ngc D3_8E.ngd  
+map -intstyle ise -p xc6vlx75t-ff484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o D3_8E_map.ncd D3_8E.ngd D3_8E.pcf 
+par -w -intstyle ise -ol high -mt off D3_8E_map.ncd D3_8E.ncd D3_8E.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml D3_8E.twx D3_8E.ncd -o D3_8E.twr D3_8E.pcf 
+sch2hdl -intstyle ise -family virtex6 -verilog D3_8E_drc.vf -w /home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.sch 
+sch2sym -intstyle ise -family virtex6 -w -refsym D3_8E /home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.sch /home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/D3_8E.sym 
