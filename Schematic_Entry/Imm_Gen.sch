@@ -10,9 +10,6 @@
         <signal name="Imm8_SE(15:0)" />
         <signal name="Imm8_ZE(15:0)" />
         <signal name="Imm5_SE(15:0)" />
-        <signal name="Imm_Out(15:0)" />
-        <signal name="Imm_Sel(1:0)" />
-        <signal name="XLXN_113(15:0)" />
         <signal name="Instr(8)" />
         <signal name="Instr(9)" />
         <signal name="Instr(10)" />
@@ -77,9 +74,39 @@
         <signal name="Imm5_SE(7)" />
         <signal name="Imm5_SE(6)" />
         <signal name="Imm5_SE(5)" />
+        <signal name="Imm_Out(15:0)" />
+        <signal name="Imm_Sel(1:0)" />
+        <signal name="Imm8_Rd(15:0)" />
+        <signal name="Imm8_Rd(15)" />
+        <signal name="Imm8_Rd(14)" />
+        <signal name="Imm8_Rd(13)" />
+        <signal name="Imm8_Rd(12)" />
+        <signal name="Imm8_Rd(11)" />
+        <signal name="Imm8_Rd(10)" />
+        <signal name="Imm8_Rd(9)" />
+        <signal name="Imm8_Rd(8)" />
+        <signal name="Imm8_Rd(7)" />
+        <signal name="Imm8_Rd(6)" />
+        <signal name="Imm8_Rd(5)" />
+        <signal name="Imm8_Rd(4)" />
+        <signal name="Imm8_Rd(3)" />
+        <signal name="Imm8_Rd(2)" />
+        <signal name="Imm8_Rd(1)" />
+        <signal name="Imm8_Rd(0)" />
+        <signal name="Rd(7:0)" />
+        <signal name="Rd(7)" />
+        <signal name="Rd(6)" />
+        <signal name="Rd(5)" />
+        <signal name="Rd(4)" />
+        <signal name="Rd(3)" />
+        <signal name="Rd(2)" />
+        <signal name="Rd(1)" />
+        <signal name="Rd(0)" />
+        <signal name="Rd(15:0)" />
         <port polarity="Input" name="Instr(15:0)" />
         <port polarity="Output" name="Imm_Out(15:0)" />
         <port polarity="Input" name="Imm_Sel(1:0)" />
+        <port polarity="Input" name="Rd(15:0)" />
         <blockdef name="MUX4_1_16bits">
             <timestamp>2025-3-22T14:49:57</timestamp>
             <rect width="256" x="64" y="-320" height="320" />
@@ -105,11 +132,6 @@
             <line x2="64" y1="-64" y2="-80" x1="64" />
             <line x2="64" y1="-128" y2="-96" x1="64" />
         </blockdef>
-        <blockdef name="constant">
-            <timestamp>2006-1-1T10:10:10</timestamp>
-            <rect width="112" x="0" y="0" height="64" />
-            <line x2="112" y1="32" y2="32" x1="144" />
-        </blockdef>
         <blockdef name="buf">
             <timestamp>2000-1-1T10:10:10</timestamp>
             <line x2="64" y1="-32" y2="-32" x1="0" />
@@ -118,22 +140,6 @@
             <line x2="64" y1="-32" y2="-64" x1="128" />
             <line x2="64" y1="-64" y2="0" x1="64" />
         </blockdef>
-        <block symbolname="MUX4_1_16bits" name="XLXI_1">
-            <blockpin signalname="Imm5_SE(15:0)" name="I0(15:0)" />
-            <blockpin signalname="Imm8_SE(15:0)" name="I1(15:0)" />
-            <blockpin signalname="Imm8_ZE(15:0)" name="I2(15:0)" />
-            <blockpin signalname="XLXN_113(15:0)" name="I3(15:0)" />
-            <blockpin signalname="Imm_Out(15:0)" name="O(15:0)" />
-            <blockpin signalname="Imm_Sel(1:0)" name="S(1:0)" />
-        </block>
-        <block symbolname="constant" name="XLXI_8">
-            <attr value="0000" name="CValue">
-                <trait delete="all:1 sym:0" />
-                <trait editname="all:1 sch:0" />
-                <trait valuetype="BitVector 32 Hexadecimal" />
-            </attr>
-            <blockpin signalname="XLXN_113(15:0)" name="O" />
-        </block>
         <block symbolname="gnd" name="XLXI_9">
             <blockpin signalname="Instr(8)" name="G" />
         </block>
@@ -342,6 +348,78 @@
             <blockpin signalname="Instr(4)" name="I" />
             <blockpin signalname="Imm5_SE(15)" name="O" />
         </block>
+        <block symbolname="MUX4_1_16bits" name="XLXI_1">
+            <blockpin signalname="Imm5_SE(15:0)" name="I0(15:0)" />
+            <blockpin signalname="Imm8_SE(15:0)" name="I1(15:0)" />
+            <blockpin signalname="Imm8_ZE(15:0)" name="I2(15:0)" />
+            <blockpin signalname="Imm8_Rd(15:0)" name="I3(15:0)" />
+            <blockpin signalname="Imm_Out(15:0)" name="O(15:0)" />
+            <blockpin signalname="Imm_Sel(1:0)" name="S(1:0)" />
+        </block>
+        <block symbolname="buf" name="XLXI_83">
+            <blockpin signalname="Instr(7)" name="I" />
+            <blockpin signalname="Imm8_Rd(15)" name="O" />
+        </block>
+        <block symbolname="buf" name="XLXI_84">
+            <blockpin signalname="Instr(6)" name="I" />
+            <blockpin signalname="Imm8_Rd(14)" name="O" />
+        </block>
+        <block symbolname="buf" name="XLXI_85">
+            <blockpin signalname="Instr(5)" name="I" />
+            <blockpin signalname="Imm8_Rd(13)" name="O" />
+        </block>
+        <block symbolname="buf" name="XLXI_86">
+            <blockpin signalname="Instr(4)" name="I" />
+            <blockpin signalname="Imm8_Rd(12)" name="O" />
+        </block>
+        <block symbolname="buf" name="XLXI_87">
+            <blockpin signalname="Instr(3)" name="I" />
+            <blockpin signalname="Imm8_Rd(11)" name="O" />
+        </block>
+        <block symbolname="buf" name="XLXI_88">
+            <blockpin signalname="Instr(2)" name="I" />
+            <blockpin signalname="Imm8_Rd(10)" name="O" />
+        </block>
+        <block symbolname="buf" name="XLXI_89">
+            <blockpin signalname="Instr(1)" name="I" />
+            <blockpin signalname="Imm8_Rd(9)" name="O" />
+        </block>
+        <block symbolname="buf" name="XLXI_90">
+            <blockpin signalname="Instr(0)" name="I" />
+            <blockpin signalname="Imm8_Rd(8)" name="O" />
+        </block>
+        <block symbolname="buf" name="XLXI_91">
+            <blockpin signalname="Rd(7)" name="I" />
+            <blockpin signalname="Imm8_Rd(7)" name="O" />
+        </block>
+        <block symbolname="buf" name="XLXI_92">
+            <blockpin signalname="Rd(6)" name="I" />
+            <blockpin signalname="Imm8_Rd(6)" name="O" />
+        </block>
+        <block symbolname="buf" name="XLXI_93">
+            <blockpin signalname="Rd(5)" name="I" />
+            <blockpin signalname="Imm8_Rd(5)" name="O" />
+        </block>
+        <block symbolname="buf" name="XLXI_94">
+            <blockpin signalname="Rd(4)" name="I" />
+            <blockpin signalname="Imm8_Rd(4)" name="O" />
+        </block>
+        <block symbolname="buf" name="XLXI_95">
+            <blockpin signalname="Rd(3)" name="I" />
+            <blockpin signalname="Imm8_Rd(3)" name="O" />
+        </block>
+        <block symbolname="buf" name="XLXI_96">
+            <blockpin signalname="Rd(2)" name="I" />
+            <blockpin signalname="Imm8_Rd(2)" name="O" />
+        </block>
+        <block symbolname="buf" name="XLXI_97">
+            <blockpin signalname="Rd(1)" name="I" />
+            <blockpin signalname="Imm8_Rd(1)" name="O" />
+        </block>
+        <block symbolname="buf" name="XLXI_98">
+            <blockpin signalname="Rd(0)" name="I" />
+            <blockpin signalname="Imm8_Rd(0)" name="O" />
+        </block>
     </netlist>
     <sheet sheetnum="1" width="7040" height="5440">
         <branch name="Instr(15:0)">
@@ -365,6 +443,7 @@
             <wire x2="976" y1="3920" y2="3920" x1="912" />
             <wire x2="1200" y1="3920" y2="3920" x1="976" />
             <wire x2="1840" y1="3920" y2="3920" x1="1200" />
+            <wire x2="3040" y1="3920" y2="3920" x1="1840" />
             <wire x2="1200" y1="3280" y2="3296" x1="1200" />
             <wire x2="1200" y1="3296" y2="3360" x1="1200" />
             <wire x2="1200" y1="3360" y2="3424" x1="1200" />
@@ -380,10 +459,18 @@
             <wire x2="1840" y1="3616" y2="3680" x1="1840" />
             <wire x2="1840" y1="3680" y2="3744" x1="1840" />
             <wire x2="1840" y1="3744" y2="3920" x1="1840" />
+            <wire x2="3040" y1="2768" y2="2784" x1="3040" />
+            <wire x2="3040" y1="2784" y2="2848" x1="3040" />
+            <wire x2="3040" y1="2848" y2="2912" x1="3040" />
+            <wire x2="3040" y1="2912" y2="2976" x1="3040" />
+            <wire x2="3040" y1="2976" y2="3040" x1="3040" />
+            <wire x2="3040" y1="3040" y2="3104" x1="3040" />
+            <wire x2="3040" y1="3104" y2="3168" x1="3040" />
+            <wire x2="3040" y1="3168" y2="3232" x1="3040" />
+            <wire x2="3040" y1="3232" y2="3920" x1="3040" />
         </branch>
         <branch name="Imm8_SE(15:0)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1136" y="2384" type="branch" />
-            <wire x2="3840" y1="2384" y2="2384" x1="1136" />
             <wire x2="1136" y1="2384" y2="2784" x1="1136" />
             <wire x2="1136" y1="2784" y2="2848" x1="1136" />
             <wire x2="1136" y1="2848" y2="2912" x1="1136" />
@@ -401,6 +488,7 @@
             <wire x2="1136" y1="3616" y2="3680" x1="1136" />
             <wire x2="1136" y1="3680" y2="3744" x1="1136" />
             <wire x2="1136" y1="3744" y2="3760" x1="1136" />
+            <wire x2="4624" y1="2384" y2="2384" x1="1136" />
         </branch>
         <bustap x2="1040" y1="3744" y2="3744" x1="1136" />
         <bustap x2="1040" y1="3680" y2="3680" x1="1136" />
@@ -435,7 +523,7 @@
             <wire x2="1760" y1="3616" y2="3680" x1="1760" />
             <wire x2="1760" y1="3680" y2="3744" x1="1760" />
             <wire x2="1760" y1="3744" y2="3760" x1="1760" />
-            <wire x2="3840" y1="2448" y2="2448" x1="1760" />
+            <wire x2="4624" y1="2448" y2="2448" x1="1760" />
         </branch>
         <bustap x2="1664" y1="3744" y2="3744" x1="1760" />
         <bustap x2="1664" y1="3680" y2="3680" x1="1760" />
@@ -472,7 +560,7 @@
             <wire x2="2560" y1="3616" y2="3680" x1="2560" />
             <wire x2="2560" y1="3680" y2="3744" x1="2560" />
             <wire x2="2560" y1="3744" y2="3760" x1="2560" />
-            <wire x2="3840" y1="2320" y2="2320" x1="2560" />
+            <wire x2="4624" y1="2320" y2="2320" x1="2560" />
         </branch>
         <bustap x2="2464" y1="3744" y2="3744" x1="2560" />
         <bustap x2="2464" y1="3680" y2="3680" x1="2560" />
@@ -490,21 +578,6 @@
         <bustap x2="2464" y1="2912" y2="2912" x1="2560" />
         <bustap x2="2464" y1="2848" y2="2848" x1="2560" />
         <bustap x2="2464" y1="2784" y2="2784" x1="2560" />
-        <branch name="Imm_Out(15:0)">
-            <wire x2="4336" y1="2320" y2="2320" x1="4224" />
-        </branch>
-        <branch name="Imm_Sel(1:0)">
-            <wire x2="3840" y1="2576" y2="2576" x1="3584" />
-        </branch>
-        <instance x="3840" y="2608" name="XLXI_1" orien="R0">
-        </instance>
-        <iomarker fontsize="28" x="3584" y="2576" name="Imm_Sel(1:0)" orien="R180" />
-        <iomarker fontsize="28" x="4336" y="2320" name="Imm_Out(15:0)" orien="R0" />
-        <branch name="XLXN_113(15:0)">
-            <wire x2="3840" y1="2512" y2="2512" x1="3808" />
-        </branch>
-        <instance x="3664" y="2480" name="XLXI_8" orien="R0">
-        </instance>
         <bustap x2="528" y1="3920" y2="4016" x1="528" />
         <instance x="464" y="4304" name="XLXI_9" orien="R0" />
         <bustap x2="592" y1="3920" y2="4016" x1="592" />
@@ -1018,5 +1091,269 @@
             <wire x2="2416" y1="3424" y2="3424" x1="2304" />
             <wire x2="2464" y1="3424" y2="3424" x1="2416" />
         </branch>
+        <branch name="Imm_Out(15:0)">
+            <wire x2="5120" y1="2320" y2="2320" x1="5008" />
+        </branch>
+        <branch name="Imm_Sel(1:0)">
+            <wire x2="4624" y1="2576" y2="2576" x1="4368" />
+        </branch>
+        <instance x="4624" y="2608" name="XLXI_1" orien="R0">
+        </instance>
+        <branch name="Imm8_Rd(15:0)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="4144" y="2512" type="branch" />
+            <wire x2="3920" y1="2512" y2="2784" x1="3920" />
+            <wire x2="3920" y1="2784" y2="2848" x1="3920" />
+            <wire x2="3920" y1="2848" y2="2912" x1="3920" />
+            <wire x2="3920" y1="2912" y2="2976" x1="3920" />
+            <wire x2="3920" y1="2976" y2="3040" x1="3920" />
+            <wire x2="3920" y1="3040" y2="3104" x1="3920" />
+            <wire x2="3920" y1="3104" y2="3168" x1="3920" />
+            <wire x2="3920" y1="3168" y2="3232" x1="3920" />
+            <wire x2="3920" y1="3232" y2="3296" x1="3920" />
+            <wire x2="3920" y1="3296" y2="3360" x1="3920" />
+            <wire x2="3920" y1="3360" y2="3424" x1="3920" />
+            <wire x2="3920" y1="3424" y2="3488" x1="3920" />
+            <wire x2="3920" y1="3488" y2="3552" x1="3920" />
+            <wire x2="3920" y1="3552" y2="3616" x1="3920" />
+            <wire x2="3920" y1="3616" y2="3680" x1="3920" />
+            <wire x2="3920" y1="3680" y2="3744" x1="3920" />
+            <wire x2="3920" y1="3744" y2="3760" x1="3920" />
+            <wire x2="4144" y1="2512" y2="2512" x1="3920" />
+            <wire x2="4592" y1="2512" y2="2512" x1="4144" />
+            <wire x2="4624" y1="2512" y2="2512" x1="4592" />
+        </branch>
+        <iomarker fontsize="28" x="4368" y="2576" name="Imm_Sel(1:0)" orien="R180" />
+        <iomarker fontsize="28" x="5120" y="2320" name="Imm_Out(15:0)" orien="R0" />
+        <bustap x2="3824" y1="3744" y2="3744" x1="3920" />
+        <bustap x2="3824" y1="3680" y2="3680" x1="3920" />
+        <bustap x2="3824" y1="3616" y2="3616" x1="3920" />
+        <bustap x2="3824" y1="3552" y2="3552" x1="3920" />
+        <bustap x2="3824" y1="3488" y2="3488" x1="3920" />
+        <bustap x2="3824" y1="3424" y2="3424" x1="3920" />
+        <bustap x2="3824" y1="3360" y2="3360" x1="3920" />
+        <bustap x2="3824" y1="3296" y2="3296" x1="3920" />
+        <bustap x2="3824" y1="3232" y2="3232" x1="3920" />
+        <bustap x2="3824" y1="2784" y2="2784" x1="3920" />
+        <bustap x2="3824" y1="3168" y2="3168" x1="3920" />
+        <bustap x2="3824" y1="3104" y2="3104" x1="3920" />
+        <bustap x2="3824" y1="3040" y2="3040" x1="3920" />
+        <bustap x2="3824" y1="2976" y2="2976" x1="3920" />
+        <bustap x2="3824" y1="2912" y2="2912" x1="3920" />
+        <bustap x2="3824" y1="2848" y2="2848" x1="3920" />
+        <instance x="3440" y="2816" name="XLXI_83" orien="R0" />
+        <instance x="3440" y="2880" name="XLXI_84" orien="R0" />
+        <instance x="3440" y="2944" name="XLXI_85" orien="R0" />
+        <instance x="3440" y="3008" name="XLXI_86" orien="R0" />
+        <instance x="3440" y="3072" name="XLXI_87" orien="R0" />
+        <instance x="3440" y="3136" name="XLXI_88" orien="R0" />
+        <instance x="3440" y="3200" name="XLXI_89" orien="R0" />
+        <instance x="3440" y="3264" name="XLXI_90" orien="R0" />
+        <instance x="3440" y="3328" name="XLXI_91" orien="R0" />
+        <instance x="3440" y="3392" name="XLXI_92" orien="R0" />
+        <instance x="3440" y="3456" name="XLXI_93" orien="R0" />
+        <instance x="3440" y="3520" name="XLXI_94" orien="R0" />
+        <instance x="3440" y="3584" name="XLXI_95" orien="R0" />
+        <instance x="3440" y="3648" name="XLXI_96" orien="R0" />
+        <instance x="3440" y="3712" name="XLXI_97" orien="R0" />
+        <instance x="3440" y="3776" name="XLXI_98" orien="R0" />
+        <branch name="Imm8_Rd(15)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3712" y="2784" type="branch" />
+            <wire x2="3712" y1="2784" y2="2784" x1="3664" />
+            <wire x2="3824" y1="2784" y2="2784" x1="3712" />
+        </branch>
+        <branch name="Imm8_Rd(14)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3712" y="2848" type="branch" />
+            <wire x2="3712" y1="2848" y2="2848" x1="3664" />
+            <wire x2="3824" y1="2848" y2="2848" x1="3712" />
+        </branch>
+        <branch name="Imm8_Rd(13)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3712" y="2912" type="branch" />
+            <wire x2="3712" y1="2912" y2="2912" x1="3664" />
+            <wire x2="3824" y1="2912" y2="2912" x1="3712" />
+        </branch>
+        <branch name="Imm8_Rd(12)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3712" y="2976" type="branch" />
+            <wire x2="3712" y1="2976" y2="2976" x1="3664" />
+            <wire x2="3824" y1="2976" y2="2976" x1="3712" />
+        </branch>
+        <branch name="Imm8_Rd(11)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3712" y="3040" type="branch" />
+            <wire x2="3712" y1="3040" y2="3040" x1="3664" />
+            <wire x2="3824" y1="3040" y2="3040" x1="3712" />
+        </branch>
+        <branch name="Imm8_Rd(10)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3712" y="3104" type="branch" />
+            <wire x2="3712" y1="3104" y2="3104" x1="3664" />
+            <wire x2="3824" y1="3104" y2="3104" x1="3712" />
+        </branch>
+        <branch name="Imm8_Rd(9)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3712" y="3168" type="branch" />
+            <wire x2="3712" y1="3168" y2="3168" x1="3664" />
+            <wire x2="3824" y1="3168" y2="3168" x1="3712" />
+        </branch>
+        <branch name="Imm8_Rd(8)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3712" y="3232" type="branch" />
+            <wire x2="3712" y1="3232" y2="3232" x1="3664" />
+            <wire x2="3824" y1="3232" y2="3232" x1="3712" />
+        </branch>
+        <branch name="Imm8_Rd(7)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3712" y="3296" type="branch" />
+            <wire x2="3712" y1="3296" y2="3296" x1="3664" />
+            <wire x2="3824" y1="3296" y2="3296" x1="3712" />
+        </branch>
+        <branch name="Imm8_Rd(6)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3712" y="3360" type="branch" />
+            <wire x2="3712" y1="3360" y2="3360" x1="3664" />
+            <wire x2="3824" y1="3360" y2="3360" x1="3712" />
+        </branch>
+        <branch name="Imm8_Rd(5)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3712" y="3424" type="branch" />
+            <wire x2="3712" y1="3424" y2="3424" x1="3664" />
+            <wire x2="3824" y1="3424" y2="3424" x1="3712" />
+        </branch>
+        <branch name="Imm8_Rd(4)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3712" y="3488" type="branch" />
+            <wire x2="3712" y1="3488" y2="3488" x1="3664" />
+            <wire x2="3824" y1="3488" y2="3488" x1="3712" />
+        </branch>
+        <branch name="Imm8_Rd(3)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3712" y="3552" type="branch" />
+            <wire x2="3712" y1="3552" y2="3552" x1="3664" />
+            <wire x2="3824" y1="3552" y2="3552" x1="3712" />
+        </branch>
+        <branch name="Imm8_Rd(2)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3712" y="3616" type="branch" />
+            <wire x2="3712" y1="3616" y2="3616" x1="3664" />
+            <wire x2="3824" y1="3616" y2="3616" x1="3712" />
+        </branch>
+        <branch name="Imm8_Rd(1)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3712" y="3680" type="branch" />
+            <wire x2="3712" y1="3680" y2="3680" x1="3664" />
+            <wire x2="3824" y1="3680" y2="3680" x1="3712" />
+        </branch>
+        <branch name="Imm8_Rd(0)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3712" y="3744" type="branch" />
+            <wire x2="3712" y1="3744" y2="3744" x1="3664" />
+            <wire x2="3824" y1="3744" y2="3744" x1="3712" />
+        </branch>
+        <bustap x2="3136" y1="2784" y2="2784" x1="3040" />
+        <bustap x2="3136" y1="2848" y2="2848" x1="3040" />
+        <bustap x2="3136" y1="2912" y2="2912" x1="3040" />
+        <bustap x2="3136" y1="2976" y2="2976" x1="3040" />
+        <bustap x2="3136" y1="3040" y2="3040" x1="3040" />
+        <bustap x2="3136" y1="3104" y2="3104" x1="3040" />
+        <bustap x2="3136" y1="3168" y2="3168" x1="3040" />
+        <bustap x2="3136" y1="3232" y2="3232" x1="3040" />
+        <branch name="Instr(7)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3184" y="2784" type="branch" />
+            <wire x2="3184" y1="2784" y2="2784" x1="3136" />
+            <wire x2="3440" y1="2784" y2="2784" x1="3184" />
+        </branch>
+        <branch name="Instr(6)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3184" y="2848" type="branch" />
+            <wire x2="3184" y1="2848" y2="2848" x1="3136" />
+            <wire x2="3440" y1="2848" y2="2848" x1="3184" />
+        </branch>
+        <branch name="Instr(5)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3184" y="2912" type="branch" />
+            <wire x2="3184" y1="2912" y2="2912" x1="3136" />
+            <wire x2="3440" y1="2912" y2="2912" x1="3184" />
+        </branch>
+        <branch name="Instr(4)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3184" y="2976" type="branch" />
+            <wire x2="3184" y1="2976" y2="2976" x1="3136" />
+            <wire x2="3440" y1="2976" y2="2976" x1="3184" />
+        </branch>
+        <branch name="Instr(3)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3184" y="3040" type="branch" />
+            <wire x2="3184" y1="3040" y2="3040" x1="3136" />
+            <wire x2="3440" y1="3040" y2="3040" x1="3184" />
+        </branch>
+        <branch name="Instr(2)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3184" y="3104" type="branch" />
+            <wire x2="3184" y1="3104" y2="3104" x1="3136" />
+            <wire x2="3440" y1="3104" y2="3104" x1="3184" />
+        </branch>
+        <branch name="Instr(1)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3184" y="3168" type="branch" />
+            <wire x2="3184" y1="3168" y2="3168" x1="3136" />
+            <wire x2="3440" y1="3168" y2="3168" x1="3184" />
+        </branch>
+        <branch name="Instr(0)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3184" y="3232" type="branch" />
+            <wire x2="3184" y1="3232" y2="3232" x1="3136" />
+            <wire x2="3440" y1="3232" y2="3232" x1="3184" />
+        </branch>
+        <branch name="Rd(7:0)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3328" y="3920" type="branch" />
+            <wire x2="3120" y1="3280" y2="3296" x1="3120" />
+            <wire x2="3120" y1="3296" y2="3360" x1="3120" />
+            <wire x2="3120" y1="3360" y2="3424" x1="3120" />
+            <wire x2="3120" y1="3424" y2="3488" x1="3120" />
+            <wire x2="3120" y1="3488" y2="3552" x1="3120" />
+            <wire x2="3120" y1="3552" y2="3616" x1="3120" />
+            <wire x2="3120" y1="3616" y2="3680" x1="3120" />
+            <wire x2="3120" y1="3680" y2="3744" x1="3120" />
+            <wire x2="3120" y1="3744" y2="3920" x1="3120" />
+            <wire x2="3328" y1="3920" y2="3920" x1="3120" />
+            <wire x2="3600" y1="3920" y2="3920" x1="3328" />
+            <wire x2="3600" y1="3920" y2="3984" x1="3600" />
+        </branch>
+        <bustap x2="3216" y1="3296" y2="3296" x1="3120" />
+        <bustap x2="3216" y1="3360" y2="3360" x1="3120" />
+        <bustap x2="3216" y1="3424" y2="3424" x1="3120" />
+        <bustap x2="3216" y1="3488" y2="3488" x1="3120" />
+        <bustap x2="3216" y1="3552" y2="3552" x1="3120" />
+        <bustap x2="3216" y1="3616" y2="3616" x1="3120" />
+        <bustap x2="3216" y1="3680" y2="3680" x1="3120" />
+        <bustap x2="3216" y1="3744" y2="3744" x1="3120" />
+        <branch name="Rd(7)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3248" y="3296" type="branch" />
+            <wire x2="3248" y1="3296" y2="3296" x1="3216" />
+            <wire x2="3440" y1="3296" y2="3296" x1="3248" />
+        </branch>
+        <branch name="Rd(6)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3248" y="3360" type="branch" />
+            <wire x2="3248" y1="3360" y2="3360" x1="3216" />
+            <wire x2="3440" y1="3360" y2="3360" x1="3248" />
+        </branch>
+        <branch name="Rd(5)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3248" y="3424" type="branch" />
+            <wire x2="3248" y1="3424" y2="3424" x1="3216" />
+            <wire x2="3440" y1="3424" y2="3424" x1="3248" />
+        </branch>
+        <branch name="Rd(4)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3248" y="3488" type="branch" />
+            <wire x2="3248" y1="3488" y2="3488" x1="3216" />
+            <wire x2="3440" y1="3488" y2="3488" x1="3248" />
+        </branch>
+        <branch name="Rd(3)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3248" y="3552" type="branch" />
+            <wire x2="3248" y1="3552" y2="3552" x1="3216" />
+            <wire x2="3440" y1="3552" y2="3552" x1="3248" />
+        </branch>
+        <branch name="Rd(2)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3248" y="3616" type="branch" />
+            <wire x2="3248" y1="3616" y2="3616" x1="3216" />
+            <wire x2="3440" y1="3616" y2="3616" x1="3248" />
+        </branch>
+        <branch name="Rd(1)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3248" y="3680" type="branch" />
+            <wire x2="3248" y1="3680" y2="3680" x1="3216" />
+            <wire x2="3440" y1="3680" y2="3680" x1="3248" />
+        </branch>
+        <branch name="Rd(0)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3248" y="3744" type="branch" />
+            <wire x2="3248" y1="3744" y2="3744" x1="3216" />
+            <wire x2="3440" y1="3744" y2="3744" x1="3248" />
+        </branch>
+        <branch name="Rd(15:0)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3792" y="4080" type="branch" />
+            <wire x2="3600" y1="4080" y2="4080" x1="3584" />
+            <wire x2="3792" y1="4080" y2="4080" x1="3600" />
+            <wire x2="3840" y1="4080" y2="4080" x1="3792" />
+        </branch>
+        <bustap x2="3600" y1="4080" y2="3984" x1="3600" />
+        <iomarker fontsize="28" x="3840" y="4080" name="Rd(15:0)" orien="R0" />
     </sheet>
 </drawing>

@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : Eight_Reg_16bits.vf
-// /___/   /\     Timestamp : 03/25/2025 02:56:21
+// /___/   /\     Timestamp : 04/16/2025 18:10:07
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -65,56 +65,56 @@ module D3_8E_MUSER_Eight_Reg_16bits(A0,
    output D6;
    output D7;
    
-   wire XLXN_37;
-   wire XLXN_40;
-   wire XLXN_70;
+   wire XLXN_23;
+   wire XLXN_30;
+   wire XLXN_33;
    
+   AND4  XLXI_1 (.I0(EN), 
+                .I1(XLXN_33), 
+                .I2(XLXN_30), 
+                .I3(XLXN_23), 
+                .O(D0));
+   AND4  XLXI_2 (.I0(EN), 
+                .I1(A0), 
+                .I2(XLXN_30), 
+                .I3(XLXN_23), 
+                .O(D1));
+   AND4  XLXI_3 (.I0(EN), 
+                .I1(XLXN_33), 
+                .I2(A1), 
+                .I3(XLXN_23), 
+                .O(D2));
+   AND4  XLXI_4 (.I0(EN), 
+                .I1(A0), 
+                .I2(A1), 
+                .I3(XLXN_23), 
+                .O(D3));
+   AND4  XLXI_5 (.I0(EN), 
+                .I1(XLXN_33), 
+                .I2(XLXN_30), 
+                .I3(A2), 
+                .O(D4));
+   AND4  XLXI_6 (.I0(EN), 
+                .I1(A0), 
+                .I2(XLXN_30), 
+                .I3(A2), 
+                .O(D5));
+   AND4  XLXI_7 (.I0(EN), 
+                .I1(XLXN_33), 
+                .I2(A1), 
+                .I3(A2), 
+                .O(D6));
+   AND4  XLXI_8 (.I0(EN), 
+                .I1(A0), 
+                .I2(A1), 
+                .I3(A2), 
+                .O(D7));
    INV  XLXI_9 (.I(A2), 
-               .O(XLXN_37));
+               .O(XLXN_23));
    INV  XLXI_10 (.I(A1), 
-                .O(XLXN_40));
+                .O(XLXN_30));
    INV  XLXI_11 (.I(A0), 
-                .O(XLXN_70));
-   AND4  XLXI_17 (.I0(EN), 
-                 .I1(XLXN_70), 
-                 .I2(XLXN_40), 
-                 .I3(XLXN_37), 
-                 .O(D0));
-   AND4  XLXI_18 (.I0(EN), 
-                 .I1(A0), 
-                 .I2(XLXN_40), 
-                 .I3(XLXN_37), 
-                 .O(D1));
-   AND4  XLXI_19 (.I0(EN), 
-                 .I1(XLXN_70), 
-                 .I2(A1), 
-                 .I3(XLXN_37), 
-                 .O(D2));
-   AND4  XLXI_20 (.I0(EN), 
-                 .I1(A0), 
-                 .I2(A1), 
-                 .I3(XLXN_37), 
-                 .O(D3));
-   AND4  XLXI_21 (.I0(EN), 
-                 .I1(XLXN_70), 
-                 .I2(XLXN_40), 
-                 .I3(A2), 
-                 .O(D4));
-   AND4  XLXI_22 (.I0(EN), 
-                 .I1(A0), 
-                 .I2(XLXN_40), 
-                 .I3(A2), 
-                 .O(D5));
-   AND4  XLXI_23 (.I0(EN), 
-                 .I1(XLXN_70), 
-                 .I2(A1), 
-                 .I3(A2), 
-                 .O(D6));
-   AND4  XLXI_24 (.I0(EN), 
-                 .I1(A0), 
-                 .I2(A1), 
-                 .I3(A2), 
-                 .O(D7));
+                .O(XLXN_33));
 endmodule
 `timescale 1ns / 1ps
 
@@ -188,7 +188,7 @@ module MUX8_1_MUSER_Eight_Reg_16bits(I0,
                 .O(XLXN_9));
    INV  XLXI_7 (.I(S1), 
                .O(XLXN_52));
-   (* HU_SET = "XLXI_8_1" *) 
+   (* HU_SET = "XLXI_8_0" *) 
    OR8_HXILINX_Eight_Reg_16bits  XLXI_8 (.I0(XLXN_11), 
                                         .I1(XLXN_9), 
                                         .I2(XLXN_7), 
@@ -850,18 +850,6 @@ module Eight_Reg_16bits(clk,
    wire XLXN_758;
    wire XLXN_759;
    
-   D3_8E_MUSER_Eight_Reg_16bits  Load (.A0(Write_addr[0]), 
-                                      .A1(Write_addr[1]), 
-                                      .A2(Write_addr[2]), 
-                                      .EN(Write_enable), 
-                                      .D0(XLXN_65), 
-                                      .D1(XLXN_66), 
-                                      .D2(XLXN_67), 
-                                      .D3(XLXN_68), 
-                                      .D4(XLXN_759), 
-                                      .D5(XLXN_758), 
-                                      .D6(XLXN_757), 
-                                      .D7(XLXN_756));
    MUX8_1_16bits_MUSER_Eight_Reg_16bits  ReadA (.I0_00(Reg_0[0]), 
                                                .I0_01(Reg_0[1]), 
                                                .I0_02(Reg_0[2]), 
@@ -1398,4 +1386,16 @@ module Eight_Reg_16bits(clk,
                                                      .Q_13(Reg_7[13]), 
                                                      .Q_14(Reg_7[14]), 
                                                      .Q_15(Reg_7[15]));
+   D3_8E_MUSER_Eight_Reg_16bits  XLXI_1 (.A0(Write_addr[0]), 
+                                        .A1(Write_addr[1]), 
+                                        .A2(Write_addr[2]), 
+                                        .EN(Write_enable), 
+                                        .D0(XLXN_65), 
+                                        .D1(XLXN_66), 
+                                        .D2(XLXN_67), 
+                                        .D3(XLXN_68), 
+                                        .D4(XLXN_759), 
+                                        .D5(XLXN_758), 
+                                        .D6(XLXN_757), 
+                                        .D7(XLXN_756));
 endmodule

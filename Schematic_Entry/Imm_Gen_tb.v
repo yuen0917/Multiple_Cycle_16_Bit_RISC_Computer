@@ -7,6 +7,7 @@ module Imm_Gen_Imm_Gen_sch_tb();
 // Inputs
    reg [15:0] Instr;
    reg [1:0] Imm_Sel;
+	reg [15:0] Rd;
 
 // Output
    wire [15:0] Imm_Out;
@@ -17,10 +18,12 @@ module Imm_Gen_Imm_Gen_sch_tb();
    Imm_Gen UUT (
 		.Instr(Instr), 
 		.Imm_Out(Imm_Out), 
-		.Imm_Sel(Imm_Sel)
+		.Imm_Sel(Imm_Sel),
+		.Rd(Rd)
    );
 	initial begin
 		Instr = 16'h00ea;
+		Rd = 16'habab;
 		Imm_Sel = 2'b00;
 		#10;
 		

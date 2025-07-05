@@ -367,7 +367,7 @@
             <line x2="384" y1="-736" y2="-736" x1="320" />
         </blockdef>
         <blockdef name="D3_8E">
-            <timestamp>2025-3-18T14:30:20</timestamp>
+            <timestamp>2025-4-16T18:8:19</timestamp>
             <rect width="256" x="64" y="-512" height="512" />
             <line x2="0" y1="-352" y2="-352" x1="64" />
             <line x2="0" y1="-416" y2="-416" x1="64" />
@@ -938,7 +938,7 @@
             <blockpin signalname="Reg_0(1)" name="I0_01" />
             <blockpin signalname="Reg_0(0)" name="I0_00" />
         </block>
-        <block symbolname="D3_8E" name="Load">
+        <block symbolname="D3_8E" name="XLXI_1">
             <blockpin signalname="Write_addr(0)" name="A0" />
             <blockpin signalname="Write_addr(1)" name="A1" />
             <blockpin signalname="Write_addr(2)" name="A2" />
@@ -4826,11 +4826,10 @@
         </branch>
         <iomarker fontsize="28" x="5200" y="432" name="ReadA_data(15:0)" orien="R0" />
         <iomarker fontsize="28" x="6528" y="432" name="ReadB_data(15:0)" orien="R0" />
-        <instance x="336" y="2944" name="Load" orien="R0">
-            <attrtext style="fontsize:28;fontname:Arial" attrname="InstName" x="0" y="0" type="instance" />
-        </instance>
         <instance x="4528" y="4688" name="ReadA" orien="R0">
             <attrtext style="fontsize:28;fontname:Arial" attrname="InstName" x="0" y="0" type="instance" />
+        </instance>
+        <instance x="336" y="2944" name="XLXI_1" orien="R0">
         </instance>
     </sheet>
 </drawing>

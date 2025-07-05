@@ -1,0 +1,235 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : FA_2s_16bits.vf
+// /___/   /\     Timestamp : 04/16/2025 09:16:00
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family virtex6 -verilog /home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/FA_2s_16bits.vf -w /home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/FA_2s_16bits.sch
+//Design Name: FA_2s_16bits
+//Device: virtex6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module FA_MUSER_FA_2s_16bits(A, 
+                             B, 
+                             C_in, 
+                             C_out, 
+                             S);
+
+    input A;
+    input B;
+    input C_in;
+   output C_out;
+   output S;
+   
+   wire A_xor_B;
+   wire XLXN_23;
+   wire XLXN_24;
+   
+   XOR2  XLXI_5 (.I0(B), 
+                .I1(A), 
+                .O(A_xor_B));
+   XOR2  XLXI_6 (.I0(C_in), 
+                .I1(A_xor_B), 
+                .O(S));
+   OR2  XLXI_7 (.I0(XLXN_24), 
+               .I1(XLXN_23), 
+               .O(C_out));
+   AND2  XLXI_8 (.I0(A), 
+                .I1(B), 
+                .O(XLXN_24));
+   AND2  XLXI_9 (.I0(C_in), 
+                .I1(A_xor_B), 
+                .O(XLXN_23));
+endmodule
+`timescale 1ns / 1ps
+
+module FA_16bits_MUSER_FA_2s_16bits(A, 
+                                    B, 
+                                    C_in, 
+                                    C_out, 
+                                    S);
+
+    input [15:0] A;
+    input [15:0] B;
+    input C_in;
+   output C_out;
+   output [15:0] S;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_8;
+   wire XLXN_9;
+   wire XLXN_10;
+   wire XLXN_11;
+   wire XLXN_12;
+   wire XLXN_13;
+   wire XLXN_14;
+   wire XLXN_15;
+   wire XLXN_16;
+   
+   FA_MUSER_FA_2s_16bits  FA_0 (.A(A[0]), 
+                               .B(B[0]), 
+                               .C_in(C_in), 
+                               .C_out(XLXN_16), 
+                               .S(S[0]));
+   FA_MUSER_FA_2s_16bits  FA_1 (.A(A[1]), 
+                               .B(B[1]), 
+                               .C_in(XLXN_16), 
+                               .C_out(XLXN_15), 
+                               .S(S[1]));
+   FA_MUSER_FA_2s_16bits  FA_2 (.A(A[2]), 
+                               .B(B[2]), 
+                               .C_in(XLXN_15), 
+                               .C_out(XLXN_14), 
+                               .S(S[2]));
+   FA_MUSER_FA_2s_16bits  FA_3 (.A(A[3]), 
+                               .B(B[3]), 
+                               .C_in(XLXN_14), 
+                               .C_out(XLXN_13), 
+                               .S(S[3]));
+   FA_MUSER_FA_2s_16bits  FA_4 (.A(A[4]), 
+                               .B(B[4]), 
+                               .C_in(XLXN_13), 
+                               .C_out(XLXN_12), 
+                               .S(S[4]));
+   FA_MUSER_FA_2s_16bits  FA_5 (.A(A[5]), 
+                               .B(B[5]), 
+                               .C_in(XLXN_12), 
+                               .C_out(XLXN_11), 
+                               .S(S[5]));
+   FA_MUSER_FA_2s_16bits  FA_6 (.A(A[6]), 
+                               .B(B[6]), 
+                               .C_in(XLXN_11), 
+                               .C_out(XLXN_10), 
+                               .S(S[6]));
+   FA_MUSER_FA_2s_16bits  FA_7 (.A(A[7]), 
+                               .B(B[7]), 
+                               .C_in(XLXN_10), 
+                               .C_out(XLXN_9), 
+                               .S(S[7]));
+   FA_MUSER_FA_2s_16bits  FA_8 (.A(A[8]), 
+                               .B(B[8]), 
+                               .C_in(XLXN_9), 
+                               .C_out(XLXN_8), 
+                               .S(S[8]));
+   FA_MUSER_FA_2s_16bits  FA_9 (.A(A[9]), 
+                               .B(B[9]), 
+                               .C_in(XLXN_8), 
+                               .C_out(XLXN_7), 
+                               .S(S[9]));
+   FA_MUSER_FA_2s_16bits  FA_10 (.A(A[10]), 
+                                .B(B[10]), 
+                                .C_in(XLXN_7), 
+                                .C_out(XLXN_6), 
+                                .S(S[10]));
+   FA_MUSER_FA_2s_16bits  FA_11 (.A(A[11]), 
+                                .B(B[11]), 
+                                .C_in(XLXN_6), 
+                                .C_out(XLXN_5), 
+                                .S(S[11]));
+   FA_MUSER_FA_2s_16bits  FA_12 (.A(A[12]), 
+                                .B(B[12]), 
+                                .C_in(XLXN_5), 
+                                .C_out(XLXN_3), 
+                                .S(S[12]));
+   FA_MUSER_FA_2s_16bits  FA_13 (.A(A[13]), 
+                                .B(B[13]), 
+                                .C_in(XLXN_3), 
+                                .C_out(XLXN_2), 
+                                .S(S[13]));
+   FA_MUSER_FA_2s_16bits  FA_14 (.A(A[14]), 
+                                .B(B[14]), 
+                                .C_in(XLXN_2), 
+                                .C_out(XLXN_1), 
+                                .S(S[14]));
+   FA_MUSER_FA_2s_16bits  FA_15 (.A(A[15]), 
+                                .B(B[15]), 
+                                .C_in(XLXN_1), 
+                                .C_out(C_out), 
+                                .S(S[15]));
+endmodule
+`timescale 1ns / 1ps
+
+module FA_2s_16bits(A, 
+                    B, 
+                    CTRL, 
+                    C_out, 
+                    S);
+
+    input [15:0] A;
+    input [15:0] B;
+    input CTRL;
+   output C_out;
+   output [15:0] S;
+   
+   wire [15:0] Bs;
+   
+   XOR2  XLXI_2 (.I0(CTRL), 
+                .I1(B[15]), 
+                .O(Bs[15]));
+   XOR2  XLXI_3 (.I0(CTRL), 
+                .I1(B[14]), 
+                .O(Bs[14]));
+   XOR2  XLXI_4 (.I0(CTRL), 
+                .I1(B[13]), 
+                .O(Bs[13]));
+   XOR2  XLXI_5 (.I0(CTRL), 
+                .I1(B[12]), 
+                .O(Bs[12]));
+   XOR2  XLXI_6 (.I0(CTRL), 
+                .I1(B[11]), 
+                .O(Bs[11]));
+   XOR2  XLXI_7 (.I0(CTRL), 
+                .I1(B[10]), 
+                .O(Bs[10]));
+   XOR2  XLXI_8 (.I0(CTRL), 
+                .I1(B[9]), 
+                .O(Bs[9]));
+   XOR2  XLXI_9 (.I0(CTRL), 
+                .I1(B[8]), 
+                .O(Bs[8]));
+   XOR2  XLXI_11 (.I0(CTRL), 
+                 .I1(B[7]), 
+                 .O(Bs[7]));
+   XOR2  XLXI_12 (.I0(CTRL), 
+                 .I1(B[6]), 
+                 .O(Bs[6]));
+   XOR2  XLXI_13 (.I0(CTRL), 
+                 .I1(B[5]), 
+                 .O(Bs[5]));
+   XOR2  XLXI_14 (.I0(CTRL), 
+                 .I1(B[4]), 
+                 .O(Bs[4]));
+   XOR2  XLXI_15 (.I0(CTRL), 
+                 .I1(B[3]), 
+                 .O(Bs[3]));
+   XOR2  XLXI_16 (.I0(CTRL), 
+                 .I1(B[2]), 
+                 .O(Bs[2]));
+   XOR2  XLXI_17 (.I0(CTRL), 
+                 .I1(B[1]), 
+                 .O(Bs[1]));
+   XOR2  XLXI_18 (.I0(CTRL), 
+                 .I1(B[0]), 
+                 .O(Bs[0]));
+   FA_16bits_MUSER_FA_2s_16bits  XLXI_19 (.A(A[15:0]), 
+                                         .B(Bs[15:0]), 
+                                         .C_in(CTRL), 
+                                         .C_out(C_out), 
+                                         .S(S[15:0]));
+endmodule

@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : D3_8E.vf
-// /___/   /\     Timestamp : 03/25/2025 02:56:19
+// /___/   /\     Timestamp : 04/16/2025 18:04:22
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -46,54 +46,54 @@ module D3_8E(A0,
    output D6;
    output D7;
    
-   wire XLXN_37;
-   wire XLXN_40;
-   wire XLXN_70;
+   wire XLXN_23;
+   wire XLXN_30;
+   wire XLXN_33;
    
+   AND4  XLXI_1 (.I0(EN), 
+                .I1(XLXN_33), 
+                .I2(XLXN_30), 
+                .I3(XLXN_23), 
+                .O(D0));
+   AND4  XLXI_2 (.I0(EN), 
+                .I1(A0), 
+                .I2(XLXN_30), 
+                .I3(XLXN_23), 
+                .O(D1));
+   AND4  XLXI_3 (.I0(EN), 
+                .I1(XLXN_33), 
+                .I2(A1), 
+                .I3(XLXN_23), 
+                .O(D2));
+   AND4  XLXI_4 (.I0(EN), 
+                .I1(A0), 
+                .I2(A1), 
+                .I3(XLXN_23), 
+                .O(D3));
+   AND4  XLXI_5 (.I0(EN), 
+                .I1(XLXN_33), 
+                .I2(XLXN_30), 
+                .I3(A2), 
+                .O(D4));
+   AND4  XLXI_6 (.I0(EN), 
+                .I1(A0), 
+                .I2(XLXN_30), 
+                .I3(A2), 
+                .O(D5));
+   AND4  XLXI_7 (.I0(EN), 
+                .I1(XLXN_33), 
+                .I2(A1), 
+                .I3(A2), 
+                .O(D6));
+   AND4  XLXI_8 (.I0(EN), 
+                .I1(A0), 
+                .I2(A1), 
+                .I3(A2), 
+                .O(D7));
    INV  XLXI_9 (.I(A2), 
-               .O(XLXN_37));
+               .O(XLXN_23));
    INV  XLXI_10 (.I(A1), 
-                .O(XLXN_40));
+                .O(XLXN_30));
    INV  XLXI_11 (.I(A0), 
-                .O(XLXN_70));
-   AND4  XLXI_17 (.I0(EN), 
-                 .I1(XLXN_70), 
-                 .I2(XLXN_40), 
-                 .I3(XLXN_37), 
-                 .O(D0));
-   AND4  XLXI_18 (.I0(EN), 
-                 .I1(A0), 
-                 .I2(XLXN_40), 
-                 .I3(XLXN_37), 
-                 .O(D1));
-   AND4  XLXI_19 (.I0(EN), 
-                 .I1(XLXN_70), 
-                 .I2(A1), 
-                 .I3(XLXN_37), 
-                 .O(D2));
-   AND4  XLXI_20 (.I0(EN), 
-                 .I1(A0), 
-                 .I2(A1), 
-                 .I3(XLXN_37), 
-                 .O(D3));
-   AND4  XLXI_21 (.I0(EN), 
-                 .I1(XLXN_70), 
-                 .I2(XLXN_40), 
-                 .I3(A2), 
-                 .O(D4));
-   AND4  XLXI_22 (.I0(EN), 
-                 .I1(A0), 
-                 .I2(XLXN_40), 
-                 .I3(A2), 
-                 .O(D5));
-   AND4  XLXI_23 (.I0(EN), 
-                 .I1(XLXN_70), 
-                 .I2(A1), 
-                 .I3(A2), 
-                 .O(D6));
-   AND4  XLXI_24 (.I0(EN), 
-                 .I1(A0), 
-                 .I2(A1), 
-                 .I3(A2), 
-                 .O(D7));
+                .O(XLXN_33));
 endmodule
