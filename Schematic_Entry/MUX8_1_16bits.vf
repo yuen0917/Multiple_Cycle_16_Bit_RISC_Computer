@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : MUX8_1_16bits.vf
-// /___/   /\     Timestamp : 03/24/2025 16:36:16
+// /___/   /\     Timestamp : 04/16/2025 09:15:54
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -109,7 +109,7 @@ module MUX8_1_MUSER_MUX8_1_16bits(I0,
                 .O(XLXN_9));
    INV  XLXI_7 (.I(S1), 
                .O(XLXN_52));
-   (* HU_SET = "XLXI_8_6" *) 
+   (* HU_SET = "XLXI_8_9" *) 
    OR8_HXILINX_MUX8_1_16bits  XLXI_8 (.I0(XLXN_11), 
                                      .I1(XLXN_9), 
                                      .I2(XLXN_7), 

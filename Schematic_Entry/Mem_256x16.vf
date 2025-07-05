@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : Mem_256x16.vf
-// /___/   /\     Timestamp : 03/25/2025 02:56:20
+// /___/   /\     Timestamp : 04/17/2025 07:22:14
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -36,6 +36,85 @@ module OR8_HXILINX_Mem_256x16 (O, I0, I1, I2, I3, I4, I5, I6, I7);
 
 assign O = (I0 || I1 || I2 || I3 || I4 || I5 || I6 || I7);
 
+endmodule
+`timescale 1ns / 1ps
+
+module D3_8E_MUSER_Mem_256x16(A0, 
+                              A1, 
+                              A2, 
+                              EN, 
+                              D0, 
+                              D1, 
+                              D2, 
+                              D3, 
+                              D4, 
+                              D5, 
+                              D6, 
+                              D7);
+
+    input A0;
+    input A1;
+    input A2;
+    input EN;
+   output D0;
+   output D1;
+   output D2;
+   output D3;
+   output D4;
+   output D5;
+   output D6;
+   output D7;
+   
+   wire XLXN_23;
+   wire XLXN_30;
+   wire XLXN_33;
+   
+   AND4  XLXI_1 (.I0(EN), 
+                .I1(XLXN_33), 
+                .I2(XLXN_30), 
+                .I3(XLXN_23), 
+                .O(D0));
+   AND4  XLXI_2 (.I0(EN), 
+                .I1(A0), 
+                .I2(XLXN_30), 
+                .I3(XLXN_23), 
+                .O(D1));
+   AND4  XLXI_3 (.I0(EN), 
+                .I1(XLXN_33), 
+                .I2(A1), 
+                .I3(XLXN_23), 
+                .O(D2));
+   AND4  XLXI_4 (.I0(EN), 
+                .I1(A0), 
+                .I2(A1), 
+                .I3(XLXN_23), 
+                .O(D3));
+   AND4  XLXI_5 (.I0(EN), 
+                .I1(XLXN_33), 
+                .I2(XLXN_30), 
+                .I3(A2), 
+                .O(D4));
+   AND4  XLXI_6 (.I0(EN), 
+                .I1(A0), 
+                .I2(XLXN_30), 
+                .I3(A2), 
+                .O(D5));
+   AND4  XLXI_7 (.I0(EN), 
+                .I1(XLXN_33), 
+                .I2(A1), 
+                .I3(A2), 
+                .O(D6));
+   AND4  XLXI_8 (.I0(EN), 
+                .I1(A0), 
+                .I2(A1), 
+                .I3(A2), 
+                .O(D7));
+   INV  XLXI_9 (.I(A2), 
+               .O(XLXN_23));
+   INV  XLXI_10 (.I(A1), 
+                .O(XLXN_30));
+   INV  XLXI_11 (.I(A0), 
+                .O(XLXN_33));
 endmodule
 `timescale 1ns / 1ps
 
@@ -598,99 +677,18 @@ module MUX8_1_16bits_MUSER_Mem_256x16(I0_00,
 endmodule
 `timescale 1ns / 1ps
 
-module D3_8E_MUSER_Mem_256x16(A0, 
-                              A1, 
-                              A2, 
-                              EN, 
-                              D0, 
-                              D1, 
-                              D2, 
-                              D3, 
-                              D4, 
-                              D5, 
-                              D6, 
-                              D7);
-
-    input A0;
-    input A1;
-    input A2;
-    input EN;
-   output D0;
-   output D1;
-   output D2;
-   output D3;
-   output D4;
-   output D5;
-   output D6;
-   output D7;
-   
-   wire XLXN_37;
-   wire XLXN_40;
-   wire XLXN_70;
-   
-   INV  XLXI_9 (.I(A2), 
-               .O(XLXN_37));
-   INV  XLXI_10 (.I(A1), 
-                .O(XLXN_40));
-   INV  XLXI_11 (.I(A0), 
-                .O(XLXN_70));
-   AND4  XLXI_17 (.I0(EN), 
-                 .I1(XLXN_70), 
-                 .I2(XLXN_40), 
-                 .I3(XLXN_37), 
-                 .O(D0));
-   AND4  XLXI_18 (.I0(EN), 
-                 .I1(A0), 
-                 .I2(XLXN_40), 
-                 .I3(XLXN_37), 
-                 .O(D1));
-   AND4  XLXI_19 (.I0(EN), 
-                 .I1(XLXN_70), 
-                 .I2(A1), 
-                 .I3(XLXN_37), 
-                 .O(D2));
-   AND4  XLXI_20 (.I0(EN), 
-                 .I1(A0), 
-                 .I2(A1), 
-                 .I3(XLXN_37), 
-                 .O(D3));
-   AND4  XLXI_21 (.I0(EN), 
-                 .I1(XLXN_70), 
-                 .I2(XLXN_40), 
-                 .I3(A2), 
-                 .O(D4));
-   AND4  XLXI_22 (.I0(EN), 
-                 .I1(A0), 
-                 .I2(XLXN_40), 
-                 .I3(A2), 
-                 .O(D5));
-   AND4  XLXI_23 (.I0(EN), 
-                 .I1(XLXN_70), 
-                 .I2(A1), 
-                 .I3(A2), 
-                 .O(D6));
-   AND4  XLXI_24 (.I0(EN), 
-                 .I1(A0), 
-                 .I2(A1), 
-                 .I3(A2), 
-                 .O(D7));
-endmodule
-`timescale 1ns / 1ps
-
 module Mem_256x16(clk, 
-                  MemR_Addr, 
-                  MemW_Addr, 
                   MemW_Data_b, 
                   MemW_Data_f, 
                   MemW_en, 
+                  Mem_Addr, 
                   MemR_Data);
 
     input clk;
-    input [2:0] MemR_Addr;
-    input [7:0] MemW_Addr;
     input [7:0] MemW_Data_b;
     input [15:8] MemW_Data_f;
     input MemW_en;
+    input [15:0] Mem_Addr;
    output [15:0] MemR_Data;
    
    wire D0;
@@ -722,11 +720,11 @@ module Mem_256x16(clk,
          .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
          .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
          .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) Group0_7_0 
-         (.A0(MemW_Addr[0]), 
-                        .A1(MemW_Addr[1]), 
-                        .A2(MemW_Addr[2]), 
-                        .A3(MemW_Addr[3]), 
-                        .A4(MemW_Addr[4]), 
+         (.A0(Mem_Addr[0]), 
+                        .A1(Mem_Addr[1]), 
+                        .A2(Mem_Addr[2]), 
+                        .A3(Mem_Addr[3]), 
+                        .A4(Mem_Addr[4]), 
                         .D(MemW_Data_b[7:0]), 
                         .WCLK(clk), 
                         .WE(D0), 
@@ -735,11 +733,11 @@ module Mem_256x16(clk,
          .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
          .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
          .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) Group0_15_8 
-         (.A0(MemW_Addr[0]), 
-                         .A1(MemW_Addr[1]), 
-                         .A2(MemW_Addr[2]), 
-                         .A3(MemW_Addr[3]), 
-                         .A4(MemW_Addr[4]), 
+         (.A0(Mem_Addr[0]), 
+                         .A1(Mem_Addr[1]), 
+                         .A2(Mem_Addr[2]), 
+                         .A3(Mem_Addr[3]), 
+                         .A4(Mem_Addr[4]), 
                          .D(MemW_Data_f[15:8]), 
                          .WCLK(clk), 
                          .WE(D0), 
@@ -748,11 +746,11 @@ module Mem_256x16(clk,
          .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
          .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
          .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) Group1_7_0 
-         (.A0(MemW_Addr[0]), 
-                        .A1(MemW_Addr[1]), 
-                        .A2(MemW_Addr[2]), 
-                        .A3(MemW_Addr[3]), 
-                        .A4(MemW_Addr[4]), 
+         (.A0(Mem_Addr[0]), 
+                        .A1(Mem_Addr[1]), 
+                        .A2(Mem_Addr[2]), 
+                        .A3(Mem_Addr[3]), 
+                        .A4(Mem_Addr[4]), 
                         .D(MemW_Data_b[7:0]), 
                         .WCLK(clk), 
                         .WE(D1), 
@@ -761,11 +759,11 @@ module Mem_256x16(clk,
          .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
          .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
          .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) Group1_15_8 
-         (.A0(MemW_Addr[0]), 
-                         .A1(MemW_Addr[1]), 
-                         .A2(MemW_Addr[2]), 
-                         .A3(MemW_Addr[3]), 
-                         .A4(MemW_Addr[4]), 
+         (.A0(Mem_Addr[0]), 
+                         .A1(Mem_Addr[1]), 
+                         .A2(Mem_Addr[2]), 
+                         .A3(Mem_Addr[3]), 
+                         .A4(Mem_Addr[4]), 
                          .D(MemW_Data_f[15:8]), 
                          .WCLK(clk), 
                          .WE(D1), 
@@ -774,11 +772,11 @@ module Mem_256x16(clk,
          .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
          .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
          .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) Group2_7_0 
-         (.A0(MemW_Addr[0]), 
-                        .A1(MemW_Addr[1]), 
-                        .A2(MemW_Addr[2]), 
-                        .A3(MemW_Addr[3]), 
-                        .A4(MemW_Addr[4]), 
+         (.A0(Mem_Addr[0]), 
+                        .A1(Mem_Addr[1]), 
+                        .A2(Mem_Addr[2]), 
+                        .A3(Mem_Addr[3]), 
+                        .A4(Mem_Addr[4]), 
                         .D(MemW_Data_b[7:0]), 
                         .WCLK(clk), 
                         .WE(D2), 
@@ -787,11 +785,11 @@ module Mem_256x16(clk,
          .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
          .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
          .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) Group2_15_8 
-         (.A0(MemW_Addr[0]), 
-                         .A1(MemW_Addr[1]), 
-                         .A2(MemW_Addr[2]), 
-                         .A3(MemW_Addr[3]), 
-                         .A4(MemW_Addr[4]), 
+         (.A0(Mem_Addr[0]), 
+                         .A1(Mem_Addr[1]), 
+                         .A2(Mem_Addr[2]), 
+                         .A3(Mem_Addr[3]), 
+                         .A4(Mem_Addr[4]), 
                          .D(MemW_Data_f[15:8]), 
                          .WCLK(clk), 
                          .WE(D2), 
@@ -800,11 +798,11 @@ module Mem_256x16(clk,
          .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
          .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
          .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) Group3_7_0 
-         (.A0(MemW_Addr[0]), 
-                        .A1(MemW_Addr[1]), 
-                        .A2(MemW_Addr[2]), 
-                        .A3(MemW_Addr[3]), 
-                        .A4(MemW_Addr[4]), 
+         (.A0(Mem_Addr[0]), 
+                        .A1(Mem_Addr[1]), 
+                        .A2(Mem_Addr[2]), 
+                        .A3(Mem_Addr[3]), 
+                        .A4(Mem_Addr[4]), 
                         .D(MemW_Data_b[7:0]), 
                         .WCLK(clk), 
                         .WE(D3), 
@@ -813,11 +811,11 @@ module Mem_256x16(clk,
          .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
          .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
          .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) Group3_15_8 
-         (.A0(MemW_Addr[0]), 
-                         .A1(MemW_Addr[1]), 
-                         .A2(MemW_Addr[2]), 
-                         .A3(MemW_Addr[3]), 
-                         .A4(MemW_Addr[4]), 
+         (.A0(Mem_Addr[0]), 
+                         .A1(Mem_Addr[1]), 
+                         .A2(Mem_Addr[2]), 
+                         .A3(Mem_Addr[3]), 
+                         .A4(Mem_Addr[4]), 
                          .D(MemW_Data_f[15:8]), 
                          .WCLK(clk), 
                          .WE(D3), 
@@ -826,11 +824,11 @@ module Mem_256x16(clk,
          .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
          .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
          .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) Group4_7_0 
-         (.A0(MemW_Addr[0]), 
-                        .A1(MemW_Addr[1]), 
-                        .A2(MemW_Addr[2]), 
-                        .A3(MemW_Addr[3]), 
-                        .A4(MemW_Addr[4]), 
+         (.A0(Mem_Addr[0]), 
+                        .A1(Mem_Addr[1]), 
+                        .A2(Mem_Addr[2]), 
+                        .A3(Mem_Addr[3]), 
+                        .A4(Mem_Addr[4]), 
                         .D(MemW_Data_b[7:0]), 
                         .WCLK(clk), 
                         .WE(D4), 
@@ -839,11 +837,11 @@ module Mem_256x16(clk,
          .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
          .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
          .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) Group4_15_8 
-         (.A0(MemW_Addr[0]), 
-                         .A1(MemW_Addr[1]), 
-                         .A2(MemW_Addr[2]), 
-                         .A3(MemW_Addr[3]), 
-                         .A4(MemW_Addr[4]), 
+         (.A0(Mem_Addr[0]), 
+                         .A1(Mem_Addr[1]), 
+                         .A2(Mem_Addr[2]), 
+                         .A3(Mem_Addr[3]), 
+                         .A4(Mem_Addr[4]), 
                          .D(MemW_Data_f[15:8]), 
                          .WCLK(clk), 
                          .WE(D4), 
@@ -852,11 +850,11 @@ module Mem_256x16(clk,
          .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
          .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
          .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) Group5_7_0 
-         (.A0(MemW_Addr[0]), 
-                        .A1(MemW_Addr[1]), 
-                        .A2(MemW_Addr[2]), 
-                        .A3(MemW_Addr[3]), 
-                        .A4(MemW_Addr[4]), 
+         (.A0(Mem_Addr[0]), 
+                        .A1(Mem_Addr[1]), 
+                        .A2(Mem_Addr[2]), 
+                        .A3(Mem_Addr[3]), 
+                        .A4(Mem_Addr[4]), 
                         .D(MemW_Data_b[7:0]), 
                         .WCLK(clk), 
                         .WE(D5), 
@@ -865,11 +863,11 @@ module Mem_256x16(clk,
          .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
          .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
          .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) Group5_15_8 
-         (.A0(MemW_Addr[0]), 
-                         .A1(MemW_Addr[1]), 
-                         .A2(MemW_Addr[2]), 
-                         .A3(MemW_Addr[3]), 
-                         .A4(MemW_Addr[4]), 
+         (.A0(Mem_Addr[0]), 
+                         .A1(Mem_Addr[1]), 
+                         .A2(Mem_Addr[2]), 
+                         .A3(Mem_Addr[3]), 
+                         .A4(Mem_Addr[4]), 
                          .D(MemW_Data_f[15:8]), 
                          .WCLK(clk), 
                          .WE(D5), 
@@ -878,11 +876,11 @@ module Mem_256x16(clk,
          .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
          .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
          .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) Group6_7_0 
-         (.A0(MemW_Addr[0]), 
-                        .A1(MemW_Addr[1]), 
-                        .A2(MemW_Addr[2]), 
-                        .A3(MemW_Addr[3]), 
-                        .A4(MemW_Addr[4]), 
+         (.A0(Mem_Addr[0]), 
+                        .A1(Mem_Addr[1]), 
+                        .A2(Mem_Addr[2]), 
+                        .A3(Mem_Addr[3]), 
+                        .A4(Mem_Addr[4]), 
                         .D(MemW_Data_b[7:0]), 
                         .WCLK(clk), 
                         .WE(D6), 
@@ -891,11 +889,11 @@ module Mem_256x16(clk,
          .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
          .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
          .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) Group6_15_8 
-         (.A0(MemW_Addr[0]), 
-                         .A1(MemW_Addr[1]), 
-                         .A2(MemW_Addr[2]), 
-                         .A3(MemW_Addr[3]), 
-                         .A4(MemW_Addr[4]), 
+         (.A0(Mem_Addr[0]), 
+                         .A1(Mem_Addr[1]), 
+                         .A2(Mem_Addr[2]), 
+                         .A3(Mem_Addr[3]), 
+                         .A4(Mem_Addr[4]), 
                          .D(MemW_Data_f[15:8]), 
                          .WCLK(clk), 
                          .WE(D6), 
@@ -904,11 +902,11 @@ module Mem_256x16(clk,
          .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
          .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
          .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) Group7_7_0 
-         (.A0(MemW_Addr[0]), 
-                        .A1(MemW_Addr[1]), 
-                        .A2(MemW_Addr[2]), 
-                        .A3(MemW_Addr[3]), 
-                        .A4(MemW_Addr[4]), 
+         (.A0(Mem_Addr[0]), 
+                        .A1(Mem_Addr[1]), 
+                        .A2(Mem_Addr[2]), 
+                        .A3(Mem_Addr[3]), 
+                        .A4(Mem_Addr[4]), 
                         .D(MemW_Data_b[7:0]), 
                         .WCLK(clk), 
                         .WE(D7), 
@@ -917,27 +915,15 @@ module Mem_256x16(clk,
          .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
          .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
          .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) Group7_15_8 
-         (.A0(MemW_Addr[0]), 
-                         .A1(MemW_Addr[1]), 
-                         .A2(MemW_Addr[2]), 
-                         .A3(MemW_Addr[3]), 
-                         .A4(MemW_Addr[4]), 
+         (.A0(Mem_Addr[0]), 
+                         .A1(Mem_Addr[1]), 
+                         .A2(Mem_Addr[2]), 
+                         .A3(Mem_Addr[3]), 
+                         .A4(Mem_Addr[4]), 
                          .D(MemW_Data_f[15:8]), 
                          .WCLK(clk), 
                          .WE(D7), 
                          .O(I7_f[15:8]));
-   D3_8E_MUSER_Mem_256x16  XLXI_10 (.A0(MemW_Addr[5]), 
-                                   .A1(MemW_Addr[6]), 
-                                   .A2(MemW_Addr[7]), 
-                                   .EN(MemW_en), 
-                                   .D0(D0), 
-                                   .D1(D1), 
-                                   .D2(D2), 
-                                   .D3(D3), 
-                                   .D4(D4), 
-                                   .D5(D5), 
-                                   .D6(D6), 
-                                   .D7(D7));
    MUX8_1_16bits_MUSER_Mem_256x16  XLXI_21 (.I0_00(I0_b[0]), 
                                            .I0_01(I0_b[1]), 
                                            .I0_02(I0_b[2]), 
@@ -1066,8 +1052,20 @@ module Mem_256x16(clk,
                                            .I7_13(I7_f[13]), 
                                            .I7_14(I7_f[14]), 
                                            .I7_15(I7_f[15]), 
-                                           .S0(MemR_Addr[0]), 
-                                           .S1(MemR_Addr[1]), 
-                                           .S2(MemR_Addr[2]), 
+                                           .S0(Mem_Addr[5]), 
+                                           .S1(Mem_Addr[6]), 
+                                           .S2(Mem_Addr[7]), 
                                            .Output(MemR_Data[15:0]));
+   D3_8E_MUSER_Mem_256x16  XLXI_22 (.A0(Mem_Addr[5]), 
+                                   .A1(Mem_Addr[6]), 
+                                   .A2(Mem_Addr[7]), 
+                                   .EN(MemW_en), 
+                                   .D0(D0), 
+                                   .D1(D1), 
+                                   .D2(D2), 
+                                   .D3(D3), 
+                                   .D4(D4), 
+                                   .D5(D5), 
+                                   .D6(D6), 
+                                   .D7(D7));
 endmodule

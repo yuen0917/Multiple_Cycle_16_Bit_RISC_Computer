@@ -15,22 +15,16 @@
         <signal name="D7" />
         <signal name="D5" />
         <signal name="clk" />
-        <signal name="MemW_Addr(7:0)" />
-        <signal name="MemW_Addr(4)" />
-        <signal name="MemW_Addr(0)" />
-        <signal name="MemW_Addr(2)" />
-        <signal name="MemW_Addr(1)" />
-        <signal name="MemW_Addr(3)" />
-        <signal name="MemW_Addr(7)" />
-        <signal name="MemW_Addr(6)" />
-        <signal name="MemW_Addr(5)" />
+        <signal name="Mem_Addr(7:0)">
+        </signal>
+        <signal name="Mem_Addr(4)" />
+        <signal name="Mem_Addr(0)" />
+        <signal name="Mem_Addr(2)" />
+        <signal name="Mem_Addr(1)" />
+        <signal name="Mem_Addr(3)" />
         <signal name="MemW_Data_f(15:8)" />
         <signal name="MemW_Data_b(7:0)" />
         <signal name="MemW_en" />
-        <signal name="MemR_Addr(2:0)" />
-        <signal name="MemR_Addr(2)" />
-        <signal name="MemR_Addr(1)" />
-        <signal name="MemR_Addr(0)" />
         <signal name="I0_f(15:8)" />
         <signal name="I1_f(15:8)" />
         <signal name="I1_b(7:0)" />
@@ -176,13 +170,16 @@
         <signal name="I7_f(15)" />
         <signal name="MemR_Data(15:0)" />
         <signal name="I0_b(7:0)" />
+        <signal name="Mem_Addr(5)" />
+        <signal name="Mem_Addr(6)" />
+        <signal name="Mem_Addr(7)" />
+        <signal name="Mem_Addr(15:0)" />
         <port polarity="Input" name="clk" />
-        <port polarity="Input" name="MemW_Addr(7:0)" />
         <port polarity="Input" name="MemW_Data_f(15:8)" />
         <port polarity="Input" name="MemW_Data_b(7:0)" />
         <port polarity="Input" name="MemW_en" />
-        <port polarity="Input" name="MemR_Addr(2:0)" />
         <port polarity="Output" name="MemR_Data(15:0)" />
+        <port polarity="Input" name="Mem_Addr(15:0)" />
         <blockdef name="ram32x8s">
             <timestamp>2000-1-1T10:10:10</timestamp>
             <line x2="80" y1="-432" y2="-448" x1="64" />
@@ -199,22 +196,6 @@
             <line x2="64" y1="-576" y2="-576" x1="0" />
             <line x2="64" y1="-512" y2="-512" x1="0" />
             <rect width="64" x="0" y="-524" height="24" />
-        </blockdef>
-        <blockdef name="D3_8E">
-            <timestamp>2025-3-18T14:30:20</timestamp>
-            <rect width="256" x="64" y="-512" height="512" />
-            <line x2="0" y1="-352" y2="-352" x1="64" />
-            <line x2="0" y1="-416" y2="-416" x1="64" />
-            <line x2="0" y1="-480" y2="-480" x1="64" />
-            <line x2="384" y1="-480" y2="-480" x1="320" />
-            <line x2="384" y1="-416" y2="-416" x1="320" />
-            <line x2="384" y1="-352" y2="-352" x1="320" />
-            <line x2="384" y1="-288" y2="-288" x1="320" />
-            <line x2="384" y1="-224" y2="-224" x1="320" />
-            <line x2="384" y1="-160" y2="-160" x1="320" />
-            <line x2="384" y1="-96" y2="-96" x1="320" />
-            <line x2="384" y1="-32" y2="-32" x1="320" />
-            <line x2="0" y1="-288" y2="-288" x1="64" />
         </blockdef>
         <blockdef name="MUX8_1_16bits">
             <timestamp>2025-3-18T15:27:52</timestamp>
@@ -353,59 +334,61 @@
             <line x2="0" y1="-3168" y2="-3168" x1="64" />
             <line x2="0" y1="-3104" y2="-3104" x1="64" />
         </blockdef>
-        <block symbolname="D3_8E" name="XLXI_10">
-            <blockpin signalname="MemW_Addr(5)" name="A0" />
-            <blockpin signalname="MemW_Addr(6)" name="A1" />
-            <blockpin signalname="MemW_Addr(7)" name="A2" />
-            <blockpin signalname="D0" name="D0" />
-            <blockpin signalname="D1" name="D1" />
-            <blockpin signalname="D2" name="D2" />
-            <blockpin signalname="D3" name="D3" />
-            <blockpin signalname="D4" name="D4" />
-            <blockpin signalname="D5" name="D5" />
-            <blockpin signalname="D6" name="D6" />
-            <blockpin signalname="D7" name="D7" />
-            <blockpin signalname="MemW_en" name="EN" />
-        </block>
+        <blockdef name="D3_8E">
+            <timestamp>2025-4-16T18:8:19</timestamp>
+            <rect width="256" x="64" y="-512" height="512" />
+            <line x2="0" y1="-352" y2="-352" x1="64" />
+            <line x2="0" y1="-416" y2="-416" x1="64" />
+            <line x2="0" y1="-480" y2="-480" x1="64" />
+            <line x2="384" y1="-480" y2="-480" x1="320" />
+            <line x2="384" y1="-416" y2="-416" x1="320" />
+            <line x2="384" y1="-352" y2="-352" x1="320" />
+            <line x2="384" y1="-288" y2="-288" x1="320" />
+            <line x2="384" y1="-224" y2="-224" x1="320" />
+            <line x2="384" y1="-160" y2="-160" x1="320" />
+            <line x2="384" y1="-96" y2="-96" x1="320" />
+            <line x2="384" y1="-32" y2="-32" x1="320" />
+            <line x2="0" y1="-288" y2="-288" x1="64" />
+        </blockdef>
         <block symbolname="ram32x8s" name="Group0_15_8">
-            <blockpin signalname="MemW_Addr(0)" name="A0" />
-            <blockpin signalname="MemW_Addr(1)" name="A1" />
-            <blockpin signalname="MemW_Addr(2)" name="A2" />
-            <blockpin signalname="MemW_Addr(3)" name="A3" />
-            <blockpin signalname="MemW_Addr(4)" name="A4" />
+            <blockpin signalname="Mem_Addr(0)" name="A0" />
+            <blockpin signalname="Mem_Addr(1)" name="A1" />
+            <blockpin signalname="Mem_Addr(2)" name="A2" />
+            <blockpin signalname="Mem_Addr(3)" name="A3" />
+            <blockpin signalname="Mem_Addr(4)" name="A4" />
             <blockpin signalname="MemW_Data_f(15:8)" name="D(7:0)" />
             <blockpin signalname="clk" name="WCLK" />
             <blockpin signalname="D0" name="WE" />
             <blockpin signalname="I0_f(15:8)" name="O(7:0)" />
         </block>
         <block symbolname="ram32x8s" name="Group0_7_0">
-            <blockpin signalname="MemW_Addr(0)" name="A0" />
-            <blockpin signalname="MemW_Addr(1)" name="A1" />
-            <blockpin signalname="MemW_Addr(2)" name="A2" />
-            <blockpin signalname="MemW_Addr(3)" name="A3" />
-            <blockpin signalname="MemW_Addr(4)" name="A4" />
+            <blockpin signalname="Mem_Addr(0)" name="A0" />
+            <blockpin signalname="Mem_Addr(1)" name="A1" />
+            <blockpin signalname="Mem_Addr(2)" name="A2" />
+            <blockpin signalname="Mem_Addr(3)" name="A3" />
+            <blockpin signalname="Mem_Addr(4)" name="A4" />
             <blockpin signalname="MemW_Data_b(7:0)" name="D(7:0)" />
             <blockpin signalname="clk" name="WCLK" />
             <blockpin signalname="D0" name="WE" />
             <blockpin signalname="I0_b(7:0)" name="O(7:0)" />
         </block>
         <block symbolname="ram32x8s" name="Group1_15_8">
-            <blockpin signalname="MemW_Addr(0)" name="A0" />
-            <blockpin signalname="MemW_Addr(1)" name="A1" />
-            <blockpin signalname="MemW_Addr(2)" name="A2" />
-            <blockpin signalname="MemW_Addr(3)" name="A3" />
-            <blockpin signalname="MemW_Addr(4)" name="A4" />
+            <blockpin signalname="Mem_Addr(0)" name="A0" />
+            <blockpin signalname="Mem_Addr(1)" name="A1" />
+            <blockpin signalname="Mem_Addr(2)" name="A2" />
+            <blockpin signalname="Mem_Addr(3)" name="A3" />
+            <blockpin signalname="Mem_Addr(4)" name="A4" />
             <blockpin signalname="MemW_Data_f(15:8)" name="D(7:0)" />
             <blockpin signalname="clk" name="WCLK" />
             <blockpin signalname="D1" name="WE" />
             <blockpin signalname="I1_f(15:8)" name="O(7:0)" />
         </block>
         <block symbolname="ram32x8s" name="Group1_7_0">
-            <blockpin signalname="MemW_Addr(0)" name="A0" />
-            <blockpin signalname="MemW_Addr(1)" name="A1" />
-            <blockpin signalname="MemW_Addr(2)" name="A2" />
-            <blockpin signalname="MemW_Addr(3)" name="A3" />
-            <blockpin signalname="MemW_Addr(4)" name="A4" />
+            <blockpin signalname="Mem_Addr(0)" name="A0" />
+            <blockpin signalname="Mem_Addr(1)" name="A1" />
+            <blockpin signalname="Mem_Addr(2)" name="A2" />
+            <blockpin signalname="Mem_Addr(3)" name="A3" />
+            <blockpin signalname="Mem_Addr(4)" name="A4" />
             <blockpin signalname="MemW_Data_b(7:0)" name="D(7:0)" />
             <blockpin signalname="clk" name="WCLK" />
             <blockpin signalname="D1" name="WE" />
@@ -477,9 +460,9 @@
             <blockpin signalname="I7_f(14)" name="I7_14" />
             <blockpin signalname="I7_f(15)" name="I7_15" />
             <blockpin signalname="MemR_Data(15:0)" name="Output(15:0)" />
-            <blockpin signalname="MemR_Addr(2)" name="S2" />
-            <blockpin signalname="MemR_Addr(1)" name="S1" />
-            <blockpin signalname="MemR_Addr(0)" name="S0" />
+            <blockpin signalname="Mem_Addr(7)" name="S2" />
+            <blockpin signalname="Mem_Addr(6)" name="S1" />
+            <blockpin signalname="Mem_Addr(5)" name="S0" />
             <blockpin signalname="I3_f(15)" name="I3_15" />
             <blockpin signalname="I3_f(14)" name="I3_14" />
             <blockpin signalname="I3_f(13)" name="I3_13" />
@@ -546,136 +529,150 @@
             <blockpin signalname="I0_b(0)" name="I0_00" />
         </block>
         <block symbolname="ram32x8s" name="Group2_7_0">
-            <blockpin signalname="MemW_Addr(0)" name="A0" />
-            <blockpin signalname="MemW_Addr(1)" name="A1" />
-            <blockpin signalname="MemW_Addr(2)" name="A2" />
-            <blockpin signalname="MemW_Addr(3)" name="A3" />
-            <blockpin signalname="MemW_Addr(4)" name="A4" />
+            <blockpin signalname="Mem_Addr(0)" name="A0" />
+            <blockpin signalname="Mem_Addr(1)" name="A1" />
+            <blockpin signalname="Mem_Addr(2)" name="A2" />
+            <blockpin signalname="Mem_Addr(3)" name="A3" />
+            <blockpin signalname="Mem_Addr(4)" name="A4" />
             <blockpin signalname="MemW_Data_b(7:0)" name="D(7:0)" />
             <blockpin signalname="clk" name="WCLK" />
             <blockpin signalname="D2" name="WE" />
             <blockpin signalname="I2_b(7:0)" name="O(7:0)" />
         </block>
         <block symbolname="ram32x8s" name="Group3_15_8">
-            <blockpin signalname="MemW_Addr(0)" name="A0" />
-            <blockpin signalname="MemW_Addr(1)" name="A1" />
-            <blockpin signalname="MemW_Addr(2)" name="A2" />
-            <blockpin signalname="MemW_Addr(3)" name="A3" />
-            <blockpin signalname="MemW_Addr(4)" name="A4" />
+            <blockpin signalname="Mem_Addr(0)" name="A0" />
+            <blockpin signalname="Mem_Addr(1)" name="A1" />
+            <blockpin signalname="Mem_Addr(2)" name="A2" />
+            <blockpin signalname="Mem_Addr(3)" name="A3" />
+            <blockpin signalname="Mem_Addr(4)" name="A4" />
             <blockpin signalname="MemW_Data_f(15:8)" name="D(7:0)" />
             <blockpin signalname="clk" name="WCLK" />
             <blockpin signalname="D3" name="WE" />
             <blockpin signalname="I3_f(15:8)" name="O(7:0)" />
         </block>
         <block symbolname="ram32x8s" name="Group3_7_0">
-            <blockpin signalname="MemW_Addr(0)" name="A0" />
-            <blockpin signalname="MemW_Addr(1)" name="A1" />
-            <blockpin signalname="MemW_Addr(2)" name="A2" />
-            <blockpin signalname="MemW_Addr(3)" name="A3" />
-            <blockpin signalname="MemW_Addr(4)" name="A4" />
+            <blockpin signalname="Mem_Addr(0)" name="A0" />
+            <blockpin signalname="Mem_Addr(1)" name="A1" />
+            <blockpin signalname="Mem_Addr(2)" name="A2" />
+            <blockpin signalname="Mem_Addr(3)" name="A3" />
+            <blockpin signalname="Mem_Addr(4)" name="A4" />
             <blockpin signalname="MemW_Data_b(7:0)" name="D(7:0)" />
             <blockpin signalname="clk" name="WCLK" />
             <blockpin signalname="D3" name="WE" />
             <blockpin signalname="I3_b(7:0)" name="O(7:0)" />
         </block>
         <block symbolname="ram32x8s" name="Group2_15_8">
-            <blockpin signalname="MemW_Addr(0)" name="A0" />
-            <blockpin signalname="MemW_Addr(1)" name="A1" />
-            <blockpin signalname="MemW_Addr(2)" name="A2" />
-            <blockpin signalname="MemW_Addr(3)" name="A3" />
-            <blockpin signalname="MemW_Addr(4)" name="A4" />
+            <blockpin signalname="Mem_Addr(0)" name="A0" />
+            <blockpin signalname="Mem_Addr(1)" name="A1" />
+            <blockpin signalname="Mem_Addr(2)" name="A2" />
+            <blockpin signalname="Mem_Addr(3)" name="A3" />
+            <blockpin signalname="Mem_Addr(4)" name="A4" />
             <blockpin signalname="MemW_Data_f(15:8)" name="D(7:0)" />
             <blockpin signalname="clk" name="WCLK" />
             <blockpin signalname="D2" name="WE" />
             <blockpin signalname="I2_f(15:8)" name="O(7:0)" />
         </block>
         <block symbolname="ram32x8s" name="Group7_15_8">
-            <blockpin signalname="MemW_Addr(0)" name="A0" />
-            <blockpin signalname="MemW_Addr(1)" name="A1" />
-            <blockpin signalname="MemW_Addr(2)" name="A2" />
-            <blockpin signalname="MemW_Addr(3)" name="A3" />
-            <blockpin signalname="MemW_Addr(4)" name="A4" />
+            <blockpin signalname="Mem_Addr(0)" name="A0" />
+            <blockpin signalname="Mem_Addr(1)" name="A1" />
+            <blockpin signalname="Mem_Addr(2)" name="A2" />
+            <blockpin signalname="Mem_Addr(3)" name="A3" />
+            <blockpin signalname="Mem_Addr(4)" name="A4" />
             <blockpin signalname="MemW_Data_f(15:8)" name="D(7:0)" />
             <blockpin signalname="clk" name="WCLK" />
             <blockpin signalname="D7" name="WE" />
             <blockpin signalname="I7_f(15:8)" name="O(7:0)" />
         </block>
         <block symbolname="ram32x8s" name="Group7_7_0">
-            <blockpin signalname="MemW_Addr(0)" name="A0" />
-            <blockpin signalname="MemW_Addr(1)" name="A1" />
-            <blockpin signalname="MemW_Addr(2)" name="A2" />
-            <blockpin signalname="MemW_Addr(3)" name="A3" />
-            <blockpin signalname="MemW_Addr(4)" name="A4" />
+            <blockpin signalname="Mem_Addr(0)" name="A0" />
+            <blockpin signalname="Mem_Addr(1)" name="A1" />
+            <blockpin signalname="Mem_Addr(2)" name="A2" />
+            <blockpin signalname="Mem_Addr(3)" name="A3" />
+            <blockpin signalname="Mem_Addr(4)" name="A4" />
             <blockpin signalname="MemW_Data_b(7:0)" name="D(7:0)" />
             <blockpin signalname="clk" name="WCLK" />
             <blockpin signalname="D7" name="WE" />
             <blockpin signalname="I7_b(7:0)" name="O(7:0)" />
         </block>
         <block symbolname="ram32x8s" name="Group6_15_8">
-            <blockpin signalname="MemW_Addr(0)" name="A0" />
-            <blockpin signalname="MemW_Addr(1)" name="A1" />
-            <blockpin signalname="MemW_Addr(2)" name="A2" />
-            <blockpin signalname="MemW_Addr(3)" name="A3" />
-            <blockpin signalname="MemW_Addr(4)" name="A4" />
+            <blockpin signalname="Mem_Addr(0)" name="A0" />
+            <blockpin signalname="Mem_Addr(1)" name="A1" />
+            <blockpin signalname="Mem_Addr(2)" name="A2" />
+            <blockpin signalname="Mem_Addr(3)" name="A3" />
+            <blockpin signalname="Mem_Addr(4)" name="A4" />
             <blockpin signalname="MemW_Data_f(15:8)" name="D(7:0)" />
             <blockpin signalname="clk" name="WCLK" />
             <blockpin signalname="D6" name="WE" />
             <blockpin signalname="I6_f(15:8)" name="O(7:0)" />
         </block>
         <block symbolname="ram32x8s" name="Group6_7_0">
-            <blockpin signalname="MemW_Addr(0)" name="A0" />
-            <blockpin signalname="MemW_Addr(1)" name="A1" />
-            <blockpin signalname="MemW_Addr(2)" name="A2" />
-            <blockpin signalname="MemW_Addr(3)" name="A3" />
-            <blockpin signalname="MemW_Addr(4)" name="A4" />
+            <blockpin signalname="Mem_Addr(0)" name="A0" />
+            <blockpin signalname="Mem_Addr(1)" name="A1" />
+            <blockpin signalname="Mem_Addr(2)" name="A2" />
+            <blockpin signalname="Mem_Addr(3)" name="A3" />
+            <blockpin signalname="Mem_Addr(4)" name="A4" />
             <blockpin signalname="MemW_Data_b(7:0)" name="D(7:0)" />
             <blockpin signalname="clk" name="WCLK" />
             <blockpin signalname="D6" name="WE" />
             <blockpin signalname="I6_b(7:0)" name="O(7:0)" />
         </block>
         <block symbolname="ram32x8s" name="Group5_15_8">
-            <blockpin signalname="MemW_Addr(0)" name="A0" />
-            <blockpin signalname="MemW_Addr(1)" name="A1" />
-            <blockpin signalname="MemW_Addr(2)" name="A2" />
-            <blockpin signalname="MemW_Addr(3)" name="A3" />
-            <blockpin signalname="MemW_Addr(4)" name="A4" />
+            <blockpin signalname="Mem_Addr(0)" name="A0" />
+            <blockpin signalname="Mem_Addr(1)" name="A1" />
+            <blockpin signalname="Mem_Addr(2)" name="A2" />
+            <blockpin signalname="Mem_Addr(3)" name="A3" />
+            <blockpin signalname="Mem_Addr(4)" name="A4" />
             <blockpin signalname="MemW_Data_f(15:8)" name="D(7:0)" />
             <blockpin signalname="clk" name="WCLK" />
             <blockpin signalname="D5" name="WE" />
             <blockpin signalname="I5_f(15:8)" name="O(7:0)" />
         </block>
         <block symbolname="ram32x8s" name="Group5_7_0">
-            <blockpin signalname="MemW_Addr(0)" name="A0" />
-            <blockpin signalname="MemW_Addr(1)" name="A1" />
-            <blockpin signalname="MemW_Addr(2)" name="A2" />
-            <blockpin signalname="MemW_Addr(3)" name="A3" />
-            <blockpin signalname="MemW_Addr(4)" name="A4" />
+            <blockpin signalname="Mem_Addr(0)" name="A0" />
+            <blockpin signalname="Mem_Addr(1)" name="A1" />
+            <blockpin signalname="Mem_Addr(2)" name="A2" />
+            <blockpin signalname="Mem_Addr(3)" name="A3" />
+            <blockpin signalname="Mem_Addr(4)" name="A4" />
             <blockpin signalname="MemW_Data_b(7:0)" name="D(7:0)" />
             <blockpin signalname="clk" name="WCLK" />
             <blockpin signalname="D5" name="WE" />
             <blockpin signalname="I5_b(7:0)" name="O(7:0)" />
         </block>
         <block symbolname="ram32x8s" name="Group4_15_8">
-            <blockpin signalname="MemW_Addr(0)" name="A0" />
-            <blockpin signalname="MemW_Addr(1)" name="A1" />
-            <blockpin signalname="MemW_Addr(2)" name="A2" />
-            <blockpin signalname="MemW_Addr(3)" name="A3" />
-            <blockpin signalname="MemW_Addr(4)" name="A4" />
+            <blockpin signalname="Mem_Addr(0)" name="A0" />
+            <blockpin signalname="Mem_Addr(1)" name="A1" />
+            <blockpin signalname="Mem_Addr(2)" name="A2" />
+            <blockpin signalname="Mem_Addr(3)" name="A3" />
+            <blockpin signalname="Mem_Addr(4)" name="A4" />
             <blockpin signalname="MemW_Data_f(15:8)" name="D(7:0)" />
             <blockpin signalname="clk" name="WCLK" />
             <blockpin signalname="D4" name="WE" />
             <blockpin signalname="I4_f(15:8)" name="O(7:0)" />
         </block>
         <block symbolname="ram32x8s" name="Group4_7_0">
-            <blockpin signalname="MemW_Addr(0)" name="A0" />
-            <blockpin signalname="MemW_Addr(1)" name="A1" />
-            <blockpin signalname="MemW_Addr(2)" name="A2" />
-            <blockpin signalname="MemW_Addr(3)" name="A3" />
-            <blockpin signalname="MemW_Addr(4)" name="A4" />
+            <blockpin signalname="Mem_Addr(0)" name="A0" />
+            <blockpin signalname="Mem_Addr(1)" name="A1" />
+            <blockpin signalname="Mem_Addr(2)" name="A2" />
+            <blockpin signalname="Mem_Addr(3)" name="A3" />
+            <blockpin signalname="Mem_Addr(4)" name="A4" />
             <blockpin signalname="MemW_Data_b(7:0)" name="D(7:0)" />
             <blockpin signalname="clk" name="WCLK" />
             <blockpin signalname="D4" name="WE" />
             <blockpin signalname="I4_b(7:0)" name="O(7:0)" />
+        </block>
+        <block symbolname="D3_8E" name="XLXI_22">
+            <blockpin signalname="Mem_Addr(5)" name="A0" />
+            <blockpin signalname="Mem_Addr(6)" name="A1" />
+            <blockpin signalname="Mem_Addr(7)" name="A2" />
+            <blockpin signalname="D0" name="D0" />
+            <blockpin signalname="D1" name="D1" />
+            <blockpin signalname="D2" name="D2" />
+            <blockpin signalname="D3" name="D3" />
+            <blockpin signalname="D4" name="D4" />
+            <blockpin signalname="D5" name="D5" />
+            <blockpin signalname="D6" name="D6" />
+            <blockpin signalname="D7" name="D7" />
+            <blockpin signalname="MemW_en" name="EN" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="7040" height="5440">
@@ -726,8 +723,6 @@
         </instance>
         <instance x="3136" y="5280" name="Group4_7_0" orien="R0">
             <attrtext style="fontsize:28;fontname:Arial" attrname="InstName" x="0" y="-64" type="instance" />
-        </instance>
-        <instance x="416" y="2912" name="XLXI_10" orien="R0">
         </instance>
         <branch name="D0">
             <attrtext style="alignment:SOFT-TVCENTER;fontsize:28;fontname:Arial" attrname="Name" x="816" y="2320" type="branch" />
@@ -853,14 +848,14 @@
             <wire x2="3136" y1="4192" y2="4192" x1="2720" />
             <wire x2="2720" y1="4192" y2="4832" x1="2720" />
             <wire x2="3136" y1="4832" y2="4832" x1="2720" />
-            <wire x2="1120" y1="80" y2="256" x1="1120" />
-            <wire x2="1120" y1="256" y2="352" x1="1120" />
+            <wire x2="1120" y1="80" y2="352" x1="1120" />
         </branch>
         <iomarker fontsize="28" x="640" y="352" name="clk" orien="R180" />
-        <branch name="MemW_Addr(7:0)">
-            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="256" y="2020" type="branch" />
-            <wire x2="256" y1="400" y2="400" x1="224" />
-            <wire x2="1680" y1="400" y2="400" x1="256" />
+        <branch name="Mem_Addr(7:0)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="288" y="400" type="branch" />
+            <wire x2="288" y1="400" y2="400" x1="256" />
+            <wire x2="480" y1="400" y2="400" x1="288" />
+            <wire x2="1680" y1="400" y2="400" x1="480" />
             <wire x2="1680" y1="400" y2="416" x1="1680" />
             <wire x2="1680" y1="416" y2="480" x1="1680" />
             <wire x2="1680" y1="480" y2="544" x1="1680" />
@@ -903,12 +898,12 @@
             <wire x2="1680" y1="5088" y2="5152" x1="1680" />
             <wire x2="1680" y1="5152" y2="5264" x1="1680" />
             <wire x2="2960" y1="5264" y2="5264" x1="1680" />
-            <wire x2="256" y1="400" y2="2016" x1="256" />
-            <wire x2="256" y1="2016" y2="2432" x1="256" />
+            <wire x2="256" y1="400" y2="2432" x1="256" />
             <wire x2="256" y1="2432" y2="2496" x1="256" />
             <wire x2="256" y1="2496" y2="2560" x1="256" />
             <wire x2="256" y1="2560" y2="2576" x1="256" />
-            <wire x2="2960" y1="400" y2="416" x1="2960" />
+            <wire x2="480" y1="224" y2="400" x1="480" />
+            <wire x2="2960" y1="80" y2="416" x1="2960" />
             <wire x2="2960" y1="416" y2="480" x1="2960" />
             <wire x2="2960" y1="480" y2="544" x1="2960" />
             <wire x2="2960" y1="544" y2="608" x1="2960" />
@@ -949,6 +944,11 @@
             <wire x2="2960" y1="5024" y2="5088" x1="2960" />
             <wire x2="2960" y1="5088" y2="5152" x1="2960" />
             <wire x2="2960" y1="5152" y2="5264" x1="2960" />
+            <wire x2="4880" y1="80" y2="80" x1="2960" />
+            <wire x2="4880" y1="80" y2="512" x1="4880" />
+            <wire x2="4880" y1="512" y2="576" x1="4880" />
+            <wire x2="4880" y1="576" y2="640" x1="4880" />
+            <wire x2="4880" y1="640" y2="656" x1="4880" />
         </branch>
         <bustap x2="1776" y1="416" y2="416" x1="1680" />
         <bustap x2="1776" y1="480" y2="480" x1="1680" />
@@ -1030,424 +1030,405 @@
         <bustap x2="3056" y1="544" y2="544" x1="2960" />
         <bustap x2="3056" y1="480" y2="480" x1="2960" />
         <bustap x2="3056" y1="416" y2="416" x1="2960" />
-        <branch name="MemW_Addr(0)">
+        <branch name="Mem_Addr(0)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="416" type="branch" />
             <wire x2="1824" y1="416" y2="416" x1="1776" />
             <wire x2="1856" y1="416" y2="416" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(1)">
+        <branch name="Mem_Addr(1)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="480" type="branch" />
             <wire x2="1824" y1="480" y2="480" x1="1776" />
             <wire x2="1856" y1="480" y2="480" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(2)">
+        <branch name="Mem_Addr(2)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="544" type="branch" />
             <wire x2="1824" y1="544" y2="544" x1="1776" />
             <wire x2="1856" y1="544" y2="544" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(3)">
+        <branch name="Mem_Addr(3)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="608" type="branch" />
             <wire x2="1824" y1="608" y2="608" x1="1776" />
             <wire x2="1856" y1="608" y2="608" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(4)">
+        <branch name="Mem_Addr(4)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="672" type="branch" />
             <wire x2="1824" y1="672" y2="672" x1="1776" />
             <wire x2="1856" y1="672" y2="672" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(0)">
+        <branch name="Mem_Addr(0)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="1056" type="branch" />
             <wire x2="1824" y1="1056" y2="1056" x1="1776" />
             <wire x2="1856" y1="1056" y2="1056" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(1)">
+        <branch name="Mem_Addr(1)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="1120" type="branch" />
             <wire x2="1824" y1="1120" y2="1120" x1="1776" />
             <wire x2="1856" y1="1120" y2="1120" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(2)">
+        <branch name="Mem_Addr(2)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="1184" type="branch" />
             <wire x2="1824" y1="1184" y2="1184" x1="1776" />
             <wire x2="1856" y1="1184" y2="1184" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(3)">
+        <branch name="Mem_Addr(3)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="1248" type="branch" />
             <wire x2="1824" y1="1248" y2="1248" x1="1776" />
             <wire x2="1856" y1="1248" y2="1248" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(4)">
+        <branch name="Mem_Addr(4)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="1312" type="branch" />
             <wire x2="1824" y1="1312" y2="1312" x1="1776" />
             <wire x2="1856" y1="1312" y2="1312" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(0)">
+        <branch name="Mem_Addr(0)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="1696" type="branch" />
             <wire x2="1824" y1="1696" y2="1696" x1="1776" />
             <wire x2="1856" y1="1696" y2="1696" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(1)">
+        <branch name="Mem_Addr(1)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="1760" type="branch" />
             <wire x2="1824" y1="1760" y2="1760" x1="1776" />
             <wire x2="1856" y1="1760" y2="1760" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(2)">
+        <branch name="Mem_Addr(2)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="1824" type="branch" />
             <wire x2="1824" y1="1824" y2="1824" x1="1776" />
             <wire x2="1856" y1="1824" y2="1824" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(3)">
+        <branch name="Mem_Addr(3)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="1888" type="branch" />
             <wire x2="1824" y1="1888" y2="1888" x1="1776" />
             <wire x2="1856" y1="1888" y2="1888" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(4)">
+        <branch name="Mem_Addr(4)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="1952" type="branch" />
             <wire x2="1824" y1="1952" y2="1952" x1="1776" />
             <wire x2="1856" y1="1952" y2="1952" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(0)">
+        <branch name="Mem_Addr(0)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="2336" type="branch" />
             <wire x2="1824" y1="2336" y2="2336" x1="1776" />
             <wire x2="1856" y1="2336" y2="2336" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(1)">
+        <branch name="Mem_Addr(1)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="2400" type="branch" />
             <wire x2="1824" y1="2400" y2="2400" x1="1776" />
             <wire x2="1856" y1="2400" y2="2400" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(2)">
+        <branch name="Mem_Addr(2)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="2464" type="branch" />
             <wire x2="1824" y1="2464" y2="2464" x1="1776" />
             <wire x2="1856" y1="2464" y2="2464" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(3)">
+        <branch name="Mem_Addr(3)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="2528" type="branch" />
             <wire x2="1824" y1="2528" y2="2528" x1="1776" />
             <wire x2="1856" y1="2528" y2="2528" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(4)">
+        <branch name="Mem_Addr(4)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="2592" type="branch" />
             <wire x2="1824" y1="2592" y2="2592" x1="1776" />
             <wire x2="1856" y1="2592" y2="2592" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(0)">
+        <branch name="Mem_Addr(0)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="2976" type="branch" />
             <wire x2="1824" y1="2976" y2="2976" x1="1776" />
             <wire x2="1856" y1="2976" y2="2976" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(1)">
+        <branch name="Mem_Addr(1)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="3040" type="branch" />
             <wire x2="1824" y1="3040" y2="3040" x1="1776" />
             <wire x2="1856" y1="3040" y2="3040" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(2)">
+        <branch name="Mem_Addr(2)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="3104" type="branch" />
             <wire x2="1824" y1="3104" y2="3104" x1="1776" />
             <wire x2="1856" y1="3104" y2="3104" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(3)">
+        <branch name="Mem_Addr(3)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="3168" type="branch" />
             <wire x2="1824" y1="3168" y2="3168" x1="1776" />
             <wire x2="1856" y1="3168" y2="3168" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(4)">
+        <branch name="Mem_Addr(4)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="3232" type="branch" />
             <wire x2="1824" y1="3232" y2="3232" x1="1776" />
             <wire x2="1856" y1="3232" y2="3232" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(0)">
+        <branch name="Mem_Addr(0)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="3616" type="branch" />
             <wire x2="1824" y1="3616" y2="3616" x1="1776" />
             <wire x2="1856" y1="3616" y2="3616" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(1)">
+        <branch name="Mem_Addr(1)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="3680" type="branch" />
             <wire x2="1824" y1="3680" y2="3680" x1="1776" />
             <wire x2="1856" y1="3680" y2="3680" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(2)">
+        <branch name="Mem_Addr(2)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="3744" type="branch" />
             <wire x2="1824" y1="3744" y2="3744" x1="1776" />
             <wire x2="1856" y1="3744" y2="3744" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(3)">
+        <branch name="Mem_Addr(3)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="3808" type="branch" />
             <wire x2="1824" y1="3808" y2="3808" x1="1776" />
             <wire x2="1856" y1="3808" y2="3808" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(4)">
+        <branch name="Mem_Addr(4)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="3872" type="branch" />
             <wire x2="1824" y1="3872" y2="3872" x1="1776" />
             <wire x2="1856" y1="3872" y2="3872" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(0)">
+        <branch name="Mem_Addr(0)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="4256" type="branch" />
             <wire x2="1824" y1="4256" y2="4256" x1="1776" />
             <wire x2="1856" y1="4256" y2="4256" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(1)">
+        <branch name="Mem_Addr(1)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="4320" type="branch" />
             <wire x2="1824" y1="4320" y2="4320" x1="1776" />
             <wire x2="1856" y1="4320" y2="4320" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(2)">
+        <branch name="Mem_Addr(2)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="4384" type="branch" />
             <wire x2="1824" y1="4384" y2="4384" x1="1776" />
             <wire x2="1856" y1="4384" y2="4384" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(3)">
+        <branch name="Mem_Addr(3)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="4448" type="branch" />
             <wire x2="1824" y1="4448" y2="4448" x1="1776" />
             <wire x2="1856" y1="4448" y2="4448" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(4)">
+        <branch name="Mem_Addr(4)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="4512" type="branch" />
             <wire x2="1824" y1="4512" y2="4512" x1="1776" />
             <wire x2="1856" y1="4512" y2="4512" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(0)">
+        <branch name="Mem_Addr(0)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="4896" type="branch" />
             <wire x2="1824" y1="4896" y2="4896" x1="1776" />
             <wire x2="1856" y1="4896" y2="4896" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(1)">
+        <branch name="Mem_Addr(1)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="4960" type="branch" />
             <wire x2="1824" y1="4960" y2="4960" x1="1776" />
             <wire x2="1856" y1="4960" y2="4960" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(2)">
+        <branch name="Mem_Addr(2)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="5024" type="branch" />
             <wire x2="1824" y1="5024" y2="5024" x1="1776" />
             <wire x2="1856" y1="5024" y2="5024" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(3)">
+        <branch name="Mem_Addr(3)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="5088" type="branch" />
             <wire x2="1824" y1="5088" y2="5088" x1="1776" />
             <wire x2="1856" y1="5088" y2="5088" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(4)">
+        <branch name="Mem_Addr(4)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="5152" type="branch" />
             <wire x2="1824" y1="5152" y2="5152" x1="1776" />
             <wire x2="1856" y1="5152" y2="5152" x1="1824" />
         </branch>
-        <branch name="MemW_Addr(4)">
+        <branch name="Mem_Addr(4)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="5152" type="branch" />
             <wire x2="3104" y1="5152" y2="5152" x1="3056" />
             <wire x2="3136" y1="5152" y2="5152" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(3)">
+        <branch name="Mem_Addr(3)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="5088" type="branch" />
             <wire x2="3104" y1="5088" y2="5088" x1="3056" />
             <wire x2="3136" y1="5088" y2="5088" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(2)">
+        <branch name="Mem_Addr(2)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="5024" type="branch" />
             <wire x2="3104" y1="5024" y2="5024" x1="3056" />
             <wire x2="3136" y1="5024" y2="5024" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(1)">
+        <branch name="Mem_Addr(1)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="4960" type="branch" />
             <wire x2="3104" y1="4960" y2="4960" x1="3056" />
             <wire x2="3136" y1="4960" y2="4960" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(0)">
+        <branch name="Mem_Addr(0)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="4896" type="branch" />
             <wire x2="3104" y1="4896" y2="4896" x1="3056" />
             <wire x2="3136" y1="4896" y2="4896" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(4)">
+        <branch name="Mem_Addr(4)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="4512" type="branch" />
             <wire x2="3104" y1="4512" y2="4512" x1="3056" />
             <wire x2="3136" y1="4512" y2="4512" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(3)">
+        <branch name="Mem_Addr(3)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="4448" type="branch" />
             <wire x2="3104" y1="4448" y2="4448" x1="3056" />
             <wire x2="3136" y1="4448" y2="4448" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(2)">
+        <branch name="Mem_Addr(2)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="4384" type="branch" />
             <wire x2="3104" y1="4384" y2="4384" x1="3056" />
             <wire x2="3136" y1="4384" y2="4384" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(1)">
+        <branch name="Mem_Addr(1)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="4320" type="branch" />
             <wire x2="3104" y1="4320" y2="4320" x1="3056" />
             <wire x2="3136" y1="4320" y2="4320" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(0)">
+        <branch name="Mem_Addr(0)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="4256" type="branch" />
             <wire x2="3104" y1="4256" y2="4256" x1="3056" />
             <wire x2="3136" y1="4256" y2="4256" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(4)">
+        <branch name="Mem_Addr(4)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="3872" type="branch" />
             <wire x2="3104" y1="3872" y2="3872" x1="3056" />
             <wire x2="3136" y1="3872" y2="3872" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(3)">
+        <branch name="Mem_Addr(3)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="3808" type="branch" />
             <wire x2="3104" y1="3808" y2="3808" x1="3056" />
             <wire x2="3136" y1="3808" y2="3808" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(2)">
+        <branch name="Mem_Addr(2)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="3744" type="branch" />
             <wire x2="3104" y1="3744" y2="3744" x1="3056" />
             <wire x2="3136" y1="3744" y2="3744" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(1)">
+        <branch name="Mem_Addr(1)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="3680" type="branch" />
             <wire x2="3104" y1="3680" y2="3680" x1="3056" />
             <wire x2="3136" y1="3680" y2="3680" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(0)">
+        <branch name="Mem_Addr(0)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="3616" type="branch" />
             <wire x2="3104" y1="3616" y2="3616" x1="3056" />
             <wire x2="3136" y1="3616" y2="3616" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(4)">
+        <branch name="Mem_Addr(4)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="3232" type="branch" />
             <wire x2="3104" y1="3232" y2="3232" x1="3056" />
             <wire x2="3136" y1="3232" y2="3232" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(3)">
+        <branch name="Mem_Addr(3)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="3168" type="branch" />
             <wire x2="3104" y1="3168" y2="3168" x1="3056" />
             <wire x2="3136" y1="3168" y2="3168" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(2)">
+        <branch name="Mem_Addr(2)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="3104" type="branch" />
             <wire x2="3104" y1="3104" y2="3104" x1="3056" />
             <wire x2="3136" y1="3104" y2="3104" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(1)">
+        <branch name="Mem_Addr(1)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="3040" type="branch" />
             <wire x2="3104" y1="3040" y2="3040" x1="3056" />
             <wire x2="3136" y1="3040" y2="3040" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(0)">
+        <branch name="Mem_Addr(0)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="2976" type="branch" />
             <wire x2="3104" y1="2976" y2="2976" x1="3056" />
             <wire x2="3136" y1="2976" y2="2976" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(4)">
+        <branch name="Mem_Addr(4)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="2592" type="branch" />
             <wire x2="3104" y1="2592" y2="2592" x1="3056" />
             <wire x2="3136" y1="2592" y2="2592" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(3)">
+        <branch name="Mem_Addr(3)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="2528" type="branch" />
             <wire x2="3104" y1="2528" y2="2528" x1="3056" />
             <wire x2="3136" y1="2528" y2="2528" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(2)">
+        <branch name="Mem_Addr(2)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="2464" type="branch" />
             <wire x2="3104" y1="2464" y2="2464" x1="3056" />
             <wire x2="3136" y1="2464" y2="2464" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(1)">
+        <branch name="Mem_Addr(1)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="2400" type="branch" />
             <wire x2="3104" y1="2400" y2="2400" x1="3056" />
             <wire x2="3136" y1="2400" y2="2400" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(0)">
+        <branch name="Mem_Addr(0)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="2336" type="branch" />
             <wire x2="3104" y1="2336" y2="2336" x1="3056" />
             <wire x2="3136" y1="2336" y2="2336" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(4)">
+        <branch name="Mem_Addr(4)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="1952" type="branch" />
             <wire x2="3104" y1="1952" y2="1952" x1="3056" />
             <wire x2="3136" y1="1952" y2="1952" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(3)">
+        <branch name="Mem_Addr(3)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="1888" type="branch" />
             <wire x2="3104" y1="1888" y2="1888" x1="3056" />
             <wire x2="3136" y1="1888" y2="1888" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(2)">
+        <branch name="Mem_Addr(2)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="1824" type="branch" />
             <wire x2="3104" y1="1824" y2="1824" x1="3056" />
             <wire x2="3136" y1="1824" y2="1824" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(1)">
+        <branch name="Mem_Addr(1)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="1760" type="branch" />
             <wire x2="3104" y1="1760" y2="1760" x1="3056" />
             <wire x2="3136" y1="1760" y2="1760" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(0)">
+        <branch name="Mem_Addr(0)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="1696" type="branch" />
             <wire x2="3104" y1="1696" y2="1696" x1="3056" />
             <wire x2="3136" y1="1696" y2="1696" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(4)">
+        <branch name="Mem_Addr(4)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="1312" type="branch" />
             <wire x2="3104" y1="1312" y2="1312" x1="3056" />
             <wire x2="3136" y1="1312" y2="1312" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(3)">
+        <branch name="Mem_Addr(3)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="1248" type="branch" />
             <wire x2="3104" y1="1248" y2="1248" x1="3056" />
             <wire x2="3136" y1="1248" y2="1248" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(2)">
+        <branch name="Mem_Addr(2)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="1184" type="branch" />
             <wire x2="3104" y1="1184" y2="1184" x1="3056" />
             <wire x2="3136" y1="1184" y2="1184" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(1)">
+        <branch name="Mem_Addr(1)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="1120" type="branch" />
             <wire x2="3104" y1="1120" y2="1120" x1="3056" />
             <wire x2="3136" y1="1120" y2="1120" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(0)">
+        <branch name="Mem_Addr(0)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="1056" type="branch" />
             <wire x2="3104" y1="1056" y2="1056" x1="3056" />
             <wire x2="3136" y1="1056" y2="1056" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(4)">
+        <branch name="Mem_Addr(4)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="672" type="branch" />
             <wire x2="3104" y1="672" y2="672" x1="3056" />
             <wire x2="3136" y1="672" y2="672" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(3)">
+        <branch name="Mem_Addr(3)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="608" type="branch" />
             <wire x2="3104" y1="608" y2="608" x1="3056" />
             <wire x2="3136" y1="608" y2="608" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(2)">
+        <branch name="Mem_Addr(2)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="544" type="branch" />
             <wire x2="3104" y1="544" y2="544" x1="3056" />
             <wire x2="3136" y1="544" y2="544" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(1)">
+        <branch name="Mem_Addr(1)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="480" type="branch" />
             <wire x2="3104" y1="480" y2="480" x1="3056" />
             <wire x2="3136" y1="480" y2="480" x1="3104" />
         </branch>
-        <branch name="MemW_Addr(0)">
+        <branch name="Mem_Addr(0)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3104" y="416" type="branch" />
             <wire x2="3104" y1="416" y2="416" x1="3056" />
             <wire x2="3136" y1="416" y2="416" x1="3104" />
-        </branch>
-        <iomarker fontsize="28" x="224" y="400" name="MemW_Addr(7:0)" orien="R180" />
-        <bustap x2="352" y1="2560" y2="2560" x1="256" />
-        <bustap x2="352" y1="2496" y2="2496" x1="256" />
-        <bustap x2="352" y1="2432" y2="2432" x1="256" />
-        <branch name="MemW_Addr(7)">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="368" y="2432" type="branch" />
-            <wire x2="368" y1="2432" y2="2432" x1="352" />
-            <wire x2="416" y1="2432" y2="2432" x1="368" />
-        </branch>
-        <branch name="MemW_Addr(6)">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="368" y="2496" type="branch" />
-            <wire x2="368" y1="2496" y2="2496" x1="352" />
-            <wire x2="416" y1="2496" y2="2496" x1="368" />
-        </branch>
-        <branch name="MemW_Addr(5)">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="368" y="2560" type="branch" />
-            <wire x2="368" y1="2560" y2="2560" x1="352" />
-            <wire x2="416" y1="2560" y2="2560" x1="368" />
         </branch>
         <branch name="MemW_Data_f(15:8)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1488" y="288" type="branch" />
@@ -1504,32 +1485,6 @@
         <iomarker fontsize="28" x="384" y="2624" name="MemW_en" orien="R180" />
         <instance x="5136" y="4768" name="XLXI_21" orien="R0">
         </instance>
-        <branch name="MemR_Addr(2:0)">
-            <wire x2="4880" y1="480" y2="480" x1="4816" />
-            <wire x2="4880" y1="480" y2="512" x1="4880" />
-            <wire x2="4880" y1="512" y2="576" x1="4880" />
-            <wire x2="4880" y1="576" y2="640" x1="4880" />
-            <wire x2="4880" y1="640" y2="656" x1="4880" />
-        </branch>
-        <bustap x2="4976" y1="512" y2="512" x1="4880" />
-        <bustap x2="4976" y1="576" y2="576" x1="4880" />
-        <bustap x2="4976" y1="640" y2="640" x1="4880" />
-        <branch name="MemR_Addr(2)">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="5056" y="512" type="branch" />
-            <wire x2="5056" y1="512" y2="512" x1="4976" />
-            <wire x2="5136" y1="512" y2="512" x1="5056" />
-        </branch>
-        <branch name="MemR_Addr(1)">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="5056" y="576" type="branch" />
-            <wire x2="5056" y1="576" y2="576" x1="4976" />
-            <wire x2="5136" y1="576" y2="576" x1="5056" />
-        </branch>
-        <branch name="MemR_Addr(0)">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="5056" y="640" type="branch" />
-            <wire x2="5056" y1="640" y2="640" x1="4976" />
-            <wire x2="5136" y1="640" y2="640" x1="5056" />
-        </branch>
-        <iomarker fontsize="28" x="4816" y="480" name="MemR_Addr(2:0)" orien="R180" />
         <branch name="I0_f(15:8)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="4720" y="688" type="branch" />
             <wire x2="2272" y1="288" y2="288" x1="2240" />
@@ -2698,10 +2653,8 @@
         </branch>
         <branch name="MemR_Data(15:0)">
             <wire x2="5536" y1="512" y2="512" x1="5520" />
-            <wire x2="6528" y1="512" y2="512" x1="5536" />
-            <wire x2="6544" y1="512" y2="512" x1="6528" />
+            <wire x2="6304" y1="512" y2="512" x1="5536" />
         </branch>
-        <iomarker fontsize="28" x="6544" y="512" name="MemR_Data(15:0)" orien="R0" />
         <branch name="I0_b(7:0)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="4720" y="1200" type="branch" />
             <wire x2="2304" y1="928" y2="928" x1="2240" />
@@ -2720,5 +2673,52 @@
             <wire x2="4960" y1="1600" y2="1664" x1="4960" />
             <wire x2="4960" y1="1664" y2="1680" x1="4960" />
         </branch>
+        <instance x="416" y="2912" name="XLXI_22" orien="R0">
+        </instance>
+        <bustap x2="4976" y1="512" y2="512" x1="4880" />
+        <bustap x2="4976" y1="576" y2="576" x1="4880" />
+        <bustap x2="4976" y1="640" y2="640" x1="4880" />
+        <bustap x2="352" y1="2432" y2="2432" x1="256" />
+        <bustap x2="352" y1="2496" y2="2496" x1="256" />
+        <bustap x2="352" y1="2560" y2="2560" x1="256" />
+        <branch name="Mem_Addr(5)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="368" y="2560" type="branch" />
+            <wire x2="368" y1="2560" y2="2560" x1="352" />
+            <wire x2="416" y1="2560" y2="2560" x1="368" />
+        </branch>
+        <branch name="Mem_Addr(6)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="368" y="2496" type="branch" />
+            <wire x2="368" y1="2496" y2="2496" x1="352" />
+            <wire x2="416" y1="2496" y2="2496" x1="368" />
+        </branch>
+        <branch name="Mem_Addr(7)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="368" y="2432" type="branch" />
+            <wire x2="368" y1="2432" y2="2432" x1="352" />
+            <wire x2="416" y1="2432" y2="2432" x1="368" />
+        </branch>
+        <branch name="Mem_Addr(7)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="5040" y="512" type="branch" />
+            <wire x2="5040" y1="512" y2="512" x1="4976" />
+            <wire x2="5136" y1="512" y2="512" x1="5040" />
+        </branch>
+        <branch name="Mem_Addr(6)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="5040" y="576" type="branch" />
+            <wire x2="5040" y1="576" y2="576" x1="4976" />
+            <wire x2="5136" y1="576" y2="576" x1="5040" />
+        </branch>
+        <branch name="Mem_Addr(5)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="5040" y="640" type="branch" />
+            <wire x2="5040" y1="640" y2="640" x1="4976" />
+            <wire x2="5136" y1="640" y2="640" x1="5040" />
+        </branch>
+        <branch name="Mem_Addr(15:0)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="320" y="128" type="branch" />
+            <wire x2="320" y1="128" y2="128" x1="224" />
+            <wire x2="480" y1="128" y2="128" x1="320" />
+            <wire x2="512" y1="128" y2="128" x1="480" />
+        </branch>
+        <bustap x2="480" y1="128" y2="224" x1="480" />
+        <iomarker fontsize="28" x="224" y="128" name="Mem_Addr(15:0)" orien="R180" />
+        <iomarker fontsize="28" x="6304" y="512" name="MemR_Data(15:0)" orien="R0" />
     </sheet>
 </drawing>
