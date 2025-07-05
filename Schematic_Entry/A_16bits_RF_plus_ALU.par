@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-localhost.localdomain::  Tue Mar 25 05:44:37 2025
+localhost.localdomain::  Wed Apr 16 03:43:43 2025
 
 par -w -intstyle ise -ol high -mt off A_16bits_RF_plus_ALU_map.ncd
 A_16bits_RF_plus_ALU.ncd A_16bits_RF_plus_ALU.pcf 
@@ -106,11 +106,11 @@ Starting Router
 
 Phase  1  : 3891 unrouted;      REAL time: 4 secs 
 
-Phase  2  : 3681 unrouted;      REAL time: 5 secs 
+Phase  2  : 3681 unrouted;      REAL time: 4 secs 
 
 Phase  3  : 520 unrouted;      REAL time: 5 secs 
 
-Phase  4  : 520 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
+Phase  4  : 520 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
 
 Updating file: A_16bits_RF_plus_ALU.ncd with current fully routed design.
 

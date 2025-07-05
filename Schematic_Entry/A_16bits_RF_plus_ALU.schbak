@@ -9,8 +9,7 @@
         <signal name="A(15:0)" />
         <signal name="B(15:0)" />
         <signal name="Write_Data(15:0)" />
-        <signal name="ALU_S(15:0)">
-        </signal>
+        <signal name="ALU_S(15:0)" />
         <signal name="ALU_S(15)" />
         <signal name="ALU_S(14)" />
         <signal name="ALU_S(13)" />
@@ -64,6 +63,7 @@
         <signal name="XLXN_94(15:0)" />
         <signal name="ReadA_data(15:0)" />
         <port polarity="Input" name="Write_Data(15:0)" />
+        <port polarity="Output" name="ALU_S(15:0)" />
         <port polarity="Output" name="ALU_Out(15:0)" />
         <port polarity="Output" name="Imm_Out(15:0)" />
         <port polarity="Input" name="ALU_B_Sel(1:0)" />
@@ -324,6 +324,8 @@
             <wire x2="4656" y1="2960" y2="3024" x1="4656" />
             <wire x2="4656" y1="3024" y2="3088" x1="4656" />
             <wire x2="4656" y1="3088" y2="3104" x1="4656" />
+            <wire x2="4480" y1="1920" y2="2080" x1="4480" />
+            <wire x2="4640" y1="1920" y2="1920" x1="4480" />
         </branch>
         <bustap x2="4752" y1="2128" y2="2128" x1="4656" />
         <bustap x2="4752" y1="2192" y2="2192" x1="4656" />
@@ -584,8 +586,7 @@
             <wire x2="4336" y1="2144" y2="2144" x1="4304" />
         </branch>
         <branch name="ALU_Control">
-            <wire x2="3904" y1="2208" y2="2208" x1="3840" />
-            <wire x2="3920" y1="2208" y2="2208" x1="3904" />
+            <wire x2="3920" y1="2208" y2="2208" x1="3808" />
         </branch>
         <iomarker fontsize="28" x="4336" y="2144" name="NZVC(3:0)" orien="R0" />
         <instance x="3280" y="2272" name="DataA_MUX" orien="R0">
@@ -599,6 +600,7 @@
         </branch>
         <iomarker fontsize="28" x="3248" y="2080" name="PC_to_ALU_A(15:0)" orien="R180" />
         <iomarker fontsize="28" x="3264" y="2240" name="ALU_A_Sel" orien="R180" />
+        <iomarker fontsize="28" x="3808" y="2208" name="ALU_Control" orien="R180" />
         <instance x="3376" y="2784" name="DataB_MUX" orien="R0">
             <attrtext style="fontsize:28;fontname:Arial" attrname="InstName" x="0" y="0" type="instance" />
         </instance>
@@ -617,6 +619,7 @@
             <wire x2="4800" y1="3152" y2="3152" x1="4416" />
             <wire x2="4416" y1="3152" y2="3440" x1="4416" />
         </branch>
+        <iomarker fontsize="28" x="4640" y="1920" name="ALU_S(15:0)" orien="R0" />
         <branch name="Instr(15:0)">
             <wire x2="2672" y1="3056" y2="3056" x1="2528" />
         </branch>
@@ -646,6 +649,5 @@
         <iomarker fontsize="28" x="2944" y="1984" name="ReadA_data(15:0)" orien="R0" />
         <iomarker fontsize="28" x="3536" y="3056" name="Imm_Out(15:0)" orien="R0" />
         <iomarker fontsize="28" x="2192" y="2288" name="Write_Data(15:0)" orien="R180" />
-        <iomarker fontsize="28" x="3840" y="2208" name="ALU_Control" orien="R180" />
     </sheet>
 </drawing>

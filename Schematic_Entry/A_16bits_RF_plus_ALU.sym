@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="A_16bits_RF_plus_ALU">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2025-7-4T9:35:5</timestamp>
+    <pin polarity="Input" x="0" y="-864" name="Write_Data(15:0)" />
+    <pin polarity="Input" x="0" y="-800" name="RF_Write_en" />
+    <pin polarity="Input" x="0" y="-736" name="Rd_to_RF(2:0)" />
+    <pin polarity="Input" x="0" y="-672" name="Rm_Rd_to_RF(2:0)" />
+    <pin polarity="Input" x="0" y="-608" name="Rn_to_RF(2:0)" />
+    <pin polarity="Input" x="0" y="-544" name="PC_to_ALU_A(15:0)" />
+    <pin polarity="Input" x="0" y="-480" name="ALU_A_Sel" />
+    <pin polarity="Input" x="0" y="-416" name="Instr(15:0)" />
+    <pin polarity="Input" x="0" y="-352" name="Rd(15:0)" />
+    <pin polarity="Input" x="0" y="-288" name="Imm_Sel(1:0)" />
+    <pin polarity="Input" x="0" y="-224" name="ALU_B_Sel(1:0)" />
+    <pin polarity="Input" x="0" y="-160" name="ALU_Control" />
+    <pin polarity="Input" x="0" y="-96" name="ALUOut_CE" />
+    <pin polarity="Input" x="0" y="-32" name="clk" />
+    <pin polarity="Output" x="560" y="-800" name="ReadA_data(15:0)" />
+    <pin polarity="Output" x="560" y="-736" name="ALU_Out(15:0)" />
+    <pin polarity="Output" x="560" y="-672" name="NZVC(3:0)" />
+    <pin polarity="Output" x="560" y="-864" name="Imm_Out(15:0)" />
+    <graph>
+        <rect width="432" x="64" y="-896" height="896" />
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="280" y="-904" type="symbol" />
+        <line x2="0" y1="-864" y2="-864" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-864" type="pin Write_Data(15:0)" />
+        <rect width="64" x="0" y="-876" height="24" />
+        <line x2="0" y1="-800" y2="-800" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-800" type="pin RF_Write_en" />
+        <line x2="0" y1="-736" y2="-736" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-736" type="pin Rd_to_RF(2:0)" />
+        <rect width="64" x="0" y="-748" height="24" />
+        <line x2="0" y1="-672" y2="-672" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-672" type="pin Rm_Rd_to_RF(2:0)" />
+        <rect width="64" x="0" y="-684" height="24" />
+        <line x2="0" y1="-608" y2="-608" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-608" type="pin Rn_to_RF(2:0)" />
+        <rect width="64" x="0" y="-620" height="24" />
+        <line x2="0" y1="-544" y2="-544" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-544" type="pin PC_to_ALU_A(15:0)" />
+        <rect width="64" x="0" y="-556" height="24" />
+        <line x2="0" y1="-480" y2="-480" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-480" type="pin ALU_A_Sel" />
+        <line x2="0" y1="-416" y2="-416" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-416" type="pin Instr(15:0)" />
+        <rect width="64" x="0" y="-428" height="24" />
+        <line x2="0" y1="-352" y2="-352" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-352" type="pin Rd(15:0)" />
+        <rect width="64" x="0" y="-364" height="24" />
+        <line x2="0" y1="-288" y2="-288" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-288" type="pin Imm_Sel(1:0)" />
+        <rect width="64" x="0" y="-300" height="24" />
+        <line x2="0" y1="-224" y2="-224" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-224" type="pin ALU_B_Sel(1:0)" />
+        <rect width="64" x="0" y="-236" height="24" />
+        <line x2="0" y1="-160" y2="-160" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-160" type="pin ALU_Control" />
+        <line x2="0" y1="-96" y2="-96" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-96" type="pin ALUOut_CE" />
+        <line x2="0" y1="-32" y2="-32" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-32" type="pin clk" />
+        <line x2="560" y1="-800" y2="-800" x1="496" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="488" y="-800" type="pin ReadA_data(15:0)" />
+        <rect width="64" x="496" y="-812" height="24" />
+        <line x2="560" y1="-736" y2="-736" x1="496" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="488" y="-736" type="pin ALU_Out(15:0)" />
+        <rect width="64" x="496" y="-748" height="24" />
+        <line x2="560" y1="-672" y2="-672" x1="496" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="488" y="-672" type="pin NZVC(3:0)" />
+        <rect width="64" x="496" y="-684" height="24" />
+        <line x2="560" y1="-864" y2="-864" x1="496" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="488" y="-864" type="pin Imm_Out(15:0)" />
+        <rect width="64" x="496" y="-876" height="24" />
+    </graph>
+</symbol>

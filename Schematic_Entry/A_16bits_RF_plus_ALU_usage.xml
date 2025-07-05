@@ -4,39 +4,39 @@
      changes made to this file may result in unpredictable
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
-<DeviceUsageSummary rev="17">
-<DesignStatistics TimeStamp="Tue Mar 25 05:44:33 2025"><group name="MiscellaneousStatistics">
-<item name="AGG_BONDED_IO" rev="17">
+<DeviceUsageSummary rev="23">
+<DesignStatistics TimeStamp="Wed Apr 16 03:43:40 2025"><group name="MiscellaneousStatistics">
+<item name="AGG_BONDED_IO" rev="23">
 <attrib name="value" value="97"/></item>
-<item name="AGG_IO" rev="17">
+<item name="AGG_IO" rev="23">
 <attrib name="value" value="97"/></item>
-<item name="AGG_SLICE" rev="17">
+<item name="AGG_SLICE" rev="23">
 <attrib name="value" value="163"/></item>
-<item name="NUM_BONDED_IOB" rev="17">
+<item name="NUM_BONDED_IOB" rev="23">
 <attrib name="value" value="97"/></item>
-<item name="NUM_BSFULL" rev="17">
+<item name="NUM_BSFULL" rev="23">
 <attrib name="value" value="119"/></item>
-<item name="NUM_BSLUTONLY" rev="17">
+<item name="NUM_BSLUTONLY" rev="23">
 <attrib name="value" value="232"/></item>
-<item name="NUM_BSREGONLY" rev="17">
+<item name="NUM_BSREGONLY" rev="23">
 <attrib name="value" value="57"/></item>
-<item name="NUM_BSUSED" rev="17">
+<item name="NUM_BSUSED" rev="23">
 <attrib name="value" value="408"/></item>
-<item name="NUM_BUFG" rev="17">
+<item name="NUM_BUFG" rev="23">
 <attrib name="value" value="1"/></item>
-<item name="NUM_LOGIC_O6ONLY" rev="17">
+<item name="NUM_LOGIC_O6ONLY" rev="23">
 <attrib name="value" value="351"/></item>
-<item name="NUM_SLICEL" rev="17">
+<item name="NUM_SLICEL" rev="23">
 <attrib name="value" value="163"/></item>
-<item name="NUM_SLICE_CONTROLSET" rev="17">
+<item name="NUM_SLICE_CONTROLSET" rev="23">
 <attrib name="value" value="11"/></item>
-<item name="NUM_SLICE_CYINIT" rev="17">
+<item name="NUM_SLICE_CYINIT" rev="23">
 <attrib name="value" value="351"/></item>
-<item name="NUM_SLICE_FF" rev="17">
+<item name="NUM_SLICE_FF" rev="23">
 <attrib name="value" value="176"/></item>
-<item name="NUM_SLICE_UNUSEDCTRL" rev="17">
+<item name="NUM_SLICE_UNUSEDCTRL" rev="23">
 <attrib name="value" value="90"/></item>
-<item name="NUM_STARTUP" rev="17">
+<item name="NUM_STARTUP" rev="23">
 <attrib name="value" value="1"/></item>
 </group>
 </DesignStatistics>

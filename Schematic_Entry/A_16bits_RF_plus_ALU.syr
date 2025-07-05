@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.01 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.01 secs
  
 --> 
 Reading design: A_16bits_RF_plus_ALU.prj
@@ -238,7 +238,7 @@ Unit <A_16bits_RF_plus_ALU> synthesized.
 
 Synthesizing Unit <ALU_16bits_MUSER_A_16bits_RF_plus_ALU>.
     Related source file is "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/A_16bits_RF_plus_ALU.vf".
-    Set property "HU_SET = XLXI_72_9" for instance <XLXI_72>.
+    Set property "HU_SET = XLXI_72_0" for instance <XLXI_72>.
 INFO:Xst:3210 - "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/A_16bits_RF_plus_ALU.vf" line 763: Output port <C_out> of the instance <For_B2s> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
@@ -312,7 +312,7 @@ Unit <MUX8_1_16bits_MUSER_A_16bits_RF_plus_ALU> synthesized.
 
 Synthesizing Unit <MUX8_1_MUSER_A_16bits_RF_plus_ALU>.
     Related source file is "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/A_16bits_RF_plus_ALU.vf".
-    Set property "HU_SET = XLXI_8_10" for instance <XLXI_8>.
+    Set property "HU_SET = XLXI_8_1" for instance <XLXI_8>.
     Summary:
 	no macro.
 Unit <MUX8_1_MUSER_A_16bits_RF_plus_ALU> synthesized.
@@ -742,13 +742,13 @@ clk            |   30.538|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 0.31 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 0.56 secs
  
 --> 
 
 
-Total memory usage is 500852 kilobytes
+Total memory usage is 500848 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
