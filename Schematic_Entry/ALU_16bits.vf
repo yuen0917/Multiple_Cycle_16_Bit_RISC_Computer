@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : ALU_16bits.vf
-// /___/   /\     Timestamp : 03/24/2025 16:36:18
+// /___/   /\     Timestamp : 04/16/2025 09:15:56
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -271,7 +271,7 @@ module ALU_16bits(A,
                                        .C_in(ALU_CTRL), 
                                        .C_out(NZVC[0]), 
                                        .S(S_DUMMY[15:0]));
-   (* HU_SET = "XLXI_72_8" *) 
+   (* HU_SET = "XLXI_72_11" *) 
    NOR16_HXILINX_ALU_16bits  XLXI_72 (.I0(S_DUMMY[0]), 
                                      .I1(S_DUMMY[1]), 
                                      .I2(S_DUMMY[2]), 

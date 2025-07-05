@@ -9,6 +9,7 @@
          <ClosedNodesVersion>2</ClosedNodesVersion>
          <ClosedNode>/ALU_16bits |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|ALU_16bits.sch</ClosedNode>
          <ClosedNode>/ALU_16bits |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|ALU_16bits.sch/XLXI_4 - FA_2s_16bits</ClosedNode>
+         <ClosedNode>/A_16bits_RF_plus_ALU |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|A_16bits_RF_plus_ALU.sch</ClosedNode>
          <ClosedNode>/A_16bits_RF_plus_ALU |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|A_16bits_RF_plus_ALU.sch/ALU - ALU_16bits</ClosedNode>
          <ClosedNode>/A_16bits_RF_plus_ALU |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|A_16bits_RF_plus_ALU.sch/ALU - ALU_16bits/For_B2s - FA_16bits</ClosedNode>
          <ClosedNode>/A_16bits_RF_plus_ALU |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|A_16bits_RF_plus_ALU.sch/ALU - ALU_16bits/XLXI_29 - FA_16bits</ClosedNode>
@@ -19,6 +20,39 @@
          <ClosedNode>/A_16bits_RF_plus_ALU |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|A_16bits_RF_plus_ALU.sch/XLXI_1 - ALU_16bits</ClosedNode>
          <ClosedNode>/A_16bits_RF_plus_ALU |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|A_16bits_RF_plus_ALU.sch/XLXI_2 - Reg_File_16bits</ClosedNode>
          <ClosedNode>/A_16bits_RF_plus_ALU |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|A_16bits_RF_plus_ALU.sch/XLXI_3 - MUX2_1_16bits</ClosedNode>
+         <ClosedNode>/Complete_Datapath |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath.sch/PC_or_ALU - MUX2_1_16bits</ClosedNode>
+         <ClosedNode>/Complete_Datapath |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath.sch/ReadA_or_ALU - MUX2_1_16bits</ClosedNode>
+         <ClosedNode>/Complete_Datapath |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath.sch/Write_Data_MUX - MUX4_1_16bits</ClosedNode>
+         <ClosedNode>/Complete_Datapath |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath.sch/XLXI_1 - PC</ClosedNode>
+         <ClosedNode>/Complete_Datapath |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath.sch/XLXI_1 - PC/XLXI_79 - FA_2s_16bits</ClosedNode>
+         <ClosedNode>/Complete_Datapath |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath.sch/XLXI_1 - PC/XLXI_81 - MUX4_1_16bits</ClosedNode>
+         <ClosedNode>/Complete_Datapath |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath.sch/XLXI_1 - PC/XLXI_82 - MUX2_1_16bits</ClosedNode>
+         <ClosedNode>/Complete_Datapath |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath.sch/XLXI_25 - Mem_256x16</ClosedNode>
+         <ClosedNode>/Complete_Datapath |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath.sch/XLXI_3 - A_16bits_RF_plus_ALU</ClosedNode>
+         <ClosedNode>/Complete_Datapath |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath.sch/XLXI_3 - A_16bits_RF_plus_ALU/ALU - ALU_16bits</ClosedNode>
+         <ClosedNode>/Complete_Datapath |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath.sch/XLXI_3 - A_16bits_RF_plus_ALU/DataA_MUX - MUX2_1_16bits</ClosedNode>
+         <ClosedNode>/Complete_Datapath |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath.sch/XLXI_3 - A_16bits_RF_plus_ALU/DataB_MUX - MUX4_1_16bits</ClosedNode>
+         <ClosedNode>/Complete_Datapath |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath.sch/XLXI_3 - A_16bits_RF_plus_ALU/RF - Eight_Reg_16bits</ClosedNode>
+         <ClosedNode>/Complete_Datapath |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath.sch/XLXI_3 - A_16bits_RF_plus_ALU/RF - Eight_Reg_16bits/ReadA - MUX8_1_16bits</ClosedNode>
+         <ClosedNode>/Complete_Datapath |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath.sch/XLXI_3 - A_16bits_RF_plus_ALU/RF - Eight_Reg_16bits/ReadB - MUX8_1_16bits</ClosedNode>
+         <ClosedNode>/Complete_Datapath |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath.sch/XLXI_3 - A_16bits_RF_plus_ALU/S50_S81_Z82_Zero3 - Imm_Gen</ClosedNode>
+         <ClosedNode>/Complete_Datapath |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath.sch/XLXI_3 - A_16bits_RF_plus_ALU/Write_data_MUX - MUX2_1_16bits</ClosedNode>
+         <ClosedNode>/Complete_Datapath |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath.sch/XLXI_31 - A_16bits_RF_plus_ALU/ALU - ALU_16bits</ClosedNode>
+         <ClosedNode>/Complete_Datapath |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath.sch/XLXI_31 - A_16bits_RF_plus_ALU/DataA_MUX - MUX2_1_16bits</ClosedNode>
+         <ClosedNode>/Complete_Datapath |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath.sch/XLXI_31 - A_16bits_RF_plus_ALU/DataB_MUX - MUX4_1_16bits</ClosedNode>
+         <ClosedNode>/Complete_Datapath |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath.sch/XLXI_31 - A_16bits_RF_plus_ALU/RF - Eight_Reg_16bits</ClosedNode>
+         <ClosedNode>/Complete_Datapath |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath.sch/XLXI_31 - A_16bits_RF_plus_ALU/Write_data_MUX - MUX2_1_16bits</ClosedNode>
+         <ClosedNode>/Complete_Datapath |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath.sch/XLXI_31 - A_16bits_RF_plus_ALU/XLXI_1 - Imm_Gen</ClosedNode>
+         <ClosedNode>/Complete_Datapath |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath.sch/XLXI_37 - A_16bits_RF_plus_ALU/ALU - ALU_16bits</ClosedNode>
+         <ClosedNode>/Complete_Datapath |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath.sch/XLXI_37 - A_16bits_RF_plus_ALU/DataA_MUX - MUX2_1_16bits</ClosedNode>
+         <ClosedNode>/Complete_Datapath |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath.sch/XLXI_37 - A_16bits_RF_plus_ALU/DataB_MUX - MUX4_1_16bits</ClosedNode>
+         <ClosedNode>/Complete_Datapath |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath.sch/XLXI_37 - A_16bits_RF_plus_ALU/RF - Eight_Reg_16bits</ClosedNode>
+         <ClosedNode>/Complete_Datapath |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath.sch/XLXI_37 - A_16bits_RF_plus_ALU/XLXI_1 - Imm_Gen</ClosedNode>
+         <ClosedNode>/Complete_Datapath |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath.sch/XLXI_4 - Mem_256x16</ClosedNode>
+         <ClosedNode>/Complete_Datapath |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath.sch/XLXI_4 - Mem_256x16/XLXI_21 - MUX8_1_16bits</ClosedNode>
+         <ClosedNode>/Complete_Datapath |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath.sch/XLXI_40 - PC</ClosedNode>
+         <ClosedNode>/Complete_Datapath |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath.sch/XLXI_5 - MUX2_1_16bits</ClosedNode>
+         <ClosedNode>/Complete_Datapath |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath.sch/XLXI_7 - MUX2_1_16bits</ClosedNode>
          <ClosedNode>/Eight_Reg_16bits |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Eight_Reg_16bits.sch</ClosedNode>
          <ClosedNode>/Eight_Reg_16bits |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Eight_Reg_16bits.sch/ReadA - MUX8_1_16bits</ClosedNode>
          <ClosedNode>/Eight_Reg_16bits |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Eight_Reg_16bits.sch/ReadB - MUX8_1_16bits</ClosedNode>
@@ -33,15 +67,14 @@
          <ClosedNode>/MUX8_1_16bits |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|MUX8_1_16bits.sch</ClosedNode>
          <ClosedNode>/Mem_256x16 |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Mem_256x16.sch</ClosedNode>
          <ClosedNode>/Mem_256x16 |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Mem_256x16.sch/XLXI_21 - MUX8_1_16bits</ClosedNode>
+         <ClosedNode>/PC |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|PC.sch</ClosedNode>
       </ClosedNodes>
-      <SelectedItems>
-         <SelectedItem>A_16bits_RF_plus_ALU (/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/A_16bits_RF_plus_ALU.sch)</SelectedItem>
-      </SelectedItems>
+      <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001c5000000020000000000000000000000000200000064ffffffff000000810000000300000002000001c50000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001e3000000020000000000000000000000000200000064ffffffff000000810000000300000002000001e30000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>A_16bits_RF_plus_ALU (/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/A_16bits_RF_plus_ALU.sch)</CurrentItem>
+      <CurrentItem>XLXI_1 - Imm_Gen (/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Imm_Gen.sch)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_SCHEMATIC" guiview="Process" >
       <ClosedNodes>
@@ -60,7 +93,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000027a000000010000000100000000000000000000000064ffffffff0000008100000000000000010000027a0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000026d000000010000000100000000000000000000000064ffffffff0000008100000000000000010000026d0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>
@@ -71,9 +104,9 @@
       <SelectedItems>
          <SelectedItem>MUX8_1_tb.v</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >6</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000000000000001000000000000000000000000000000000000027a000000040101000100000000000000000000000064ffffffff0000008100000000000000040000007100000001000000000000006600000001000000000000008400000001000000000000011f0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000004d0000000040101000100000000000000000000000064ffffffff000000810000000000000004000000710000000100000000000000660000000100000000000000840000000100000000000003750000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>MUX8_1_tb.v</CurrentItem>
    </ItemView>
@@ -85,32 +118,37 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000128000000010001000100000000000000000000000064ffffffff000000810000000000000001000001280000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000000000000001000000000000000000000000000000000000026e000000010001000100000000000000000000000064ffffffff0000008100000000000000010000026e0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>work</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Configure Target Device</ClosedNode>
          <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
+         <ClosedNode>Implement Design</ClosedNode>
+         <ClosedNode>Synthesize - XST</ClosedNode>
+         <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Update All Schematic Files</SelectedItem>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000027a000000010000000100000000000000000000000064ffffffff0000008100000000000000010000027a0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000026d000000010000000100000000000000000000000064ffffffff0000008100000000000000010000026d0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Update All Schematic Files</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff00000000000000020000014c0000011d01000000060100000002</SourceProcessView>
-   <CurrentView>Behavioral Simulation</CurrentView>
+   <CurrentView>Implementation</CurrentView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
          <ClosedNode>/ALU_16bits |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|ALU_16bits.sch</ClosedNode>
          <ClosedNode>/A_16bits_RF_plus_ALU |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|A_16bits_RF_plus_ALU.sch</ClosedNode>
          <ClosedNode>/A_16bits_RF_plus_ALU_A_16bits_RF_plus_ALU_sch_tb |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|A_16bits_RF_plus_ALU_tb.v</ClosedNode>
+         <ClosedNode>/Complete_Datapath |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath.sch</ClosedNode>
          <ClosedNode>/D3_8E_D3_8E_sch_tb |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|D3_8E_tb.v</ClosedNode>
          <ClosedNode>/DFF_Reg_16bits_DFF_Reg_16bits_sch_tb |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|DFF_Reg_16bits_tb.v</ClosedNode>
          <ClosedNode>/Eight_Reg_16bits |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Eight_Reg_16bits.sch</ClosedNode>
@@ -135,19 +173,21 @@
          <ClosedNode>/MUX8_1_MUX8_1_sch_tb |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|MUX8_1_tb.v</ClosedNode>
          <ClosedNode>/Mem_256x16 |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Mem_256x16.sch</ClosedNode>
          <ClosedNode>/Mem_256x16_Mem_256x16_sch_tb |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Mem_256x16_tb.v</ClosedNode>
+         <ClosedNode>/PC_PC_sch_tb |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|PC_tb.v</ClosedNode>
+         <ClosedNode>/PC_tb |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|PC_tb.v</ClosedNode>
          <ClosedNode>/TEST_gate |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|ALU_16bits_tb.v</ClosedNode>
          <ClosedNode>/TEST_gate |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Imm_Gen_tb.v</ClosedNode>
          <ClosedNode>/TEST_gate |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Imm_Gen_tb.v/Imm_Gen_tb - Imm_Gen</ClosedNode>
          <ClosedNode>/TEST_gate |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|MUX2_1_tb.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>MUX4_1_16bits_MUX4_1_16bits_sch_tb (/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/MUX4_1_16bits_tb.v)</SelectedItem>
+         <SelectedItem>A_16bits_RF_plus_ALU_A_16bits_RF_plus_ALU_sch_tb (/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/A_16bits_RF_plus_ALU_tb.v)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000025d000000020000000000000000000000000200000064ffffffff0000008100000003000000020000025d0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>MUX4_1_16bits_MUX4_1_16bits_sch_tb (/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/MUX4_1_16bits_tb.v)</CurrentItem>
+      <CurrentItem>A_16bits_RF_plus_ALU_A_16bits_RF_plus_ALU_sch_tb (/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/A_16bits_RF_plus_ALU_tb.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -159,7 +199,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000027a000000010000000100000000000000000000000064ffffffff0000008100000000000000010000027a0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000026e000000010000000100000000000000000000000064ffffffff0000008100000000000000010000026e0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>
@@ -185,22 +225,23 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000027a000000010000000100000000000000000000000064ffffffff0000008100000000000000010000027a0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001b6000000010000000100000000000000000000000064ffffffff000000810000000000000001000001b60000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>Simulate Behavioral Model</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="ManualCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode/>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>MUX8_1.sch (/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/MUX8_1.sch)</SelectedItem>
+         <SelectedItem>ALU_Control.sch (/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/ALU_Control.sch)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000194000000020000000000000000000000000000000064ffffffff000000810000000000000002000001020000000100000000000000920000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000130000000020000000000000000000000000000000064ffffffff0000008100000000000000020000009e0000000100000000000000920000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>MUX8_1.sch (/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/MUX8_1.sch)</CurrentItem>
+      <CurrentItem>ALU_Control.sch (/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/ALU_Control.sch)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="ManualCompile" >
       <ClosedNodes>

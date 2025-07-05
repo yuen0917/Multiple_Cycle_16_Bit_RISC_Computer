@@ -1,0 +1,28 @@
+Command line:
+   A_16bits_RF_plus_ALU_A_16bits_RF_plus_ALU_sch_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  59180
+
+Sat Jul  5 15:51:14 2025
+
+
+ Elaboration Time: 0.11 sec
+
+ Current Memory Usage: 211.825 Meg
+
+ Total Signals          : 6402
+ Total Nets             : 1423
+ Total Signal Drivers   : 1394
+ Total Blocks           : 1215
+ Total Primitive Blocks : 1081
+ Total Processes        : 1831
+ Total Traceable Variables  : 320
+ Total Scalar Nets and Variables : 1873
+
+ Total Simulation Time: 0.14 sec
+
+ Current Memory Usage: 289.423 Meg
+
+Sat Jul  5 15:53:06 2025
+

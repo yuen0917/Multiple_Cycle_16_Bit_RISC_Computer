@@ -28,3 +28,7 @@ xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schema
 xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Complete_Datapath.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Complete_Datapath.syr" 
 xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Complete_Datapath.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Complete_Datapath.syr" 
 xst -intstyle ise -ifn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Complete_Datapath.xst" -ofn "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Complete_Datapath.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6vlx75t-ff484-1 Complete_Datapath.ngc Complete_Datapath.ngd  
+map -intstyle ise -p xc6vlx75t-ff484-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Complete_Datapath_map.ncd Complete_Datapath.ngd Complete_Datapath.pcf 
+par -w -intstyle ise -ol high -mt off Complete_Datapath_map.ncd Complete_Datapath.ncd Complete_Datapath.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Complete_Datapath.twx Complete_Datapath.ncd -o Complete_Datapath.twr Complete_Datapath.pcf 
