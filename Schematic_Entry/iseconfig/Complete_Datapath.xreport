@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2025-07-05T05:55:06</DateModified>
+  <DateModified>2025-07-09T07:25:12</DateModified>
   <ModuleName>Complete_Datapath</ModuleName>
-  <SummaryTimeStamp>2025-04-17T08:11:00</SummaryTimeStamp>
+  <SummaryTimeStamp>2025-07-09T07:25:08</SummaryTimeStamp>
   <SavedFilePath>/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/iseconfig/Complete_Datapath.xreport</SavedFilePath>
   <ImplementationReportsDirectory>/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/</ImplementationReportsDirectory>
   <DateInitialized>2025-04-16T17:56:06</DateInitialized>

@@ -1,0 +1,4 @@
+verilog work "MUX2_1.vf"
+verilog work "MUX2_1_3bits.vf"
+verilog work "MUX2_1_3bits_tb.v"
+verilog work "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

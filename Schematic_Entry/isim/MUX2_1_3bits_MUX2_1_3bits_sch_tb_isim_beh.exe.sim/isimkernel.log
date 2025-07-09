@@ -1,0 +1,28 @@
+Command line:
+   MUX2_1_3bits_MUX2_1_3bits_sch_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  34931
+
+Wed Jul  9 07:50:16 2025
+
+
+ Elaboration Time: 0.04 sec
+
+ Current Memory Usage: 198.582 Meg
+
+ Total Signals          : 72
+ Total Nets             : 32
+ Total Signal Drivers   : 20
+ Total Blocks           : 18
+ Total Primitive Blocks : 13
+ Total Processes        : 22
+ Total Traceable Variables  : 22
+ Total Scalar Nets and Variables : 151
+
+ Total Simulation Time: 0.04 sec
+
+ Current Memory Usage: 276.181 Meg
+
+Wed Jul  9 07:52:49 2025
+

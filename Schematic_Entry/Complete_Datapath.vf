@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : Complete_Datapath.vf
-// /___/   /\     Timestamp : 07/05/2025 16:01:58
+// /___/   /\     Timestamp : 07/09/2025 08:01:38
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -63,6 +63,134 @@ module OR8_HXILINX_Complete_Datapath (O, I0, I1, I2, I3, I4, I5, I6, I7);
 
 assign O = (I0 || I1 || I2 || I3 || I4 || I5 || I6 || I7);
 
+endmodule
+`timescale 1ns / 1ps
+
+module MUX2_1_MUSER_Complete_Datapath(I0, 
+                                      I1, 
+                                      S, 
+                                      Output);
+
+    input I0;
+    input I1;
+    input S;
+   output Output;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_7;
+   
+   AND2  XLXI_1 (.I0(XLXN_7), 
+                .I1(I0), 
+                .O(XLXN_1));
+   AND2  XLXI_2 (.I0(S), 
+                .I1(I1), 
+                .O(XLXN_2));
+   OR2  XLXI_3 (.I0(XLXN_2), 
+               .I1(XLXN_1), 
+               .O(Output));
+   INV  XLXI_4 (.I(S), 
+               .O(XLXN_7));
+endmodule
+`timescale 1ns / 1ps
+
+module MUX2_1_3bits_MUSER_Complete_Datapath(I0, 
+                                            I1, 
+                                            S, 
+                                            Output);
+
+    input [2:0] I0;
+    input [2:0] I1;
+    input S;
+   output [2:0] Output;
+   
+   
+   MUX2_1_MUSER_Complete_Datapath  XLXI_1 (.I0(I0[2]), 
+                                          .I1(I1[2]), 
+                                          .S(S), 
+                                          .Output(Output[2]));
+   MUX2_1_MUSER_Complete_Datapath  XLXI_2 (.I0(I0[1]), 
+                                          .I1(I1[1]), 
+                                          .S(S), 
+                                          .Output(Output[1]));
+   MUX2_1_MUSER_Complete_Datapath  XLXI_3 (.I0(I0[0]), 
+                                          .I1(I1[0]), 
+                                          .S(S), 
+                                          .Output(Output[0]));
+endmodule
+`timescale 1ns / 1ps
+
+module Instr_Parser_MUSER_Complete_Datapath(Instr_Input, 
+                                            ALU_Op, 
+                                            Label11, 
+                                            Opcode, 
+                                            Rd, 
+                                            Rm, 
+                                            Rn);
+
+    input [15:0] Instr_Input;
+   output [1:0] ALU_Op;
+   output [10:0] Label11;
+   output [4:0] Opcode;
+   output [2:0] Rd;
+   output [2:0] Rm;
+   output [2:0] Rn;
+   
+   
+   BUF  XLXI_3 (.I(Instr_Input[15]), 
+               .O(Opcode[4]));
+   BUF  XLXI_4 (.I(Instr_Input[14]), 
+               .O(Opcode[3]));
+   BUF  XLXI_5 (.I(Instr_Input[13]), 
+               .O(Opcode[2]));
+   BUF  XLXI_6 (.I(Instr_Input[12]), 
+               .O(Opcode[1]));
+   BUF  XLXI_7 (.I(Instr_Input[11]), 
+               .O(Opcode[0]));
+   BUF  XLXI_8 (.I(Instr_Input[10]), 
+               .O(Rd[2]));
+   BUF  XLXI_9 (.I(Instr_Input[9]), 
+               .O(Rd[1]));
+   BUF  XLXI_10 (.I(Instr_Input[8]), 
+                .O(Rd[0]));
+   BUF  XLXI_11 (.I(Instr_Input[7]), 
+                .O(Rm[2]));
+   BUF  XLXI_12 (.I(Instr_Input[6]), 
+                .O(Rm[1]));
+   BUF  XLXI_13 (.I(Instr_Input[5]), 
+                .O(Rm[0]));
+   BUF  XLXI_14 (.I(Instr_Input[4]), 
+                .O(Rn[2]));
+   BUF  XLXI_15 (.I(Instr_Input[3]), 
+                .O(Rn[1]));
+   BUF  XLXI_16 (.I(Instr_Input[2]), 
+                .O(Rn[0]));
+   BUF  XLXI_17 (.I(Instr_Input[1]), 
+                .O(ALU_Op[1]));
+   BUF  XLXI_18 (.I(Instr_Input[0]), 
+                .O(ALU_Op[0]));
+   BUF  XLXI_19 (.I(Instr_Input[10]), 
+                .O(Label11[10]));
+   BUF  XLXI_20 (.I(Instr_Input[9]), 
+                .O(Label11[9]));
+   BUF  XLXI_21 (.I(Instr_Input[8]), 
+                .O(Label11[8]));
+   BUF  XLXI_22 (.I(Instr_Input[7]), 
+                .O(Label11[7]));
+   BUF  XLXI_23 (.I(Instr_Input[6]), 
+                .O(Label11[6]));
+   BUF  XLXI_24 (.I(Instr_Input[5]), 
+                .O(Label11[5]));
+   BUF  XLXI_25 (.I(Instr_Input[4]), 
+                .O(Label11[4]));
+   BUF  XLXI_26 (.I(Instr_Input[3]), 
+                .O(Label11[3]));
+   BUF  XLXI_27 (.I(Instr_Input[2]), 
+                .O(Label11[2]));
+   BUF  XLXI_28 (.I(Instr_Input[1]), 
+                .O(Label11[1]));
+   BUF  XLXI_29 (.I(Instr_Input[0]), 
+                .O(Label11[0]));
 endmodule
 `timescale 1ns / 1ps
 
@@ -201,34 +329,6 @@ module DFF_Reg_16bits_MUSER_Complete_Datapath(CE,
                 .CE(CE), 
                 .D(D_0), 
                 .Q(Q_0));
-endmodule
-`timescale 1ns / 1ps
-
-module MUX2_1_MUSER_Complete_Datapath(I0, 
-                                      I1, 
-                                      S, 
-                                      Output);
-
-    input I0;
-    input I1;
-    input S;
-   output Output;
-   
-   wire XLXN_1;
-   wire XLXN_2;
-   wire XLXN_7;
-   
-   AND2  XLXI_1 (.I0(XLXN_7), 
-                .I1(I0), 
-                .O(XLXN_1));
-   AND2  XLXI_2 (.I0(S), 
-                .I1(I1), 
-                .O(XLXN_2));
-   OR2  XLXI_3 (.I0(XLXN_2), 
-               .I1(XLXN_1), 
-               .O(Output));
-   INV  XLXI_4 (.I(S), 
-               .O(XLXN_7));
 endmodule
 `timescale 1ns / 1ps
 
@@ -2809,23 +2909,20 @@ module Complete_Datapath(ALUOut_Reg_CE,
                          ALU_Control, 
                          clk, 
                          C_CE, 
-                         Imm_Input, 
                          Imm_Sel, 
                          MemW_en, 
                          Out_R_CE, 
                          PC_Add_Src, 
                          PC_ALU_Sel, 
-                         PC_Label11, 
                          PC_Sel, 
-                         Rd_Addr, 
                          Rd_Reg_CE, 
+                         Rd_Rm_Sel, 
                          RF_Write_Data_Sel, 
                          RF_Write_en, 
-                         Rm_Rd_Addr, 
-                         Rn_Addr, 
                          Z_CE, 
+                         ALU_Op, 
                          C, 
-                         Mem_Data_Reg, 
+                         Opcode, 
                          Out_R, 
                          Z);
 
@@ -2835,23 +2932,20 @@ module Complete_Datapath(ALUOut_Reg_CE,
     input ALU_Control;
     input clk;
     input C_CE;
-    input [15:0] Imm_Input;
     input [1:0] Imm_Sel;
     input MemW_en;
     input Out_R_CE;
     input PC_Add_Src;
     input PC_ALU_Sel;
-    input [10:0] PC_Label11;
     input [1:0] PC_Sel;
-    input [2:0] Rd_Addr;
     input Rd_Reg_CE;
+    input Rd_Rm_Sel;
     input [1:0] RF_Write_Data_Sel;
     input RF_Write_en;
-    input [2:0] Rm_Rd_Addr;
-    input [2:0] Rn_Addr;
     input Z_CE;
+   output [1:0] ALU_Op;
    output C;
-   output [15:0] Mem_Data_Reg;
+   output [4:0] Opcode;
    output [15:0] Out_R;
    output Z;
    
@@ -2859,15 +2953,21 @@ module Complete_Datapath(ALUOut_Reg_CE,
    wire [15:0] Imm_Out;
    wire MemDataReg_CE;
    wire [15:0] MemR_Data;
+   wire [15:0] Mem_Data_Reg;
    wire [7:0] MWDb;
    wire [15:8] MWDf;
    wire [3:0] NZVC;
+   wire [10:0] PC_Label11;
    wire [15:0] PC_out;
+   wire [2:0] Rd_Addr;
    wire [15:0] Rd_Reg;
    wire [15:0] ReadA_Data;
+   wire [2:0] Rm_Rd_Addr;
+   wire [2:0] Rn_Addr;
    wire [15:0] XLXN_116;
    wire XLXN_133;
    wire [15:0] XLXN_142;
+   wire [2:0] XLXN_225;
    
    DFF_Reg_16bits_MUSER_Complete_Datapath  MemDataReg (.CE(MemDataReg_CE), 
                                                       .clk(clk), 
@@ -3047,7 +3147,7 @@ module Complete_Datapath(ALUOut_Reg_CE,
                                                          
          .Imm_Sel(Imm_Sel[1:0]), 
                                                          
-         .Instr(Imm_Input[15:0]), 
+         .Instr(Mem_Data_Reg[15:0]), 
                                                          
          .PC_to_ALU_A(PC_out[15:0]), 
                                                          .Rd(Rd_Reg[15:0]), 
@@ -3076,4 +3176,16 @@ module Complete_Datapath(ALUOut_Reg_CE,
                                        .PC_sel(PC_Sel[1:0]), 
                                        .Rd_Rm(Rd_Reg[15:0]), 
                                        .PC_out(PC_out[15:0]));
+   Instr_Parser_MUSER_Complete_Datapath  XLXI_41 
+         (.Instr_Input(Mem_Data_Reg[15:0]), 
+                                                 .ALU_Op(ALU_Op[1:0]), 
+                                                 .Label11(PC_Label11[10:0]), 
+                                                 .Opcode(Opcode[4:0]), 
+                                                 .Rd(Rd_Addr[2:0]), 
+                                                 .Rm(XLXN_225[2:0]), 
+                                                 .Rn(Rn_Addr[2:0]));
+   MUX2_1_3bits_MUSER_Complete_Datapath  XLXI_43 (.I0(Rd_Addr[2:0]), 
+                                                 .I1(XLXN_225[2:0]), 
+                                                 .S(Rd_Rm_Sel), 
+                                                 .Output(Rm_Rd_Addr[2:0]));
 endmodule

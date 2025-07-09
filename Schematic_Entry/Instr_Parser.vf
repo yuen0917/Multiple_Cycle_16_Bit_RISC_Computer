@@ -1,0 +1,94 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Instr_Parser.vf
+// /___/   /\     Timestamp : 07/09/2025 06:34:26
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family virtex6 -verilog /home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Instr_Parser.vf -w /home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Instr_Parser.sch
+//Design Name: Instr_Parser
+//Device: virtex6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module Instr_Parser(Instr_Input, 
+                    ALU_Op, 
+                    Label11, 
+                    Opcode, 
+                    Rd, 
+                    Rm, 
+                    Rn);
+
+    input [15:0] Instr_Input;
+   output [1:0] ALU_Op;
+   output [10:0] Label11;
+   output [4:0] Opcode;
+   output [2:0] Rd;
+   output [2:0] Rm;
+   output [2:0] Rn;
+   
+   
+   BUF  XLXI_3 (.I(Instr_Input[15]), 
+               .O(Opcode[4]));
+   BUF  XLXI_4 (.I(Instr_Input[14]), 
+               .O(Opcode[3]));
+   BUF  XLXI_5 (.I(Instr_Input[13]), 
+               .O(Opcode[2]));
+   BUF  XLXI_6 (.I(Instr_Input[12]), 
+               .O(Opcode[1]));
+   BUF  XLXI_7 (.I(Instr_Input[11]), 
+               .O(Opcode[0]));
+   BUF  XLXI_8 (.I(Instr_Input[10]), 
+               .O(Rd[2]));
+   BUF  XLXI_9 (.I(Instr_Input[9]), 
+               .O(Rd[1]));
+   BUF  XLXI_10 (.I(Instr_Input[8]), 
+                .O(Rd[0]));
+   BUF  XLXI_11 (.I(Instr_Input[7]), 
+                .O(Rm[2]));
+   BUF  XLXI_12 (.I(Instr_Input[6]), 
+                .O(Rm[1]));
+   BUF  XLXI_13 (.I(Instr_Input[5]), 
+                .O(Rm[0]));
+   BUF  XLXI_14 (.I(Instr_Input[4]), 
+                .O(Rn[2]));
+   BUF  XLXI_15 (.I(Instr_Input[3]), 
+                .O(Rn[1]));
+   BUF  XLXI_16 (.I(Instr_Input[2]), 
+                .O(Rn[0]));
+   BUF  XLXI_17 (.I(Instr_Input[1]), 
+                .O(ALU_Op[1]));
+   BUF  XLXI_18 (.I(Instr_Input[0]), 
+                .O(ALU_Op[0]));
+   BUF  XLXI_19 (.I(Instr_Input[10]), 
+                .O(Label11[10]));
+   BUF  XLXI_20 (.I(Instr_Input[9]), 
+                .O(Label11[9]));
+   BUF  XLXI_21 (.I(Instr_Input[8]), 
+                .O(Label11[8]));
+   BUF  XLXI_22 (.I(Instr_Input[7]), 
+                .O(Label11[7]));
+   BUF  XLXI_23 (.I(Instr_Input[6]), 
+                .O(Label11[6]));
+   BUF  XLXI_24 (.I(Instr_Input[5]), 
+                .O(Label11[5]));
+   BUF  XLXI_25 (.I(Instr_Input[4]), 
+                .O(Label11[4]));
+   BUF  XLXI_26 (.I(Instr_Input[3]), 
+                .O(Label11[3]));
+   BUF  XLXI_27 (.I(Instr_Input[2]), 
+                .O(Label11[2]));
+   BUF  XLXI_28 (.I(Instr_Input[1]), 
+                .O(Label11[1]));
+   BUF  XLXI_29 (.I(Instr_Input[0]), 
+                .O(Label11[0]));
+endmodule
