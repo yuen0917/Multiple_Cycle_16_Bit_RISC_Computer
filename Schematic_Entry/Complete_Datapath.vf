@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : Complete_Datapath.vf
-// /___/   /\     Timestamp : 07/09/2025 08:01:38
+// /___/   /\     Timestamp : 07/17/2025 07:51:08
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -91,6 +91,84 @@ module MUX2_1_MUSER_Complete_Datapath(I0,
                .O(Output));
    INV  XLXI_4 (.I(S), 
                .O(XLXN_7));
+endmodule
+`timescale 1ns / 1ps
+
+module MUX2_1_16bits_MUSER_Complete_Datapath(I0, 
+                                             I1, 
+                                             S, 
+                                             Output);
+
+    input [15:0] I0;
+    input [15:0] I1;
+    input S;
+   output [15:0] Output;
+   
+   
+   MUX2_1_MUSER_Complete_Datapath  XLXI_1 (.I0(I0[15]), 
+                                          .I1(I1[15]), 
+                                          .S(S), 
+                                          .Output(Output[15]));
+   MUX2_1_MUSER_Complete_Datapath  XLXI_2 (.I0(I0[14]), 
+                                          .I1(I1[14]), 
+                                          .S(S), 
+                                          .Output(Output[14]));
+   MUX2_1_MUSER_Complete_Datapath  XLXI_3 (.I0(I0[13]), 
+                                          .I1(I1[13]), 
+                                          .S(S), 
+                                          .Output(Output[13]));
+   MUX2_1_MUSER_Complete_Datapath  XLXI_4 (.I0(I0[12]), 
+                                          .I1(I1[12]), 
+                                          .S(S), 
+                                          .Output(Output[12]));
+   MUX2_1_MUSER_Complete_Datapath  XLXI_5 (.I0(I0[11]), 
+                                          .I1(I1[11]), 
+                                          .S(S), 
+                                          .Output(Output[11]));
+   MUX2_1_MUSER_Complete_Datapath  XLXI_6 (.I0(I0[10]), 
+                                          .I1(I1[10]), 
+                                          .S(S), 
+                                          .Output(Output[10]));
+   MUX2_1_MUSER_Complete_Datapath  XLXI_7 (.I0(I0[9]), 
+                                          .I1(I1[9]), 
+                                          .S(S), 
+                                          .Output(Output[9]));
+   MUX2_1_MUSER_Complete_Datapath  XLXI_8 (.I0(I0[8]), 
+                                          .I1(I1[8]), 
+                                          .S(S), 
+                                          .Output(Output[8]));
+   MUX2_1_MUSER_Complete_Datapath  XLXI_9 (.I0(I0[7]), 
+                                          .I1(I1[7]), 
+                                          .S(S), 
+                                          .Output(Output[7]));
+   MUX2_1_MUSER_Complete_Datapath  XLXI_10 (.I0(I0[6]), 
+                                           .I1(I1[6]), 
+                                           .S(S), 
+                                           .Output(Output[6]));
+   MUX2_1_MUSER_Complete_Datapath  XLXI_11 (.I0(I0[5]), 
+                                           .I1(I1[5]), 
+                                           .S(S), 
+                                           .Output(Output[5]));
+   MUX2_1_MUSER_Complete_Datapath  XLXI_12 (.I0(I0[4]), 
+                                           .I1(I1[4]), 
+                                           .S(S), 
+                                           .Output(Output[4]));
+   MUX2_1_MUSER_Complete_Datapath  XLXI_13 (.I0(I0[3]), 
+                                           .I1(I1[3]), 
+                                           .S(S), 
+                                           .Output(Output[3]));
+   MUX2_1_MUSER_Complete_Datapath  XLXI_14 (.I0(I0[2]), 
+                                           .I1(I1[2]), 
+                                           .S(S), 
+                                           .Output(Output[2]));
+   MUX2_1_MUSER_Complete_Datapath  XLXI_15 (.I0(I0[1]), 
+                                           .I1(I1[1]), 
+                                           .S(S), 
+                                           .Output(Output[1]));
+   MUX2_1_MUSER_Complete_Datapath  XLXI_16 (.I0(I0[0]), 
+                                           .I1(I1[0]), 
+                                           .S(S), 
+                                           .Output(Output[0]));
 endmodule
 `timescale 1ns / 1ps
 
@@ -329,84 +407,6 @@ module DFF_Reg_16bits_MUSER_Complete_Datapath(CE,
                 .CE(CE), 
                 .D(D_0), 
                 .Q(Q_0));
-endmodule
-`timescale 1ns / 1ps
-
-module MUX2_1_16bits_MUSER_Complete_Datapath(I0, 
-                                             I1, 
-                                             S, 
-                                             Output);
-
-    input [15:0] I0;
-    input [15:0] I1;
-    input S;
-   output [15:0] Output;
-   
-   
-   MUX2_1_MUSER_Complete_Datapath  XLXI_1 (.I0(I0[15]), 
-                                          .I1(I1[15]), 
-                                          .S(S), 
-                                          .Output(Output[15]));
-   MUX2_1_MUSER_Complete_Datapath  XLXI_2 (.I0(I0[14]), 
-                                          .I1(I1[14]), 
-                                          .S(S), 
-                                          .Output(Output[14]));
-   MUX2_1_MUSER_Complete_Datapath  XLXI_3 (.I0(I0[13]), 
-                                          .I1(I1[13]), 
-                                          .S(S), 
-                                          .Output(Output[13]));
-   MUX2_1_MUSER_Complete_Datapath  XLXI_4 (.I0(I0[12]), 
-                                          .I1(I1[12]), 
-                                          .S(S), 
-                                          .Output(Output[12]));
-   MUX2_1_MUSER_Complete_Datapath  XLXI_5 (.I0(I0[11]), 
-                                          .I1(I1[11]), 
-                                          .S(S), 
-                                          .Output(Output[11]));
-   MUX2_1_MUSER_Complete_Datapath  XLXI_6 (.I0(I0[10]), 
-                                          .I1(I1[10]), 
-                                          .S(S), 
-                                          .Output(Output[10]));
-   MUX2_1_MUSER_Complete_Datapath  XLXI_7 (.I0(I0[9]), 
-                                          .I1(I1[9]), 
-                                          .S(S), 
-                                          .Output(Output[9]));
-   MUX2_1_MUSER_Complete_Datapath  XLXI_8 (.I0(I0[8]), 
-                                          .I1(I1[8]), 
-                                          .S(S), 
-                                          .Output(Output[8]));
-   MUX2_1_MUSER_Complete_Datapath  XLXI_9 (.I0(I0[7]), 
-                                          .I1(I1[7]), 
-                                          .S(S), 
-                                          .Output(Output[7]));
-   MUX2_1_MUSER_Complete_Datapath  XLXI_10 (.I0(I0[6]), 
-                                           .I1(I1[6]), 
-                                           .S(S), 
-                                           .Output(Output[6]));
-   MUX2_1_MUSER_Complete_Datapath  XLXI_11 (.I0(I0[5]), 
-                                           .I1(I1[5]), 
-                                           .S(S), 
-                                           .Output(Output[5]));
-   MUX2_1_MUSER_Complete_Datapath  XLXI_12 (.I0(I0[4]), 
-                                           .I1(I1[4]), 
-                                           .S(S), 
-                                           .Output(Output[4]));
-   MUX2_1_MUSER_Complete_Datapath  XLXI_13 (.I0(I0[3]), 
-                                           .I1(I1[3]), 
-                                           .S(S), 
-                                           .Output(Output[3]));
-   MUX2_1_MUSER_Complete_Datapath  XLXI_14 (.I0(I0[2]), 
-                                           .I1(I1[2]), 
-                                           .S(S), 
-                                           .Output(Output[2]));
-   MUX2_1_MUSER_Complete_Datapath  XLXI_15 (.I0(I0[1]), 
-                                           .I1(I1[1]), 
-                                           .S(S), 
-                                           .Output(Output[1]));
-   MUX2_1_MUSER_Complete_Datapath  XLXI_16 (.I0(I0[0]), 
-                                           .I1(I1[0]), 
-                                           .S(S), 
-                                           .Output(Output[0]));
 endmodule
 `timescale 1ns / 1ps
 
@@ -918,8 +918,10 @@ module Imm_Gen_MUSER_Complete_Datapath(Imm_Sel,
    wire [15:0] Imm8_SE;
    wire [15:0] Imm8_ZE;
    wire [15:0] Instr_DUMMY;
+   wire [15:0] Rd_DUMMY;
    
    assign Instr_DUMMY[15:0] = Instr[15:0];
+   assign Rd_DUMMY[15:0] = Rd[15:0];
    MUX4_1_16bits_MUSER_Complete_Datapath  XLXI_1 (.I0(Imm5_SE[15:0]), 
                                                  .I1(Imm8_SE[15:0]), 
                                                  .I2(Imm8_ZE[15:0]), 
@@ -1038,22 +1040,30 @@ module Imm_Gen_MUSER_Complete_Datapath(Imm_Sel,
                 .O(Imm8_Rd[9]));
    BUF  XLXI_90 (.I(Instr_DUMMY[0]), 
                 .O(Imm8_Rd[8]));
-   BUF  XLXI_91 (.I(Rd[7]), 
+   BUF  XLXI_91 (.I(Rd_DUMMY[7]), 
                 .O(Imm8_Rd[7]));
-   BUF  XLXI_92 (.I(Rd[6]), 
+   BUF  XLXI_92 (.I(Rd_DUMMY[6]), 
                 .O(Imm8_Rd[6]));
-   BUF  XLXI_93 (.I(Rd[5]), 
+   BUF  XLXI_93 (.I(Rd_DUMMY[5]), 
                 .O(Imm8_Rd[5]));
-   BUF  XLXI_94 (.I(Rd[4]), 
+   BUF  XLXI_94 (.I(Rd_DUMMY[4]), 
                 .O(Imm8_Rd[4]));
-   BUF  XLXI_95 (.I(Rd[3]), 
+   BUF  XLXI_95 (.I(Rd_DUMMY[3]), 
                 .O(Imm8_Rd[3]));
-   BUF  XLXI_96 (.I(Rd[2]), 
+   BUF  XLXI_96 (.I(Rd_DUMMY[2]), 
                 .O(Imm8_Rd[2]));
-   BUF  XLXI_97 (.I(Rd[1]), 
+   BUF  XLXI_97 (.I(Rd_DUMMY[1]), 
                 .O(Imm8_Rd[1]));
-   BUF  XLXI_98 (.I(Rd[0]), 
+   BUF  XLXI_98 (.I(Rd_DUMMY[0]), 
                 .O(Imm8_Rd[0]));
+   GND  XLXI_99 (.G(Rd_DUMMY[15]));
+   GND  XLXI_100 (.G(Rd_DUMMY[14]));
+   GND  XLXI_101 (.G(Rd_DUMMY[13]));
+   GND  XLXI_102 (.G(Rd_DUMMY[12]));
+   GND  XLXI_103 (.G(Rd_DUMMY[11]));
+   GND  XLXI_104 (.G(Rd_DUMMY[10]));
+   GND  XLXI_105 (.G(Rd_DUMMY[9]));
+   GND  XLXI_106 (.G(Rd_DUMMY[8]));
 endmodule
 `timescale 1ns / 1ps
 
@@ -1136,7 +1146,7 @@ module ALU_16bits_MUSER_Complete_Datapath(A,
                                               .C_in(ALU_CTRL), 
                                               .C_out(NZVC[0]), 
                                               .S(S_DUMMY[15:0]));
-   (* HU_SET = "XLXI_72_0" *) 
+   (* HU_SET = "XLXI_72_5" *) 
    NOR16_HXILINX_Complete_Datapath  XLXI_72 (.I0(S_DUMMY[0]), 
                                             .I1(S_DUMMY[1]), 
                                             .I2(S_DUMMY[2]), 
@@ -1317,7 +1327,7 @@ module MUX8_1_MUSER_Complete_Datapath(I0,
                 .O(XLXN_9));
    INV  XLXI_7 (.I(S1), 
                .O(XLXN_52));
-   (* HU_SET = "XLXI_8_1" *) 
+   (* HU_SET = "XLXI_8_6" *) 
    OR8_HXILINX_Complete_Datapath  XLXI_8 (.I0(XLXN_11), 
                                          .I1(XLXN_9), 
                                          .I2(XLXN_7), 
@@ -2547,16 +2557,18 @@ module Mem_256x16_MUSER_Complete_Datapath(clk,
    wire [15:8] I6_f;
    wire [7:0] I7_b;
    wire [15:8] I7_f;
+   wire [15:0] Mem_Addr_DUMMY;
    
+   assign Mem_Addr_DUMMY[15:0] = Mem_Addr[15:0];
    RAM32X8S #( .INIT_00(32'h00000000), .INIT_01(32'h00000000), 
          .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
          .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
          .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) Group0_7_0 
-         (.A0(Mem_Addr[0]), 
-                        .A1(Mem_Addr[1]), 
-                        .A2(Mem_Addr[2]), 
-                        .A3(Mem_Addr[3]), 
-                        .A4(Mem_Addr[4]), 
+         (.A0(Mem_Addr_DUMMY[0]), 
+                        .A1(Mem_Addr_DUMMY[1]), 
+                        .A2(Mem_Addr_DUMMY[2]), 
+                        .A3(Mem_Addr_DUMMY[3]), 
+                        .A4(Mem_Addr_DUMMY[4]), 
                         .D(MemW_Data_b[7:0]), 
                         .WCLK(clk), 
                         .WE(D0), 
@@ -2565,11 +2577,11 @@ module Mem_256x16_MUSER_Complete_Datapath(clk,
          .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
          .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
          .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) Group0_15_8 
-         (.A0(Mem_Addr[0]), 
-                         .A1(Mem_Addr[1]), 
-                         .A2(Mem_Addr[2]), 
-                         .A3(Mem_Addr[3]), 
-                         .A4(Mem_Addr[4]), 
+         (.A0(Mem_Addr_DUMMY[0]), 
+                         .A1(Mem_Addr_DUMMY[1]), 
+                         .A2(Mem_Addr_DUMMY[2]), 
+                         .A3(Mem_Addr_DUMMY[3]), 
+                         .A4(Mem_Addr_DUMMY[4]), 
                          .D(MemW_Data_f[15:8]), 
                          .WCLK(clk), 
                          .WE(D0), 
@@ -2578,11 +2590,11 @@ module Mem_256x16_MUSER_Complete_Datapath(clk,
          .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
          .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
          .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) Group1_7_0 
-         (.A0(Mem_Addr[0]), 
-                        .A1(Mem_Addr[1]), 
-                        .A2(Mem_Addr[2]), 
-                        .A3(Mem_Addr[3]), 
-                        .A4(Mem_Addr[4]), 
+         (.A0(Mem_Addr_DUMMY[0]), 
+                        .A1(Mem_Addr_DUMMY[1]), 
+                        .A2(Mem_Addr_DUMMY[2]), 
+                        .A3(Mem_Addr_DUMMY[3]), 
+                        .A4(Mem_Addr_DUMMY[4]), 
                         .D(MemW_Data_b[7:0]), 
                         .WCLK(clk), 
                         .WE(D1), 
@@ -2591,11 +2603,11 @@ module Mem_256x16_MUSER_Complete_Datapath(clk,
          .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
          .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
          .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) Group1_15_8 
-         (.A0(Mem_Addr[0]), 
-                         .A1(Mem_Addr[1]), 
-                         .A2(Mem_Addr[2]), 
-                         .A3(Mem_Addr[3]), 
-                         .A4(Mem_Addr[4]), 
+         (.A0(Mem_Addr_DUMMY[0]), 
+                         .A1(Mem_Addr_DUMMY[1]), 
+                         .A2(Mem_Addr_DUMMY[2]), 
+                         .A3(Mem_Addr_DUMMY[3]), 
+                         .A4(Mem_Addr_DUMMY[4]), 
                          .D(MemW_Data_f[15:8]), 
                          .WCLK(clk), 
                          .WE(D1), 
@@ -2604,11 +2616,11 @@ module Mem_256x16_MUSER_Complete_Datapath(clk,
          .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
          .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
          .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) Group2_7_0 
-         (.A0(Mem_Addr[0]), 
-                        .A1(Mem_Addr[1]), 
-                        .A2(Mem_Addr[2]), 
-                        .A3(Mem_Addr[3]), 
-                        .A4(Mem_Addr[4]), 
+         (.A0(Mem_Addr_DUMMY[0]), 
+                        .A1(Mem_Addr_DUMMY[1]), 
+                        .A2(Mem_Addr_DUMMY[2]), 
+                        .A3(Mem_Addr_DUMMY[3]), 
+                        .A4(Mem_Addr_DUMMY[4]), 
                         .D(MemW_Data_b[7:0]), 
                         .WCLK(clk), 
                         .WE(D2), 
@@ -2617,11 +2629,11 @@ module Mem_256x16_MUSER_Complete_Datapath(clk,
          .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
          .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
          .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) Group2_15_8 
-         (.A0(Mem_Addr[0]), 
-                         .A1(Mem_Addr[1]), 
-                         .A2(Mem_Addr[2]), 
-                         .A3(Mem_Addr[3]), 
-                         .A4(Mem_Addr[4]), 
+         (.A0(Mem_Addr_DUMMY[0]), 
+                         .A1(Mem_Addr_DUMMY[1]), 
+                         .A2(Mem_Addr_DUMMY[2]), 
+                         .A3(Mem_Addr_DUMMY[3]), 
+                         .A4(Mem_Addr_DUMMY[4]), 
                          .D(MemW_Data_f[15:8]), 
                          .WCLK(clk), 
                          .WE(D2), 
@@ -2630,11 +2642,11 @@ module Mem_256x16_MUSER_Complete_Datapath(clk,
          .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
          .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
          .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) Group3_7_0 
-         (.A0(Mem_Addr[0]), 
-                        .A1(Mem_Addr[1]), 
-                        .A2(Mem_Addr[2]), 
-                        .A3(Mem_Addr[3]), 
-                        .A4(Mem_Addr[4]), 
+         (.A0(Mem_Addr_DUMMY[0]), 
+                        .A1(Mem_Addr_DUMMY[1]), 
+                        .A2(Mem_Addr_DUMMY[2]), 
+                        .A3(Mem_Addr_DUMMY[3]), 
+                        .A4(Mem_Addr_DUMMY[4]), 
                         .D(MemW_Data_b[7:0]), 
                         .WCLK(clk), 
                         .WE(D3), 
@@ -2643,11 +2655,11 @@ module Mem_256x16_MUSER_Complete_Datapath(clk,
          .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
          .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
          .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) Group3_15_8 
-         (.A0(Mem_Addr[0]), 
-                         .A1(Mem_Addr[1]), 
-                         .A2(Mem_Addr[2]), 
-                         .A3(Mem_Addr[3]), 
-                         .A4(Mem_Addr[4]), 
+         (.A0(Mem_Addr_DUMMY[0]), 
+                         .A1(Mem_Addr_DUMMY[1]), 
+                         .A2(Mem_Addr_DUMMY[2]), 
+                         .A3(Mem_Addr_DUMMY[3]), 
+                         .A4(Mem_Addr_DUMMY[4]), 
                          .D(MemW_Data_f[15:8]), 
                          .WCLK(clk), 
                          .WE(D3), 
@@ -2656,11 +2668,11 @@ module Mem_256x16_MUSER_Complete_Datapath(clk,
          .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
          .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
          .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) Group4_7_0 
-         (.A0(Mem_Addr[0]), 
-                        .A1(Mem_Addr[1]), 
-                        .A2(Mem_Addr[2]), 
-                        .A3(Mem_Addr[3]), 
-                        .A4(Mem_Addr[4]), 
+         (.A0(Mem_Addr_DUMMY[0]), 
+                        .A1(Mem_Addr_DUMMY[1]), 
+                        .A2(Mem_Addr_DUMMY[2]), 
+                        .A3(Mem_Addr_DUMMY[3]), 
+                        .A4(Mem_Addr_DUMMY[4]), 
                         .D(MemW_Data_b[7:0]), 
                         .WCLK(clk), 
                         .WE(D4), 
@@ -2669,11 +2681,11 @@ module Mem_256x16_MUSER_Complete_Datapath(clk,
          .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
          .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
          .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) Group4_15_8 
-         (.A0(Mem_Addr[0]), 
-                         .A1(Mem_Addr[1]), 
-                         .A2(Mem_Addr[2]), 
-                         .A3(Mem_Addr[3]), 
-                         .A4(Mem_Addr[4]), 
+         (.A0(Mem_Addr_DUMMY[0]), 
+                         .A1(Mem_Addr_DUMMY[1]), 
+                         .A2(Mem_Addr_DUMMY[2]), 
+                         .A3(Mem_Addr_DUMMY[3]), 
+                         .A4(Mem_Addr_DUMMY[4]), 
                          .D(MemW_Data_f[15:8]), 
                          .WCLK(clk), 
                          .WE(D4), 
@@ -2682,11 +2694,11 @@ module Mem_256x16_MUSER_Complete_Datapath(clk,
          .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
          .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
          .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) Group5_7_0 
-         (.A0(Mem_Addr[0]), 
-                        .A1(Mem_Addr[1]), 
-                        .A2(Mem_Addr[2]), 
-                        .A3(Mem_Addr[3]), 
-                        .A4(Mem_Addr[4]), 
+         (.A0(Mem_Addr_DUMMY[0]), 
+                        .A1(Mem_Addr_DUMMY[1]), 
+                        .A2(Mem_Addr_DUMMY[2]), 
+                        .A3(Mem_Addr_DUMMY[3]), 
+                        .A4(Mem_Addr_DUMMY[4]), 
                         .D(MemW_Data_b[7:0]), 
                         .WCLK(clk), 
                         .WE(D5), 
@@ -2695,11 +2707,11 @@ module Mem_256x16_MUSER_Complete_Datapath(clk,
          .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
          .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
          .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) Group5_15_8 
-         (.A0(Mem_Addr[0]), 
-                         .A1(Mem_Addr[1]), 
-                         .A2(Mem_Addr[2]), 
-                         .A3(Mem_Addr[3]), 
-                         .A4(Mem_Addr[4]), 
+         (.A0(Mem_Addr_DUMMY[0]), 
+                         .A1(Mem_Addr_DUMMY[1]), 
+                         .A2(Mem_Addr_DUMMY[2]), 
+                         .A3(Mem_Addr_DUMMY[3]), 
+                         .A4(Mem_Addr_DUMMY[4]), 
                          .D(MemW_Data_f[15:8]), 
                          .WCLK(clk), 
                          .WE(D5), 
@@ -2708,11 +2720,11 @@ module Mem_256x16_MUSER_Complete_Datapath(clk,
          .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
          .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
          .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) Group6_7_0 
-         (.A0(Mem_Addr[0]), 
-                        .A1(Mem_Addr[1]), 
-                        .A2(Mem_Addr[2]), 
-                        .A3(Mem_Addr[3]), 
-                        .A4(Mem_Addr[4]), 
+         (.A0(Mem_Addr_DUMMY[0]), 
+                        .A1(Mem_Addr_DUMMY[1]), 
+                        .A2(Mem_Addr_DUMMY[2]), 
+                        .A3(Mem_Addr_DUMMY[3]), 
+                        .A4(Mem_Addr_DUMMY[4]), 
                         .D(MemW_Data_b[7:0]), 
                         .WCLK(clk), 
                         .WE(D6), 
@@ -2721,11 +2733,11 @@ module Mem_256x16_MUSER_Complete_Datapath(clk,
          .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
          .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
          .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) Group6_15_8 
-         (.A0(Mem_Addr[0]), 
-                         .A1(Mem_Addr[1]), 
-                         .A2(Mem_Addr[2]), 
-                         .A3(Mem_Addr[3]), 
-                         .A4(Mem_Addr[4]), 
+         (.A0(Mem_Addr_DUMMY[0]), 
+                         .A1(Mem_Addr_DUMMY[1]), 
+                         .A2(Mem_Addr_DUMMY[2]), 
+                         .A3(Mem_Addr_DUMMY[3]), 
+                         .A4(Mem_Addr_DUMMY[4]), 
                          .D(MemW_Data_f[15:8]), 
                          .WCLK(clk), 
                          .WE(D6), 
@@ -2734,11 +2746,11 @@ module Mem_256x16_MUSER_Complete_Datapath(clk,
          .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
          .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
          .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) Group7_7_0 
-         (.A0(Mem_Addr[0]), 
-                        .A1(Mem_Addr[1]), 
-                        .A2(Mem_Addr[2]), 
-                        .A3(Mem_Addr[3]), 
-                        .A4(Mem_Addr[4]), 
+         (.A0(Mem_Addr_DUMMY[0]), 
+                        .A1(Mem_Addr_DUMMY[1]), 
+                        .A2(Mem_Addr_DUMMY[2]), 
+                        .A3(Mem_Addr_DUMMY[3]), 
+                        .A4(Mem_Addr_DUMMY[4]), 
                         .D(MemW_Data_b[7:0]), 
                         .WCLK(clk), 
                         .WE(D7), 
@@ -2747,11 +2759,11 @@ module Mem_256x16_MUSER_Complete_Datapath(clk,
          .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
          .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
          .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) Group7_15_8 
-         (.A0(Mem_Addr[0]), 
-                         .A1(Mem_Addr[1]), 
-                         .A2(Mem_Addr[2]), 
-                         .A3(Mem_Addr[3]), 
-                         .A4(Mem_Addr[4]), 
+         (.A0(Mem_Addr_DUMMY[0]), 
+                         .A1(Mem_Addr_DUMMY[1]), 
+                         .A2(Mem_Addr_DUMMY[2]), 
+                         .A3(Mem_Addr_DUMMY[3]), 
+                         .A4(Mem_Addr_DUMMY[4]), 
                          .D(MemW_Data_f[15:8]), 
                          .WCLK(clk), 
                          .WE(D7), 
@@ -2884,13 +2896,13 @@ module Mem_256x16_MUSER_Complete_Datapath(clk,
                                                   .I7_13(I7_f[13]), 
                                                   .I7_14(I7_f[14]), 
                                                   .I7_15(I7_f[15]), 
-                                                  .S0(Mem_Addr[5]), 
-                                                  .S1(Mem_Addr[6]), 
-                                                  .S2(Mem_Addr[7]), 
+                                                  .S0(Mem_Addr_DUMMY[5]), 
+                                                  .S1(Mem_Addr_DUMMY[6]), 
+                                                  .S2(Mem_Addr_DUMMY[7]), 
                                                   .Output(MemR_Data[15:0]));
-   D3_8E_MUSER_Complete_Datapath  XLXI_22 (.A0(Mem_Addr[5]), 
-                                          .A1(Mem_Addr[6]), 
-                                          .A2(Mem_Addr[7]), 
+   D3_8E_MUSER_Complete_Datapath  XLXI_22 (.A0(Mem_Addr_DUMMY[5]), 
+                                          .A1(Mem_Addr_DUMMY[6]), 
+                                          .A2(Mem_Addr_DUMMY[7]), 
                                           .EN(MemW_en), 
                                           .D0(D0), 
                                           .D1(D1), 
@@ -2900,6 +2912,14 @@ module Mem_256x16_MUSER_Complete_Datapath(clk,
                                           .D5(D5), 
                                           .D6(D6), 
                                           .D7(D7));
+   GND  XLXI_24 (.G(Mem_Addr_DUMMY[15]));
+   GND  XLXI_25 (.G(Mem_Addr_DUMMY[14]));
+   GND  XLXI_26 (.G(Mem_Addr_DUMMY[13]));
+   GND  XLXI_27 (.G(Mem_Addr_DUMMY[12]));
+   GND  XLXI_28 (.G(Mem_Addr_DUMMY[11]));
+   GND  XLXI_29 (.G(Mem_Addr_DUMMY[10]));
+   GND  XLXI_30 (.G(Mem_Addr_DUMMY[9]));
+   GND  XLXI_31 (.G(Mem_Addr_DUMMY[8]));
 endmodule
 `timescale 1ns / 1ps
 
@@ -2909,8 +2929,12 @@ module Complete_Datapath(ALUOut_Reg_CE,
                          ALU_Control, 
                          clk, 
                          C_CE, 
+                         Ext_MemW_Data, 
+                         Ext_Mem_Addr, 
                          Imm_Sel, 
+                         MemW_Data_Sel, 
                          MemW_en, 
+                         Mem_Addr_Sel, 
                          Out_R_CE, 
                          PC_Add_Src, 
                          PC_ALU_Sel, 
@@ -2921,10 +2945,16 @@ module Complete_Datapath(ALUOut_Reg_CE,
                          RF_Write_en, 
                          Z_CE, 
                          ALU_Op, 
-                         C, 
+                         C_Reg, 
+                         Imm_Out, 
+                         Mem_Data_Reg, 
                          Opcode, 
                          Out_R, 
-                         Z);
+                         PC_Label11, 
+                         Rd_Addr, 
+                         Rm_Addr, 
+                         Rn_Addr, 
+                         Z_Reg);
 
     input ALUOut_Reg_CE;
     input ALU_A_Sel;
@@ -2932,8 +2962,12 @@ module Complete_Datapath(ALUOut_Reg_CE,
     input ALU_Control;
     input clk;
     input C_CE;
+    input [15:0] Ext_MemW_Data;
+    input [15:0] Ext_Mem_Addr;
     input [1:0] Imm_Sel;
+    input MemW_Data_Sel;
     input MemW_en;
+    input Mem_Addr_Sel;
     input Out_R_CE;
     input PC_Add_Src;
     input PC_ALU_Sel;
@@ -2944,31 +2978,54 @@ module Complete_Datapath(ALUOut_Reg_CE,
     input RF_Write_en;
     input Z_CE;
    output [1:0] ALU_Op;
-   output C;
+   output C_Reg;
+   output [15:0] Imm_Out;
+   output [15:0] Mem_Data_Reg;
    output [4:0] Opcode;
    output [15:0] Out_R;
-   output Z;
+   output [10:0] PC_Label11;
+   output [2:0] Rd_Addr;
+   output [2:0] Rm_Addr;
+   output [2:0] Rn_Addr;
+   output Z_Reg;
    
    wire [15:0] ALU_Out;
-   wire [15:0] Imm_Out;
    wire MemDataReg_CE;
    wire [15:0] MemR_Data;
-   wire [15:0] Mem_Data_Reg;
-   wire [7:0] MWDb;
-   wire [15:8] MWDf;
+   wire [15:0] MemW_Data;
+   wire [7:0] MemW_Data_b;
+   wire [15:8] MemW_Data_f;
    wire [3:0] NZVC;
-   wire [10:0] PC_Label11;
    wire [15:0] PC_out;
-   wire [2:0] Rd_Addr;
    wire [15:0] Rd_Reg;
    wire [15:0] ReadA_Data;
    wire [2:0] Rm_Rd_Addr;
-   wire [2:0] Rn_Addr;
-   wire [15:0] XLXN_116;
    wire XLXN_133;
    wire [15:0] XLXN_142;
-   wire [2:0] XLXN_225;
+   wire [15:0] XLXN_227;
+   wire [15:0] XLXN_228;
+   wire [15:0] Imm_Out_DUMMY;
+   wire [15:0] Mem_Data_Reg_DUMMY;
+   wire [2:0] Rm_Addr_DUMMY;
+   wire [2:0] Rn_Addr_DUMMY;
+   wire [10:0] PC_Label11_DUMMY;
+   wire [2:0] Rd_Addr_DUMMY;
    
+   assign Imm_Out[15:0] = Imm_Out_DUMMY[15:0];
+   assign Mem_Data_Reg[15:0] = Mem_Data_Reg_DUMMY[15:0];
+   assign PC_Label11[10:0] = PC_Label11_DUMMY[10:0];
+   assign Rd_Addr[2:0] = Rd_Addr_DUMMY[2:0];
+   assign Rm_Addr[2:0] = Rm_Addr_DUMMY[2:0];
+   assign Rn_Addr[2:0] = Rn_Addr_DUMMY[2:0];
+   Instr_Parser_MUSER_Complete_Datapath  Instr_Parser1 
+         (.Instr_Input(Mem_Data_Reg_DUMMY[15:0]), 
+                                                       .ALU_Op(ALU_Op[1:0]), 
+                                                       
+         .Label11(PC_Label11_DUMMY[10:0]), 
+                                                       .Opcode(Opcode[4:0]), 
+                                                       .Rd(Rd_Addr_DUMMY[2:0]), 
+                                                       .Rm(Rm_Addr_DUMMY[2:0]), 
+                                                       .Rn(Rn_Addr_DUMMY[2:0]));
    DFF_Reg_16bits_MUSER_Complete_Datapath  MemDataReg (.CE(MemDataReg_CE), 
                                                       .clk(clk), 
                                                       .D_0(MemR_Data[0]), 
@@ -2987,22 +3044,48 @@ module Complete_Datapath(ALUOut_Reg_CE,
                                                       .D_13(MemR_Data[13]), 
                                                       .D_14(MemR_Data[14]), 
                                                       .D_15(MemR_Data[15]), 
-                                                      .Q_0(Mem_Data_Reg[0]), 
-                                                      .Q_1(Mem_Data_Reg[1]), 
-                                                      .Q_2(Mem_Data_Reg[2]), 
-                                                      .Q_3(Mem_Data_Reg[3]), 
-                                                      .Q_4(Mem_Data_Reg[4]), 
-                                                      .Q_5(Mem_Data_Reg[5]), 
-                                                      .Q_6(Mem_Data_Reg[6]), 
-                                                      .Q_7(Mem_Data_Reg[7]), 
-                                                      .Q_8(Mem_Data_Reg[8]), 
-                                                      .Q_9(Mem_Data_Reg[9]), 
-                                                      .Q_10(Mem_Data_Reg[10]), 
-                                                      .Q_11(Mem_Data_Reg[11]), 
-                                                      .Q_12(Mem_Data_Reg[12]), 
-                                                      .Q_13(Mem_Data_Reg[13]), 
-                                                      .Q_14(Mem_Data_Reg[14]), 
-                                                      .Q_15(Mem_Data_Reg[15]));
+                                                      
+         .Q_0(Mem_Data_Reg_DUMMY[0]), 
+                                                      
+         .Q_1(Mem_Data_Reg_DUMMY[1]), 
+                                                      
+         .Q_2(Mem_Data_Reg_DUMMY[2]), 
+                                                      
+         .Q_3(Mem_Data_Reg_DUMMY[3]), 
+                                                      
+         .Q_4(Mem_Data_Reg_DUMMY[4]), 
+                                                      
+         .Q_5(Mem_Data_Reg_DUMMY[5]), 
+                                                      
+         .Q_6(Mem_Data_Reg_DUMMY[6]), 
+                                                      
+         .Q_7(Mem_Data_Reg_DUMMY[7]), 
+                                                      
+         .Q_8(Mem_Data_Reg_DUMMY[8]), 
+                                                      
+         .Q_9(Mem_Data_Reg_DUMMY[9]), 
+                                                      
+         .Q_10(Mem_Data_Reg_DUMMY[10]), 
+                                                      
+         .Q_11(Mem_Data_Reg_DUMMY[11]), 
+                                                      
+         .Q_12(Mem_Data_Reg_DUMMY[12]), 
+                                                      
+         .Q_13(Mem_Data_Reg_DUMMY[13]), 
+                                                      
+         .Q_14(Mem_Data_Reg_DUMMY[14]), 
+                                                      
+         .Q_15(Mem_Data_Reg_DUMMY[15]));
+   MUX2_1_16bits_MUSER_Complete_Datapath  MemW_Data_Src (.I0(ReadA_Data[15:0]), 
+                                                        
+         .I1(Ext_MemW_Data[15:0]), 
+                                                        .S(MemW_Data_Sel), 
+                                                        
+         .Output(MemW_Data[15:0]));
+   MUX2_1_16bits_MUSER_Complete_Datapath  Mem_Addr_Src (.I0(XLXN_227[15:0]), 
+                                                       .I1(Ext_Mem_Addr[15:0]), 
+                                                       .S(Mem_Addr_Sel), 
+                                                       .Output(XLXN_228[15:0]));
    DFF_Reg_16bits_MUSER_Complete_Datapath  Out_Reg (.CE(Out_R_CE), 
                                                    .clk(clk), 
                                                    .D_0(ReadA_Data[0]), 
@@ -3040,7 +3123,19 @@ module Complete_Datapath(ALUOut_Reg_CE,
    MUX2_1_16bits_MUSER_Complete_Datapath  PC_or_ALU (.I0(PC_out[15:0]), 
                                                     .I1(ALU_Out[15:0]), 
                                                     .S(PC_ALU_Sel), 
-                                                    .Output(XLXN_116[15:0]));
+                                                    .Output(XLXN_227[15:0]));
+   PC_MUSER_Complete_Datapath  PC1 (.CE(XLXN_133), 
+                                   .clk(clk), 
+                                   .label11(PC_Label11_DUMMY[10:0]), 
+                                   .one_or_label(PC_Add_Src), 
+                                   .PC_Label(Imm_Out_DUMMY[15:0]), 
+                                   .PC_sel(PC_Sel[1:0]), 
+                                   .Rd_Rm(Rd_Reg[15:0]), 
+                                   .PC_out(PC_out[15:0]));
+   MUX2_1_3bits_MUSER_Complete_Datapath  Rd_Rm_Src (.I0(Rd_Addr_DUMMY[2:0]), 
+                                                   .I1(Rm_Addr_DUMMY[2:0]), 
+                                                   .S(Rd_Rm_Sel), 
+                                                   .Output(Rm_Rd_Addr[2:0]));
    DFF_Reg_16bits_MUSER_Complete_Datapath  ReadA_Data_Reg (.CE(Rd_Reg_CE), 
                                                           .clk(clk), 
                                                           .D_0(ReadA_Data[0]), 
@@ -3081,111 +3176,91 @@ module Complete_Datapath(ALUOut_Reg_CE,
                                                           .Q_13(Rd_Reg[13]), 
                                                           .Q_14(Rd_Reg[14]), 
                                                           .Q_15(Rd_Reg[15]));
+   A_16bits_RF_plus_ALU_MUSER_Complete_Datapath  RF_ALU 
+         (.ALUOut_CE(ALUOut_Reg_CE), 
+                                                        .ALU_A_Sel(ALU_A_Sel), 
+                                                        
+         .ALU_B_Sel(ALU_B_Sel[1:0]), 
+                                                        
+         .ALU_Control(ALU_Control), 
+                                                        .clk(clk), 
+                                                        .Imm_Sel(Imm_Sel[1:0]), 
+                                                        
+         .Instr(Mem_Data_Reg_DUMMY[15:0]), 
+                                                        
+         .PC_to_ALU_A(PC_out[15:0]), 
+                                                        .Rd(Rd_Reg[15:0]), 
+                                                        
+         .Rd_to_RF(Rd_Addr_DUMMY[2:0]), 
+                                                        
+         .RF_Write_en(RF_Write_en), 
+                                                        
+         .Rm_Rd_to_RF(Rm_Rd_Addr[2:0]), 
+                                                        
+         .Rn_to_RF(Rn_Addr_DUMMY[2:0]), 
+                                                        
+         .Write_Data(XLXN_142[15:0]), 
+                                                        
+         .ALU_Out(ALU_Out[15:0]), 
+                                                        
+         .Imm_Out(Imm_Out_DUMMY[15:0]), 
+                                                        .NZVC(NZVC[3:0]), 
+                                                        
+         .ReadA_data(ReadA_Data[15:0]));
    MUX4_1_16bits_MUSER_Complete_Datapath  Write_Data_MUX (.I0(MemR_Data[15:0]), 
-                                                         .I1(Imm_Out[15:0]), 
+                                                         
+         .I1(Imm_Out_DUMMY[15:0]), 
                                                          .I2(ALU_Out[15:0]), 
                                                          .I3(PC_out[15:0]), 
                                                          
          .S(RF_Write_Data_Sel[1:0]), 
                                                          .O(XLXN_142[15:0]));
-   BUF  XLXI_8 (.I(ReadA_Data[15]), 
-               .O(MWDf[15]));
-   BUF  XLXI_9 (.I(ReadA_Data[14]), 
-               .O(MWDf[14]));
-   BUF  XLXI_10 (.I(ReadA_Data[13]), 
-                .O(MWDf[13]));
-   BUF  XLXI_11 (.I(ReadA_Data[12]), 
-                .O(MWDf[12]));
-   BUF  XLXI_12 (.I(ReadA_Data[11]), 
-                .O(MWDf[11]));
-   BUF  XLXI_13 (.I(ReadA_Data[10]), 
-                .O(MWDf[10]));
-   BUF  XLXI_14 (.I(ReadA_Data[9]), 
-                .O(MWDf[9]));
-   BUF  XLXI_15 (.I(ReadA_Data[8]), 
-                .O(MWDf[8]));
-   BUF  XLXI_16 (.I(ReadA_Data[7]), 
-                .O(MWDb[7]));
-   BUF  XLXI_17 (.I(ReadA_Data[6]), 
-                .O(MWDb[6]));
-   BUF  XLXI_18 (.I(ReadA_Data[5]), 
-                .O(MWDb[5]));
-   BUF  XLXI_19 (.I(ReadA_Data[4]), 
-                .O(MWDb[4]));
-   BUF  XLXI_20 (.I(ReadA_Data[3]), 
-                .O(MWDb[3]));
-   BUF  XLXI_21 (.I(ReadA_Data[2]), 
-                .O(MWDb[2]));
-   BUF  XLXI_22 (.I(ReadA_Data[1]), 
-                .O(MWDb[1]));
-   BUF  XLXI_23 (.I(ReadA_Data[0]), 
-                .O(MWDb[0]));
    Mem_256x16_MUSER_Complete_Datapath  XLXI_25 (.clk(clk), 
-                                               .MemW_Data_b(MWDb[7:0]), 
-                                               .MemW_Data_f(MWDf[15:8]), 
+                                               .MemW_Data_b(MemW_Data_b[7:0]), 
+                                               .MemW_Data_f(MemW_Data_f[15:8]), 
                                                .MemW_en(MemW_en), 
-                                               .Mem_Addr(XLXN_116[15:0]), 
+                                               .Mem_Addr(XLXN_228[15:0]), 
                                                .MemR_Data(MemR_Data[15:0]));
    VCC  XLXI_26 (.P(MemDataReg_CE));
    VCC  XLXI_27 (.P(XLXN_133));
    FDE #( .INIT(1'b0) ) XLXI_33 (.C(clk), 
                 .CE(Z_CE), 
                 .D(NZVC[2]), 
-                .Q(Z));
+                .Q(Z_Reg));
    FDE #( .INIT(1'b0) ) XLXI_34 (.C(clk), 
                 .CE(C_CE), 
                 .D(NZVC[0]), 
-                .Q(C));
-   A_16bits_RF_plus_ALU_MUSER_Complete_Datapath  XLXI_37 
-         (.ALUOut_CE(ALUOut_Reg_CE), 
-                                                         .ALU_A_Sel(ALU_A_Sel), 
-                                                         
-         .ALU_B_Sel(ALU_B_Sel[1:0]), 
-                                                         
-         .ALU_Control(ALU_Control), 
-                                                         .clk(clk), 
-                                                         
-         .Imm_Sel(Imm_Sel[1:0]), 
-                                                         
-         .Instr(Mem_Data_Reg[15:0]), 
-                                                         
-         .PC_to_ALU_A(PC_out[15:0]), 
-                                                         .Rd(Rd_Reg[15:0]), 
-                                                         
-         .Rd_to_RF(Rd_Addr[2:0]), 
-                                                         
-         .RF_Write_en(RF_Write_en), 
-                                                         
-         .Rm_Rd_to_RF(Rm_Rd_Addr[2:0]), 
-                                                         
-         .Rn_to_RF(Rn_Addr[2:0]), 
-                                                         
-         .Write_Data(XLXN_142[15:0]), 
-                                                         
-         .ALU_Out(ALU_Out[15:0]), 
-                                                         
-         .Imm_Out(Imm_Out[15:0]), 
-                                                         .NZVC(NZVC[3:0]), 
-                                                         
-         .ReadA_data(ReadA_Data[15:0]));
-   PC_MUSER_Complete_Datapath  XLXI_40 (.CE(XLXN_133), 
-                                       .clk(clk), 
-                                       .label11(PC_Label11[10:0]), 
-                                       .one_or_label(PC_Add_Src), 
-                                       .PC_Label(Imm_Out[15:0]), 
-                                       .PC_sel(PC_Sel[1:0]), 
-                                       .Rd_Rm(Rd_Reg[15:0]), 
-                                       .PC_out(PC_out[15:0]));
-   Instr_Parser_MUSER_Complete_Datapath  XLXI_41 
-         (.Instr_Input(Mem_Data_Reg[15:0]), 
-                                                 .ALU_Op(ALU_Op[1:0]), 
-                                                 .Label11(PC_Label11[10:0]), 
-                                                 .Opcode(Opcode[4:0]), 
-                                                 .Rd(Rd_Addr[2:0]), 
-                                                 .Rm(XLXN_225[2:0]), 
-                                                 .Rn(Rn_Addr[2:0]));
-   MUX2_1_3bits_MUSER_Complete_Datapath  XLXI_43 (.I0(Rd_Addr[2:0]), 
-                                                 .I1(XLXN_225[2:0]), 
-                                                 .S(Rd_Rm_Sel), 
-                                                 .Output(Rm_Rd_Addr[2:0]));
+                .Q(C_Reg));
+   BUF  XLXI_46 (.I(MemW_Data[15]), 
+                .O(MemW_Data_f[15]));
+   BUF  XLXI_47 (.I(MemW_Data[14]), 
+                .O(MemW_Data_f[14]));
+   BUF  XLXI_48 (.I(MemW_Data[13]), 
+                .O(MemW_Data_f[13]));
+   BUF  XLXI_49 (.I(MemW_Data[12]), 
+                .O(MemW_Data_f[12]));
+   BUF  XLXI_50 (.I(MemW_Data[11]), 
+                .O(MemW_Data_f[11]));
+   BUF  XLXI_51 (.I(MemW_Data[10]), 
+                .O(MemW_Data_f[10]));
+   BUF  XLXI_52 (.I(MemW_Data[9]), 
+                .O(MemW_Data_f[9]));
+   BUF  XLXI_53 (.I(MemW_Data[8]), 
+                .O(MemW_Data_f[8]));
+   BUF  XLXI_54 (.I(MemW_Data[7]), 
+                .O(MemW_Data_b[7]));
+   BUF  XLXI_55 (.I(MemW_Data[6]), 
+                .O(MemW_Data_b[6]));
+   BUF  XLXI_56 (.I(MemW_Data[5]), 
+                .O(MemW_Data_b[5]));
+   BUF  XLXI_57 (.I(MemW_Data[4]), 
+                .O(MemW_Data_b[4]));
+   BUF  XLXI_58 (.I(MemW_Data[3]), 
+                .O(MemW_Data_b[3]));
+   BUF  XLXI_59 (.I(MemW_Data[2]), 
+                .O(MemW_Data_b[2]));
+   BUF  XLXI_60 (.I(MemW_Data[1]), 
+                .O(MemW_Data_b[1]));
+   BUF  XLXI_61 (.I(MemW_Data[0]), 
+                .O(MemW_Data_b[0]));
 endmodule

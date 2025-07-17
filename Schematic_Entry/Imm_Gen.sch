@@ -103,6 +103,14 @@
         <signal name="Rd(1)" />
         <signal name="Rd(0)" />
         <signal name="Rd(15:0)" />
+        <signal name="Rd(15)" />
+        <signal name="Rd(14)" />
+        <signal name="Rd(13)" />
+        <signal name="Rd(12)" />
+        <signal name="Rd(11)" />
+        <signal name="Rd(10)" />
+        <signal name="Rd(9)" />
+        <signal name="Rd(8)" />
         <port polarity="Input" name="Instr(15:0)" />
         <port polarity="Output" name="Imm_Out(15:0)" />
         <port polarity="Input" name="Imm_Sel(1:0)" />
@@ -419,6 +427,30 @@
         <block symbolname="buf" name="XLXI_98">
             <blockpin signalname="Rd(0)" name="I" />
             <blockpin signalname="Imm8_Rd(0)" name="O" />
+        </block>
+        <block symbolname="gnd" name="XLXI_99">
+            <blockpin signalname="Rd(15)" name="G" />
+        </block>
+        <block symbolname="gnd" name="XLXI_100">
+            <blockpin signalname="Rd(14)" name="G" />
+        </block>
+        <block symbolname="gnd" name="XLXI_101">
+            <blockpin signalname="Rd(13)" name="G" />
+        </block>
+        <block symbolname="gnd" name="XLXI_102">
+            <blockpin signalname="Rd(12)" name="G" />
+        </block>
+        <block symbolname="gnd" name="XLXI_103">
+            <blockpin signalname="Rd(11)" name="G" />
+        </block>
+        <block symbolname="gnd" name="XLXI_104">
+            <blockpin signalname="Rd(10)" name="G" />
+        </block>
+        <block symbolname="gnd" name="XLXI_105">
+            <blockpin signalname="Rd(9)" name="G" />
+        </block>
+        <block symbolname="gnd" name="XLXI_106">
+            <blockpin signalname="Rd(8)" name="G" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="7040" height="5440">
@@ -1348,12 +1380,76 @@
             <wire x2="3440" y1="3744" y2="3744" x1="3248" />
         </branch>
         <branch name="Rd(15:0)">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3792" y="4080" type="branch" />
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3632" y="4080" type="branch" />
             <wire x2="3600" y1="4080" y2="4080" x1="3584" />
-            <wire x2="3792" y1="4080" y2="4080" x1="3600" />
-            <wire x2="3840" y1="4080" y2="4080" x1="3792" />
+            <wire x2="3632" y1="4080" y2="4080" x1="3600" />
+            <wire x2="3664" y1="4080" y2="4080" x1="3632" />
+            <wire x2="3728" y1="4080" y2="4080" x1="3664" />
+            <wire x2="3792" y1="4080" y2="4080" x1="3728" />
+            <wire x2="3856" y1="4080" y2="4080" x1="3792" />
+            <wire x2="3920" y1="4080" y2="4080" x1="3856" />
+            <wire x2="3984" y1="4080" y2="4080" x1="3920" />
+            <wire x2="4048" y1="4080" y2="4080" x1="3984" />
+            <wire x2="4112" y1="4080" y2="4080" x1="4048" />
+            <wire x2="4400" y1="4080" y2="4080" x1="4112" />
         </branch>
         <bustap x2="3600" y1="4080" y2="3984" x1="3600" />
-        <iomarker fontsize="28" x="3840" y="4080" name="Rd(15:0)" orien="R0" />
+        <iomarker fontsize="28" x="4400" y="4080" name="Rd(15:0)" orien="R0" />
+        <bustap x2="3664" y1="4080" y2="4176" x1="3664" />
+        <bustap x2="3728" y1="4080" y2="4176" x1="3728" />
+        <bustap x2="3792" y1="4080" y2="4176" x1="3792" />
+        <bustap x2="3856" y1="4080" y2="4176" x1="3856" />
+        <bustap x2="3920" y1="4080" y2="4176" x1="3920" />
+        <bustap x2="3984" y1="4080" y2="4176" x1="3984" />
+        <bustap x2="4048" y1="4080" y2="4176" x1="4048" />
+        <bustap x2="4112" y1="4080" y2="4176" x1="4112" />
+        <instance x="3600" y="4368" name="XLXI_99" orien="R0" />
+        <instance x="3664" y="4368" name="XLXI_100" orien="R0" />
+        <instance x="3728" y="4368" name="XLXI_101" orien="R0" />
+        <instance x="3792" y="4368" name="XLXI_102" orien="R0" />
+        <instance x="3856" y="4368" name="XLXI_103" orien="R0" />
+        <instance x="3920" y="4368" name="XLXI_104" orien="R0" />
+        <instance x="3984" y="4368" name="XLXI_105" orien="R0" />
+        <instance x="4048" y="4368" name="XLXI_106" orien="R0" />
+        <branch name="Rd(15)">
+            <attrtext style="alignment:SOFT-TVCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3664" y="4208" type="branch" />
+            <wire x2="3664" y1="4176" y2="4208" x1="3664" />
+            <wire x2="3664" y1="4208" y2="4240" x1="3664" />
+        </branch>
+        <branch name="Rd(14)">
+            <attrtext style="alignment:SOFT-TVCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3728" y="4208" type="branch" />
+            <wire x2="3728" y1="4176" y2="4208" x1="3728" />
+            <wire x2="3728" y1="4208" y2="4240" x1="3728" />
+        </branch>
+        <branch name="Rd(13)">
+            <attrtext style="alignment:SOFT-TVCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3792" y="4208" type="branch" />
+            <wire x2="3792" y1="4176" y2="4208" x1="3792" />
+            <wire x2="3792" y1="4208" y2="4240" x1="3792" />
+        </branch>
+        <branch name="Rd(12)">
+            <attrtext style="alignment:SOFT-TVCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3856" y="4208" type="branch" />
+            <wire x2="3856" y1="4176" y2="4208" x1="3856" />
+            <wire x2="3856" y1="4208" y2="4240" x1="3856" />
+        </branch>
+        <branch name="Rd(11)">
+            <attrtext style="alignment:SOFT-TVCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3920" y="4208" type="branch" />
+            <wire x2="3920" y1="4176" y2="4208" x1="3920" />
+            <wire x2="3920" y1="4208" y2="4240" x1="3920" />
+        </branch>
+        <branch name="Rd(10)">
+            <attrtext style="alignment:SOFT-TVCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3984" y="4208" type="branch" />
+            <wire x2="3984" y1="4176" y2="4208" x1="3984" />
+            <wire x2="3984" y1="4208" y2="4240" x1="3984" />
+        </branch>
+        <branch name="Rd(9)">
+            <attrtext style="alignment:SOFT-TVCENTER;fontsize:28;fontname:Arial" attrname="Name" x="4048" y="4208" type="branch" />
+            <wire x2="4048" y1="4176" y2="4208" x1="4048" />
+            <wire x2="4048" y1="4208" y2="4240" x1="4048" />
+        </branch>
+        <branch name="Rd(8)">
+            <attrtext style="alignment:SOFT-TVCENTER;fontsize:28;fontname:Arial" attrname="Name" x="4112" y="4208" type="branch" />
+            <wire x2="4112" y1="4176" y2="4208" x1="4112" />
+            <wire x2="4112" y1="4208" y2="4240" x1="4112" />
+        </branch>
     </sheet>
 </drawing>

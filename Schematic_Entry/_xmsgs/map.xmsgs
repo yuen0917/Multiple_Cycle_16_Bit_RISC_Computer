@@ -8,6 +8,30 @@
 <msg type="info" file="MapLib" num="562" delta="old" >No environment variables are currently set.
 </msg>
 
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">Ext_Mem_Addr&lt;15&gt;</arg> connected to top level port <arg fmt="%s" index="2">Ext_Mem_Addr&lt;15&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">Ext_Mem_Addr&lt;14&gt;</arg> connected to top level port <arg fmt="%s" index="2">Ext_Mem_Addr&lt;14&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">Ext_Mem_Addr&lt;13&gt;</arg> connected to top level port <arg fmt="%s" index="2">Ext_Mem_Addr&lt;13&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">Ext_Mem_Addr&lt;12&gt;</arg> connected to top level port <arg fmt="%s" index="2">Ext_Mem_Addr&lt;12&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">Ext_Mem_Addr&lt;11&gt;</arg> connected to top level port <arg fmt="%s" index="2">Ext_Mem_Addr&lt;11&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">Ext_Mem_Addr&lt;10&gt;</arg> connected to top level port <arg fmt="%s" index="2">Ext_Mem_Addr&lt;10&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">Ext_Mem_Addr&lt;9&gt;</arg> connected to top level port <arg fmt="%s" index="2">Ext_Mem_Addr&lt;9&gt;</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">Ext_Mem_Addr&lt;8&gt;</arg> connected to top level port <arg fmt="%s" index="2">Ext_Mem_Addr&lt;8&gt;</arg> has been removed.
+</msg>
+
 <msg type="info" file="LIT" num="244" delta="old" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs.
 </msg>
 

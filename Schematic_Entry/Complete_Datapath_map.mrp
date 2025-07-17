@@ -11,21 +11,21 @@ Target Device  : xc6vlx75t
 Target Package : ff484
 Target Speed   : -1
 Mapper Version : virtex6 -- $Revision: 1.55 $
-Mapped Date    : Wed Jul  9 08:03:48 2025
+Mapped Date    : Thu Jul 17 07:54:56 2025
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    0
+Number of warnings:    8
 Slice Logic Utilization:
   Number of Slice Registers:                   210 out of  93,120    1%
     Number used as Flip Flops:                 210
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                        604 out of  46,560    1%
-    Number used as logic:                      539 out of  46,560    1%
-      Number using O6 output only:             539
+  Number of Slice LUTs:                        622 out of  46,560    1%
+    Number used as logic:                      555 out of  46,560    1%
+      Number using O6 output only:             555
       Number using O5 output only:               0
       Number using O5 and O6:                    0
       Number used as ROM:                        0
@@ -36,17 +36,17 @@ Slice Logic Utilization:
         Number using O5 output only:             0
         Number using O5 and O6:                 64
       Number used as Shift Register:             0
-    Number used exclusively as route-thrus:      1
-      Number with same-slice register load:      1
+    Number used exclusively as route-thrus:      3
+      Number with same-slice register load:      3
       Number with same-slice carry load:         0
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   243 out of  11,640    2%
+  Number of occupied Slices:                   263 out of  11,640    2%
   Number of LUT Flip Flop pairs used:          679
-    Number with an unused Flip Flop:           472 out of     679   69%
-    Number with an unused LUT:                  75 out of     679   11%
-    Number of fully used LUT-FF pairs:         132 out of     679   19%
+    Number with an unused Flip Flop:           473 out of     679   69%
+    Number with an unused LUT:                  57 out of     679    8%
+    Number of fully used LUT-FF pairs:         149 out of     679   21%
     Number of unique control sets:              22
     Number of slice register sites lost
       to control set restrictions:              14 out of  93,120    1%
@@ -60,7 +60,7 @@ Slice Logic Distribution:
   over-mapped for a non-BRAM resource or if placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        46 out of     240   19%
+  Number of bonded IOBs:                       124 out of     240   51%
 
 Specific Feature Utilization:
   Number of RAMB36E1/FIFO36E1s:                  0 out of     156    0%
@@ -89,11 +89,11 @@ Specific Feature Utilization:
   Number of SYSMONs:                             0 out of       1    0%
   Number of TEMAC_SINGLEs:                       0 out of       4    0%
 
-Average Fanout of Non-Clock Nets:                3.53
+Average Fanout of Non-Clock Nets:                3.50
 
-Peak Memory Usage:  1006 MB
-Total REAL time to MAP completion:  17 secs 
-Total CPU time to MAP completion:   14 secs 
+Peak Memory Usage:  1030 MB
+Total REAL time to MAP completion:  22 secs 
+Total CPU time to MAP completion:   16 secs 
 
 Table of Contents
 -----------------
@@ -119,6 +119,22 @@ Section 2 - Warnings
 WARNING:Security:42 - Your software subscription period has lapsed. Your current
 version of Xilinx tools will continue to function, but you no longer qualify for
 Xilinx software updates or new releases.
+WARNING:MapLib:701 - Signal Ext_Mem_Addr<15> connected to top level port
+   Ext_Mem_Addr<15> has been removed.
+WARNING:MapLib:701 - Signal Ext_Mem_Addr<14> connected to top level port
+   Ext_Mem_Addr<14> has been removed.
+WARNING:MapLib:701 - Signal Ext_Mem_Addr<13> connected to top level port
+   Ext_Mem_Addr<13> has been removed.
+WARNING:MapLib:701 - Signal Ext_Mem_Addr<12> connected to top level port
+   Ext_Mem_Addr<12> has been removed.
+WARNING:MapLib:701 - Signal Ext_Mem_Addr<11> connected to top level port
+   Ext_Mem_Addr<11> has been removed.
+WARNING:MapLib:701 - Signal Ext_Mem_Addr<10> connected to top level port
+   Ext_Mem_Addr<10> has been removed.
+WARNING:MapLib:701 - Signal Ext_Mem_Addr<9> connected to top level port
+   Ext_Mem_Addr<9> has been removed.
+WARNING:MapLib:701 - Signal Ext_Mem_Addr<8> connected to top level port
+   Ext_Mem_Addr<8> has been removed.
 
 Section 3 - Informational
 -------------------------
@@ -137,9 +153,9 @@ INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
- 134 block(s) removed
+ 182 block(s) removed
   74 block(s) optimized away
- 107 signal(s) removed
+ 155 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
@@ -154,331 +170,425 @@ To quickly locate the original cause for the removal of a chain of logic, look
 above the place where that logic is listed in the trimming report, then locate
 the lines that are least indented (begin at the leftmost edge).
 
-Loadless block "PC_or_ALU/XLXI_1/XLXI_3" (OR) removed.
- The signal "PC_or_ALU/XLXI_1/XLXN_2" is loadless and has been removed.
-  Loadless block "PC_or_ALU/XLXI_1/XLXI_2" (AND) removed.
- The signal "PC_or_ALU/XLXI_1/XLXN_1" is loadless and has been removed.
-  Loadless block "PC_or_ALU/XLXI_1/XLXI_1" (AND) removed.
-   The signal "PC_or_ALU/XLXI_1/XLXN_7" is loadless and has been removed.
-    Loadless block "PC_or_ALU/XLXI_1/XLXI_4" (BUF) removed.
-Loadless block "PC_or_ALU/XLXI_2/XLXI_3" (OR) removed.
- The signal "PC_or_ALU/XLXI_2/XLXN_2" is loadless and has been removed.
-  Loadless block "PC_or_ALU/XLXI_2/XLXI_2" (AND) removed.
- The signal "PC_or_ALU/XLXI_2/XLXN_1" is loadless and has been removed.
-  Loadless block "PC_or_ALU/XLXI_2/XLXI_1" (AND) removed.
-   The signal "PC_or_ALU/XLXI_2/XLXN_7" is loadless and has been removed.
-    Loadless block "PC_or_ALU/XLXI_2/XLXI_4" (BUF) removed.
-Loadless block "PC_or_ALU/XLXI_3/XLXI_3" (OR) removed.
- The signal "PC_or_ALU/XLXI_3/XLXN_2" is loadless and has been removed.
-  Loadless block "PC_or_ALU/XLXI_3/XLXI_2" (AND) removed.
- The signal "PC_or_ALU/XLXI_3/XLXN_1" is loadless and has been removed.
-  Loadless block "PC_or_ALU/XLXI_3/XLXI_1" (AND) removed.
-   The signal "PC_or_ALU/XLXI_3/XLXN_7" is loadless and has been removed.
-    Loadless block "PC_or_ALU/XLXI_3/XLXI_4" (BUF) removed.
-Loadless block "PC_or_ALU/XLXI_4/XLXI_3" (OR) removed.
- The signal "PC_or_ALU/XLXI_4/XLXN_2" is loadless and has been removed.
-  Loadless block "PC_or_ALU/XLXI_4/XLXI_2" (AND) removed.
- The signal "PC_or_ALU/XLXI_4/XLXN_1" is loadless and has been removed.
-  Loadless block "PC_or_ALU/XLXI_4/XLXI_1" (AND) removed.
-   The signal "PC_or_ALU/XLXI_4/XLXN_7" is loadless and has been removed.
-    Loadless block "PC_or_ALU/XLXI_4/XLXI_4" (BUF) removed.
-Loadless block "PC_or_ALU/XLXI_5/XLXI_3" (OR) removed.
- The signal "PC_or_ALU/XLXI_5/XLXN_2" is loadless and has been removed.
-  Loadless block "PC_or_ALU/XLXI_5/XLXI_2" (AND) removed.
- The signal "PC_or_ALU/XLXI_5/XLXN_1" is loadless and has been removed.
-  Loadless block "PC_or_ALU/XLXI_5/XLXI_1" (AND) removed.
-   The signal "PC_or_ALU/XLXI_5/XLXN_7" is loadless and has been removed.
-    Loadless block "PC_or_ALU/XLXI_5/XLXI_4" (BUF) removed.
-Loadless block "PC_or_ALU/XLXI_6/XLXI_3" (OR) removed.
- The signal "PC_or_ALU/XLXI_6/XLXN_2" is loadless and has been removed.
-  Loadless block "PC_or_ALU/XLXI_6/XLXI_2" (AND) removed.
- The signal "PC_or_ALU/XLXI_6/XLXN_1" is loadless and has been removed.
-  Loadless block "PC_or_ALU/XLXI_6/XLXI_1" (AND) removed.
-   The signal "PC_or_ALU/XLXI_6/XLXN_7" is loadless and has been removed.
-    Loadless block "PC_or_ALU/XLXI_6/XLXI_4" (BUF) removed.
-Loadless block "PC_or_ALU/XLXI_7/XLXI_3" (OR) removed.
- The signal "PC_or_ALU/XLXI_7/XLXN_2" is loadless and has been removed.
-  Loadless block "PC_or_ALU/XLXI_7/XLXI_2" (AND) removed.
- The signal "PC_or_ALU/XLXI_7/XLXN_1" is loadless and has been removed.
-  Loadless block "PC_or_ALU/XLXI_7/XLXI_1" (AND) removed.
-   The signal "PC_or_ALU/XLXI_7/XLXN_7" is loadless and has been removed.
-    Loadless block "PC_or_ALU/XLXI_7/XLXI_4" (BUF) removed.
-Loadless block "PC_or_ALU/XLXI_8/XLXI_3" (OR) removed.
- The signal "PC_or_ALU/XLXI_8/XLXN_2" is loadless and has been removed.
-  Loadless block "PC_or_ALU/XLXI_8/XLXI_2" (AND) removed.
- The signal "PC_or_ALU/XLXI_8/XLXN_1" is loadless and has been removed.
-  Loadless block "PC_or_ALU/XLXI_8/XLXI_1" (AND) removed.
-   The signal "PC_or_ALU/XLXI_8/XLXN_7" is loadless and has been removed.
-    Loadless block "PC_or_ALU/XLXI_8/XLXI_4" (BUF) removed.
-Loadless block "XLXI_37/ALU/For_B2s/FA_0/XLXI_6" (XOR) removed.
- The signal "XLXI_37/ALU/For_B2s/FA_0/A_xor_B" is loadless and has been removed.
-  Loadless block "XLXI_37/ALU/For_B2s/FA_0/XLXI_5" (XOR) removed.
-Loadless block "XLXI_37/ALU/For_B2s/FA_1/XLXI_6" (XOR) removed.
- The signal "XLXI_37/ALU/For_B2s/XLXN_16" is loadless and has been removed.
-  Loadless block "XLXI_37/ALU/For_B2s/FA_0/XLXI_7" (OR) removed.
-   The signal "XLXI_37/ALU/For_B2s/FA_0/XLXN_24" is loadless and has been removed.
-    Loadless block "XLXI_37/ALU/For_B2s/FA_0/XLXI_8" (AND) removed.
-   The signal "XLXI_37/ALU/For_B2s/FA_0/XLXN_23" is loadless and has been removed.
-    Loadless block "XLXI_37/ALU/For_B2s/FA_0/XLXI_9" (AND) removed.
- The signal "XLXI_37/ALU/For_B2s/FA_1/A_xor_B" is loadless and has been removed.
-  Loadless block "XLXI_37/ALU/For_B2s/FA_1/XLXI_5" (XOR) removed.
-Loadless block "XLXI_37/ALU/For_B2s/FA_10/XLXI_6" (XOR) removed.
- The signal "XLXI_37/ALU/For_B2s/XLXN_7" is loadless and has been removed.
-  Loadless block "XLXI_37/ALU/For_B2s/FA_9/XLXI_7" (OR) removed.
-   The signal "XLXI_37/ALU/For_B2s/FA_9/XLXN_24" is loadless and has been removed.
-    Loadless block "XLXI_37/ALU/For_B2s/FA_9/XLXI_8" (AND) removed.
-   The signal "XLXI_37/ALU/For_B2s/FA_9/XLXN_23" is loadless and has been removed.
-    Loadless block "XLXI_37/ALU/For_B2s/FA_9/XLXI_9" (AND) removed.
-     The signal "XLXI_37/ALU/For_B2s/XLXN_8" is loadless and has been removed.
-      Loadless block "XLXI_37/ALU/For_B2s/FA_8/XLXI_7" (OR) removed.
-       The signal "XLXI_37/ALU/For_B2s/FA_8/XLXN_24" is loadless and has been removed.
-        Loadless block "XLXI_37/ALU/For_B2s/FA_8/XLXI_8" (AND) removed.
-       The signal "XLXI_37/ALU/For_B2s/FA_8/XLXN_23" is loadless and has been removed.
-        Loadless block "XLXI_37/ALU/For_B2s/FA_8/XLXI_9" (AND) removed.
-         The signal "XLXI_37/ALU/For_B2s/XLXN_9" is loadless and has been removed.
-          Loadless block "XLXI_37/ALU/For_B2s/FA_7/XLXI_7" (OR) removed.
-           The signal "XLXI_37/ALU/For_B2s/FA_7/XLXN_24" is loadless and has been removed.
-            Loadless block "XLXI_37/ALU/For_B2s/FA_7/XLXI_8" (AND) removed.
-           The signal "XLXI_37/ALU/For_B2s/FA_7/XLXN_23" is loadless and has been removed.
-            Loadless block "XLXI_37/ALU/For_B2s/FA_7/XLXI_9" (AND) removed.
-             The signal "XLXI_37/ALU/For_B2s/XLXN_10" is loadless and has been removed.
-              Loadless block "XLXI_37/ALU/For_B2s/FA_6/XLXI_7" (OR) removed.
-               The signal "XLXI_37/ALU/For_B2s/FA_6/XLXN_24" is loadless and has been removed.
-                Loadless block "XLXI_37/ALU/For_B2s/FA_6/XLXI_8" (AND) removed.
-               The signal "XLXI_37/ALU/For_B2s/FA_6/XLXN_23" is loadless and has been removed.
-                Loadless block "XLXI_37/ALU/For_B2s/FA_6/XLXI_9" (AND) removed.
-                 The signal "XLXI_37/ALU/For_B2s/XLXN_11" is loadless and has been removed.
-                  Loadless block "XLXI_37/ALU/For_B2s/FA_5/XLXI_7" (OR) removed.
-                   The signal "XLXI_37/ALU/For_B2s/FA_5/XLXN_24" is loadless and has been removed.
-                    Loadless block "XLXI_37/ALU/For_B2s/FA_5/XLXI_8" (AND) removed.
-                   The signal "XLXI_37/ALU/For_B2s/FA_5/XLXN_23" is loadless and has been removed.
-                    Loadless block "XLXI_37/ALU/For_B2s/FA_5/XLXI_9" (AND) removed.
-                     The signal "XLXI_37/ALU/For_B2s/XLXN_12" is loadless and has been removed.
-                      Loadless block "XLXI_37/ALU/For_B2s/FA_4/XLXI_7" (OR) removed.
-                       The signal "XLXI_37/ALU/For_B2s/FA_4/XLXN_24" is loadless and has been removed.
-                        Loadless block "XLXI_37/ALU/For_B2s/FA_4/XLXI_8" (AND) removed.
-                       The signal "XLXI_37/ALU/For_B2s/FA_4/XLXN_23" is loadless and has been removed.
-                        Loadless block "XLXI_37/ALU/For_B2s/FA_4/XLXI_9" (AND) removed.
-                         The signal "XLXI_37/ALU/For_B2s/XLXN_13" is loadless and has been removed.
-                          Loadless block "XLXI_37/ALU/For_B2s/FA_3/XLXI_7" (OR) removed.
-                           The signal "XLXI_37/ALU/For_B2s/FA_3/XLXN_24" is loadless and has been removed.
-                            Loadless block "XLXI_37/ALU/For_B2s/FA_3/XLXI_8" (AND) removed.
-                           The signal "XLXI_37/ALU/For_B2s/FA_3/XLXN_23" is loadless and has been removed.
-                            Loadless block "XLXI_37/ALU/For_B2s/FA_3/XLXI_9" (AND) removed.
-                             The signal "XLXI_37/ALU/For_B2s/XLXN_14" is loadless and has been removed.
-                              Loadless block "XLXI_37/ALU/For_B2s/FA_2/XLXI_7" (OR) removed.
-                               The signal "XLXI_37/ALU/For_B2s/FA_2/XLXN_24" is loadless and has been removed.
-                                Loadless block "XLXI_37/ALU/For_B2s/FA_2/XLXI_8" (AND) removed.
-                               The signal "XLXI_37/ALU/For_B2s/FA_2/XLXN_23" is loadless and has been removed.
-                                Loadless block "XLXI_37/ALU/For_B2s/FA_2/XLXI_9" (AND) removed.
-                                 The signal "XLXI_37/ALU/For_B2s/XLXN_15" is loadless and has been removed.
-                                  Loadless block "XLXI_37/ALU/For_B2s/FA_1/XLXI_7" (OR) removed.
-                                   The signal "XLXI_37/ALU/For_B2s/FA_1/XLXN_24" is loadless and has been removed.
-                                    Loadless block "XLXI_37/ALU/For_B2s/FA_1/XLXI_8" (AND) removed.
-                                   The signal "XLXI_37/ALU/For_B2s/FA_1/XLXN_23" is loadless and has been removed.
-                                    Loadless block "XLXI_37/ALU/For_B2s/FA_1/XLXI_9" (AND) removed.
-                                 The signal "XLXI_37/ALU/For_B2s/FA_2/A_xor_B" is loadless and has been removed.
-                                  Loadless block "XLXI_37/ALU/For_B2s/FA_2/XLXI_5" (XOR) removed.
-                             The signal "XLXI_37/ALU/For_B2s/FA_3/A_xor_B" is loadless and has been removed.
-                              Loadless block "XLXI_37/ALU/For_B2s/FA_3/XLXI_5" (XOR) removed.
-                         The signal "XLXI_37/ALU/For_B2s/FA_4/A_xor_B" is loadless and has been removed.
-                          Loadless block "XLXI_37/ALU/For_B2s/FA_4/XLXI_5" (XOR) removed.
-                     The signal "XLXI_37/ALU/For_B2s/FA_5/A_xor_B" is loadless and has been removed.
-                      Loadless block "XLXI_37/ALU/For_B2s/FA_5/XLXI_5" (XOR) removed.
-                 The signal "XLXI_37/ALU/For_B2s/FA_6/A_xor_B" is loadless and has been removed.
-                  Loadless block "XLXI_37/ALU/For_B2s/FA_6/XLXI_5" (XOR) removed.
-             The signal "XLXI_37/ALU/For_B2s/FA_7/A_xor_B" is loadless and has been removed.
-              Loadless block "XLXI_37/ALU/For_B2s/FA_7/XLXI_5" (XOR) removed.
-         The signal "XLXI_37/ALU/For_B2s/FA_8/A_xor_B" is loadless and has been removed.
-          Loadless block "XLXI_37/ALU/For_B2s/FA_8/XLXI_5" (XOR) removed.
-     The signal "XLXI_37/ALU/For_B2s/FA_9/A_xor_B" is loadless and has been removed.
-      Loadless block "XLXI_37/ALU/For_B2s/FA_9/XLXI_5" (XOR) removed.
- The signal "XLXI_37/ALU/For_B2s/FA_10/A_xor_B" is loadless and has been removed.
-  Loadless block "XLXI_37/ALU/For_B2s/FA_10/XLXI_5" (XOR) removed.
-Loadless block "XLXI_37/ALU/For_B2s/FA_11/XLXI_6" (XOR) removed.
- The signal "XLXI_37/ALU/For_B2s/XLXN_6" is loadless and has been removed.
-  Loadless block "XLXI_37/ALU/For_B2s/FA_10/XLXI_7" (OR) removed.
-   The signal "XLXI_37/ALU/For_B2s/FA_10/XLXN_24" is loadless and has been removed.
-    Loadless block "XLXI_37/ALU/For_B2s/FA_10/XLXI_8" (AND) removed.
-   The signal "XLXI_37/ALU/For_B2s/FA_10/XLXN_23" is loadless and has been removed.
-    Loadless block "XLXI_37/ALU/For_B2s/FA_10/XLXI_9" (AND) removed.
- The signal "XLXI_37/ALU/For_B2s/FA_11/A_xor_B" is loadless and has been removed.
-  Loadless block "XLXI_37/ALU/For_B2s/FA_11/XLXI_5" (XOR) removed.
-Loadless block "XLXI_37/ALU/For_B2s/FA_12/XLXI_6" (XOR) removed.
- The signal "XLXI_37/ALU/For_B2s/XLXN_5" is loadless and has been removed.
-  Loadless block "XLXI_37/ALU/For_B2s/FA_11/XLXI_7" (OR) removed.
-   The signal "XLXI_37/ALU/For_B2s/FA_11/XLXN_24" is loadless and has been removed.
-    Loadless block "XLXI_37/ALU/For_B2s/FA_11/XLXI_8" (AND) removed.
-   The signal "XLXI_37/ALU/For_B2s/FA_11/XLXN_23" is loadless and has been removed.
-    Loadless block "XLXI_37/ALU/For_B2s/FA_11/XLXI_9" (AND) removed.
- The signal "XLXI_37/ALU/For_B2s/FA_12/A_xor_B" is loadless and has been removed.
-  Loadless block "XLXI_37/ALU/For_B2s/FA_12/XLXI_5" (XOR) removed.
-Loadless block "XLXI_37/ALU/For_B2s/FA_13/XLXI_6" (XOR) removed.
- The signal "XLXI_37/ALU/For_B2s/XLXN_3" is loadless and has been removed.
-  Loadless block "XLXI_37/ALU/For_B2s/FA_12/XLXI_7" (OR) removed.
-   The signal "XLXI_37/ALU/For_B2s/FA_12/XLXN_24" is loadless and has been removed.
-    Loadless block "XLXI_37/ALU/For_B2s/FA_12/XLXI_8" (AND) removed.
-   The signal "XLXI_37/ALU/For_B2s/FA_12/XLXN_23" is loadless and has been removed.
-    Loadless block "XLXI_37/ALU/For_B2s/FA_12/XLXI_9" (AND) removed.
- The signal "XLXI_37/ALU/For_B2s/FA_13/A_xor_B" is loadless and has been removed.
-  Loadless block "XLXI_37/ALU/For_B2s/FA_13/XLXI_5" (XOR) removed.
-Loadless block "XLXI_37/ALU/For_B2s/FA_14/XLXI_6" (XOR) removed.
- The signal "XLXI_37/ALU/For_B2s/XLXN_2" is loadless and has been removed.
-  Loadless block "XLXI_37/ALU/For_B2s/FA_13/XLXI_7" (OR) removed.
-   The signal "XLXI_37/ALU/For_B2s/FA_13/XLXN_24" is loadless and has been removed.
-    Loadless block "XLXI_37/ALU/For_B2s/FA_13/XLXI_8" (AND) removed.
-   The signal "XLXI_37/ALU/For_B2s/FA_13/XLXN_23" is loadless and has been removed.
-    Loadless block "XLXI_37/ALU/For_B2s/FA_13/XLXI_9" (AND) removed.
- The signal "XLXI_37/ALU/For_B2s/FA_14/A_xor_B" is loadless and has been removed.
-  Loadless block "XLXI_37/ALU/For_B2s/FA_14/XLXI_5" (XOR) removed.
-Loadless block "XLXI_37/ALU/For_B2s/FA_15/XLXI_7" (OR) removed.
- The signal "XLXI_37/ALU/For_B2s/FA_15/XLXN_24" is loadless and has been removed.
-  Loadless block "XLXI_37/ALU/For_B2s/FA_15/XLXI_8" (AND) removed.
- The signal "XLXI_37/ALU/For_B2s/FA_15/XLXN_23" is loadless and has been removed.
-  Loadless block "XLXI_37/ALU/For_B2s/FA_15/XLXI_9" (AND) removed.
-   The signal "XLXI_37/ALU/For_B2s/XLXN_1" is loadless and has been removed.
-    Loadless block "XLXI_37/ALU/For_B2s/FA_14/XLXI_7" (OR) removed.
-     The signal "XLXI_37/ALU/For_B2s/FA_14/XLXN_24" is loadless and has been removed.
-      Loadless block "XLXI_37/ALU/For_B2s/FA_14/XLXI_8" (AND) removed.
-     The signal "XLXI_37/ALU/For_B2s/FA_14/XLXN_23" is loadless and has been removed.
-      Loadless block "XLXI_37/ALU/For_B2s/FA_14/XLXI_9" (AND) removed.
-   The signal "XLXI_37/ALU/For_B2s/FA_15/A_xor_B" is loadless and has been removed.
-    Loadless block "XLXI_37/ALU/For_B2s/FA_15/XLXI_5" (XOR) removed.
-Loadless block "XLXI_37/ALU/For_B2s/FA_2/XLXI_6" (XOR) removed.
-Loadless block "XLXI_37/ALU/For_B2s/FA_3/XLXI_6" (XOR) removed.
-Loadless block "XLXI_37/ALU/For_B2s/FA_4/XLXI_6" (XOR) removed.
-Loadless block "XLXI_37/ALU/For_B2s/FA_5/XLXI_6" (XOR) removed.
-Loadless block "XLXI_37/ALU/For_B2s/FA_6/XLXI_6" (XOR) removed.
-Loadless block "XLXI_37/ALU/For_B2s/FA_7/XLXI_6" (XOR) removed.
-Loadless block "XLXI_37/ALU/For_B2s/FA_8/XLXI_6" (XOR) removed.
-Loadless block "XLXI_37/ALU/For_B2s/FA_9/XLXI_6" (XOR) removed.
-Loadless block "XLXI_37/ALU/XLXI_76" (AND) removed.
- The signal "XLXI_37/ALU/XLXN_197" is loadless and has been removed.
-  Loadless block "XLXI_37/ALU/XLXI_74" (XOR) removed.
-   The signal "XLXI_37/ALU/B2s<15>" is loadless and has been removed.
-    Loadless block "XLXI_37/ALU/For_B2s/FA_15/XLXI_6" (XOR) removed.
- The signal "XLXI_37/ALU/XLXN_196" is loadless and has been removed.
-  Loadless block "XLXI_37/ALU/XLXI_75" (XOR) removed.
-Loadless block "XLXI_37/ALU/XLXI_77" (BUF) removed.
-Loadless block "XLXI_40/XLXI_79/XLXI_19/FA_15/XLXI_7" (OR) removed.
- The signal "XLXI_40/XLXI_79/XLXI_19/FA_15/XLXN_24" is loadless and has been
-removed.
-  Loadless block "XLXI_40/XLXI_79/XLXI_19/FA_15/XLXI_8" (AND) removed.
- The signal "XLXI_40/XLXI_79/XLXI_19/FA_15/XLXN_23" is loadless and has been
-removed.
-  Loadless block "XLXI_40/XLXI_79/XLXI_19/FA_15/XLXI_9" (AND) removed.
+Loadless block "Mem_Addr_Src/XLXI_1/XLXI_3" (OR) removed.
+ The signal "Mem_Addr_Src/XLXI_1/XLXN_2" is loadless and has been removed.
+  Loadless block "Mem_Addr_Src/XLXI_1/XLXI_2" (AND) removed.
+   The signal "Ext_Mem_Addr_15_IBUF" is loadless and has been removed.
+    Loadless block "Ext_Mem_Addr_15_IBUF" (BUF) removed.
+     The signal "Ext_Mem_Addr<15>" is loadless and has been removed.
+      Loadless block "Ext_Mem_Addr<15>" (PAD) removed.
+ The signal "Mem_Addr_Src/XLXI_1/XLXN_1" is loadless and has been removed.
+  Loadless block "Mem_Addr_Src/XLXI_1/XLXI_1" (AND) removed.
+   The signal "Mem_Addr_Src/XLXI_1/XLXN_7" is loadless and has been removed.
+    Loadless block "Mem_Addr_Src/XLXI_1/XLXI_4" (BUF) removed.
+   The signal "XLXN_227<15>" is loadless and has been removed.
+    Loadless block "PC_or_ALU/XLXI_1/XLXI_3" (OR) removed.
+     The signal "PC_or_ALU/XLXI_1/XLXN_2" is loadless and has been removed.
+      Loadless block "PC_or_ALU/XLXI_1/XLXI_2" (AND) removed.
+     The signal "PC_or_ALU/XLXI_1/XLXN_1" is loadless and has been removed.
+      Loadless block "PC_or_ALU/XLXI_1/XLXI_1" (AND) removed.
+       The signal "PC_or_ALU/XLXI_1/XLXN_7" is loadless and has been removed.
+        Loadless block "PC_or_ALU/XLXI_1/XLXI_4" (BUF) removed.
+Loadless block "Mem_Addr_Src/XLXI_2/XLXI_3" (OR) removed.
+ The signal "Mem_Addr_Src/XLXI_2/XLXN_2" is loadless and has been removed.
+  Loadless block "Mem_Addr_Src/XLXI_2/XLXI_2" (AND) removed.
+   The signal "Ext_Mem_Addr_14_IBUF" is loadless and has been removed.
+    Loadless block "Ext_Mem_Addr_14_IBUF" (BUF) removed.
+     The signal "Ext_Mem_Addr<14>" is loadless and has been removed.
+      Loadless block "Ext_Mem_Addr<14>" (PAD) removed.
+ The signal "Mem_Addr_Src/XLXI_2/XLXN_1" is loadless and has been removed.
+  Loadless block "Mem_Addr_Src/XLXI_2/XLXI_1" (AND) removed.
+   The signal "Mem_Addr_Src/XLXI_2/XLXN_7" is loadless and has been removed.
+    Loadless block "Mem_Addr_Src/XLXI_2/XLXI_4" (BUF) removed.
+   The signal "XLXN_227<14>" is loadless and has been removed.
+    Loadless block "PC_or_ALU/XLXI_2/XLXI_3" (OR) removed.
+     The signal "PC_or_ALU/XLXI_2/XLXN_2" is loadless and has been removed.
+      Loadless block "PC_or_ALU/XLXI_2/XLXI_2" (AND) removed.
+     The signal "PC_or_ALU/XLXI_2/XLXN_1" is loadless and has been removed.
+      Loadless block "PC_or_ALU/XLXI_2/XLXI_1" (AND) removed.
+       The signal "PC_or_ALU/XLXI_2/XLXN_7" is loadless and has been removed.
+        Loadless block "PC_or_ALU/XLXI_2/XLXI_4" (BUF) removed.
+Loadless block "Mem_Addr_Src/XLXI_3/XLXI_3" (OR) removed.
+ The signal "Mem_Addr_Src/XLXI_3/XLXN_2" is loadless and has been removed.
+  Loadless block "Mem_Addr_Src/XLXI_3/XLXI_2" (AND) removed.
+   The signal "Ext_Mem_Addr_13_IBUF" is loadless and has been removed.
+    Loadless block "Ext_Mem_Addr_13_IBUF" (BUF) removed.
+     The signal "Ext_Mem_Addr<13>" is loadless and has been removed.
+      Loadless block "Ext_Mem_Addr<13>" (PAD) removed.
+ The signal "Mem_Addr_Src/XLXI_3/XLXN_1" is loadless and has been removed.
+  Loadless block "Mem_Addr_Src/XLXI_3/XLXI_1" (AND) removed.
+   The signal "Mem_Addr_Src/XLXI_3/XLXN_7" is loadless and has been removed.
+    Loadless block "Mem_Addr_Src/XLXI_3/XLXI_4" (BUF) removed.
+   The signal "XLXN_227<13>" is loadless and has been removed.
+    Loadless block "PC_or_ALU/XLXI_3/XLXI_3" (OR) removed.
+     The signal "PC_or_ALU/XLXI_3/XLXN_2" is loadless and has been removed.
+      Loadless block "PC_or_ALU/XLXI_3/XLXI_2" (AND) removed.
+     The signal "PC_or_ALU/XLXI_3/XLXN_1" is loadless and has been removed.
+      Loadless block "PC_or_ALU/XLXI_3/XLXI_1" (AND) removed.
+       The signal "PC_or_ALU/XLXI_3/XLXN_7" is loadless and has been removed.
+        Loadless block "PC_or_ALU/XLXI_3/XLXI_4" (BUF) removed.
+Loadless block "Mem_Addr_Src/XLXI_4/XLXI_3" (OR) removed.
+ The signal "Mem_Addr_Src/XLXI_4/XLXN_2" is loadless and has been removed.
+  Loadless block "Mem_Addr_Src/XLXI_4/XLXI_2" (AND) removed.
+   The signal "Ext_Mem_Addr_12_IBUF" is loadless and has been removed.
+    Loadless block "Ext_Mem_Addr_12_IBUF" (BUF) removed.
+     The signal "Ext_Mem_Addr<12>" is loadless and has been removed.
+      Loadless block "Ext_Mem_Addr<12>" (PAD) removed.
+ The signal "Mem_Addr_Src/XLXI_4/XLXN_1" is loadless and has been removed.
+  Loadless block "Mem_Addr_Src/XLXI_4/XLXI_1" (AND) removed.
+   The signal "Mem_Addr_Src/XLXI_4/XLXN_7" is loadless and has been removed.
+    Loadless block "Mem_Addr_Src/XLXI_4/XLXI_4" (BUF) removed.
+   The signal "XLXN_227<12>" is loadless and has been removed.
+    Loadless block "PC_or_ALU/XLXI_4/XLXI_3" (OR) removed.
+     The signal "PC_or_ALU/XLXI_4/XLXN_2" is loadless and has been removed.
+      Loadless block "PC_or_ALU/XLXI_4/XLXI_2" (AND) removed.
+     The signal "PC_or_ALU/XLXI_4/XLXN_1" is loadless and has been removed.
+      Loadless block "PC_or_ALU/XLXI_4/XLXI_1" (AND) removed.
+       The signal "PC_or_ALU/XLXI_4/XLXN_7" is loadless and has been removed.
+        Loadless block "PC_or_ALU/XLXI_4/XLXI_4" (BUF) removed.
+Loadless block "Mem_Addr_Src/XLXI_5/XLXI_3" (OR) removed.
+ The signal "Mem_Addr_Src/XLXI_5/XLXN_2" is loadless and has been removed.
+  Loadless block "Mem_Addr_Src/XLXI_5/XLXI_2" (AND) removed.
+   The signal "Ext_Mem_Addr_11_IBUF" is loadless and has been removed.
+    Loadless block "Ext_Mem_Addr_11_IBUF" (BUF) removed.
+     The signal "Ext_Mem_Addr<11>" is loadless and has been removed.
+      Loadless block "Ext_Mem_Addr<11>" (PAD) removed.
+ The signal "Mem_Addr_Src/XLXI_5/XLXN_1" is loadless and has been removed.
+  Loadless block "Mem_Addr_Src/XLXI_5/XLXI_1" (AND) removed.
+   The signal "Mem_Addr_Src/XLXI_5/XLXN_7" is loadless and has been removed.
+    Loadless block "Mem_Addr_Src/XLXI_5/XLXI_4" (BUF) removed.
+   The signal "XLXN_227<11>" is loadless and has been removed.
+    Loadless block "PC_or_ALU/XLXI_5/XLXI_3" (OR) removed.
+     The signal "PC_or_ALU/XLXI_5/XLXN_2" is loadless and has been removed.
+      Loadless block "PC_or_ALU/XLXI_5/XLXI_2" (AND) removed.
+     The signal "PC_or_ALU/XLXI_5/XLXN_1" is loadless and has been removed.
+      Loadless block "PC_or_ALU/XLXI_5/XLXI_1" (AND) removed.
+       The signal "PC_or_ALU/XLXI_5/XLXN_7" is loadless and has been removed.
+        Loadless block "PC_or_ALU/XLXI_5/XLXI_4" (BUF) removed.
+Loadless block "Mem_Addr_Src/XLXI_6/XLXI_3" (OR) removed.
+ The signal "Mem_Addr_Src/XLXI_6/XLXN_2" is loadless and has been removed.
+  Loadless block "Mem_Addr_Src/XLXI_6/XLXI_2" (AND) removed.
+   The signal "Ext_Mem_Addr_10_IBUF" is loadless and has been removed.
+    Loadless block "Ext_Mem_Addr_10_IBUF" (BUF) removed.
+     The signal "Ext_Mem_Addr<10>" is loadless and has been removed.
+      Loadless block "Ext_Mem_Addr<10>" (PAD) removed.
+ The signal "Mem_Addr_Src/XLXI_6/XLXN_1" is loadless and has been removed.
+  Loadless block "Mem_Addr_Src/XLXI_6/XLXI_1" (AND) removed.
+   The signal "Mem_Addr_Src/XLXI_6/XLXN_7" is loadless and has been removed.
+    Loadless block "Mem_Addr_Src/XLXI_6/XLXI_4" (BUF) removed.
+   The signal "XLXN_227<10>" is loadless and has been removed.
+    Loadless block "PC_or_ALU/XLXI_6/XLXI_3" (OR) removed.
+     The signal "PC_or_ALU/XLXI_6/XLXN_2" is loadless and has been removed.
+      Loadless block "PC_or_ALU/XLXI_6/XLXI_2" (AND) removed.
+     The signal "PC_or_ALU/XLXI_6/XLXN_1" is loadless and has been removed.
+      Loadless block "PC_or_ALU/XLXI_6/XLXI_1" (AND) removed.
+       The signal "PC_or_ALU/XLXI_6/XLXN_7" is loadless and has been removed.
+        Loadless block "PC_or_ALU/XLXI_6/XLXI_4" (BUF) removed.
+Loadless block "Mem_Addr_Src/XLXI_7/XLXI_3" (OR) removed.
+ The signal "Mem_Addr_Src/XLXI_7/XLXN_2" is loadless and has been removed.
+  Loadless block "Mem_Addr_Src/XLXI_7/XLXI_2" (AND) removed.
+   The signal "Ext_Mem_Addr_9_IBUF" is loadless and has been removed.
+    Loadless block "Ext_Mem_Addr_9_IBUF" (BUF) removed.
+     The signal "Ext_Mem_Addr<9>" is loadless and has been removed.
+      Loadless block "Ext_Mem_Addr<9>" (PAD) removed.
+ The signal "Mem_Addr_Src/XLXI_7/XLXN_1" is loadless and has been removed.
+  Loadless block "Mem_Addr_Src/XLXI_7/XLXI_1" (AND) removed.
+   The signal "Mem_Addr_Src/XLXI_7/XLXN_7" is loadless and has been removed.
+    Loadless block "Mem_Addr_Src/XLXI_7/XLXI_4" (BUF) removed.
+   The signal "XLXN_227<9>" is loadless and has been removed.
+    Loadless block "PC_or_ALU/XLXI_7/XLXI_3" (OR) removed.
+     The signal "PC_or_ALU/XLXI_7/XLXN_2" is loadless and has been removed.
+      Loadless block "PC_or_ALU/XLXI_7/XLXI_2" (AND) removed.
+     The signal "PC_or_ALU/XLXI_7/XLXN_1" is loadless and has been removed.
+      Loadless block "PC_or_ALU/XLXI_7/XLXI_1" (AND) removed.
+       The signal "PC_or_ALU/XLXI_7/XLXN_7" is loadless and has been removed.
+        Loadless block "PC_or_ALU/XLXI_7/XLXI_4" (BUF) removed.
+Loadless block "Mem_Addr_Src/XLXI_8/XLXI_3" (OR) removed.
+ The signal "Mem_Addr_Src/XLXI_8/XLXN_2" is loadless and has been removed.
+  Loadless block "Mem_Addr_Src/XLXI_8/XLXI_2" (AND) removed.
+   The signal "Ext_Mem_Addr_8_IBUF" is loadless and has been removed.
+    Loadless block "Ext_Mem_Addr_8_IBUF" (BUF) removed.
+     The signal "Ext_Mem_Addr<8>" is loadless and has been removed.
+      Loadless block "Ext_Mem_Addr<8>" (PAD) removed.
+ The signal "Mem_Addr_Src/XLXI_8/XLXN_1" is loadless and has been removed.
+  Loadless block "Mem_Addr_Src/XLXI_8/XLXI_1" (AND) removed.
+   The signal "Mem_Addr_Src/XLXI_8/XLXN_7" is loadless and has been removed.
+    Loadless block "Mem_Addr_Src/XLXI_8/XLXI_4" (BUF) removed.
+   The signal "XLXN_227<8>" is loadless and has been removed.
+    Loadless block "PC_or_ALU/XLXI_8/XLXI_3" (OR) removed.
+     The signal "PC_or_ALU/XLXI_8/XLXN_2" is loadless and has been removed.
+      Loadless block "PC_or_ALU/XLXI_8/XLXI_2" (AND) removed.
+     The signal "PC_or_ALU/XLXI_8/XLXN_1" is loadless and has been removed.
+      Loadless block "PC_or_ALU/XLXI_8/XLXI_1" (AND) removed.
+       The signal "PC_or_ALU/XLXI_8/XLXN_7" is loadless and has been removed.
+        Loadless block "PC_or_ALU/XLXI_8/XLXI_4" (BUF) removed.
+Loadless block "PC1/XLXI_79/XLXI_19/FA_15/XLXI_7" (OR) removed.
+ The signal "PC1/XLXI_79/XLXI_19/FA_15/XLXN_24" is loadless and has been removed.
+  Loadless block "PC1/XLXI_79/XLXI_19/FA_15/XLXI_8" (AND) removed.
+ The signal "PC1/XLXI_79/XLXI_19/FA_15/XLXN_23" is loadless and has been removed.
+  Loadless block "PC1/XLXI_79/XLXI_19/FA_15/XLXI_9" (AND) removed.
+Loadless block "RF_ALU/ALU/For_B2s/FA_0/XLXI_6" (XOR) removed.
+ The signal "RF_ALU/ALU/For_B2s/FA_0/A_xor_B" is loadless and has been removed.
+  Loadless block "RF_ALU/ALU/For_B2s/FA_0/XLXI_5" (XOR) removed.
+Loadless block "RF_ALU/ALU/For_B2s/FA_1/XLXI_6" (XOR) removed.
+ The signal "RF_ALU/ALU/For_B2s/XLXN_16" is loadless and has been removed.
+  Loadless block "RF_ALU/ALU/For_B2s/FA_0/XLXI_7" (OR) removed.
+   The signal "RF_ALU/ALU/For_B2s/FA_0/XLXN_24" is loadless and has been removed.
+    Loadless block "RF_ALU/ALU/For_B2s/FA_0/XLXI_8" (AND) removed.
+   The signal "RF_ALU/ALU/For_B2s/FA_0/XLXN_23" is loadless and has been removed.
+    Loadless block "RF_ALU/ALU/For_B2s/FA_0/XLXI_9" (AND) removed.
+ The signal "RF_ALU/ALU/For_B2s/FA_1/A_xor_B" is loadless and has been removed.
+  Loadless block "RF_ALU/ALU/For_B2s/FA_1/XLXI_5" (XOR) removed.
+Loadless block "RF_ALU/ALU/For_B2s/FA_10/XLXI_6" (XOR) removed.
+ The signal "RF_ALU/ALU/For_B2s/XLXN_7" is loadless and has been removed.
+  Loadless block "RF_ALU/ALU/For_B2s/FA_9/XLXI_7" (OR) removed.
+   The signal "RF_ALU/ALU/For_B2s/FA_9/XLXN_24" is loadless and has been removed.
+    Loadless block "RF_ALU/ALU/For_B2s/FA_9/XLXI_8" (AND) removed.
+   The signal "RF_ALU/ALU/For_B2s/FA_9/XLXN_23" is loadless and has been removed.
+    Loadless block "RF_ALU/ALU/For_B2s/FA_9/XLXI_9" (AND) removed.
+     The signal "RF_ALU/ALU/For_B2s/XLXN_8" is loadless and has been removed.
+      Loadless block "RF_ALU/ALU/For_B2s/FA_8/XLXI_7" (OR) removed.
+       The signal "RF_ALU/ALU/For_B2s/FA_8/XLXN_24" is loadless and has been removed.
+        Loadless block "RF_ALU/ALU/For_B2s/FA_8/XLXI_8" (AND) removed.
+       The signal "RF_ALU/ALU/For_B2s/FA_8/XLXN_23" is loadless and has been removed.
+        Loadless block "RF_ALU/ALU/For_B2s/FA_8/XLXI_9" (AND) removed.
+         The signal "RF_ALU/ALU/For_B2s/XLXN_9" is loadless and has been removed.
+          Loadless block "RF_ALU/ALU/For_B2s/FA_7/XLXI_7" (OR) removed.
+           The signal "RF_ALU/ALU/For_B2s/FA_7/XLXN_24" is loadless and has been removed.
+            Loadless block "RF_ALU/ALU/For_B2s/FA_7/XLXI_8" (AND) removed.
+           The signal "RF_ALU/ALU/For_B2s/FA_7/XLXN_23" is loadless and has been removed.
+            Loadless block "RF_ALU/ALU/For_B2s/FA_7/XLXI_9" (AND) removed.
+             The signal "RF_ALU/ALU/For_B2s/XLXN_10" is loadless and has been removed.
+              Loadless block "RF_ALU/ALU/For_B2s/FA_6/XLXI_7" (OR) removed.
+               The signal "RF_ALU/ALU/For_B2s/FA_6/XLXN_24" is loadless and has been removed.
+                Loadless block "RF_ALU/ALU/For_B2s/FA_6/XLXI_8" (AND) removed.
+               The signal "RF_ALU/ALU/For_B2s/FA_6/XLXN_23" is loadless and has been removed.
+                Loadless block "RF_ALU/ALU/For_B2s/FA_6/XLXI_9" (AND) removed.
+                 The signal "RF_ALU/ALU/For_B2s/XLXN_11" is loadless and has been removed.
+                  Loadless block "RF_ALU/ALU/For_B2s/FA_5/XLXI_7" (OR) removed.
+                   The signal "RF_ALU/ALU/For_B2s/FA_5/XLXN_24" is loadless and has been removed.
+                    Loadless block "RF_ALU/ALU/For_B2s/FA_5/XLXI_8" (AND) removed.
+                   The signal "RF_ALU/ALU/For_B2s/FA_5/XLXN_23" is loadless and has been removed.
+                    Loadless block "RF_ALU/ALU/For_B2s/FA_5/XLXI_9" (AND) removed.
+                     The signal "RF_ALU/ALU/For_B2s/XLXN_12" is loadless and has been removed.
+                      Loadless block "RF_ALU/ALU/For_B2s/FA_4/XLXI_7" (OR) removed.
+                       The signal "RF_ALU/ALU/For_B2s/FA_4/XLXN_24" is loadless and has been removed.
+                        Loadless block "RF_ALU/ALU/For_B2s/FA_4/XLXI_8" (AND) removed.
+                       The signal "RF_ALU/ALU/For_B2s/FA_4/XLXN_23" is loadless and has been removed.
+                        Loadless block "RF_ALU/ALU/For_B2s/FA_4/XLXI_9" (AND) removed.
+                         The signal "RF_ALU/ALU/For_B2s/XLXN_13" is loadless and has been removed.
+                          Loadless block "RF_ALU/ALU/For_B2s/FA_3/XLXI_7" (OR) removed.
+                           The signal "RF_ALU/ALU/For_B2s/FA_3/XLXN_24" is loadless and has been removed.
+                            Loadless block "RF_ALU/ALU/For_B2s/FA_3/XLXI_8" (AND) removed.
+                           The signal "RF_ALU/ALU/For_B2s/FA_3/XLXN_23" is loadless and has been removed.
+                            Loadless block "RF_ALU/ALU/For_B2s/FA_3/XLXI_9" (AND) removed.
+                             The signal "RF_ALU/ALU/For_B2s/XLXN_14" is loadless and has been removed.
+                              Loadless block "RF_ALU/ALU/For_B2s/FA_2/XLXI_7" (OR) removed.
+                               The signal "RF_ALU/ALU/For_B2s/FA_2/XLXN_24" is loadless and has been removed.
+                                Loadless block "RF_ALU/ALU/For_B2s/FA_2/XLXI_8" (AND) removed.
+                               The signal "RF_ALU/ALU/For_B2s/FA_2/XLXN_23" is loadless and has been removed.
+                                Loadless block "RF_ALU/ALU/For_B2s/FA_2/XLXI_9" (AND) removed.
+                                 The signal "RF_ALU/ALU/For_B2s/XLXN_15" is loadless and has been removed.
+                                  Loadless block "RF_ALU/ALU/For_B2s/FA_1/XLXI_7" (OR) removed.
+                                   The signal "RF_ALU/ALU/For_B2s/FA_1/XLXN_24" is loadless and has been removed.
+                                    Loadless block "RF_ALU/ALU/For_B2s/FA_1/XLXI_8" (AND) removed.
+                                   The signal "RF_ALU/ALU/For_B2s/FA_1/XLXN_23" is loadless and has been removed.
+                                    Loadless block "RF_ALU/ALU/For_B2s/FA_1/XLXI_9" (AND) removed.
+                                 The signal "RF_ALU/ALU/For_B2s/FA_2/A_xor_B" is loadless and has been removed.
+                                  Loadless block "RF_ALU/ALU/For_B2s/FA_2/XLXI_5" (XOR) removed.
+                             The signal "RF_ALU/ALU/For_B2s/FA_3/A_xor_B" is loadless and has been removed.
+                              Loadless block "RF_ALU/ALU/For_B2s/FA_3/XLXI_5" (XOR) removed.
+                         The signal "RF_ALU/ALU/For_B2s/FA_4/A_xor_B" is loadless and has been removed.
+                          Loadless block "RF_ALU/ALU/For_B2s/FA_4/XLXI_5" (XOR) removed.
+                     The signal "RF_ALU/ALU/For_B2s/FA_5/A_xor_B" is loadless and has been removed.
+                      Loadless block "RF_ALU/ALU/For_B2s/FA_5/XLXI_5" (XOR) removed.
+                 The signal "RF_ALU/ALU/For_B2s/FA_6/A_xor_B" is loadless and has been removed.
+                  Loadless block "RF_ALU/ALU/For_B2s/FA_6/XLXI_5" (XOR) removed.
+             The signal "RF_ALU/ALU/For_B2s/FA_7/A_xor_B" is loadless and has been removed.
+              Loadless block "RF_ALU/ALU/For_B2s/FA_7/XLXI_5" (XOR) removed.
+         The signal "RF_ALU/ALU/For_B2s/FA_8/A_xor_B" is loadless and has been removed.
+          Loadless block "RF_ALU/ALU/For_B2s/FA_8/XLXI_5" (XOR) removed.
+     The signal "RF_ALU/ALU/For_B2s/FA_9/A_xor_B" is loadless and has been removed.
+      Loadless block "RF_ALU/ALU/For_B2s/FA_9/XLXI_5" (XOR) removed.
+ The signal "RF_ALU/ALU/For_B2s/FA_10/A_xor_B" is loadless and has been removed.
+  Loadless block "RF_ALU/ALU/For_B2s/FA_10/XLXI_5" (XOR) removed.
+Loadless block "RF_ALU/ALU/For_B2s/FA_11/XLXI_6" (XOR) removed.
+ The signal "RF_ALU/ALU/For_B2s/XLXN_6" is loadless and has been removed.
+  Loadless block "RF_ALU/ALU/For_B2s/FA_10/XLXI_7" (OR) removed.
+   The signal "RF_ALU/ALU/For_B2s/FA_10/XLXN_24" is loadless and has been removed.
+    Loadless block "RF_ALU/ALU/For_B2s/FA_10/XLXI_8" (AND) removed.
+   The signal "RF_ALU/ALU/For_B2s/FA_10/XLXN_23" is loadless and has been removed.
+    Loadless block "RF_ALU/ALU/For_B2s/FA_10/XLXI_9" (AND) removed.
+ The signal "RF_ALU/ALU/For_B2s/FA_11/A_xor_B" is loadless and has been removed.
+  Loadless block "RF_ALU/ALU/For_B2s/FA_11/XLXI_5" (XOR) removed.
+Loadless block "RF_ALU/ALU/For_B2s/FA_12/XLXI_6" (XOR) removed.
+ The signal "RF_ALU/ALU/For_B2s/XLXN_5" is loadless and has been removed.
+  Loadless block "RF_ALU/ALU/For_B2s/FA_11/XLXI_7" (OR) removed.
+   The signal "RF_ALU/ALU/For_B2s/FA_11/XLXN_24" is loadless and has been removed.
+    Loadless block "RF_ALU/ALU/For_B2s/FA_11/XLXI_8" (AND) removed.
+   The signal "RF_ALU/ALU/For_B2s/FA_11/XLXN_23" is loadless and has been removed.
+    Loadless block "RF_ALU/ALU/For_B2s/FA_11/XLXI_9" (AND) removed.
+ The signal "RF_ALU/ALU/For_B2s/FA_12/A_xor_B" is loadless and has been removed.
+  Loadless block "RF_ALU/ALU/For_B2s/FA_12/XLXI_5" (XOR) removed.
+Loadless block "RF_ALU/ALU/For_B2s/FA_13/XLXI_6" (XOR) removed.
+ The signal "RF_ALU/ALU/For_B2s/XLXN_3" is loadless and has been removed.
+  Loadless block "RF_ALU/ALU/For_B2s/FA_12/XLXI_7" (OR) removed.
+   The signal "RF_ALU/ALU/For_B2s/FA_12/XLXN_24" is loadless and has been removed.
+    Loadless block "RF_ALU/ALU/For_B2s/FA_12/XLXI_8" (AND) removed.
+   The signal "RF_ALU/ALU/For_B2s/FA_12/XLXN_23" is loadless and has been removed.
+    Loadless block "RF_ALU/ALU/For_B2s/FA_12/XLXI_9" (AND) removed.
+ The signal "RF_ALU/ALU/For_B2s/FA_13/A_xor_B" is loadless and has been removed.
+  Loadless block "RF_ALU/ALU/For_B2s/FA_13/XLXI_5" (XOR) removed.
+Loadless block "RF_ALU/ALU/For_B2s/FA_14/XLXI_6" (XOR) removed.
+ The signal "RF_ALU/ALU/For_B2s/XLXN_2" is loadless and has been removed.
+  Loadless block "RF_ALU/ALU/For_B2s/FA_13/XLXI_7" (OR) removed.
+   The signal "RF_ALU/ALU/For_B2s/FA_13/XLXN_24" is loadless and has been removed.
+    Loadless block "RF_ALU/ALU/For_B2s/FA_13/XLXI_8" (AND) removed.
+   The signal "RF_ALU/ALU/For_B2s/FA_13/XLXN_23" is loadless and has been removed.
+    Loadless block "RF_ALU/ALU/For_B2s/FA_13/XLXI_9" (AND) removed.
+ The signal "RF_ALU/ALU/For_B2s/FA_14/A_xor_B" is loadless and has been removed.
+  Loadless block "RF_ALU/ALU/For_B2s/FA_14/XLXI_5" (XOR) removed.
+Loadless block "RF_ALU/ALU/For_B2s/FA_15/XLXI_7" (OR) removed.
+ The signal "RF_ALU/ALU/For_B2s/FA_15/XLXN_24" is loadless and has been removed.
+  Loadless block "RF_ALU/ALU/For_B2s/FA_15/XLXI_8" (AND) removed.
+ The signal "RF_ALU/ALU/For_B2s/FA_15/XLXN_23" is loadless and has been removed.
+  Loadless block "RF_ALU/ALU/For_B2s/FA_15/XLXI_9" (AND) removed.
+   The signal "RF_ALU/ALU/For_B2s/XLXN_1" is loadless and has been removed.
+    Loadless block "RF_ALU/ALU/For_B2s/FA_14/XLXI_7" (OR) removed.
+     The signal "RF_ALU/ALU/For_B2s/FA_14/XLXN_24" is loadless and has been removed.
+      Loadless block "RF_ALU/ALU/For_B2s/FA_14/XLXI_8" (AND) removed.
+     The signal "RF_ALU/ALU/For_B2s/FA_14/XLXN_23" is loadless and has been removed.
+      Loadless block "RF_ALU/ALU/For_B2s/FA_14/XLXI_9" (AND) removed.
+   The signal "RF_ALU/ALU/For_B2s/FA_15/A_xor_B" is loadless and has been removed.
+    Loadless block "RF_ALU/ALU/For_B2s/FA_15/XLXI_5" (XOR) removed.
+Loadless block "RF_ALU/ALU/For_B2s/FA_2/XLXI_6" (XOR) removed.
+Loadless block "RF_ALU/ALU/For_B2s/FA_3/XLXI_6" (XOR) removed.
+Loadless block "RF_ALU/ALU/For_B2s/FA_4/XLXI_6" (XOR) removed.
+Loadless block "RF_ALU/ALU/For_B2s/FA_5/XLXI_6" (XOR) removed.
+Loadless block "RF_ALU/ALU/For_B2s/FA_6/XLXI_6" (XOR) removed.
+Loadless block "RF_ALU/ALU/For_B2s/FA_7/XLXI_6" (XOR) removed.
+Loadless block "RF_ALU/ALU/For_B2s/FA_8/XLXI_6" (XOR) removed.
+Loadless block "RF_ALU/ALU/For_B2s/FA_9/XLXI_6" (XOR) removed.
+Loadless block "RF_ALU/ALU/XLXI_76" (AND) removed.
+ The signal "RF_ALU/ALU/XLXN_197" is loadless and has been removed.
+  Loadless block "RF_ALU/ALU/XLXI_74" (XOR) removed.
+   The signal "RF_ALU/ALU/B2s<15>" is loadless and has been removed.
+    Loadless block "RF_ALU/ALU/For_B2s/FA_15/XLXI_6" (XOR) removed.
+ The signal "RF_ALU/ALU/XLXN_196" is loadless and has been removed.
+  Loadless block "RF_ALU/ALU/XLXI_75" (XOR) removed.
+Loadless block "RF_ALU/ALU/XLXI_77" (BUF) removed.
 
 The trimmed logic reported below is either:
    1. part of a cycle
    2. part of disabled logic
    3. a side-effect of other trimmed logic
 
-The signal "XLXI_40/XLXI_82/XLXI_15/XLXN_7" is unused and has been removed.
- Unused block "XLXI_40/XLXI_82/XLXI_15/XLXI_4" (BUF) removed.
-The signal "XLXI_40/XLXI_82/XLXI_14/XLXN_7" is unused and has been removed.
- Unused block "XLXI_40/XLXI_82/XLXI_14/XLXI_4" (BUF) removed.
-The signal "XLXI_40/XLXI_82/XLXI_13/XLXN_7" is unused and has been removed.
- Unused block "XLXI_40/XLXI_82/XLXI_13/XLXI_4" (BUF) removed.
-The signal "XLXI_40/XLXI_82/XLXI_12/XLXN_7" is unused and has been removed.
- Unused block "XLXI_40/XLXI_82/XLXI_12/XLXI_4" (BUF) removed.
-The signal "XLXI_40/XLXI_82/XLXI_11/XLXN_7" is unused and has been removed.
- Unused block "XLXI_40/XLXI_82/XLXI_11/XLXI_4" (BUF) removed.
-The signal "XLXI_40/XLXI_82/XLXI_10/XLXN_7" is unused and has been removed.
- Unused block "XLXI_40/XLXI_82/XLXI_10/XLXI_4" (BUF) removed.
-The signal "XLXI_40/XLXI_82/XLXI_9/XLXN_7" is unused and has been removed.
- Unused block "XLXI_40/XLXI_82/XLXI_9/XLXI_4" (BUF) removed.
-The signal "XLXI_40/XLXI_82/XLXI_8/XLXN_7" is unused and has been removed.
- Unused block "XLXI_40/XLXI_82/XLXI_8/XLXI_4" (BUF) removed.
-The signal "XLXI_40/XLXI_82/XLXI_7/XLXN_7" is unused and has been removed.
- Unused block "XLXI_40/XLXI_82/XLXI_7/XLXI_4" (BUF) removed.
-The signal "XLXI_40/XLXI_82/XLXI_6/XLXN_7" is unused and has been removed.
- Unused block "XLXI_40/XLXI_82/XLXI_6/XLXI_4" (BUF) removed.
-The signal "XLXI_40/XLXI_82/XLXI_5/XLXN_7" is unused and has been removed.
- Unused block "XLXI_40/XLXI_82/XLXI_5/XLXI_4" (BUF) removed.
-The signal "XLXI_40/XLXI_82/XLXI_4/XLXN_7" is unused and has been removed.
- Unused block "XLXI_40/XLXI_82/XLXI_4/XLXI_4" (BUF) removed.
-The signal "XLXI_40/XLXI_82/XLXI_3/XLXN_7" is unused and has been removed.
- Unused block "XLXI_40/XLXI_82/XLXI_3/XLXI_4" (BUF) removed.
-The signal "XLXI_40/XLXI_82/XLXI_2/XLXN_7" is unused and has been removed.
- Unused block "XLXI_40/XLXI_82/XLXI_2/XLXI_4" (BUF) removed.
-The signal "XLXI_40/XLXI_82/XLXI_1/XLXN_7" is unused and has been removed.
- Unused block "XLXI_40/XLXI_82/XLXI_1/XLXI_4" (BUF) removed.
+The signal "PC1/XLXI_82/XLXI_15/XLXN_7" is unused and has been removed.
+ Unused block "PC1/XLXI_82/XLXI_15/XLXI_4" (BUF) removed.
+The signal "PC1/XLXI_82/XLXI_14/XLXN_7" is unused and has been removed.
+ Unused block "PC1/XLXI_82/XLXI_14/XLXI_4" (BUF) removed.
+The signal "PC1/XLXI_82/XLXI_13/XLXN_7" is unused and has been removed.
+ Unused block "PC1/XLXI_82/XLXI_13/XLXI_4" (BUF) removed.
+The signal "PC1/XLXI_82/XLXI_12/XLXN_7" is unused and has been removed.
+ Unused block "PC1/XLXI_82/XLXI_12/XLXI_4" (BUF) removed.
+The signal "PC1/XLXI_82/XLXI_11/XLXN_7" is unused and has been removed.
+ Unused block "PC1/XLXI_82/XLXI_11/XLXI_4" (BUF) removed.
+The signal "PC1/XLXI_82/XLXI_10/XLXN_7" is unused and has been removed.
+ Unused block "PC1/XLXI_82/XLXI_10/XLXI_4" (BUF) removed.
+The signal "PC1/XLXI_82/XLXI_9/XLXN_7" is unused and has been removed.
+ Unused block "PC1/XLXI_82/XLXI_9/XLXI_4" (BUF) removed.
+The signal "PC1/XLXI_82/XLXI_8/XLXN_7" is unused and has been removed.
+ Unused block "PC1/XLXI_82/XLXI_8/XLXI_4" (BUF) removed.
+The signal "PC1/XLXI_82/XLXI_7/XLXN_7" is unused and has been removed.
+ Unused block "PC1/XLXI_82/XLXI_7/XLXI_4" (BUF) removed.
+The signal "PC1/XLXI_82/XLXI_6/XLXN_7" is unused and has been removed.
+ Unused block "PC1/XLXI_82/XLXI_6/XLXI_4" (BUF) removed.
+The signal "PC1/XLXI_82/XLXI_5/XLXN_7" is unused and has been removed.
+ Unused block "PC1/XLXI_82/XLXI_5/XLXI_4" (BUF) removed.
+The signal "PC1/XLXI_82/XLXI_4/XLXN_7" is unused and has been removed.
+ Unused block "PC1/XLXI_82/XLXI_4/XLXI_4" (BUF) removed.
+The signal "PC1/XLXI_82/XLXI_3/XLXN_7" is unused and has been removed.
+ Unused block "PC1/XLXI_82/XLXI_3/XLXI_4" (BUF) removed.
+The signal "PC1/XLXI_82/XLXI_2/XLXN_7" is unused and has been removed.
+ Unused block "PC1/XLXI_82/XLXI_2/XLXI_4" (BUF) removed.
+The signal "PC1/XLXI_82/XLXI_1/XLXN_7" is unused and has been removed.
+ Unused block "PC1/XLXI_82/XLXI_1/XLXI_4" (BUF) removed.
 
 Optimized Block(s):
 TYPE 		BLOCK
+AND2 		PC1/XLXI_79/XLXI_19/FA_0/XLXI_9
+AND3 		PC1/XLXI_81/XLXI_10/XLXI_4
+AND3 		PC1/XLXI_81/XLXI_11/XLXI_4
+AND3 		PC1/XLXI_81/XLXI_12/XLXI_4
+AND3 		PC1/XLXI_81/XLXI_13/XLXI_4
+AND3 		PC1/XLXI_81/XLXI_14/XLXI_4
+AND3 		PC1/XLXI_81/XLXI_15/XLXI_4
+AND3 		PC1/XLXI_81/XLXI_16/XLXI_4
+AND3 		PC1/XLXI_81/XLXI_17/XLXI_4
+AND3 		PC1/XLXI_81/XLXI_18/XLXI_4
+AND3 		PC1/XLXI_81/XLXI_19/XLXI_4
+AND3 		PC1/XLXI_81/XLXI_20/XLXI_4
+AND3 		PC1/XLXI_81/XLXI_21/XLXI_4
+AND3 		PC1/XLXI_81/XLXI_22/XLXI_4
+AND3 		PC1/XLXI_81/XLXI_23/XLXI_4
+AND3 		PC1/XLXI_81/XLXI_24/XLXI_4
+AND3 		PC1/XLXI_81/XLXI_9/XLXI_4
+AND2 		PC1/XLXI_82/XLXI_1/XLXI_1
+AND2 		PC1/XLXI_82/XLXI_10/XLXI_1
+AND2 		PC1/XLXI_82/XLXI_11/XLXI_1
+AND2 		PC1/XLXI_82/XLXI_12/XLXI_1
+AND2 		PC1/XLXI_82/XLXI_13/XLXI_1
+AND2 		PC1/XLXI_82/XLXI_14/XLXI_1
+AND2 		PC1/XLXI_82/XLXI_15/XLXI_1
+AND2 		PC1/XLXI_82/XLXI_2/XLXI_1
+AND2 		PC1/XLXI_82/XLXI_3/XLXI_1
+AND2 		PC1/XLXI_82/XLXI_4/XLXI_1
+AND2 		PC1/XLXI_82/XLXI_5/XLXI_1
+AND2 		PC1/XLXI_82/XLXI_6/XLXI_1
+AND2 		PC1/XLXI_82/XLXI_7/XLXI_1
+AND2 		PC1/XLXI_82/XLXI_8/XLXI_1
+AND2 		PC1/XLXI_82/XLXI_9/XLXI_1
+AND3 		RF_ALU/DataB_MUX/XLXI_10/XLXI_3
+AND3 		RF_ALU/DataB_MUX/XLXI_10/XLXI_4
+AND3 		RF_ALU/DataB_MUX/XLXI_11/XLXI_3
+AND3 		RF_ALU/DataB_MUX/XLXI_11/XLXI_4
+AND3 		RF_ALU/DataB_MUX/XLXI_12/XLXI_3
+AND3 		RF_ALU/DataB_MUX/XLXI_12/XLXI_4
+AND3 		RF_ALU/DataB_MUX/XLXI_13/XLXI_3
+AND3 		RF_ALU/DataB_MUX/XLXI_13/XLXI_4
+AND3 		RF_ALU/DataB_MUX/XLXI_14/XLXI_3
+AND3 		RF_ALU/DataB_MUX/XLXI_14/XLXI_4
+AND3 		RF_ALU/DataB_MUX/XLXI_15/XLXI_3
+AND3 		RF_ALU/DataB_MUX/XLXI_15/XLXI_4
+AND3 		RF_ALU/DataB_MUX/XLXI_16/XLXI_3
+AND3 		RF_ALU/DataB_MUX/XLXI_16/XLXI_4
+AND3 		RF_ALU/DataB_MUX/XLXI_17/XLXI_3
+AND3 		RF_ALU/DataB_MUX/XLXI_17/XLXI_4
+AND3 		RF_ALU/DataB_MUX/XLXI_18/XLXI_3
+AND3 		RF_ALU/DataB_MUX/XLXI_18/XLXI_4
+AND3 		RF_ALU/DataB_MUX/XLXI_19/XLXI_3
+AND3 		RF_ALU/DataB_MUX/XLXI_19/XLXI_4
+AND3 		RF_ALU/DataB_MUX/XLXI_20/XLXI_3
+AND3 		RF_ALU/DataB_MUX/XLXI_20/XLXI_4
+AND3 		RF_ALU/DataB_MUX/XLXI_21/XLXI_3
+AND3 		RF_ALU/DataB_MUX/XLXI_21/XLXI_4
+AND3 		RF_ALU/DataB_MUX/XLXI_22/XLXI_3
+AND3 		RF_ALU/DataB_MUX/XLXI_22/XLXI_4
+AND3 		RF_ALU/DataB_MUX/XLXI_23/XLXI_3
+AND3 		RF_ALU/DataB_MUX/XLXI_23/XLXI_4
+AND3 		RF_ALU/DataB_MUX/XLXI_24/XLXI_3
+AND3 		RF_ALU/DataB_MUX/XLXI_24/XLXI_4
+AND3 		RF_ALU/DataB_MUX/XLXI_9/XLXI_3
+AND3 		RF_ALU/DataB_MUX/XLXI_9/XLXI_4
+AND3 		RF_ALU/XLXI_1/XLXI_1/XLXI_10/XLXI_3
+AND3 		RF_ALU/XLXI_1/XLXI_1/XLXI_11/XLXI_3
+AND3 		RF_ALU/XLXI_1/XLXI_1/XLXI_12/XLXI_3
+AND3 		RF_ALU/XLXI_1/XLXI_1/XLXI_13/XLXI_3
+AND3 		RF_ALU/XLXI_1/XLXI_1/XLXI_14/XLXI_3
+AND3 		RF_ALU/XLXI_1/XLXI_1/XLXI_15/XLXI_3
+AND3 		RF_ALU/XLXI_1/XLXI_1/XLXI_16/XLXI_3
+AND3 		RF_ALU/XLXI_1/XLXI_1/XLXI_9/XLXI_3
 VCC 		XLXI_27
-AND3 		XLXI_37/DataB_MUX/XLXI_10/XLXI_3
-AND3 		XLXI_37/DataB_MUX/XLXI_10/XLXI_4
-AND3 		XLXI_37/DataB_MUX/XLXI_11/XLXI_3
-AND3 		XLXI_37/DataB_MUX/XLXI_11/XLXI_4
-AND3 		XLXI_37/DataB_MUX/XLXI_12/XLXI_3
-AND3 		XLXI_37/DataB_MUX/XLXI_12/XLXI_4
-AND3 		XLXI_37/DataB_MUX/XLXI_13/XLXI_3
-AND3 		XLXI_37/DataB_MUX/XLXI_13/XLXI_4
-AND3 		XLXI_37/DataB_MUX/XLXI_14/XLXI_3
-AND3 		XLXI_37/DataB_MUX/XLXI_14/XLXI_4
-AND3 		XLXI_37/DataB_MUX/XLXI_15/XLXI_3
-AND3 		XLXI_37/DataB_MUX/XLXI_15/XLXI_4
-AND3 		XLXI_37/DataB_MUX/XLXI_16/XLXI_3
-AND3 		XLXI_37/DataB_MUX/XLXI_16/XLXI_4
-AND3 		XLXI_37/DataB_MUX/XLXI_17/XLXI_3
-AND3 		XLXI_37/DataB_MUX/XLXI_17/XLXI_4
-AND3 		XLXI_37/DataB_MUX/XLXI_18/XLXI_3
-AND3 		XLXI_37/DataB_MUX/XLXI_18/XLXI_4
-AND3 		XLXI_37/DataB_MUX/XLXI_19/XLXI_3
-AND3 		XLXI_37/DataB_MUX/XLXI_19/XLXI_4
-AND3 		XLXI_37/DataB_MUX/XLXI_20/XLXI_3
-AND3 		XLXI_37/DataB_MUX/XLXI_20/XLXI_4
-AND3 		XLXI_37/DataB_MUX/XLXI_21/XLXI_3
-AND3 		XLXI_37/DataB_MUX/XLXI_21/XLXI_4
-AND3 		XLXI_37/DataB_MUX/XLXI_22/XLXI_3
-AND3 		XLXI_37/DataB_MUX/XLXI_22/XLXI_4
-AND3 		XLXI_37/DataB_MUX/XLXI_23/XLXI_3
-AND3 		XLXI_37/DataB_MUX/XLXI_23/XLXI_4
-AND3 		XLXI_37/DataB_MUX/XLXI_24/XLXI_3
-AND3 		XLXI_37/DataB_MUX/XLXI_24/XLXI_4
-AND3 		XLXI_37/DataB_MUX/XLXI_9/XLXI_3
-AND3 		XLXI_37/DataB_MUX/XLXI_9/XLXI_4
-AND3 		XLXI_37/XLXI_1/XLXI_1/XLXI_10/XLXI_3
-AND3 		XLXI_37/XLXI_1/XLXI_1/XLXI_11/XLXI_3
-AND3 		XLXI_37/XLXI_1/XLXI_1/XLXI_12/XLXI_3
-AND3 		XLXI_37/XLXI_1/XLXI_1/XLXI_13/XLXI_3
-AND3 		XLXI_37/XLXI_1/XLXI_1/XLXI_14/XLXI_3
-AND3 		XLXI_37/XLXI_1/XLXI_1/XLXI_15/XLXI_3
-AND3 		XLXI_37/XLXI_1/XLXI_1/XLXI_16/XLXI_3
-AND3 		XLXI_37/XLXI_1/XLXI_1/XLXI_9/XLXI_3
-AND2 		XLXI_40/XLXI_79/XLXI_19/FA_0/XLXI_9
-AND3 		XLXI_40/XLXI_81/XLXI_10/XLXI_4
-AND3 		XLXI_40/XLXI_81/XLXI_11/XLXI_4
-AND3 		XLXI_40/XLXI_81/XLXI_12/XLXI_4
-AND3 		XLXI_40/XLXI_81/XLXI_13/XLXI_4
-AND3 		XLXI_40/XLXI_81/XLXI_14/XLXI_4
-AND3 		XLXI_40/XLXI_81/XLXI_15/XLXI_4
-AND3 		XLXI_40/XLXI_81/XLXI_16/XLXI_4
-AND3 		XLXI_40/XLXI_81/XLXI_17/XLXI_4
-AND3 		XLXI_40/XLXI_81/XLXI_18/XLXI_4
-AND3 		XLXI_40/XLXI_81/XLXI_19/XLXI_4
-AND3 		XLXI_40/XLXI_81/XLXI_20/XLXI_4
-AND3 		XLXI_40/XLXI_81/XLXI_21/XLXI_4
-AND3 		XLXI_40/XLXI_81/XLXI_22/XLXI_4
-AND3 		XLXI_40/XLXI_81/XLXI_23/XLXI_4
-AND3 		XLXI_40/XLXI_81/XLXI_24/XLXI_4
-AND3 		XLXI_40/XLXI_81/XLXI_9/XLXI_4
-AND2 		XLXI_40/XLXI_82/XLXI_1/XLXI_1
-AND2 		XLXI_40/XLXI_82/XLXI_10/XLXI_1
-AND2 		XLXI_40/XLXI_82/XLXI_11/XLXI_1
-AND2 		XLXI_40/XLXI_82/XLXI_12/XLXI_1
-AND2 		XLXI_40/XLXI_82/XLXI_13/XLXI_1
-AND2 		XLXI_40/XLXI_82/XLXI_14/XLXI_1
-AND2 		XLXI_40/XLXI_82/XLXI_15/XLXI_1
-AND2 		XLXI_40/XLXI_82/XLXI_2/XLXI_1
-AND2 		XLXI_40/XLXI_82/XLXI_3/XLXI_1
-AND2 		XLXI_40/XLXI_82/XLXI_4/XLXI_1
-AND2 		XLXI_40/XLXI_82/XLXI_5/XLXI_1
-AND2 		XLXI_40/XLXI_82/XLXI_6/XLXI_1
-AND2 		XLXI_40/XLXI_82/XLXI_7/XLXI_1
-AND2 		XLXI_40/XLXI_82/XLXI_8/XLXI_1
-AND2 		XLXI_40/XLXI_82/XLXI_9/XLXI_1
 GND 		XST_GND
 
 To enable printing of redundant blocks removed and signals merged, set the
@@ -498,11 +608,69 @@ Section 6 - IOB Properties
 | ALU_Control                        | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | ALU_Op<0>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | ALU_Op<1>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| C                                  | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | C_CE                               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| C_Reg                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Ext_MemW_Data<0>                   | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| Ext_MemW_Data<1>                   | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| Ext_MemW_Data<2>                   | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| Ext_MemW_Data<3>                   | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| Ext_MemW_Data<4>                   | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| Ext_MemW_Data<5>                   | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| Ext_MemW_Data<6>                   | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| Ext_MemW_Data<7>                   | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| Ext_MemW_Data<8>                   | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| Ext_MemW_Data<9>                   | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| Ext_MemW_Data<10>                  | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| Ext_MemW_Data<11>                  | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| Ext_MemW_Data<12>                  | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| Ext_MemW_Data<13>                  | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| Ext_MemW_Data<14>                  | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| Ext_MemW_Data<15>                  | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| Ext_Mem_Addr<0>                    | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| Ext_Mem_Addr<1>                    | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| Ext_Mem_Addr<2>                    | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| Ext_Mem_Addr<3>                    | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| Ext_Mem_Addr<4>                    | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| Ext_Mem_Addr<5>                    | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| Ext_Mem_Addr<6>                    | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| Ext_Mem_Addr<7>                    | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| Imm_Out<0>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Imm_Out<1>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Imm_Out<2>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Imm_Out<3>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Imm_Out<4>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Imm_Out<5>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Imm_Out<6>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Imm_Out<7>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Imm_Out<8>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Imm_Out<9>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Imm_Out<10>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Imm_Out<11>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Imm_Out<12>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Imm_Out<13>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Imm_Out<14>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Imm_Out<15>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | Imm_Sel<0>                         | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | Imm_Sel<1>                         | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| MemW_Data_Sel                      | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | MemW_en                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| Mem_Addr_Sel                       | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| Mem_Data_Reg<0>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Mem_Data_Reg<1>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Mem_Data_Reg<2>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Mem_Data_Reg<3>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Mem_Data_Reg<4>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Mem_Data_Reg<5>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Mem_Data_Reg<6>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Mem_Data_Reg<7>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Mem_Data_Reg<8>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Mem_Data_Reg<9>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Mem_Data_Reg<10>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Mem_Data_Reg<11>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Mem_Data_Reg<12>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Mem_Data_Reg<13>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Mem_Data_Reg<14>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Mem_Data_Reg<15>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | Opcode<0>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | Opcode<1>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | Opcode<2>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
@@ -527,15 +695,35 @@ Section 6 - IOB Properties
 | Out_R_CE                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | PC_ALU_Sel                         | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | PC_Add_Src                         | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| PC_Label11<0>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PC_Label11<1>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PC_Label11<2>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PC_Label11<3>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PC_Label11<4>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PC_Label11<5>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PC_Label11<6>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PC_Label11<7>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PC_Label11<8>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PC_Label11<9>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PC_Label11<10>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | PC_Sel<0>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | PC_Sel<1>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | RF_Write_Data_Sel<0>               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | RF_Write_Data_Sel<1>               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | RF_Write_en                        | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| Rd_Addr<0>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Rd_Addr<1>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Rd_Addr<2>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | Rd_Reg_CE                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | Rd_Rm_Sel                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| Z                                  | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Rm_Addr<0>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Rm_Addr<1>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Rm_Addr<2>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Rn_Addr<0>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Rn_Addr<1>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| Rn_Addr<2>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | Z_CE                               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| Z_Reg                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | clk                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 
