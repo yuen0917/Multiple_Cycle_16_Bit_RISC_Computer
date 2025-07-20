@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="NgdBuild" timeStamp="Thu Jul 17 07:54:52 2025">
+  <application stringID="NgdBuild" timeStamp="Thu Jul 17 13:50:53 2025">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -76,7 +76,7 @@
         <item dataType="int" stringID="NGDBUILD_NUM_BUFGP" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FDE" value="210"/>
         <item dataType="int" stringID="NGDBUILD_NUM_GND" value="1"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_IBUF" value="54"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_IBUF" value="55"/>
         <item dataType="int" stringID="NGDBUILD_NUM_INV" value="361"/>
         <item dataType="int" stringID="NGDBUILD_NUM_LUT3" value="48"/>
         <item dataType="int" stringID="NGDBUILD_NUM_LUT6" value="51"/>
@@ -96,7 +96,7 @@
         <item dataType="int" stringID="NGDBUILD_NUM_BUFG" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FDE" value="210"/>
         <item dataType="int" stringID="NGDBUILD_NUM_GND" value="1"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_IBUF" value="54"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_IBUF" value="55"/>
         <item dataType="int" stringID="NGDBUILD_NUM_IBUFG" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_INV" value="361"/>
         <item dataType="int" stringID="NGDBUILD_NUM_LUT3" value="48"/>

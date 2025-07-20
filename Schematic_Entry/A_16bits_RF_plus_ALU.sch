@@ -9,8 +9,7 @@
         <signal name="A(15:0)" />
         <signal name="B(15:0)" />
         <signal name="Write_Data(15:0)" />
-        <signal name="ALU_S(15:0)">
-        </signal>
+        <signal name="ALU_S(15:0)" />
         <signal name="ALU_S(15)" />
         <signal name="ALU_S(14)" />
         <signal name="ALU_S(13)" />

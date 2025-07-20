@@ -378,7 +378,7 @@ Unit <A_16bits_RF_plus_ALU_MUSER_Complete_Datapath> synthesized.
 
 Synthesizing Unit <ALU_16bits_MUSER_Complete_Datapath>.
     Related source file is "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Complete_Datapath.vf".
-    Set property "HU_SET = XLXI_72_5" for instance <XLXI_72>.
+    Set property "HU_SET = XLXI_72_0" for instance <XLXI_72>.
 INFO:Xst:3210 - "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Complete_Datapath.vf" line 1091: Output port <C_out> of the instance <For_B2s> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
@@ -404,7 +404,7 @@ Unit <MUX8_1_16bits_MUSER_Complete_Datapath> synthesized.
 
 Synthesizing Unit <MUX8_1_MUSER_Complete_Datapath>.
     Related source file is "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Complete_Datapath.vf".
-    Set property "HU_SET = XLXI_8_6" for instance <XLXI_8>.
+    Set property "HU_SET = XLXI_8_1" for instance <XLXI_8>.
     Summary:
 	no macro.
 Unit <MUX8_1_MUSER_Complete_Datapath> synthesized.
@@ -545,8 +545,8 @@ Primitive and Black Box Usage:
 #      RAM32X8S                    : 16
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 131
-#      IBUF                        : 54
+# IO Buffers                       : 132
+#      IBUF                        : 55
 #      OBUF                        : 77
 
 Device utilization summary:
@@ -567,11 +567,11 @@ Slice Logic Distribution:
    Number with an unused Flip Flop:     567  out of    777    72%  
    Number with an unused LUT:           189  out of    777    24%  
    Number of fully used LUT-FF pairs:    21  out of    777     2%  
-   Number of unique control sets:        14
+   Number of unique control sets:        15
 
 IO Utilization: 
- Number of IOs:                         132
- Number of bonded IOBs:                 132  out of    240    55%  
+ Number of IOs:                         133
+ Number of bonded IOBs:                 133  out of    240    55%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
@@ -684,7 +684,7 @@ Delay:               36.028ns (Levels of Logic = 43)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 96195 / 612
+  Total number of paths / destination ports: 96211 / 628
 -------------------------------------------------------------------------
 Offset:              35.635ns (Levels of Logic = 44)
   Source:            Rd_Rm_Sel (PAD)
@@ -805,12 +805,12 @@ clk            |   36.028|         |         |         |
 
 
 Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 0.56 secs
+Total CPU time to Xst completion: 0.59 secs
  
 --> 
 
 
-Total memory usage is 503376 kilobytes
+Total memory usage is 503260 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

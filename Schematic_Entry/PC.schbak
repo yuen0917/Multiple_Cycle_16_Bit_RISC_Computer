@@ -11,7 +11,8 @@
         <signal name="XLXN_234(15:0)" />
         <signal name="XLXN_237(15:0)" />
         <signal name="XLXN_238(15:0)" />
-        <signal name="XLXN_316(15:0)" />
+        <signal name="XLXN_316(15:0)">
+        </signal>
         <signal name="label11_PC(15:0)" />
         <signal name="PC_out(15)" />
         <signal name="PC_out(14)" />

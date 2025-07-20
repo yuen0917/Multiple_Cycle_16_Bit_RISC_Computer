@@ -352,17 +352,15 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1752043376" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1752043376">
+    <transform xil_pn:end_ts="1752757137" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1752757137">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1752049701" xil_pn:in_ck="-2768013763656381787" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1752049701">
+    <transform xil_pn:end_ts="1752760243" xil_pn:in_ck="-2768013763656381787" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1752760243">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="A_16bits_RF_plus_ALU_tb.v"/>
       <outfile xil_pn:name="Complete_Datapath_tb.v"/>
       <outfile xil_pn:name="D3_8E_tb.v"/>
@@ -496,9 +494,11 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1752738833" xil_pn:in_ck="211398310561981034" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-7542102918328431393" xil_pn:start_ts="1752738830">
+    <transform xil_pn:end_ts="1752756308" xil_pn:in_ck="211398310561981034" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-7542102918328431393" xil_pn:start_ts="1752756302">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="ALU_16bits.vf"/>
       <outfile xil_pn:name="A_16bits_RF_plus_ALU.vf"/>
       <outfile xil_pn:name="Complete_Datapath.vf"/>
@@ -534,81 +534,64 @@
     <transform xil_pn:end_ts="1752738833" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-311711526559847569" xil_pn:start_ts="1752738833">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
     <transform xil_pn:end_ts="1752738833" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="2416795703468950022" xil_pn:start_ts="1752738833">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
-    <transform xil_pn:end_ts="1752738846" xil_pn:in_ck="-4763574011725584851" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-918203644596190293" xil_pn:start_ts="1752738833">
+    <transform xil_pn:end_ts="1752756319" xil_pn:in_ck="-4763574011725584851" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-918203644596190293" xil_pn:start_ts="1752756308">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="A_16bits_RF_plus_ALU.ngr"/>
-      <outfile xil_pn:name="Complete_Datapath.jhd"/>
-      <outfile xil_pn:name="Complete_Datapath.lso"/>
-      <outfile xil_pn:name="Complete_Datapath.ngc"/>
-      <outfile xil_pn:name="Complete_Datapath.ngr"/>
-      <outfile xil_pn:name="Complete_Datapath.prj"/>
-      <outfile xil_pn:name="Complete_Datapath.stx"/>
-      <outfile xil_pn:name="Complete_Datapath.syr"/>
-      <outfile xil_pn:name="Complete_Datapath.xst"/>
-      <outfile xil_pn:name="Complete_Datapath_Complete_Datapath_sch_tb_stx_beh.prj"/>
-      <outfile xil_pn:name="Complete_Datapath_xst.xrpt"/>
-      <outfile xil_pn:name="D3_8E.ngr"/>
-      <outfile xil_pn:name="Eight_Reg_16bits.ngr"/>
-      <outfile xil_pn:name="MUX8_1_16bits.ngr"/>
-      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
-      <outfile xil_pn:name="webtalk_pn.xml"/>
-      <outfile xil_pn:name="xst"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1751348657" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="5658313139790853601" xil_pn:start_ts="1751348657">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
-    <transform xil_pn:end_ts="1752738893" xil_pn:in_ck="-8558639195640566012" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="6932624735704061446" xil_pn:start_ts="1752738889">
+    <transform xil_pn:end_ts="1752760254" xil_pn:in_ck="-8558639195640566012" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="6932624735704061446" xil_pn:start_ts="1752760250">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="Complete_Datapath.bld"/>
-      <outfile xil_pn:name="Complete_Datapath.ngd"/>
-      <outfile xil_pn:name="Complete_Datapath_ngdbuild.xrpt"/>
-      <outfile xil_pn:name="_ngo"/>
-      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
-    <transform xil_pn:end_ts="1752738919" xil_pn:in_ck="2828303891164218345" xil_pn:name="TRANEXT_map_virtex6" xil_pn:prop_ck="1093113972579795663" xil_pn:start_ts="1752738893">
+    <transform xil_pn:end_ts="1752760285" xil_pn:in_ck="2828303891164218345" xil_pn:name="TRANEXT_map_virtex6" xil_pn:prop_ck="1093113972579795663" xil_pn:start_ts="1752760254">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="Complete_Datapath.pcf"/>
-      <outfile xil_pn:name="Complete_Datapath_map.map"/>
-      <outfile xil_pn:name="Complete_Datapath_map.mrp"/>
-      <outfile xil_pn:name="Complete_Datapath_map.ncd"/>
-      <outfile xil_pn:name="Complete_Datapath_map.ngm"/>
-      <outfile xil_pn:name="Complete_Datapath_map.xrpt"/>
-      <outfile xil_pn:name="Complete_Datapath_summary.xml"/>
-      <outfile xil_pn:name="Complete_Datapath_usage.xml"/>
-      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
-    <transform xil_pn:end_ts="1752738952" xil_pn:in_ck="-3524066873490007482" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="8969472336045954842" xil_pn:start_ts="1752738919">
+    <transform xil_pn:end_ts="1752760321" xil_pn:in_ck="-3524066873490007482" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="8969472336045954842" xil_pn:start_ts="1752760285">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="Complete_Datapath.ncd"/>
-      <outfile xil_pn:name="Complete_Datapath.pad"/>
-      <outfile xil_pn:name="Complete_Datapath.par"/>
-      <outfile xil_pn:name="Complete_Datapath.ptwx"/>
-      <outfile xil_pn:name="Complete_Datapath.unroutes"/>
-      <outfile xil_pn:name="Complete_Datapath.xpi"/>
-      <outfile xil_pn:name="Complete_Datapath_pad.csv"/>
-      <outfile xil_pn:name="Complete_Datapath_pad.txt"/>
-      <outfile xil_pn:name="Complete_Datapath_par.xrpt"/>
-      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
-    <transform xil_pn:end_ts="1752738952" xil_pn:in_ck="-6061913596593635883" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416183" xil_pn:start_ts="1752738940">
+    <transform xil_pn:end_ts="1752760321" xil_pn:in_ck="-6061913596593635883" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416183" xil_pn:start_ts="1752760309">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="Complete_Datapath.twr"/>
-      <outfile xil_pn:name="Complete_Datapath.twx"/>
-      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
   </transforms>
 

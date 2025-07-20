@@ -1,5 +1,7 @@
-select figure at 1591 2581 8 -branches -sn=1
-select figure at 2330 3038 8 -branches -sn=1
-select figure at 3738 2929 8 -branches -sn=1
-update symbols A_16bits_RF_plus_ALU
-select figure at 3112 1793 8 -branches -sn=1
+select figure at 4127 4156 8 -branches -sn=1
+select figure at 2975 2156 8 -branches -sn=1
+select figure at 2123 2432 8 -branches -sn=1
+select figure at 2143 2346 8 -branches -sn=1
+select figure at 2527 3129 8 -branches -sn=1
+select figure at 2500 2583 8 -branches -sn=1
+select figure at 2739 2694 8 -branches -sn=1

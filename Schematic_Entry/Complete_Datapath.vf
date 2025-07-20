@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : Complete_Datapath.vf
-// /___/   /\     Timestamp : 07/17/2025 07:51:08
+// /___/   /\     Timestamp : 07/17/2025 12:45:07
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -1146,7 +1146,7 @@ module ALU_16bits_MUSER_Complete_Datapath(A,
                                               .C_in(ALU_CTRL), 
                                               .C_out(NZVC[0]), 
                                               .S(S_DUMMY[15:0]));
-   (* HU_SET = "XLXI_72_5" *) 
+   (* HU_SET = "XLXI_72_0" *) 
    NOR16_HXILINX_Complete_Datapath  XLXI_72 (.I0(S_DUMMY[0]), 
                                             .I1(S_DUMMY[1]), 
                                             .I2(S_DUMMY[2]), 
@@ -1327,7 +1327,7 @@ module MUX8_1_MUSER_Complete_Datapath(I0,
                 .O(XLXN_9));
    INV  XLXI_7 (.I(S1), 
                .O(XLXN_52));
-   (* HU_SET = "XLXI_8_6" *) 
+   (* HU_SET = "XLXI_8_1" *) 
    OR8_HXILINX_Complete_Datapath  XLXI_8 (.I0(XLXN_11), 
                                          .I1(XLXN_9), 
                                          .I2(XLXN_7), 
@@ -2938,6 +2938,7 @@ module Complete_Datapath(ALUOut_Reg_CE,
                          Out_R_CE, 
                          PC_Add_Src, 
                          PC_ALU_Sel, 
+                         PC_CE, 
                          PC_Sel, 
                          Rd_Reg_CE, 
                          Rd_Rm_Sel, 
@@ -2971,6 +2972,7 @@ module Complete_Datapath(ALUOut_Reg_CE,
     input Out_R_CE;
     input PC_Add_Src;
     input PC_ALU_Sel;
+    input PC_CE;
     input [1:0] PC_Sel;
     input Rd_Reg_CE;
     input Rd_Rm_Sel;
@@ -3000,7 +3002,6 @@ module Complete_Datapath(ALUOut_Reg_CE,
    wire [15:0] Rd_Reg;
    wire [15:0] ReadA_Data;
    wire [2:0] Rm_Rd_Addr;
-   wire XLXN_133;
    wire [15:0] XLXN_142;
    wire [15:0] XLXN_227;
    wire [15:0] XLXN_228;
@@ -3124,7 +3125,7 @@ module Complete_Datapath(ALUOut_Reg_CE,
                                                     .I1(ALU_Out[15:0]), 
                                                     .S(PC_ALU_Sel), 
                                                     .Output(XLXN_227[15:0]));
-   PC_MUSER_Complete_Datapath  PC1 (.CE(XLXN_133), 
+   PC_MUSER_Complete_Datapath  PC1 (.CE(PC_CE), 
                                    .clk(clk), 
                                    .label11(PC_Label11_DUMMY[10:0]), 
                                    .one_or_label(PC_Add_Src), 
@@ -3222,7 +3223,6 @@ module Complete_Datapath(ALUOut_Reg_CE,
                                                .Mem_Addr(XLXN_228[15:0]), 
                                                .MemR_Data(MemR_Data[15:0]));
    VCC  XLXI_26 (.P(MemDataReg_CE));
-   VCC  XLXI_27 (.P(XLXN_133));
    FDE #( .INIT(1'b0) ) XLXI_33 (.C(clk), 
                 .CE(Z_CE), 
                 .D(NZVC[2]), 
