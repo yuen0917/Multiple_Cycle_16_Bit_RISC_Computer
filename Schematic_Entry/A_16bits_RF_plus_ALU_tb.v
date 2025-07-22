@@ -14,8 +14,6 @@ module A_16bits_RF_plus_ALU_A_16bits_RF_plus_ALU_sch_tb();
    reg [2:0] Rm_Rd_to_RF;
    reg [2:0] Rn_to_RF;
    reg ALU_Control;
-   reg [15:0] PC_to_ALU_A;
-   reg ALU_A_Sel;
    reg [15:0] Instr;
    reg [1:0] Imm_Sel;
    reg [15:0] Rd;
@@ -42,8 +40,6 @@ module A_16bits_RF_plus_ALU_A_16bits_RF_plus_ALU_sch_tb();
 		.Rn_to_RF(Rn_to_RF),
 		.NZVC(NZVC),
 		.ALU_Control(ALU_Control),
-		.PC_to_ALU_A(PC_to_ALU_A),
-		.ALU_A_Sel(ALU_A_Sel),
 		.Instr(Instr),
 		.Imm_Sel(Imm_Sel),
 		.Rd(Rd),
@@ -53,7 +49,7 @@ module A_16bits_RF_plus_ALU_A_16bits_RF_plus_ALU_sch_tb();
 
 
    always #5 clk = ~clk;
-   always #10 $display("IN: Write_Data = %h, ALU_B_Sel = %b, clk = %b, ALUOut_CE = %b, RF_Write_en = %b, Rd_to_RF = %b, Rm_Rd_to_RF = %b, Rn_to_RF = %b, ALU_Control = %b, PC_to_ALU_A = %h, ALU_A_Sel = %b, Instr = %h, Imm_Sel = %b, Rd = %h", Write_Data, ALU_B_Sel, clk, ALUOut_CE, RF_Write_en, Rd_to_RF, Rm_Rd_to_RF, Rn_to_RF, ALU_Control, PC_to_ALU_A, ALU_A_Sel, Instr, Imm_Sel, Rd);
+   always #10 $display("IN: Write_Data = %h, ALU_B_Sel = %b, clk = %b, ALUOut_CE = %b, RF_Write_en = %b, Rd_to_RF = %b, Rm_Rd_to_RF = %b, Rn_to_RF = %b, ALU_Control = %b, Instr = %h, Imm_Sel = %b, Rd = %h", Write_Data, ALU_B_Sel, clk, ALUOut_CE, RF_Write_en, Rd_to_RF, Rm_Rd_to_RF, Rn_to_RF, ALU_Control, Instr, Imm_Sel, Rd);
    always #10 $display("OUT: ALU_Out = %h, Imm_Out = %h, NZVC = %b, ReadA_data = %h", ALU_Out, Imm_Out, NZVC, ReadA_data);
    initial begin
       // Initialize all inputs
@@ -66,8 +62,6 @@ module A_16bits_RF_plus_ALU_A_16bits_RF_plus_ALU_sch_tb();
       Rm_Rd_to_RF = 3'b000;
       Rn_to_RF = 3'b000;
       ALU_Control = 1'b0;
-      PC_to_ALU_A = 16'h0000;
-      ALU_A_Sel = 1'b0;
       Instr = 16'h0000;
       Imm_Sel = 2'b00;
       Rd = 16'h0000;
@@ -136,7 +130,6 @@ module A_16bits_RF_plus_ALU_A_16bits_RF_plus_ALU_sch_tb();
       Rn_to_RF = 3'b101;   // Select R5 (5) for B
       #10;
 
-      ALU_A_Sel = 1'b1;        // Select RF data
       ALU_B_Sel = 2'b00;       // Select RF data
       ALU_Control = 1'b0;      // Addition operation
       ALUOut_CE = 1'b1;
@@ -234,7 +227,6 @@ module A_16bits_RF_plus_ALU_A_16bits_RF_plus_ALU_sch_tb();
       Rn_to_RF = 3'b011;   // Select R3 (3) for B
       #10;
 
-      ALU_A_Sel = 1'b1;        // Select RF data
       ALU_B_Sel = 2'b00;       // Select RF data
       ALU_Control = 1'b1;      // Subtraction operation
       ALUOut_CE = 1'b1;
@@ -287,7 +279,6 @@ module A_16bits_RF_plus_ALU_A_16bits_RF_plus_ALU_sch_tb();
       ///////////////////////////////
       Rm_Rd_to_RF = 3'b100;   // Select R4 (4) for A
       Instr = 16'h0003;        // Immediate value 3
-      ALU_A_Sel = 1'b1;        // Select RF data
       ALU_B_Sel = 2'b01;       // Select immediate
       #10;
 
@@ -301,28 +292,10 @@ module A_16bits_RF_plus_ALU_A_16bits_RF_plus_ALU_sch_tb();
       #20;
 
       ///////////////////////////////
-      // Test Case 10: Test with PC
-      ///////////////////////////////
-      PC_to_ALU_A = 16'h1000;
-      ALU_A_Sel = 1'b0;        // Select PC
-      ALU_B_Sel = 2'b10;       // Select constant 0
-      #10;
-
-      ALUOut_CE = 1'b1;
-      #20;
-
-      if (ALU_Out !== 16'h1000)
-         $display("/////////////////////////////Error: PC increment failed. Expected 1000, got %h", ALU_Out);
-
-      ALUOut_CE = 1'b0;
-      #20;
-
-      ///////////////////////////////
       // Test Case 11: Add same register (R2 + R2 = 4)
       ///////////////////////////////
       Rm_Rd_to_RF = 3'b010;   // Select R2 (2) for A
       Rn_to_RF = 3'b010;   // Select R2 (2) for B
-      ALU_A_Sel = 1'b1;        // Select RF data
       ALU_B_Sel = 2'b00;       // Select RF data
       #10;
 
@@ -373,24 +346,7 @@ module A_16bits_RF_plus_ALU_A_16bits_RF_plus_ALU_sch_tb();
       #20;
 
       ///////////////////////////////
-      // Test 13-2: Imm_Sel = 00, 5-bit negative immediate with sign extend
-      ///////////////////////////////
-      Rm_Rd_to_RF = 3'b101;   // Select R5 (5) for A
-      Instr = 16'b0000_0000_0001_1000;  // Immediate value -8 (11000)
-      Imm_Sel = 2'b00;         // Select 5-bit immediate with sign extend
-      #10;
-
-      ALUOut_CE = 1'b1;
-      #20;
-
-      if (ALU_Out !== 16'hFFFD)  // 5 + (-8) = -3 (0xFFFD)
-         $display("/////////////////////////////Error: Addition R5 + IMM(5-bit signed -8) failed. Expected FFFD, got %h", ALU_Out);
-
-      ALUOut_CE = 1'b0;
-      #20;
-
-      ///////////////////////////////
-      // Test 13-3: Imm_Sel = 01, 8-bit immediate with sign extend (positive)
+      // Test 13-2: Imm_Sel = 01, 8-bit immediate with sign extend (positive)
       ///////////////////////////////
       Rm_Rd_to_RF = 3'b100;   // Select R4 (4) for A
       Instr = 16'b0000_0000_0111_1111;  // Immediate value +127 (0111_1111)
@@ -407,7 +363,7 @@ module A_16bits_RF_plus_ALU_A_16bits_RF_plus_ALU_sch_tb();
       #20;
 
       ///////////////////////////////
-      // Test 13-4: Imm_Sel = 01, 8-bit negative immediate with sign extend
+      // Test 13-3: Imm_Sel = 01, 8-bit negative immediate with sign extend
       ///////////////////////////////
       Rm_Rd_to_RF = 3'b011;   // Select R3 (3) for A
       Instr = 16'b0000_0000_1000_0000;  // Immediate value -128 (1000_0000)
@@ -424,7 +380,7 @@ module A_16bits_RF_plus_ALU_A_16bits_RF_plus_ALU_sch_tb();
       #20;
 
       ///////////////////////////////
-      // Test 13-5: Imm_Sel = 10, 8-bit immediate with zero extend
+      // Test 13-4: Imm_Sel = 10, 8-bit immediate with zero extend
       ///////////////////////////////
       Rm_Rd_to_RF = 3'b010;   // Select R2 (2) for A
       Instr = 16'b0000_0000_1111_1111;  // Immediate value 255 (1111_1111)
@@ -441,7 +397,7 @@ module A_16bits_RF_plus_ALU_A_16bits_RF_plus_ALU_sch_tb();
       #20;
 
       ///////////////////////////////
-      // Test 13-6: Imm_Sel = 11, {imm8,Rd[7:0]}, Rd = 16'habab
+      // Test 13-5: Imm_Sel = 11, {imm8,Rd[7:0]}, Rd = 16'habab
       ///////////////////////////////
       Rd = 16'habab;
       Rm_Rd_to_RF = 3'b001;   // Select R1 (1) for A

@@ -9,7 +9,7 @@
         <signal name="Instr(15:0)" />
         <signal name="Imm8_SE(15:0)" />
         <signal name="Imm8_ZE(15:0)" />
-        <signal name="Imm5_SE(15:0)" />
+        <signal name="Imm5_ZE(15:0)" />
         <signal name="Instr(8)" />
         <signal name="Instr(9)" />
         <signal name="Instr(10)" />
@@ -41,12 +41,12 @@
         <signal name="Imm8_ZE(2)" />
         <signal name="Imm8_ZE(1)" />
         <signal name="Imm8_ZE(0)" />
-        <signal name="Imm5_SE(0)" />
-        <signal name="Imm5_SE(1)" />
-        <signal name="Imm5_SE(2)" />
-        <signal name="Imm5_SE(3)" />
+        <signal name="Imm5_ZE(0)" />
+        <signal name="Imm5_ZE(1)" />
+        <signal name="Imm5_ZE(2)" />
+        <signal name="Imm5_ZE(3)" />
         <signal name="Imm8_SE(7)" />
-        <signal name="Imm5_SE(4)" />
+        <signal name="Imm5_ZE(4)" />
         <signal name="Imm8_SE(15)" />
         <signal name="Imm8_SE(14)" />
         <signal name="Imm8_SE(13)" />
@@ -63,17 +63,17 @@
         <signal name="Imm8_ZE(10)" />
         <signal name="Imm8_ZE(9)" />
         <signal name="Imm8_ZE(8)" />
-        <signal name="Imm5_SE(15)" />
-        <signal name="Imm5_SE(14)" />
-        <signal name="Imm5_SE(13)" />
-        <signal name="Imm5_SE(12)" />
-        <signal name="Imm5_SE(11)" />
-        <signal name="Imm5_SE(10)" />
-        <signal name="Imm5_SE(9)" />
-        <signal name="Imm5_SE(8)" />
-        <signal name="Imm5_SE(7)" />
-        <signal name="Imm5_SE(6)" />
-        <signal name="Imm5_SE(5)" />
+        <signal name="Imm5_ZE(15)" />
+        <signal name="Imm5_ZE(14)" />
+        <signal name="Imm5_ZE(13)" />
+        <signal name="Imm5_ZE(12)" />
+        <signal name="Imm5_ZE(11)" />
+        <signal name="Imm5_ZE(10)" />
+        <signal name="Imm5_ZE(9)" />
+        <signal name="Imm5_ZE(8)" />
+        <signal name="Imm5_ZE(7)" />
+        <signal name="Imm5_ZE(6)" />
+        <signal name="Imm5_ZE(5)" />
         <signal name="Imm_Out(15:0)" />
         <signal name="Imm_Sel(1:0)" />
         <signal name="Imm8_Rd(15:0)" />
@@ -111,6 +111,17 @@
         <signal name="Rd(10)" />
         <signal name="Rd(9)" />
         <signal name="Rd(8)" />
+        <signal name="XLXN_2" />
+        <signal name="XLXN_3" />
+        <signal name="XLXN_4" />
+        <signal name="XLXN_5" />
+        <signal name="XLXN_6" />
+        <signal name="XLXN_7" />
+        <signal name="XLXN_8" />
+        <signal name="XLXN_9" />
+        <signal name="XLXN_10" />
+        <signal name="XLXN_11" />
+        <signal name="XLXN_12" />
         <port polarity="Input" name="Instr(15:0)" />
         <port polarity="Output" name="Imm_Out(15:0)" />
         <port polarity="Input" name="Imm_Sel(1:0)" />
@@ -238,23 +249,23 @@
         </block>
         <block symbolname="buf" name="XLXI_50">
             <blockpin signalname="Instr(0)" name="I" />
-            <blockpin signalname="Imm5_SE(0)" name="O" />
+            <blockpin signalname="Imm5_ZE(0)" name="O" />
         </block>
         <block symbolname="buf" name="XLXI_51">
             <blockpin signalname="Instr(1)" name="I" />
-            <blockpin signalname="Imm5_SE(1)" name="O" />
+            <blockpin signalname="Imm5_ZE(1)" name="O" />
         </block>
         <block symbolname="buf" name="XLXI_52">
             <blockpin signalname="Instr(2)" name="I" />
-            <blockpin signalname="Imm5_SE(2)" name="O" />
+            <blockpin signalname="Imm5_ZE(2)" name="O" />
         </block>
         <block symbolname="buf" name="XLXI_53">
             <blockpin signalname="Instr(3)" name="I" />
-            <blockpin signalname="Imm5_SE(3)" name="O" />
+            <blockpin signalname="Imm5_ZE(3)" name="O" />
         </block>
         <block symbolname="buf" name="XLXI_54">
             <blockpin signalname="Instr(4)" name="I" />
-            <blockpin signalname="Imm5_SE(4)" name="O" />
+            <blockpin signalname="Imm5_ZE(4)" name="O" />
         </block>
         <block symbolname="buf" name="XLXI_55">
             <blockpin signalname="Instr(7)" name="I" />
@@ -312,52 +323,8 @@
         <block symbolname="gnd" name="XLXI_70">
             <blockpin signalname="Imm8_ZE(15)" name="G" />
         </block>
-        <block symbolname="buf" name="XLXI_71">
-            <blockpin signalname="Instr(4)" name="I" />
-            <blockpin signalname="Imm5_SE(5)" name="O" />
-        </block>
-        <block symbolname="buf" name="XLXI_72">
-            <blockpin signalname="Instr(4)" name="I" />
-            <blockpin signalname="Imm5_SE(6)" name="O" />
-        </block>
-        <block symbolname="buf" name="XLXI_73">
-            <blockpin signalname="Instr(4)" name="I" />
-            <blockpin signalname="Imm5_SE(7)" name="O" />
-        </block>
-        <block symbolname="buf" name="XLXI_74">
-            <blockpin signalname="Instr(4)" name="I" />
-            <blockpin signalname="Imm5_SE(8)" name="O" />
-        </block>
-        <block symbolname="buf" name="XLXI_75">
-            <blockpin signalname="Instr(4)" name="I" />
-            <blockpin signalname="Imm5_SE(9)" name="O" />
-        </block>
-        <block symbolname="buf" name="XLXI_76">
-            <blockpin signalname="Instr(4)" name="I" />
-            <blockpin signalname="Imm5_SE(10)" name="O" />
-        </block>
-        <block symbolname="buf" name="XLXI_77">
-            <blockpin signalname="Instr(4)" name="I" />
-            <blockpin signalname="Imm5_SE(11)" name="O" />
-        </block>
-        <block symbolname="buf" name="XLXI_78">
-            <blockpin signalname="Instr(4)" name="I" />
-            <blockpin signalname="Imm5_SE(12)" name="O" />
-        </block>
-        <block symbolname="buf" name="XLXI_79">
-            <blockpin signalname="Instr(4)" name="I" />
-            <blockpin signalname="Imm5_SE(13)" name="O" />
-        </block>
-        <block symbolname="buf" name="XLXI_80">
-            <blockpin signalname="Instr(4)" name="I" />
-            <blockpin signalname="Imm5_SE(14)" name="O" />
-        </block>
-        <block symbolname="buf" name="XLXI_81">
-            <blockpin signalname="Instr(4)" name="I" />
-            <blockpin signalname="Imm5_SE(15)" name="O" />
-        </block>
         <block symbolname="MUX4_1_16bits" name="XLXI_1">
-            <blockpin signalname="Imm5_SE(15:0)" name="I0(15:0)" />
+            <blockpin signalname="Imm5_ZE(15:0)" name="I0(15:0)" />
             <blockpin signalname="Imm8_SE(15:0)" name="I1(15:0)" />
             <blockpin signalname="Imm8_ZE(15:0)" name="I2(15:0)" />
             <blockpin signalname="Imm8_Rd(15:0)" name="I3(15:0)" />
@@ -452,6 +419,39 @@
         <block symbolname="gnd" name="XLXI_106">
             <blockpin signalname="Rd(8)" name="G" />
         </block>
+        <block symbolname="gnd" name="XLXI_107">
+            <blockpin signalname="Imm5_ZE(5)" name="G" />
+        </block>
+        <block symbolname="gnd" name="XLXI_108">
+            <blockpin signalname="Imm5_ZE(6)" name="G" />
+        </block>
+        <block symbolname="gnd" name="XLXI_109">
+            <blockpin signalname="Imm5_ZE(7)" name="G" />
+        </block>
+        <block symbolname="gnd" name="XLXI_110">
+            <blockpin signalname="Imm5_ZE(8)" name="G" />
+        </block>
+        <block symbolname="gnd" name="XLXI_111">
+            <blockpin signalname="Imm5_ZE(9)" name="G" />
+        </block>
+        <block symbolname="gnd" name="XLXI_112">
+            <blockpin signalname="Imm5_ZE(10)" name="G" />
+        </block>
+        <block symbolname="gnd" name="XLXI_113">
+            <blockpin signalname="Imm5_ZE(11)" name="G" />
+        </block>
+        <block symbolname="gnd" name="XLXI_114">
+            <blockpin signalname="Imm5_ZE(12)" name="G" />
+        </block>
+        <block symbolname="gnd" name="XLXI_115">
+            <blockpin signalname="Imm5_ZE(13)" name="G" />
+        </block>
+        <block symbolname="gnd" name="XLXI_116">
+            <blockpin signalname="Imm5_ZE(14)" name="G" />
+        </block>
+        <block symbolname="gnd" name="XLXI_117">
+            <blockpin signalname="Imm5_ZE(15)" name="G" />
+        </block>
     </netlist>
     <sheet sheetnum="1" width="7040" height="5440">
         <branch name="Instr(15:0)">
@@ -502,7 +502,7 @@
             <wire x2="3040" y1="3232" y2="3920" x1="3040" />
         </branch>
         <branch name="Imm8_SE(15:0)">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1136" y="2384" type="branch" />
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="4144" y="2384" type="branch" />
             <wire x2="1136" y1="2384" y2="2784" x1="1136" />
             <wire x2="1136" y1="2784" y2="2848" x1="1136" />
             <wire x2="1136" y1="2848" y2="2912" x1="1136" />
@@ -520,7 +520,8 @@
             <wire x2="1136" y1="3616" y2="3680" x1="1136" />
             <wire x2="1136" y1="3680" y2="3744" x1="1136" />
             <wire x2="1136" y1="3744" y2="3760" x1="1136" />
-            <wire x2="4624" y1="2384" y2="2384" x1="1136" />
+            <wire x2="4144" y1="2384" y2="2384" x1="1136" />
+            <wire x2="4624" y1="2384" y2="2384" x1="4144" />
         </branch>
         <bustap x2="1040" y1="3744" y2="3744" x1="1136" />
         <bustap x2="1040" y1="3680" y2="3680" x1="1136" />
@@ -537,7 +538,7 @@
         <bustap x2="1040" y1="2976" y2="2976" x1="1136" />
         <bustap x2="1040" y1="2912" y2="2912" x1="1136" />
         <branch name="Imm8_ZE(15:0)">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1760" y="2448" type="branch" />
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="4144" y="2448" type="branch" />
             <wire x2="1760" y1="2448" y2="2784" x1="1760" />
             <wire x2="1760" y1="2784" y2="2848" x1="1760" />
             <wire x2="1760" y1="2848" y2="2912" x1="1760" />
@@ -555,7 +556,8 @@
             <wire x2="1760" y1="3616" y2="3680" x1="1760" />
             <wire x2="1760" y1="3680" y2="3744" x1="1760" />
             <wire x2="1760" y1="3744" y2="3760" x1="1760" />
-            <wire x2="4624" y1="2448" y2="2448" x1="1760" />
+            <wire x2="4144" y1="2448" y2="2448" x1="1760" />
+            <wire x2="4624" y1="2448" y2="2448" x1="4144" />
         </branch>
         <bustap x2="1664" y1="3744" y2="3744" x1="1760" />
         <bustap x2="1664" y1="3680" y2="3680" x1="1760" />
@@ -573,8 +575,8 @@
         <bustap x2="1664" y1="2912" y2="2912" x1="1760" />
         <bustap x2="1664" y1="2848" y2="2848" x1="1760" />
         <bustap x2="1664" y1="2784" y2="2784" x1="1760" />
-        <branch name="Imm5_SE(15:0)">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="2560" y="2320" type="branch" />
+        <branch name="Imm5_ZE(15:0)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="4144" y="2320" type="branch" />
             <wire x2="2560" y1="2320" y2="2784" x1="2560" />
             <wire x2="2560" y1="2784" y2="2848" x1="2560" />
             <wire x2="2560" y1="2848" y2="2912" x1="2560" />
@@ -592,7 +594,8 @@
             <wire x2="2560" y1="3616" y2="3680" x1="2560" />
             <wire x2="2560" y1="3680" y2="3744" x1="2560" />
             <wire x2="2560" y1="3744" y2="3760" x1="2560" />
-            <wire x2="4624" y1="2320" y2="2320" x1="2560" />
+            <wire x2="4144" y1="2320" y2="2320" x1="2560" />
+            <wire x2="4624" y1="2320" y2="2320" x1="4144" />
         </branch>
         <bustap x2="2464" y1="3744" y2="3744" x1="2560" />
         <bustap x2="2464" y1="3680" y2="3680" x1="2560" />
@@ -872,34 +875,6 @@
         <instance x="2080" y="3648" name="XLXI_52" orien="R0" />
         <instance x="2080" y="3584" name="XLXI_53" orien="R0" />
         <instance x="2080" y="3520" name="XLXI_54" orien="R0" />
-        <branch name="Instr(4)">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="2016" y="3488" type="branch" />
-            <wire x2="1952" y1="3488" y2="3488" x1="1936" />
-            <wire x2="2016" y1="3488" y2="3488" x1="1952" />
-            <wire x2="2080" y1="3488" y2="3488" x1="2016" />
-            <wire x2="2080" y1="2784" y2="2784" x1="1952" />
-            <wire x2="1952" y1="2784" y2="2848" x1="1952" />
-            <wire x2="2080" y1="2848" y2="2848" x1="1952" />
-            <wire x2="1952" y1="2848" y2="2912" x1="1952" />
-            <wire x2="2080" y1="2912" y2="2912" x1="1952" />
-            <wire x2="1952" y1="2912" y2="2976" x1="1952" />
-            <wire x2="2080" y1="2976" y2="2976" x1="1952" />
-            <wire x2="1952" y1="2976" y2="3040" x1="1952" />
-            <wire x2="2080" y1="3040" y2="3040" x1="1952" />
-            <wire x2="1952" y1="3040" y2="3104" x1="1952" />
-            <wire x2="2080" y1="3104" y2="3104" x1="1952" />
-            <wire x2="1952" y1="3104" y2="3168" x1="1952" />
-            <wire x2="2080" y1="3168" y2="3168" x1="1952" />
-            <wire x2="1952" y1="3168" y2="3232" x1="1952" />
-            <wire x2="2080" y1="3232" y2="3232" x1="1952" />
-            <wire x2="1952" y1="3232" y2="3296" x1="1952" />
-            <wire x2="2080" y1="3296" y2="3296" x1="1952" />
-            <wire x2="1952" y1="3296" y2="3360" x1="1952" />
-            <wire x2="2080" y1="3360" y2="3360" x1="1952" />
-            <wire x2="1952" y1="3360" y2="3424" x1="1952" />
-            <wire x2="2080" y1="3424" y2="3424" x1="1952" />
-            <wire x2="1952" y1="3424" y2="3488" x1="1952" />
-        </branch>
         <branch name="Instr(3)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="2016" y="3552" type="branch" />
             <wire x2="2016" y1="3552" y2="3552" x1="1936" />
@@ -920,22 +895,22 @@
             <wire x2="2016" y1="3744" y2="3744" x1="1936" />
             <wire x2="2080" y1="3744" y2="3744" x1="2016" />
         </branch>
-        <branch name="Imm5_SE(0)">
+        <branch name="Imm5_ZE(0)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="2416" y="3744" type="branch" />
             <wire x2="2416" y1="3744" y2="3744" x1="2304" />
             <wire x2="2464" y1="3744" y2="3744" x1="2416" />
         </branch>
-        <branch name="Imm5_SE(1)">
+        <branch name="Imm5_ZE(1)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="2416" y="3680" type="branch" />
             <wire x2="2416" y1="3680" y2="3680" x1="2304" />
             <wire x2="2464" y1="3680" y2="3680" x1="2416" />
         </branch>
-        <branch name="Imm5_SE(2)">
+        <branch name="Imm5_ZE(2)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="2416" y="3616" type="branch" />
             <wire x2="2416" y1="3616" y2="3616" x1="2304" />
             <wire x2="2464" y1="3616" y2="3616" x1="2416" />
         </branch>
-        <branch name="Imm5_SE(3)">
+        <branch name="Imm5_ZE(3)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="2416" y="3552" type="branch" />
             <wire x2="2416" y1="3552" y2="3552" x1="2304" />
             <wire x2="2464" y1="3552" y2="3552" x1="2416" />
@@ -945,7 +920,7 @@
             <wire x2="1024" y1="3296" y2="3296" x1="880" />
             <wire x2="1040" y1="3296" y2="3296" x1="1024" />
         </branch>
-        <branch name="Imm5_SE(4)">
+        <branch name="Imm5_ZE(4)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="2416" y="3488" type="branch" />
             <wire x2="2416" y1="3488" y2="3488" x1="2304" />
             <wire x2="2464" y1="3488" y2="3488" x1="2416" />
@@ -1057,70 +1032,59 @@
             <wire x2="1648" y1="3232" y2="3232" x1="1504" />
             <wire x2="1664" y1="3232" y2="3232" x1="1648" />
         </branch>
-        <instance x="2080" y="3456" name="XLXI_71" orien="R0" />
-        <instance x="2080" y="3392" name="XLXI_72" orien="R0" />
-        <instance x="2080" y="3328" name="XLXI_73" orien="R0" />
-        <instance x="2080" y="3264" name="XLXI_74" orien="R0" />
-        <instance x="2080" y="3200" name="XLXI_75" orien="R0" />
-        <instance x="2080" y="3136" name="XLXI_76" orien="R0" />
-        <instance x="2080" y="3072" name="XLXI_77" orien="R0" />
-        <instance x="2080" y="3008" name="XLXI_78" orien="R0" />
-        <instance x="2080" y="2944" name="XLXI_79" orien="R0" />
-        <instance x="2080" y="2880" name="XLXI_80" orien="R0" />
-        <instance x="2080" y="2816" name="XLXI_81" orien="R0" />
-        <branch name="Imm5_SE(15)">
+        <branch name="Imm5_ZE(15)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="2416" y="2784" type="branch" />
-            <wire x2="2416" y1="2784" y2="2784" x1="2304" />
+            <wire x2="2416" y1="2784" y2="2784" x1="2208" />
             <wire x2="2464" y1="2784" y2="2784" x1="2416" />
         </branch>
-        <branch name="Imm5_SE(14)">
+        <branch name="Imm5_ZE(14)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="2416" y="2848" type="branch" />
-            <wire x2="2416" y1="2848" y2="2848" x1="2304" />
+            <wire x2="2416" y1="2848" y2="2848" x1="2208" />
             <wire x2="2464" y1="2848" y2="2848" x1="2416" />
         </branch>
-        <branch name="Imm5_SE(13)">
+        <branch name="Imm5_ZE(13)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="2416" y="2912" type="branch" />
-            <wire x2="2416" y1="2912" y2="2912" x1="2304" />
+            <wire x2="2416" y1="2912" y2="2912" x1="2208" />
             <wire x2="2464" y1="2912" y2="2912" x1="2416" />
         </branch>
-        <branch name="Imm5_SE(12)">
+        <branch name="Imm5_ZE(12)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="2416" y="2976" type="branch" />
-            <wire x2="2416" y1="2976" y2="2976" x1="2304" />
+            <wire x2="2416" y1="2976" y2="2976" x1="2208" />
             <wire x2="2464" y1="2976" y2="2976" x1="2416" />
         </branch>
-        <branch name="Imm5_SE(11)">
+        <branch name="Imm5_ZE(11)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="2416" y="3040" type="branch" />
-            <wire x2="2416" y1="3040" y2="3040" x1="2304" />
+            <wire x2="2416" y1="3040" y2="3040" x1="2208" />
             <wire x2="2464" y1="3040" y2="3040" x1="2416" />
         </branch>
-        <branch name="Imm5_SE(10)">
+        <branch name="Imm5_ZE(10)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="2416" y="3104" type="branch" />
-            <wire x2="2416" y1="3104" y2="3104" x1="2304" />
+            <wire x2="2416" y1="3104" y2="3104" x1="2208" />
             <wire x2="2464" y1="3104" y2="3104" x1="2416" />
         </branch>
-        <branch name="Imm5_SE(9)">
+        <branch name="Imm5_ZE(9)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="2416" y="3168" type="branch" />
-            <wire x2="2416" y1="3168" y2="3168" x1="2304" />
+            <wire x2="2416" y1="3168" y2="3168" x1="2208" />
             <wire x2="2464" y1="3168" y2="3168" x1="2416" />
         </branch>
-        <branch name="Imm5_SE(8)">
+        <branch name="Imm5_ZE(8)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="2416" y="3232" type="branch" />
-            <wire x2="2416" y1="3232" y2="3232" x1="2304" />
+            <wire x2="2416" y1="3232" y2="3232" x1="2208" />
             <wire x2="2464" y1="3232" y2="3232" x1="2416" />
         </branch>
-        <branch name="Imm5_SE(7)">
+        <branch name="Imm5_ZE(7)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="2416" y="3296" type="branch" />
-            <wire x2="2416" y1="3296" y2="3296" x1="2304" />
+            <wire x2="2416" y1="3296" y2="3296" x1="2208" />
             <wire x2="2464" y1="3296" y2="3296" x1="2416" />
         </branch>
-        <branch name="Imm5_SE(6)">
+        <branch name="Imm5_ZE(6)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="2416" y="3360" type="branch" />
-            <wire x2="2416" y1="3360" y2="3360" x1="2304" />
+            <wire x2="2416" y1="3360" y2="3360" x1="2208" />
             <wire x2="2464" y1="3360" y2="3360" x1="2416" />
         </branch>
-        <branch name="Imm5_SE(5)">
+        <branch name="Imm5_ZE(5)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="2416" y="3424" type="branch" />
-            <wire x2="2416" y1="3424" y2="3424" x1="2304" />
+            <wire x2="2416" y1="3424" y2="3424" x1="2208" />
             <wire x2="2464" y1="3424" y2="3424" x1="2416" />
         </branch>
         <branch name="Imm_Out(15:0)">
@@ -1451,5 +1415,21 @@
             <wire x2="4112" y1="4176" y2="4208" x1="4112" />
             <wire x2="4112" y1="4208" y2="4240" x1="4112" />
         </branch>
+        <branch name="Instr(4)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="2016" y="3488" type="branch" />
+            <wire x2="2016" y1="3488" y2="3488" x1="1936" />
+            <wire x2="2080" y1="3488" y2="3488" x1="2016" />
+        </branch>
+        <instance x="2080" y="3360" name="XLXI_107" orien="R90" />
+        <instance x="2080" y="3296" name="XLXI_108" orien="R90" />
+        <instance x="2080" y="3232" name="XLXI_109" orien="R90" />
+        <instance x="2080" y="3168" name="XLXI_110" orien="R90" />
+        <instance x="2080" y="3104" name="XLXI_111" orien="R90" />
+        <instance x="2080" y="3040" name="XLXI_112" orien="R90" />
+        <instance x="2080" y="2976" name="XLXI_113" orien="R90" />
+        <instance x="2080" y="2912" name="XLXI_114" orien="R90" />
+        <instance x="2080" y="2848" name="XLXI_115" orien="R90" />
+        <instance x="2080" y="2784" name="XLXI_116" orien="R90" />
+        <instance x="2080" y="2720" name="XLXI_117" orien="R90" />
     </sheet>
 </drawing>

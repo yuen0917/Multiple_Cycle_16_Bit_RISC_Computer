@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : Imm_Gen.vf
-// /___/   /\     Timestamp : 07/17/2025 07:50:58
+// /___/   /\     Timestamp : 07/20/2025 08:36:50
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -193,7 +193,7 @@ module Imm_Gen(Imm_Sel,
     input [15:0] Rd;
    output [15:0] Imm_Out;
    
-   wire [15:0] Imm5_SE;
+   wire [15:0] Imm5_ZE;
    wire [15:0] Imm8_Rd;
    wire [15:0] Imm8_SE;
    wire [15:0] Imm8_ZE;
@@ -202,7 +202,7 @@ module Imm_Gen(Imm_Sel,
    
    assign Instr_DUMMY[15:0] = Instr[15:0];
    assign Rd_DUMMY[15:0] = Rd[15:0];
-   MUX4_1_16bits_MUSER_Imm_Gen  XLXI_1 (.I0(Imm5_SE[15:0]), 
+   MUX4_1_16bits_MUSER_Imm_Gen  XLXI_1 (.I0(Imm5_ZE[15:0]), 
                                        .I1(Imm8_SE[15:0]), 
                                        .I2(Imm8_ZE[15:0]), 
                                        .I3(Imm8_Rd[15:0]), 
@@ -249,15 +249,15 @@ module Imm_Gen(Imm_Sel,
    BUF  XLXI_49 (.I(Instr_DUMMY[0]), 
                 .O(Imm8_ZE[0]));
    BUF  XLXI_50 (.I(Instr_DUMMY[0]), 
-                .O(Imm5_SE[0]));
+                .O(Imm5_ZE[0]));
    BUF  XLXI_51 (.I(Instr_DUMMY[1]), 
-                .O(Imm5_SE[1]));
+                .O(Imm5_ZE[1]));
    BUF  XLXI_52 (.I(Instr_DUMMY[2]), 
-                .O(Imm5_SE[2]));
+                .O(Imm5_ZE[2]));
    BUF  XLXI_53 (.I(Instr_DUMMY[3]), 
-                .O(Imm5_SE[3]));
+                .O(Imm5_ZE[3]));
    BUF  XLXI_54 (.I(Instr_DUMMY[4]), 
-                .O(Imm5_SE[4]));
+                .O(Imm5_ZE[4]));
    BUF  XLXI_55 (.I(Instr_DUMMY[7]), 
                 .O(Imm8_SE[8]));
    BUF  XLXI_56 (.I(Instr_DUMMY[7]), 
@@ -282,28 +282,6 @@ module Imm_Gen(Imm_Sel,
    GND  XLXI_68 (.G(Imm8_ZE[13]));
    GND  XLXI_69 (.G(Imm8_ZE[14]));
    GND  XLXI_70 (.G(Imm8_ZE[15]));
-   BUF  XLXI_71 (.I(Instr_DUMMY[4]), 
-                .O(Imm5_SE[5]));
-   BUF  XLXI_72 (.I(Instr_DUMMY[4]), 
-                .O(Imm5_SE[6]));
-   BUF  XLXI_73 (.I(Instr_DUMMY[4]), 
-                .O(Imm5_SE[7]));
-   BUF  XLXI_74 (.I(Instr_DUMMY[4]), 
-                .O(Imm5_SE[8]));
-   BUF  XLXI_75 (.I(Instr_DUMMY[4]), 
-                .O(Imm5_SE[9]));
-   BUF  XLXI_76 (.I(Instr_DUMMY[4]), 
-                .O(Imm5_SE[10]));
-   BUF  XLXI_77 (.I(Instr_DUMMY[4]), 
-                .O(Imm5_SE[11]));
-   BUF  XLXI_78 (.I(Instr_DUMMY[4]), 
-                .O(Imm5_SE[12]));
-   BUF  XLXI_79 (.I(Instr_DUMMY[4]), 
-                .O(Imm5_SE[13]));
-   BUF  XLXI_80 (.I(Instr_DUMMY[4]), 
-                .O(Imm5_SE[14]));
-   BUF  XLXI_81 (.I(Instr_DUMMY[4]), 
-                .O(Imm5_SE[15]));
    BUF  XLXI_83 (.I(Instr_DUMMY[7]), 
                 .O(Imm8_Rd[15]));
    BUF  XLXI_84 (.I(Instr_DUMMY[6]), 
@@ -344,4 +322,15 @@ module Imm_Gen(Imm_Sel,
    GND  XLXI_104 (.G(Rd_DUMMY[10]));
    GND  XLXI_105 (.G(Rd_DUMMY[9]));
    GND  XLXI_106 (.G(Rd_DUMMY[8]));
+   GND  XLXI_107 (.G(Imm5_ZE[5]));
+   GND  XLXI_108 (.G(Imm5_ZE[6]));
+   GND  XLXI_109 (.G(Imm5_ZE[7]));
+   GND  XLXI_110 (.G(Imm5_ZE[8]));
+   GND  XLXI_111 (.G(Imm5_ZE[9]));
+   GND  XLXI_112 (.G(Imm5_ZE[10]));
+   GND  XLXI_113 (.G(Imm5_ZE[11]));
+   GND  XLXI_114 (.G(Imm5_ZE[12]));
+   GND  XLXI_115 (.G(Imm5_ZE[13]));
+   GND  XLXI_116 (.G(Imm5_ZE[14]));
+   GND  XLXI_117 (.G(Imm5_ZE[15]));
 endmodule

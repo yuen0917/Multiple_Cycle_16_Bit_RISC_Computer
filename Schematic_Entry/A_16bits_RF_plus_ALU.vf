@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : A_16bits_RF_plus_ALU.vf
-// /___/   /\     Timestamp : 07/17/2025 07:51:04
+// /___/   /\     Timestamp : 07/22/2025 05:18:35
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -239,7 +239,7 @@ module Imm_Gen_MUSER_A_16bits_RF_plus_ALU(Imm_Sel,
     input [15:0] Rd;
    output [15:0] Imm_Out;
    
-   wire [15:0] Imm5_SE;
+   wire [15:0] Imm5_ZE;
    wire [15:0] Imm8_Rd;
    wire [15:0] Imm8_SE;
    wire [15:0] Imm8_ZE;
@@ -248,7 +248,7 @@ module Imm_Gen_MUSER_A_16bits_RF_plus_ALU(Imm_Sel,
    
    assign Instr_DUMMY[15:0] = Instr[15:0];
    assign Rd_DUMMY[15:0] = Rd[15:0];
-   MUX4_1_16bits_MUSER_A_16bits_RF_plus_ALU  XLXI_1 (.I0(Imm5_SE[15:0]), 
+   MUX4_1_16bits_MUSER_A_16bits_RF_plus_ALU  XLXI_1 (.I0(Imm5_ZE[15:0]), 
                                                     .I1(Imm8_SE[15:0]), 
                                                     .I2(Imm8_ZE[15:0]), 
                                                     .I3(Imm8_Rd[15:0]), 
@@ -295,15 +295,15 @@ module Imm_Gen_MUSER_A_16bits_RF_plus_ALU(Imm_Sel,
    BUF  XLXI_49 (.I(Instr_DUMMY[0]), 
                 .O(Imm8_ZE[0]));
    BUF  XLXI_50 (.I(Instr_DUMMY[0]), 
-                .O(Imm5_SE[0]));
+                .O(Imm5_ZE[0]));
    BUF  XLXI_51 (.I(Instr_DUMMY[1]), 
-                .O(Imm5_SE[1]));
+                .O(Imm5_ZE[1]));
    BUF  XLXI_52 (.I(Instr_DUMMY[2]), 
-                .O(Imm5_SE[2]));
+                .O(Imm5_ZE[2]));
    BUF  XLXI_53 (.I(Instr_DUMMY[3]), 
-                .O(Imm5_SE[3]));
+                .O(Imm5_ZE[3]));
    BUF  XLXI_54 (.I(Instr_DUMMY[4]), 
-                .O(Imm5_SE[4]));
+                .O(Imm5_ZE[4]));
    BUF  XLXI_55 (.I(Instr_DUMMY[7]), 
                 .O(Imm8_SE[8]));
    BUF  XLXI_56 (.I(Instr_DUMMY[7]), 
@@ -328,28 +328,6 @@ module Imm_Gen_MUSER_A_16bits_RF_plus_ALU(Imm_Sel,
    GND  XLXI_68 (.G(Imm8_ZE[13]));
    GND  XLXI_69 (.G(Imm8_ZE[14]));
    GND  XLXI_70 (.G(Imm8_ZE[15]));
-   BUF  XLXI_71 (.I(Instr_DUMMY[4]), 
-                .O(Imm5_SE[5]));
-   BUF  XLXI_72 (.I(Instr_DUMMY[4]), 
-                .O(Imm5_SE[6]));
-   BUF  XLXI_73 (.I(Instr_DUMMY[4]), 
-                .O(Imm5_SE[7]));
-   BUF  XLXI_74 (.I(Instr_DUMMY[4]), 
-                .O(Imm5_SE[8]));
-   BUF  XLXI_75 (.I(Instr_DUMMY[4]), 
-                .O(Imm5_SE[9]));
-   BUF  XLXI_76 (.I(Instr_DUMMY[4]), 
-                .O(Imm5_SE[10]));
-   BUF  XLXI_77 (.I(Instr_DUMMY[4]), 
-                .O(Imm5_SE[11]));
-   BUF  XLXI_78 (.I(Instr_DUMMY[4]), 
-                .O(Imm5_SE[12]));
-   BUF  XLXI_79 (.I(Instr_DUMMY[4]), 
-                .O(Imm5_SE[13]));
-   BUF  XLXI_80 (.I(Instr_DUMMY[4]), 
-                .O(Imm5_SE[14]));
-   BUF  XLXI_81 (.I(Instr_DUMMY[4]), 
-                .O(Imm5_SE[15]));
    BUF  XLXI_83 (.I(Instr_DUMMY[7]), 
                 .O(Imm8_Rd[15]));
    BUF  XLXI_84 (.I(Instr_DUMMY[6]), 
@@ -390,112 +368,17 @@ module Imm_Gen_MUSER_A_16bits_RF_plus_ALU(Imm_Sel,
    GND  XLXI_104 (.G(Rd_DUMMY[10]));
    GND  XLXI_105 (.G(Rd_DUMMY[9]));
    GND  XLXI_106 (.G(Rd_DUMMY[8]));
-endmodule
-`timescale 1ns / 1ps
-
-module MUX2_1_MUSER_A_16bits_RF_plus_ALU(I0, 
-                                         I1, 
-                                         S, 
-                                         Output);
-
-    input I0;
-    input I1;
-    input S;
-   output Output;
-   
-   wire XLXN_1;
-   wire XLXN_2;
-   wire XLXN_7;
-   
-   AND2  XLXI_1 (.I0(XLXN_7), 
-                .I1(I0), 
-                .O(XLXN_1));
-   AND2  XLXI_2 (.I0(S), 
-                .I1(I1), 
-                .O(XLXN_2));
-   OR2  XLXI_3 (.I0(XLXN_2), 
-               .I1(XLXN_1), 
-               .O(Output));
-   INV  XLXI_4 (.I(S), 
-               .O(XLXN_7));
-endmodule
-`timescale 1ns / 1ps
-
-module MUX2_1_16bits_MUSER_A_16bits_RF_plus_ALU(I0, 
-                                                I1, 
-                                                S, 
-                                                Output);
-
-    input [15:0] I0;
-    input [15:0] I1;
-    input S;
-   output [15:0] Output;
-   
-   
-   MUX2_1_MUSER_A_16bits_RF_plus_ALU  XLXI_1 (.I0(I0[15]), 
-                                             .I1(I1[15]), 
-                                             .S(S), 
-                                             .Output(Output[15]));
-   MUX2_1_MUSER_A_16bits_RF_plus_ALU  XLXI_2 (.I0(I0[14]), 
-                                             .I1(I1[14]), 
-                                             .S(S), 
-                                             .Output(Output[14]));
-   MUX2_1_MUSER_A_16bits_RF_plus_ALU  XLXI_3 (.I0(I0[13]), 
-                                             .I1(I1[13]), 
-                                             .S(S), 
-                                             .Output(Output[13]));
-   MUX2_1_MUSER_A_16bits_RF_plus_ALU  XLXI_4 (.I0(I0[12]), 
-                                             .I1(I1[12]), 
-                                             .S(S), 
-                                             .Output(Output[12]));
-   MUX2_1_MUSER_A_16bits_RF_plus_ALU  XLXI_5 (.I0(I0[11]), 
-                                             .I1(I1[11]), 
-                                             .S(S), 
-                                             .Output(Output[11]));
-   MUX2_1_MUSER_A_16bits_RF_plus_ALU  XLXI_6 (.I0(I0[10]), 
-                                             .I1(I1[10]), 
-                                             .S(S), 
-                                             .Output(Output[10]));
-   MUX2_1_MUSER_A_16bits_RF_plus_ALU  XLXI_7 (.I0(I0[9]), 
-                                             .I1(I1[9]), 
-                                             .S(S), 
-                                             .Output(Output[9]));
-   MUX2_1_MUSER_A_16bits_RF_plus_ALU  XLXI_8 (.I0(I0[8]), 
-                                             .I1(I1[8]), 
-                                             .S(S), 
-                                             .Output(Output[8]));
-   MUX2_1_MUSER_A_16bits_RF_plus_ALU  XLXI_9 (.I0(I0[7]), 
-                                             .I1(I1[7]), 
-                                             .S(S), 
-                                             .Output(Output[7]));
-   MUX2_1_MUSER_A_16bits_RF_plus_ALU  XLXI_10 (.I0(I0[6]), 
-                                              .I1(I1[6]), 
-                                              .S(S), 
-                                              .Output(Output[6]));
-   MUX2_1_MUSER_A_16bits_RF_plus_ALU  XLXI_11 (.I0(I0[5]), 
-                                              .I1(I1[5]), 
-                                              .S(S), 
-                                              .Output(Output[5]));
-   MUX2_1_MUSER_A_16bits_RF_plus_ALU  XLXI_12 (.I0(I0[4]), 
-                                              .I1(I1[4]), 
-                                              .S(S), 
-                                              .Output(Output[4]));
-   MUX2_1_MUSER_A_16bits_RF_plus_ALU  XLXI_13 (.I0(I0[3]), 
-                                              .I1(I1[3]), 
-                                              .S(S), 
-                                              .Output(Output[3]));
-   MUX2_1_MUSER_A_16bits_RF_plus_ALU  XLXI_14 (.I0(I0[2]), 
-                                              .I1(I1[2]), 
-                                              .S(S), 
-                                              .Output(Output[2]));
-   MUX2_1_MUSER_A_16bits_RF_plus_ALU  XLXI_15 (.I0(I0[1]), 
-                                              .I1(I1[1]), 
-                                              .S(S), 
-                                              .Output(Output[1]));
-   MUX2_1_MUSER_A_16bits_RF_plus_ALU  XLXI_16 (.I0(I0[0]), 
-                                              .I1(I1[0]), 
-                                              .S(S), 
-                                              .Output(Output[0]));
+   GND  XLXI_107 (.G(Imm5_ZE[5]));
+   GND  XLXI_108 (.G(Imm5_ZE[6]));
+   GND  XLXI_109 (.G(Imm5_ZE[7]));
+   GND  XLXI_110 (.G(Imm5_ZE[8]));
+   GND  XLXI_111 (.G(Imm5_ZE[9]));
+   GND  XLXI_112 (.G(Imm5_ZE[10]));
+   GND  XLXI_113 (.G(Imm5_ZE[11]));
+   GND  XLXI_114 (.G(Imm5_ZE[12]));
+   GND  XLXI_115 (.G(Imm5_ZE[13]));
+   GND  XLXI_116 (.G(Imm5_ZE[14]));
+   GND  XLXI_117 (.G(Imm5_ZE[15]));
 endmodule
 `timescale 1ns / 1ps
 
@@ -723,7 +606,7 @@ module ALU_16bits_MUSER_A_16bits_RF_plus_ALU(A,
                                                  .C_in(ALU_CTRL), 
                                                  .C_out(NZVC[0]), 
                                                  .S(S_DUMMY[15:0]));
-   (* HU_SET = "XLXI_72_3" *) 
+   (* HU_SET = "XLXI_72_0" *) 
    NOR16_HXILINX_A_16bits_RF_plus_ALU  XLXI_72 (.I0(S_DUMMY[0]), 
                                                .I1(S_DUMMY[1]), 
                                                .I2(S_DUMMY[2]), 
@@ -1042,7 +925,7 @@ module MUX8_1_MUSER_A_16bits_RF_plus_ALU(I0,
                 .O(XLXN_9));
    INV  XLXI_7 (.I(S1), 
                .O(XLXN_52));
-   (* HU_SET = "XLXI_8_4" *) 
+   (* HU_SET = "XLXI_8_1" *) 
    OR8_HXILINX_A_16bits_RF_plus_ALU  XLXI_8 (.I0(XLXN_11), 
                                             .I1(XLXN_9), 
                                             .I2(XLXN_7), 
@@ -2118,13 +2001,11 @@ endmodule
 `timescale 1ns / 1ps
 
 module A_16bits_RF_plus_ALU(ALUOut_CE, 
-                            ALU_A_Sel, 
                             ALU_B_Sel, 
                             ALU_Control, 
                             clk, 
                             Imm_Sel, 
                             Instr, 
-                            PC_to_ALU_A, 
                             Rd, 
                             Rd_to_RF, 
                             RF_Write_en, 
@@ -2137,13 +2018,11 @@ module A_16bits_RF_plus_ALU(ALUOut_CE,
                             ReadA_data);
 
     input ALUOut_CE;
-    input ALU_A_Sel;
     input [1:0] ALU_B_Sel;
     input ALU_Control;
     input clk;
     input [1:0] Imm_Sel;
     input [15:0] Instr;
-    input [15:0] PC_to_ALU_A;
     input [15:0] Rd;
     input [2:0] Rd_to_RF;
     input RF_Write_en;
@@ -2155,20 +2034,17 @@ module A_16bits_RF_plus_ALU(ALUOut_CE,
    output [3:0] NZVC;
    output [15:0] ReadA_data;
    
-   wire [15:0] A;
    wire [15:0] ALU_S;
    wire [15:0] B;
-   wire [15:0] XLXN_78;
    wire [15:0] XLXN_79;
    wire [15:0] XLXN_94;
    wire [15:0] Imm_Out_DUMMY;
    wire [15:0] ReadA_data_DUMMY;
    
-   assign XLXN_78 = 16'h0000;
    assign XLXN_79 = 16'h0000;
    assign Imm_Out[15:0] = Imm_Out_DUMMY[15:0];
    assign ReadA_data[15:0] = ReadA_data_DUMMY[15:0];
-   ALU_16bits_MUSER_A_16bits_RF_plus_ALU  ALU (.A(A[15:0]), 
+   ALU_16bits_MUSER_A_16bits_RF_plus_ALU  ALU (.A(ReadA_data_DUMMY[15:0]), 
                                               .ALU_CTRL(ALU_Control), 
                                               .B(B[15:0]), 
                                               .NZVC(NZVC[3:0]), 
@@ -2207,15 +2083,10 @@ module A_16bits_RF_plus_ALU(ALUOut_CE,
                                                      .Q_13(ALU_Out[13]), 
                                                      .Q_14(ALU_Out[14]), 
                                                      .Q_15(ALU_Out[15]));
-   MUX2_1_16bits_MUSER_A_16bits_RF_plus_ALU  DataA_MUX (.I0(PC_to_ALU_A[15:0]), 
-                                                       
-         .I1(ReadA_data_DUMMY[15:0]), 
-                                                       .S(ALU_A_Sel), 
-                                                       .Output(A[15:0]));
    MUX4_1_16bits_MUSER_A_16bits_RF_plus_ALU  DataB_MUX (.I0(XLXN_94[15:0]), 
                                                        
          .I1(Imm_Out_DUMMY[15:0]), 
-                                                       .I2(XLXN_78[15:0]), 
+                                                       .I2(XLXN_79[15:0]), 
                                                        .I3(XLXN_79[15:0]), 
                                                        .S(ALU_B_Sel[1:0]), 
                                                        .O(B[15:0]));

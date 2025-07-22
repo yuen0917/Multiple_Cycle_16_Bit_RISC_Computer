@@ -6,7 +6,6 @@
         <trait edittrait="all:0" />
     </attr>
     <netlist>
-        <signal name="A(15:0)" />
         <signal name="B(15:0)" />
         <signal name="Write_Data(15:0)" />
         <signal name="ALU_S(15:0)" />
@@ -55,8 +54,6 @@
         <signal name="ALU_Out(0)" />
         <signal name="NZVC(3:0)" />
         <signal name="ALU_Control" />
-        <signal name="PC_to_ALU_A(15:0)" />
-        <signal name="ALU_A_Sel" />
         <signal name="Instr(15:0)" />
         <signal name="Imm_Sel(1:0)" />
         <signal name="Rd(15:0)" />
@@ -74,8 +71,6 @@
         <port polarity="Input" name="Rn_to_RF(2:0)" />
         <port polarity="Output" name="NZVC(3:0)" />
         <port polarity="Input" name="ALU_Control" />
-        <port polarity="Input" name="PC_to_ALU_A(15:0)" />
-        <port polarity="Input" name="ALU_A_Sel" />
         <port polarity="Input" name="Instr(15:0)" />
         <port polarity="Input" name="Imm_Sel(1:0)" />
         <port polarity="Input" name="Rd(15:0)" />
@@ -92,17 +87,6 @@
             <rect width="64" x="320" y="-172" height="24" />
             <line x2="384" y1="-96" y2="-96" x1="320" />
             <rect width="64" x="320" y="-108" height="24" />
-        </blockdef>
-        <blockdef name="MUX2_1_16bits">
-            <timestamp>2025-3-22T6:37:34</timestamp>
-            <rect width="256" x="64" y="-224" height="224" />
-            <line x2="0" y1="-192" y2="-192" x1="64" />
-            <rect width="64" x="0" y="-204" height="24" />
-            <line x2="0" y1="-112" y2="-112" x1="64" />
-            <rect width="64" x="0" y="-124" height="24" />
-            <line x2="0" y1="-32" y2="-32" x1="64" />
-            <line x2="384" y1="-192" y2="-192" x1="320" />
-            <rect width="64" x="320" y="-204" height="24" />
         </blockdef>
         <blockdef name="Eight_Reg_16bits">
             <timestamp>2025-3-22T7:49:44</timestamp>
@@ -247,34 +231,20 @@
             </attr>
             <blockpin signalname="XLXN_79(15:0)" name="O" />
         </block>
-        <block symbolname="constant" name="PC_plus0">
-            <attr value="0000" name="CValue">
-                <trait delete="all:1 sym:0" />
-                <trait editname="all:1 sch:0" />
-                <trait valuetype="BitVector 32 Hexadecimal" />
-            </attr>
-            <blockpin signalname="XLXN_78(15:0)" name="O" />
-        </block>
         <block symbolname="MUX4_1_16bits" name="DataB_MUX">
             <blockpin signalname="XLXN_94(15:0)" name="I0(15:0)" />
             <blockpin signalname="Imm_Out(15:0)" name="I1(15:0)" />
-            <blockpin signalname="XLXN_78(15:0)" name="I2(15:0)" />
+            <blockpin signalname="XLXN_79(15:0)" name="I2(15:0)" />
             <blockpin signalname="XLXN_79(15:0)" name="I3(15:0)" />
             <blockpin signalname="B(15:0)" name="O(15:0)" />
             <blockpin signalname="ALU_B_Sel(1:0)" name="S(1:0)" />
         </block>
         <block symbolname="ALU_16bits" name="ALU">
             <blockpin signalname="B(15:0)" name="B(15:0)" />
-            <blockpin signalname="A(15:0)" name="A(15:0)" />
+            <blockpin signalname="ReadA_data(15:0)" name="A(15:0)" />
             <blockpin signalname="ALU_Control" name="ALU_CTRL" />
             <blockpin signalname="ALU_S(15:0)" name="S(15:0)" />
             <blockpin signalname="NZVC(3:0)" name="NZVC(3:0)" />
-        </block>
-        <block symbolname="MUX2_1_16bits" name="DataA_MUX">
-            <blockpin signalname="PC_to_ALU_A(15:0)" name="I0(15:0)" />
-            <blockpin signalname="ReadA_data(15:0)" name="I1(15:0)" />
-            <blockpin signalname="ALU_A_Sel" name="S" />
-            <blockpin signalname="A(15:0)" name="Output(15:0)" />
         </block>
         <block symbolname="Imm_Gen" name="XLXI_1">
             <blockpin signalname="Imm_Out(15:0)" name="Imm_Out(15:0)" />
@@ -284,16 +254,14 @@
         </block>
     </netlist>
     <sheet sheetnum="1" width="7040" height="5440">
-        <branch name="A(15:0)">
-            <wire x2="3920" y1="2080" y2="2080" x1="3664" />
-        </branch>
         <instance x="2224" y="2512" name="RF" orien="R0">
             <attrtext style="fontsize:28;fontname:Arial" attrname="InstName" x="0" y="0" type="instance" />
         </instance>
         <branch name="B(15:0)">
             <wire x2="3824" y1="2496" y2="2496" x1="3760" />
-            <wire x2="3824" y1="2144" y2="2496" x1="3824" />
             <wire x2="3920" y1="2144" y2="2144" x1="3824" />
+            <wire x2="3824" y1="2144" y2="2208" x1="3824" />
+            <wire x2="3824" y1="2208" y2="2496" x1="3824" />
         </branch>
         <branch name="Write_Data(15:0)">
             <wire x2="2224" y1="2288" y2="2288" x1="2192" />
@@ -441,11 +409,10 @@
         </branch>
         <branch name="XLXN_79(15:0)">
             <wire x2="3264" y1="2864" y2="2864" x1="3168" />
+            <wire x2="3376" y1="2624" y2="2624" x1="3264" />
+            <wire x2="3264" y1="2624" y2="2688" x1="3264" />
             <wire x2="3264" y1="2688" y2="2864" x1="3264" />
             <wire x2="3376" y1="2688" y2="2688" x1="3264" />
-        </branch>
-        <branch name="XLXN_78(15:0)">
-            <wire x2="3376" y1="2624" y2="2624" x1="3168" />
         </branch>
         <branch name="Imm_Out(15:0)">
             <wire x2="3312" y1="3056" y2="3056" x1="3136" />
@@ -587,24 +554,10 @@
             <wire x2="3920" y1="2208" y2="2208" x1="3904" />
         </branch>
         <iomarker fontsize="28" x="4336" y="2144" name="NZVC(3:0)" orien="R0" />
-        <instance x="3280" y="2272" name="DataA_MUX" orien="R0">
-            <attrtext style="fontsize:28;fontname:Arial" attrname="InstName" x="0" y="0" type="instance" />
-        </instance>
-        <branch name="PC_to_ALU_A(15:0)">
-            <wire x2="3280" y1="2080" y2="2080" x1="3248" />
-        </branch>
-        <branch name="ALU_A_Sel">
-            <wire x2="3280" y1="2240" y2="2240" x1="3264" />
-        </branch>
-        <iomarker fontsize="28" x="3248" y="2080" name="PC_to_ALU_A(15:0)" orien="R180" />
-        <iomarker fontsize="28" x="3264" y="2240" name="ALU_A_Sel" orien="R180" />
         <instance x="3376" y="2784" name="DataB_MUX" orien="R0">
             <attrtext style="fontsize:28;fontname:Arial" attrname="InstName" x="0" y="0" type="instance" />
         </instance>
         <instance x="3024" y="2832" name="Default" orien="R0">
-            <attrtext style="fontsize:28;fontname:Arial" attrname="InstName" x="0" y="64" type="instance" />
-        </instance>
-        <instance x="3024" y="2592" name="PC_plus0" orien="R0">
             <attrtext style="fontsize:28;fontname:Arial" attrname="InstName" x="0" y="64" type="instance" />
         </instance>
         <branch name="clk">
@@ -641,6 +594,8 @@
             <wire x2="3280" y1="2160" y2="2160" x1="2816" />
             <wire x2="2816" y1="1984" y2="2160" x1="2816" />
             <wire x2="2944" y1="1984" y2="1984" x1="2816" />
+            <wire x2="3280" y1="2080" y2="2160" x1="3280" />
+            <wire x2="3920" y1="2080" y2="2080" x1="3280" />
         </branch>
         <iomarker fontsize="28" x="2944" y="1984" name="ReadA_data(15:0)" orien="R0" />
         <iomarker fontsize="28" x="3536" y="3056" name="Imm_Out(15:0)" orien="R0" />
