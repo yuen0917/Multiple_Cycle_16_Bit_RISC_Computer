@@ -5,18 +5,17 @@
 module Complete_Datapath_Complete_Datapath_sch_tb();
 
 // Inputs
-   reg MemW_en;
-   reg PC_Add_Src;
-   reg [1:0] PC_Sel;
-   reg clk;
-   reg PC_ALU_Sel;
-   reg Z_CE;
-   reg C_CE;
-   reg [1:0] RF_Write_Data_Sel;
-   reg Rd_Reg_CE;
-   reg [1:0] Imm_Sel;
-   reg ALUOut_Reg_CE;
-   reg ALU_A_Sel;
+   reg MemW_en;                 // Memory Write Enable, 0: No Write, 1: Write
+   reg PC_Add_Src;              // PC Add Source, 0: PC+1, 1: PC+PC_Label
+   reg [1:0] PC_Sel;            // PC Select, 00: PC+(1 or Label), 01: PC[10:0] = PC_Label11, 10: PC = (Rd or Rm), 11: PC = 0
+   reg clk;                     // Clock
+   reg PC_ALU_Sel;              // PC ALU Select, 0: PC_Out, 1: ALU_Out
+   reg Z_CE;                    // Z Register Clock Enable, 0: No Change, 1: Clock Enable
+   reg C_CE;                    // C Register Clock Enable, 0: No Change, 1: Clock Enable
+   reg [1:0] RF_Write_Data_Sel; // RF Write Data Select, 00: MemR_Data, 01: Imm_Out, 10: ALU_Out, 11: PC_Out
+   reg Rd_Reg_CE;               // Rd Register(ReadA_Data) Clock Enable, 0: No Change, 1: Clock Enable
+   reg [1:0] Imm_Sel;           // Imm_Out Select, 00: {11{1'b0}, Imm5}, 01: {Imm8(7)*9, Imm8[6:0]}, 10: {8{1'b0}, Imm8}, 11: {Imm8, Rd[7:0]}
+   reg ALUOut_Reg_CE;           // ALU_Out Register Clock Enable, 0: No Change, 1: Clock Enable
    reg [1:0] ALU_B_Sel;
    reg ALU_Control;
    reg RF_Write_en;
@@ -26,7 +25,9 @@ module Complete_Datapath_Complete_Datapath_sch_tb();
    reg Mem_Addr_Sel;
    reg [15:0] Ext_MemW_Data;
    reg MemW_Data_Sel;
-	reg PC_CE;
+   reg PC_CE;
+
+
 
 // Output
    wire [10:0] PC_Label11;
@@ -40,8 +41,10 @@ module Complete_Datapath_Complete_Datapath_sch_tb();
    wire [4:0] Opcode;
    wire [1:0] ALU_Op;
    wire [2:0] Rn_Addr;
+   wire [15:0] PC_Out;
 
-// Bidirs
+// Parameters
+	 parameter PERIOD = 20;
 
 // Instantiate the UUT
    Complete_Datapath UUT (
@@ -62,7 +65,6 @@ module Complete_Datapath_Complete_Datapath_sch_tb();
 		.Imm_Sel(Imm_Sel),
 		.ALUOut_Reg_CE(ALUOut_Reg_CE),
 		.Rd_Addr(Rd_Addr),
-		.ALU_A_Sel(ALU_A_Sel),
 		.ALU_B_Sel(ALU_B_Sel),
 		.ALU_Control(ALU_Control),
 		.RF_Write_en(RF_Write_en),
@@ -77,12 +79,13 @@ module Complete_Datapath_Complete_Datapath_sch_tb();
 		.Mem_Addr_Sel(Mem_Addr_Sel),
 		.Ext_MemW_Data(Ext_MemW_Data),
 		.MemW_Data_Sel(MemW_Data_Sel),
-		.PC_CE(PC_CE)
+		.PC_CE(PC_CE),
+		.PC_Out(PC_Out)
    );
 
 	reg done;
   //clock
-	always #10 if (!done) clk = ~clk;
+	always #(PERIOD/2) if (!done) clk = ~clk;
 
 
 	// Initialize Inputs
@@ -99,7 +102,6 @@ module Complete_Datapath_Complete_Datapath_sch_tb();
 		Rd_Reg_CE = 0;
 		Imm_Sel = 0;
 		ALUOut_Reg_CE = 0;
-		ALU_A_Sel = 0;
 		ALU_B_Sel = 0;
 		ALU_Control = 0;
 		RF_Write_en = 0;
@@ -194,11 +196,7 @@ module Complete_Datapath_Complete_Datapath_sch_tb();
 		// Test data
 		write_mem(16'h40, 16'h47); // data (40h, 47h)
 		write_mem(16'h41, 16'h89); // data (41h, 89h)
-
-
-
-
-
+		#100;
 
 		#200;
 		$display("Testbench completed");
@@ -207,6 +205,7 @@ module Complete_Datapath_Complete_Datapath_sch_tb();
 
 	////////////////////////////////////////////////
 	// tasks
+	////////////////////////////////////////////////
 	// task to write to memory
 	task write_mem(
 		input [15:0] addr,
@@ -223,8 +222,22 @@ module Complete_Datapath_Complete_Datapath_sch_tb();
 	end
 	endtask
 
+  task PC_plus_1_cmd;
+		begin
+			PC_Add_Src = 1'b0;
+			PC_Sel = 2'b00;
+			PC_ALU_Sel = 1'b0;
+			Mem_Addr_Sel = 1'b0;
+			PC_CE = 1'b1;
+			#PERIOD;
+			PC_CE = 1'b0;
+			$display("PC_plus_1: %h", PC_Out);
+		end
+	endtask
+
 	task LHI_cmd;
 		begin
+
 		end
 	endtask
 

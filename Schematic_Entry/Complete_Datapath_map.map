@@ -11,7 +11,7 @@ Target Device  : xc6vlx75t
 Target Package : ff484
 Target Speed   : -1
 Mapper Version : virtex6 -- $Revision: 1.55 $
-Mapped Date    : Thu Jul 17 13:50:56 2025
+Mapped Date    : Sun Jul 20 08:39:01 2025
 
 vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 INFO:Security:54 - 'xc6vlx75t' is a WebPack part.
@@ -42,62 +42,62 @@ Updating timing models...
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 16 secs 
-Total CPU  time at the beginning of Placer: 10 secs 
+Total REAL time at the beginning of Placer: 9 secs 
+Total CPU  time at the beginning of Placer: 7 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:131b3e) REAL time: 18 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:137ea6) REAL time: 10 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:131b3e) REAL time: 18 secs 
+Phase 2.7  Design Feasibility Check (Checksum:137ea6) REAL time: 10 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:3e10c58e) REAL time: 18 secs 
+Phase 3.31  Local Placement Optimization (Checksum:b3a73676) REAL time: 10 secs 
 
 Phase 4.37  Local Placement Optimization
-Phase 4.37  Local Placement Optimization (Checksum:3e10c58e) REAL time: 18 secs 
+Phase 4.37  Local Placement Optimization (Checksum:b3a73676) REAL time: 10 secs 
 
 Phase 5.2  Initial Placement for Architecture Specific Features
 ...
 ....
 Phase 5.2  Initial Placement for Architecture Specific Features
-(Checksum:41250151) REAL time: 20 secs 
+(Checksum:47b19669) REAL time: 11 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:41250151) REAL time: 20 secs 
+Phase 6.36  Local Placement Optimization (Checksum:47b19669) REAL time: 11 secs 
 
 Phase 7.30  Global Clock Region Assignment
-Phase 7.30  Global Clock Region Assignment (Checksum:41250151) REAL time: 20 secs 
+Phase 7.30  Global Clock Region Assignment (Checksum:47b19669) REAL time: 11 secs 
 
 Phase 8.3  Local Placement Optimization
 ...
 ....
-Phase 8.3  Local Placement Optimization (Checksum:a9cbccf) REAL time: 20 secs 
+Phase 8.3  Local Placement Optimization (Checksum:c3dd76b) REAL time: 12 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:a9cbccf) REAL time: 20 secs 
+Phase 9.5  Local Placement Optimization (Checksum:c3dd76b) REAL time: 12 secs 
 
 Phase 10.8  Global Placement
-....................
-...............................................................................................................
-......................................................................................................................................
-.....................
-Phase 10.8  Global Placement (Checksum:725fa2a) REAL time: 22 secs 
+...........
+........................................
+...........................
+........................
+Phase 10.8  Global Placement (Checksum:f5da2648) REAL time: 12 secs 
 
 Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:725fa2a) REAL time: 22 secs 
+Phase 11.5  Local Placement Optimization (Checksum:f5da2648) REAL time: 12 secs 
 
 Phase 12.18  Placement Optimization
-Phase 12.18  Placement Optimization (Checksum:3d0714bc) REAL time: 26 secs 
+Phase 12.18  Placement Optimization (Checksum:9875fb9a) REAL time: 17 secs 
 
 Phase 13.5  Local Placement Optimization
-Phase 13.5  Local Placement Optimization (Checksum:3d0714bc) REAL time: 26 secs 
+Phase 13.5  Local Placement Optimization (Checksum:9875fb9a) REAL time: 17 secs 
 
 Phase 14.34  Placement Validation
-Phase 14.34  Placement Validation (Checksum:4c7e16c1) REAL time: 26 secs 
+Phase 14.34  Placement Validation (Checksum:2e662d90) REAL time: 17 secs 
 
-Total REAL time to Placer completion: 26 secs 
-Total CPU  time to Placer completion: 18 secs 
+Total REAL time to Placer completion: 18 secs 
+Total CPU  time to Placer completion: 15 secs 
 Running post-placement packing...
 Writing output files...
 
@@ -129,11 +129,11 @@ Slice Logic Utilization:
     Number used exclusively as route-thrus:      0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   318 out of  11,640    2%
-  Number of LUT Flip Flop pairs used:          704
-    Number with an unused Flip Flop:           494 out of     704   70%
-    Number with an unused LUT:                  85 out of     704   12%
-    Number of fully used LUT-FF pairs:         125 out of     704   17%
+  Number of occupied Slices:                   292 out of  11,640    2%
+  Number of LUT Flip Flop pairs used:          697
+    Number with an unused Flip Flop:           490 out of     697   70%
+    Number with an unused LUT:                  78 out of     697   11%
+    Number of fully used LUT-FF pairs:         129 out of     697   18%
     Number of unique control sets:              23
     Number of slice register sites lost
       to control set restrictions:              14 out of  93,120    1%
@@ -147,7 +147,7 @@ Slice Logic Distribution:
   over-mapped for a non-BRAM resource or if placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                       125 out of     240   52%
+  Number of bonded IOBs:                       141 out of     240   58%
 
 Specific Feature Utilization:
   Number of RAMB36E1/FIFO36E1s:                  0 out of     156    0%
@@ -176,11 +176,11 @@ Specific Feature Utilization:
   Number of SYSMONs:                             0 out of       1    0%
   Number of TEMAC_SINGLEs:                       0 out of       4    0%
 
-Average Fanout of Non-Clock Nets:                3.51
+Average Fanout of Non-Clock Nets:                3.53
 
 Peak Memory Usage:  1030 MB
-Total REAL time to MAP completion:  27 secs 
-Total CPU time to MAP completion:   19 secs 
+Total REAL time to MAP completion:  18 secs 
+Total CPU time to MAP completion:   16 secs 
 
 Mapping completed.
 See MAP report file "Complete_Datapath_map.mrp" for details.

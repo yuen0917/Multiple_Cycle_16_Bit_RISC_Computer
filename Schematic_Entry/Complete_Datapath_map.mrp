@@ -11,7 +11,7 @@ Target Device  : xc6vlx75t
 Target Package : ff484
 Target Speed   : -1
 Mapper Version : virtex6 -- $Revision: 1.55 $
-Mapped Date    : Thu Jul 17 13:50:56 2025
+Mapped Date    : Sun Jul 20 08:39:01 2025
 
 Design Summary
 --------------
@@ -39,11 +39,11 @@ Slice Logic Utilization:
     Number used exclusively as route-thrus:      0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   318 out of  11,640    2%
-  Number of LUT Flip Flop pairs used:          704
-    Number with an unused Flip Flop:           494 out of     704   70%
-    Number with an unused LUT:                  85 out of     704   12%
-    Number of fully used LUT-FF pairs:         125 out of     704   17%
+  Number of occupied Slices:                   292 out of  11,640    2%
+  Number of LUT Flip Flop pairs used:          697
+    Number with an unused Flip Flop:           490 out of     697   70%
+    Number with an unused LUT:                  78 out of     697   11%
+    Number of fully used LUT-FF pairs:         129 out of     697   18%
     Number of unique control sets:              23
     Number of slice register sites lost
       to control set restrictions:              14 out of  93,120    1%
@@ -57,7 +57,7 @@ Slice Logic Distribution:
   over-mapped for a non-BRAM resource or if placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                       125 out of     240   52%
+  Number of bonded IOBs:                       141 out of     240   58%
 
 Specific Feature Utilization:
   Number of RAMB36E1/FIFO36E1s:                  0 out of     156    0%
@@ -86,11 +86,11 @@ Specific Feature Utilization:
   Number of SYSMONs:                             0 out of       1    0%
   Number of TEMAC_SINGLEs:                       0 out of       4    0%
 
-Average Fanout of Non-Clock Nets:                3.51
+Average Fanout of Non-Clock Nets:                3.53
 
 Peak Memory Usage:  1030 MB
-Total REAL time to MAP completion:  27 secs 
-Total CPU time to MAP completion:   19 secs 
+Total REAL time to MAP completion:  18 secs 
+Total CPU time to MAP completion:   16 secs 
 
 Table of Contents
 -----------------
@@ -706,6 +706,22 @@ Section 6 - IOB Properties
 | PC_Label11<10>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | PC_Sel<0>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | PC_Sel<1>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| PC_out<0>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PC_out<1>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PC_out<2>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PC_out<3>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PC_out<4>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PC_out<5>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PC_out<6>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PC_out<7>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PC_out<8>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PC_out<9>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PC_out<10>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PC_out<11>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PC_out<12>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PC_out<13>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PC_out<14>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| PC_out<15>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | RF_Write_Data_Sel<0>               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | RF_Write_Data_Sel<1>               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | RF_Write_en                        | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |

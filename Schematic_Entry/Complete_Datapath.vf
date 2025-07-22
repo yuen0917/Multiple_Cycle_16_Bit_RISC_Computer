@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : Complete_Datapath.vf
-// /___/   /\     Timestamp : 07/17/2025 12:45:07
+// /___/   /\     Timestamp : 07/22/2025 05:18:42
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -63,350 +63,6 @@ module OR8_HXILINX_Complete_Datapath (O, I0, I1, I2, I3, I4, I5, I6, I7);
 
 assign O = (I0 || I1 || I2 || I3 || I4 || I5 || I6 || I7);
 
-endmodule
-`timescale 1ns / 1ps
-
-module MUX2_1_MUSER_Complete_Datapath(I0, 
-                                      I1, 
-                                      S, 
-                                      Output);
-
-    input I0;
-    input I1;
-    input S;
-   output Output;
-   
-   wire XLXN_1;
-   wire XLXN_2;
-   wire XLXN_7;
-   
-   AND2  XLXI_1 (.I0(XLXN_7), 
-                .I1(I0), 
-                .O(XLXN_1));
-   AND2  XLXI_2 (.I0(S), 
-                .I1(I1), 
-                .O(XLXN_2));
-   OR2  XLXI_3 (.I0(XLXN_2), 
-               .I1(XLXN_1), 
-               .O(Output));
-   INV  XLXI_4 (.I(S), 
-               .O(XLXN_7));
-endmodule
-`timescale 1ns / 1ps
-
-module MUX2_1_16bits_MUSER_Complete_Datapath(I0, 
-                                             I1, 
-                                             S, 
-                                             Output);
-
-    input [15:0] I0;
-    input [15:0] I1;
-    input S;
-   output [15:0] Output;
-   
-   
-   MUX2_1_MUSER_Complete_Datapath  XLXI_1 (.I0(I0[15]), 
-                                          .I1(I1[15]), 
-                                          .S(S), 
-                                          .Output(Output[15]));
-   MUX2_1_MUSER_Complete_Datapath  XLXI_2 (.I0(I0[14]), 
-                                          .I1(I1[14]), 
-                                          .S(S), 
-                                          .Output(Output[14]));
-   MUX2_1_MUSER_Complete_Datapath  XLXI_3 (.I0(I0[13]), 
-                                          .I1(I1[13]), 
-                                          .S(S), 
-                                          .Output(Output[13]));
-   MUX2_1_MUSER_Complete_Datapath  XLXI_4 (.I0(I0[12]), 
-                                          .I1(I1[12]), 
-                                          .S(S), 
-                                          .Output(Output[12]));
-   MUX2_1_MUSER_Complete_Datapath  XLXI_5 (.I0(I0[11]), 
-                                          .I1(I1[11]), 
-                                          .S(S), 
-                                          .Output(Output[11]));
-   MUX2_1_MUSER_Complete_Datapath  XLXI_6 (.I0(I0[10]), 
-                                          .I1(I1[10]), 
-                                          .S(S), 
-                                          .Output(Output[10]));
-   MUX2_1_MUSER_Complete_Datapath  XLXI_7 (.I0(I0[9]), 
-                                          .I1(I1[9]), 
-                                          .S(S), 
-                                          .Output(Output[9]));
-   MUX2_1_MUSER_Complete_Datapath  XLXI_8 (.I0(I0[8]), 
-                                          .I1(I1[8]), 
-                                          .S(S), 
-                                          .Output(Output[8]));
-   MUX2_1_MUSER_Complete_Datapath  XLXI_9 (.I0(I0[7]), 
-                                          .I1(I1[7]), 
-                                          .S(S), 
-                                          .Output(Output[7]));
-   MUX2_1_MUSER_Complete_Datapath  XLXI_10 (.I0(I0[6]), 
-                                           .I1(I1[6]), 
-                                           .S(S), 
-                                           .Output(Output[6]));
-   MUX2_1_MUSER_Complete_Datapath  XLXI_11 (.I0(I0[5]), 
-                                           .I1(I1[5]), 
-                                           .S(S), 
-                                           .Output(Output[5]));
-   MUX2_1_MUSER_Complete_Datapath  XLXI_12 (.I0(I0[4]), 
-                                           .I1(I1[4]), 
-                                           .S(S), 
-                                           .Output(Output[4]));
-   MUX2_1_MUSER_Complete_Datapath  XLXI_13 (.I0(I0[3]), 
-                                           .I1(I1[3]), 
-                                           .S(S), 
-                                           .Output(Output[3]));
-   MUX2_1_MUSER_Complete_Datapath  XLXI_14 (.I0(I0[2]), 
-                                           .I1(I1[2]), 
-                                           .S(S), 
-                                           .Output(Output[2]));
-   MUX2_1_MUSER_Complete_Datapath  XLXI_15 (.I0(I0[1]), 
-                                           .I1(I1[1]), 
-                                           .S(S), 
-                                           .Output(Output[1]));
-   MUX2_1_MUSER_Complete_Datapath  XLXI_16 (.I0(I0[0]), 
-                                           .I1(I1[0]), 
-                                           .S(S), 
-                                           .Output(Output[0]));
-endmodule
-`timescale 1ns / 1ps
-
-module MUX2_1_3bits_MUSER_Complete_Datapath(I0, 
-                                            I1, 
-                                            S, 
-                                            Output);
-
-    input [2:0] I0;
-    input [2:0] I1;
-    input S;
-   output [2:0] Output;
-   
-   
-   MUX2_1_MUSER_Complete_Datapath  XLXI_1 (.I0(I0[2]), 
-                                          .I1(I1[2]), 
-                                          .S(S), 
-                                          .Output(Output[2]));
-   MUX2_1_MUSER_Complete_Datapath  XLXI_2 (.I0(I0[1]), 
-                                          .I1(I1[1]), 
-                                          .S(S), 
-                                          .Output(Output[1]));
-   MUX2_1_MUSER_Complete_Datapath  XLXI_3 (.I0(I0[0]), 
-                                          .I1(I1[0]), 
-                                          .S(S), 
-                                          .Output(Output[0]));
-endmodule
-`timescale 1ns / 1ps
-
-module Instr_Parser_MUSER_Complete_Datapath(Instr_Input, 
-                                            ALU_Op, 
-                                            Label11, 
-                                            Opcode, 
-                                            Rd, 
-                                            Rm, 
-                                            Rn);
-
-    input [15:0] Instr_Input;
-   output [1:0] ALU_Op;
-   output [10:0] Label11;
-   output [4:0] Opcode;
-   output [2:0] Rd;
-   output [2:0] Rm;
-   output [2:0] Rn;
-   
-   
-   BUF  XLXI_3 (.I(Instr_Input[15]), 
-               .O(Opcode[4]));
-   BUF  XLXI_4 (.I(Instr_Input[14]), 
-               .O(Opcode[3]));
-   BUF  XLXI_5 (.I(Instr_Input[13]), 
-               .O(Opcode[2]));
-   BUF  XLXI_6 (.I(Instr_Input[12]), 
-               .O(Opcode[1]));
-   BUF  XLXI_7 (.I(Instr_Input[11]), 
-               .O(Opcode[0]));
-   BUF  XLXI_8 (.I(Instr_Input[10]), 
-               .O(Rd[2]));
-   BUF  XLXI_9 (.I(Instr_Input[9]), 
-               .O(Rd[1]));
-   BUF  XLXI_10 (.I(Instr_Input[8]), 
-                .O(Rd[0]));
-   BUF  XLXI_11 (.I(Instr_Input[7]), 
-                .O(Rm[2]));
-   BUF  XLXI_12 (.I(Instr_Input[6]), 
-                .O(Rm[1]));
-   BUF  XLXI_13 (.I(Instr_Input[5]), 
-                .O(Rm[0]));
-   BUF  XLXI_14 (.I(Instr_Input[4]), 
-                .O(Rn[2]));
-   BUF  XLXI_15 (.I(Instr_Input[3]), 
-                .O(Rn[1]));
-   BUF  XLXI_16 (.I(Instr_Input[2]), 
-                .O(Rn[0]));
-   BUF  XLXI_17 (.I(Instr_Input[1]), 
-                .O(ALU_Op[1]));
-   BUF  XLXI_18 (.I(Instr_Input[0]), 
-                .O(ALU_Op[0]));
-   BUF  XLXI_19 (.I(Instr_Input[10]), 
-                .O(Label11[10]));
-   BUF  XLXI_20 (.I(Instr_Input[9]), 
-                .O(Label11[9]));
-   BUF  XLXI_21 (.I(Instr_Input[8]), 
-                .O(Label11[8]));
-   BUF  XLXI_22 (.I(Instr_Input[7]), 
-                .O(Label11[7]));
-   BUF  XLXI_23 (.I(Instr_Input[6]), 
-                .O(Label11[6]));
-   BUF  XLXI_24 (.I(Instr_Input[5]), 
-                .O(Label11[5]));
-   BUF  XLXI_25 (.I(Instr_Input[4]), 
-                .O(Label11[4]));
-   BUF  XLXI_26 (.I(Instr_Input[3]), 
-                .O(Label11[3]));
-   BUF  XLXI_27 (.I(Instr_Input[2]), 
-                .O(Label11[2]));
-   BUF  XLXI_28 (.I(Instr_Input[1]), 
-                .O(Label11[1]));
-   BUF  XLXI_29 (.I(Instr_Input[0]), 
-                .O(Label11[0]));
-endmodule
-`timescale 1ns / 1ps
-
-module DFF_Reg_16bits_MUSER_Complete_Datapath(CE, 
-                                              clk, 
-                                              D_0, 
-                                              D_1, 
-                                              D_2, 
-                                              D_3, 
-                                              D_4, 
-                                              D_5, 
-                                              D_6, 
-                                              D_7, 
-                                              D_8, 
-                                              D_9, 
-                                              D_10, 
-                                              D_11, 
-                                              D_12, 
-                                              D_13, 
-                                              D_14, 
-                                              D_15, 
-                                              Q_0, 
-                                              Q_1, 
-                                              Q_2, 
-                                              Q_3, 
-                                              Q_4, 
-                                              Q_5, 
-                                              Q_6, 
-                                              Q_7, 
-                                              Q_8, 
-                                              Q_9, 
-                                              Q_10, 
-                                              Q_11, 
-                                              Q_12, 
-                                              Q_13, 
-                                              Q_14, 
-                                              Q_15);
-
-    input CE;
-    input clk;
-    input D_0;
-    input D_1;
-    input D_2;
-    input D_3;
-    input D_4;
-    input D_5;
-    input D_6;
-    input D_7;
-    input D_8;
-    input D_9;
-    input D_10;
-    input D_11;
-    input D_12;
-    input D_13;
-    input D_14;
-    input D_15;
-   output Q_0;
-   output Q_1;
-   output Q_2;
-   output Q_3;
-   output Q_4;
-   output Q_5;
-   output Q_6;
-   output Q_7;
-   output Q_8;
-   output Q_9;
-   output Q_10;
-   output Q_11;
-   output Q_12;
-   output Q_13;
-   output Q_14;
-   output Q_15;
-   
-   
-   FDE #( .INIT(1'b0) ) XLXI_18 (.C(clk), 
-                .CE(CE), 
-                .D(D_15), 
-                .Q(Q_15));
-   FDE #( .INIT(1'b0) ) XLXI_19 (.C(clk), 
-                .CE(CE), 
-                .D(D_14), 
-                .Q(Q_14));
-   FDE #( .INIT(1'b0) ) XLXI_20 (.C(clk), 
-                .CE(CE), 
-                .D(D_13), 
-                .Q(Q_13));
-   FDE #( .INIT(1'b0) ) XLXI_21 (.C(clk), 
-                .CE(CE), 
-                .D(D_12), 
-                .Q(Q_12));
-   FDE #( .INIT(1'b0) ) XLXI_22 (.C(clk), 
-                .CE(CE), 
-                .D(D_11), 
-                .Q(Q_11));
-   FDE #( .INIT(1'b0) ) XLXI_23 (.C(clk), 
-                .CE(CE), 
-                .D(D_10), 
-                .Q(Q_10));
-   FDE #( .INIT(1'b0) ) XLXI_24 (.C(clk), 
-                .CE(CE), 
-                .D(D_9), 
-                .Q(Q_9));
-   FDE #( .INIT(1'b0) ) XLXI_25 (.C(clk), 
-                .CE(CE), 
-                .D(D_8), 
-                .Q(Q_8));
-   FDE #( .INIT(1'b0) ) XLXI_26 (.C(clk), 
-                .CE(CE), 
-                .D(D_7), 
-                .Q(Q_7));
-   FDE #( .INIT(1'b0) ) XLXI_27 (.C(clk), 
-                .CE(CE), 
-                .D(D_6), 
-                .Q(Q_6));
-   FDE #( .INIT(1'b0) ) XLXI_28 (.C(clk), 
-                .CE(CE), 
-                .D(D_5), 
-                .Q(Q_5));
-   FDE #( .INIT(1'b0) ) XLXI_29 (.C(clk), 
-                .CE(CE), 
-                .D(D_4), 
-                .Q(Q_4));
-   FDE #( .INIT(1'b0) ) XLXI_30 (.C(clk), 
-                .CE(CE), 
-                .D(D_3), 
-                .Q(Q_3));
-   FDE #( .INIT(1'b0) ) XLXI_31 (.C(clk), 
-                .CE(CE), 
-                .D(D_2), 
-                .Q(Q_2));
-   FDE #( .INIT(1'b0) ) XLXI_32 (.C(clk), 
-                .CE(CE), 
-                .D(D_1), 
-                .Q(Q_1));
-   FDE #( .INIT(1'b0) ) XLXI_33 (.C(clk), 
-                .CE(CE), 
-                .D(D_0), 
-                .Q(Q_0));
 endmodule
 `timescale 1ns / 1ps
 
@@ -573,6 +229,159 @@ module MUX4_1_16bits_MUSER_Complete_Datapath(I0,
 endmodule
 `timescale 1ns / 1ps
 
+module Imm_Gen_MUSER_Complete_Datapath(Imm_Sel, 
+                                       Instr, 
+                                       Rd, 
+                                       Imm_Out);
+
+    input [1:0] Imm_Sel;
+    input [15:0] Instr;
+    input [15:0] Rd;
+   output [15:0] Imm_Out;
+   
+   wire [15:0] Imm5_ZE;
+   wire [15:0] Imm8_Rd;
+   wire [15:0] Imm8_SE;
+   wire [15:0] Imm8_ZE;
+   wire [15:0] Instr_DUMMY;
+   wire [15:0] Rd_DUMMY;
+   
+   assign Instr_DUMMY[15:0] = Instr[15:0];
+   assign Rd_DUMMY[15:0] = Rd[15:0];
+   MUX4_1_16bits_MUSER_Complete_Datapath  XLXI_1 (.I0(Imm5_ZE[15:0]), 
+                                                 .I1(Imm8_SE[15:0]), 
+                                                 .I2(Imm8_ZE[15:0]), 
+                                                 .I3(Imm8_Rd[15:0]), 
+                                                 .S(Imm_Sel[1:0]), 
+                                                 .O(Imm_Out[15:0]));
+   GND  XLXI_9 (.G(Instr_DUMMY[8]));
+   GND  XLXI_10 (.G(Instr_DUMMY[9]));
+   GND  XLXI_11 (.G(Instr_DUMMY[10]));
+   GND  XLXI_12 (.G(Instr_DUMMY[11]));
+   GND  XLXI_14 (.G(Instr_DUMMY[12]));
+   GND  XLXI_15 (.G(Instr_DUMMY[13]));
+   GND  XLXI_16 (.G(Instr_DUMMY[14]));
+   GND  XLXI_17 (.G(Instr_DUMMY[15]));
+   BUF  XLXI_18 (.I(Instr_DUMMY[7]), 
+                .O(Imm8_SE[7]));
+   BUF  XLXI_19 (.I(Instr_DUMMY[6]), 
+                .O(Imm8_SE[6]));
+   BUF  XLXI_20 (.I(Instr_DUMMY[5]), 
+                .O(Imm8_SE[5]));
+   BUF  XLXI_21 (.I(Instr_DUMMY[4]), 
+                .O(Imm8_SE[4]));
+   BUF  XLXI_22 (.I(Instr_DUMMY[3]), 
+                .O(Imm8_SE[3]));
+   BUF  XLXI_23 (.I(Instr_DUMMY[2]), 
+                .O(Imm8_SE[2]));
+   BUF  XLXI_24 (.I(Instr_DUMMY[1]), 
+                .O(Imm8_SE[1]));
+   BUF  XLXI_25 (.I(Instr_DUMMY[0]), 
+                .O(Imm8_SE[0]));
+   BUF  XLXI_42 (.I(Instr_DUMMY[7]), 
+                .O(Imm8_ZE[7]));
+   BUF  XLXI_43 (.I(Instr_DUMMY[6]), 
+                .O(Imm8_ZE[6]));
+   BUF  XLXI_44 (.I(Instr_DUMMY[5]), 
+                .O(Imm8_ZE[5]));
+   BUF  XLXI_45 (.I(Instr_DUMMY[4]), 
+                .O(Imm8_ZE[4]));
+   BUF  XLXI_46 (.I(Instr_DUMMY[3]), 
+                .O(Imm8_ZE[3]));
+   BUF  XLXI_47 (.I(Instr_DUMMY[2]), 
+                .O(Imm8_ZE[2]));
+   BUF  XLXI_48 (.I(Instr_DUMMY[1]), 
+                .O(Imm8_ZE[1]));
+   BUF  XLXI_49 (.I(Instr_DUMMY[0]), 
+                .O(Imm8_ZE[0]));
+   BUF  XLXI_50 (.I(Instr_DUMMY[0]), 
+                .O(Imm5_ZE[0]));
+   BUF  XLXI_51 (.I(Instr_DUMMY[1]), 
+                .O(Imm5_ZE[1]));
+   BUF  XLXI_52 (.I(Instr_DUMMY[2]), 
+                .O(Imm5_ZE[2]));
+   BUF  XLXI_53 (.I(Instr_DUMMY[3]), 
+                .O(Imm5_ZE[3]));
+   BUF  XLXI_54 (.I(Instr_DUMMY[4]), 
+                .O(Imm5_ZE[4]));
+   BUF  XLXI_55 (.I(Instr_DUMMY[7]), 
+                .O(Imm8_SE[8]));
+   BUF  XLXI_56 (.I(Instr_DUMMY[7]), 
+                .O(Imm8_SE[9]));
+   BUF  XLXI_57 (.I(Instr_DUMMY[7]), 
+                .O(Imm8_SE[10]));
+   BUF  XLXI_58 (.I(Instr_DUMMY[7]), 
+                .O(Imm8_SE[11]));
+   BUF  XLXI_59 (.I(Instr_DUMMY[7]), 
+                .O(Imm8_SE[12]));
+   BUF  XLXI_60 (.I(Instr_DUMMY[7]), 
+                .O(Imm8_SE[13]));
+   BUF  XLXI_61 (.I(Instr_DUMMY[7]), 
+                .O(Imm8_SE[14]));
+   BUF  XLXI_62 (.I(Instr_DUMMY[7]), 
+                .O(Imm8_SE[15]));
+   GND  XLXI_63 (.G(Imm8_ZE[8]));
+   GND  XLXI_64 (.G(Imm8_ZE[9]));
+   GND  XLXI_65 (.G(Imm8_ZE[10]));
+   GND  XLXI_66 (.G(Imm8_ZE[11]));
+   GND  XLXI_67 (.G(Imm8_ZE[12]));
+   GND  XLXI_68 (.G(Imm8_ZE[13]));
+   GND  XLXI_69 (.G(Imm8_ZE[14]));
+   GND  XLXI_70 (.G(Imm8_ZE[15]));
+   BUF  XLXI_83 (.I(Instr_DUMMY[7]), 
+                .O(Imm8_Rd[15]));
+   BUF  XLXI_84 (.I(Instr_DUMMY[6]), 
+                .O(Imm8_Rd[14]));
+   BUF  XLXI_85 (.I(Instr_DUMMY[5]), 
+                .O(Imm8_Rd[13]));
+   BUF  XLXI_86 (.I(Instr_DUMMY[4]), 
+                .O(Imm8_Rd[12]));
+   BUF  XLXI_87 (.I(Instr_DUMMY[3]), 
+                .O(Imm8_Rd[11]));
+   BUF  XLXI_88 (.I(Instr_DUMMY[2]), 
+                .O(Imm8_Rd[10]));
+   BUF  XLXI_89 (.I(Instr_DUMMY[1]), 
+                .O(Imm8_Rd[9]));
+   BUF  XLXI_90 (.I(Instr_DUMMY[0]), 
+                .O(Imm8_Rd[8]));
+   BUF  XLXI_91 (.I(Rd_DUMMY[7]), 
+                .O(Imm8_Rd[7]));
+   BUF  XLXI_92 (.I(Rd_DUMMY[6]), 
+                .O(Imm8_Rd[6]));
+   BUF  XLXI_93 (.I(Rd_DUMMY[5]), 
+                .O(Imm8_Rd[5]));
+   BUF  XLXI_94 (.I(Rd_DUMMY[4]), 
+                .O(Imm8_Rd[4]));
+   BUF  XLXI_95 (.I(Rd_DUMMY[3]), 
+                .O(Imm8_Rd[3]));
+   BUF  XLXI_96 (.I(Rd_DUMMY[2]), 
+                .O(Imm8_Rd[2]));
+   BUF  XLXI_97 (.I(Rd_DUMMY[1]), 
+                .O(Imm8_Rd[1]));
+   BUF  XLXI_98 (.I(Rd_DUMMY[0]), 
+                .O(Imm8_Rd[0]));
+   GND  XLXI_99 (.G(Rd_DUMMY[15]));
+   GND  XLXI_100 (.G(Rd_DUMMY[14]));
+   GND  XLXI_101 (.G(Rd_DUMMY[13]));
+   GND  XLXI_102 (.G(Rd_DUMMY[12]));
+   GND  XLXI_103 (.G(Rd_DUMMY[11]));
+   GND  XLXI_104 (.G(Rd_DUMMY[10]));
+   GND  XLXI_105 (.G(Rd_DUMMY[9]));
+   GND  XLXI_106 (.G(Rd_DUMMY[8]));
+   GND  XLXI_107 (.G(Imm5_ZE[5]));
+   GND  XLXI_108 (.G(Imm5_ZE[6]));
+   GND  XLXI_109 (.G(Imm5_ZE[7]));
+   GND  XLXI_110 (.G(Imm5_ZE[8]));
+   GND  XLXI_111 (.G(Imm5_ZE[9]));
+   GND  XLXI_112 (.G(Imm5_ZE[10]));
+   GND  XLXI_113 (.G(Imm5_ZE[11]));
+   GND  XLXI_114 (.G(Imm5_ZE[12]));
+   GND  XLXI_115 (.G(Imm5_ZE[13]));
+   GND  XLXI_116 (.G(Imm5_ZE[14]));
+   GND  XLXI_117 (.G(Imm5_ZE[15]));
+endmodule
+`timescale 1ns / 1ps
+
 module FA_MUSER_Complete_Datapath(A, 
                                   B, 
                                   C_in, 
@@ -718,355 +527,6 @@ module FA_16bits_MUSER_Complete_Datapath(A,
 endmodule
 `timescale 1ns / 1ps
 
-module FA_2s_16bits_MUSER_Complete_Datapath(A, 
-                                            B, 
-                                            CTRL, 
-                                            C_out, 
-                                            S);
-
-    input [15:0] A;
-    input [15:0] B;
-    input CTRL;
-   output C_out;
-   output [15:0] S;
-   
-   wire [15:0] Bs;
-   
-   XOR2  XLXI_2 (.I0(CTRL), 
-                .I1(B[15]), 
-                .O(Bs[15]));
-   XOR2  XLXI_3 (.I0(CTRL), 
-                .I1(B[14]), 
-                .O(Bs[14]));
-   XOR2  XLXI_4 (.I0(CTRL), 
-                .I1(B[13]), 
-                .O(Bs[13]));
-   XOR2  XLXI_5 (.I0(CTRL), 
-                .I1(B[12]), 
-                .O(Bs[12]));
-   XOR2  XLXI_6 (.I0(CTRL), 
-                .I1(B[11]), 
-                .O(Bs[11]));
-   XOR2  XLXI_7 (.I0(CTRL), 
-                .I1(B[10]), 
-                .O(Bs[10]));
-   XOR2  XLXI_8 (.I0(CTRL), 
-                .I1(B[9]), 
-                .O(Bs[9]));
-   XOR2  XLXI_9 (.I0(CTRL), 
-                .I1(B[8]), 
-                .O(Bs[8]));
-   XOR2  XLXI_11 (.I0(CTRL), 
-                 .I1(B[7]), 
-                 .O(Bs[7]));
-   XOR2  XLXI_12 (.I0(CTRL), 
-                 .I1(B[6]), 
-                 .O(Bs[6]));
-   XOR2  XLXI_13 (.I0(CTRL), 
-                 .I1(B[5]), 
-                 .O(Bs[5]));
-   XOR2  XLXI_14 (.I0(CTRL), 
-                 .I1(B[4]), 
-                 .O(Bs[4]));
-   XOR2  XLXI_15 (.I0(CTRL), 
-                 .I1(B[3]), 
-                 .O(Bs[3]));
-   XOR2  XLXI_16 (.I0(CTRL), 
-                 .I1(B[2]), 
-                 .O(Bs[2]));
-   XOR2  XLXI_17 (.I0(CTRL), 
-                 .I1(B[1]), 
-                 .O(Bs[1]));
-   XOR2  XLXI_18 (.I0(CTRL), 
-                 .I1(B[0]), 
-                 .O(Bs[0]));
-   FA_16bits_MUSER_Complete_Datapath  XLXI_19 (.A(A[15:0]), 
-                                              .B(Bs[15:0]), 
-                                              .C_in(CTRL), 
-                                              .C_out(C_out), 
-                                              .S(S[15:0]));
-endmodule
-`timescale 1ns / 1ps
-
-module PC_MUSER_Complete_Datapath(CE, 
-                                  clk, 
-                                  label11, 
-                                  one_or_label, 
-                                  PC_Label, 
-                                  PC_sel, 
-                                  Rd_Rm, 
-                                  PC_out);
-
-    input CE;
-    input clk;
-    input [10:0] label11;
-    input one_or_label;
-    input [15:0] PC_Label;
-    input [1:0] PC_sel;
-    input [15:0] Rd_Rm;
-   output [15:0] PC_out;
-   
-   wire [15:0] D;
-   wire [15:0] label11_PC;
-   wire [15:0] XLXN_234;
-   wire [15:0] XLXN_237;
-   wire [15:0] XLXN_238;
-   wire [15:0] XLXN_316;
-   wire XLXN_358;
-   wire [15:0] PC_out_DUMMY;
-   
-   assign XLXN_238 = 16'h0001;
-   assign XLXN_316 = 16'h0000;
-   assign PC_out[15:0] = PC_out_DUMMY[15:0];
-   FA_2s_16bits_MUSER_Complete_Datapath  XLXI_79 (.A(PC_out_DUMMY[15:0]), 
-                                                 .B(XLXN_234[15:0]), 
-                                                 .CTRL(XLXN_358), 
-                                                 .C_out(), 
-                                                 .S(XLXN_237[15:0]));
-   DFF_Reg_16bits_MUSER_Complete_Datapath  XLXI_80 (.CE(CE), 
-                                                   .clk(clk), 
-                                                   .D_0(D[0]), 
-                                                   .D_1(D[1]), 
-                                                   .D_2(D[2]), 
-                                                   .D_3(D[3]), 
-                                                   .D_4(D[4]), 
-                                                   .D_5(D[5]), 
-                                                   .D_6(D[6]), 
-                                                   .D_7(D[7]), 
-                                                   .D_8(D[8]), 
-                                                   .D_9(D[9]), 
-                                                   .D_10(D[10]), 
-                                                   .D_11(D[11]), 
-                                                   .D_12(D[12]), 
-                                                   .D_13(D[13]), 
-                                                   .D_14(D[14]), 
-                                                   .D_15(D[15]), 
-                                                   .Q_0(PC_out_DUMMY[0]), 
-                                                   .Q_1(PC_out_DUMMY[1]), 
-                                                   .Q_2(PC_out_DUMMY[2]), 
-                                                   .Q_3(PC_out_DUMMY[3]), 
-                                                   .Q_4(PC_out_DUMMY[4]), 
-                                                   .Q_5(PC_out_DUMMY[5]), 
-                                                   .Q_6(PC_out_DUMMY[6]), 
-                                                   .Q_7(PC_out_DUMMY[7]), 
-                                                   .Q_8(PC_out_DUMMY[8]), 
-                                                   .Q_9(PC_out_DUMMY[9]), 
-                                                   .Q_10(PC_out_DUMMY[10]), 
-                                                   .Q_11(PC_out_DUMMY[11]), 
-                                                   .Q_12(PC_out_DUMMY[12]), 
-                                                   .Q_13(PC_out_DUMMY[13]), 
-                                                   .Q_14(PC_out_DUMMY[14]), 
-                                                   .Q_15(PC_out_DUMMY[15]));
-   MUX4_1_16bits_MUSER_Complete_Datapath  XLXI_81 (.I0(XLXN_237[15:0]), 
-                                                  .I1(label11_PC[15:0]), 
-                                                  .I2(Rd_Rm[15:0]), 
-                                                  .I3(XLXN_316[15:0]), 
-                                                  .S(PC_sel[1:0]), 
-                                                  .O(D[15:0]));
-   MUX2_1_16bits_MUSER_Complete_Datapath  XLXI_82 (.I0(XLXN_238[15:0]), 
-                                                  .I1(PC_Label[15:0]), 
-                                                  .S(one_or_label), 
-                                                  .Output(XLXN_234[15:0]));
-   BUF  XLXI_149 (.I(label11[10]), 
-                 .O(label11_PC[10]));
-   BUF  XLXI_150 (.I(label11[9]), 
-                 .O(label11_PC[9]));
-   BUF  XLXI_151 (.I(label11[8]), 
-                 .O(label11_PC[8]));
-   BUF  XLXI_152 (.I(label11[7]), 
-                 .O(label11_PC[7]));
-   BUF  XLXI_153 (.I(label11[6]), 
-                 .O(label11_PC[6]));
-   BUF  XLXI_154 (.I(label11[5]), 
-                 .O(label11_PC[5]));
-   BUF  XLXI_155 (.I(label11[4]), 
-                 .O(label11_PC[4]));
-   BUF  XLXI_156 (.I(label11[3]), 
-                 .O(label11_PC[3]));
-   BUF  XLXI_157 (.I(PC_out_DUMMY[11]), 
-                 .O(label11_PC[11]));
-   BUF  XLXI_158 (.I(PC_out_DUMMY[12]), 
-                 .O(label11_PC[12]));
-   BUF  XLXI_159 (.I(PC_out_DUMMY[13]), 
-                 .O(label11_PC[13]));
-   BUF  XLXI_160 (.I(PC_out_DUMMY[14]), 
-                 .O(label11_PC[14]));
-   BUF  XLXI_161 (.I(PC_out_DUMMY[15]), 
-                 .O(label11_PC[15]));
-   BUF  XLXI_163 (.I(label11[2]), 
-                 .O(label11_PC[2]));
-   BUF  XLXI_164 (.I(label11[1]), 
-                 .O(label11_PC[1]));
-   BUF  XLXI_165 (.I(label11[0]), 
-                 .O(label11_PC[0]));
-   GND  XLXI_166 (.G(XLXN_358));
-endmodule
-`timescale 1ns / 1ps
-
-module Imm_Gen_MUSER_Complete_Datapath(Imm_Sel, 
-                                       Instr, 
-                                       Rd, 
-                                       Imm_Out);
-
-    input [1:0] Imm_Sel;
-    input [15:0] Instr;
-    input [15:0] Rd;
-   output [15:0] Imm_Out;
-   
-   wire [15:0] Imm5_SE;
-   wire [15:0] Imm8_Rd;
-   wire [15:0] Imm8_SE;
-   wire [15:0] Imm8_ZE;
-   wire [15:0] Instr_DUMMY;
-   wire [15:0] Rd_DUMMY;
-   
-   assign Instr_DUMMY[15:0] = Instr[15:0];
-   assign Rd_DUMMY[15:0] = Rd[15:0];
-   MUX4_1_16bits_MUSER_Complete_Datapath  XLXI_1 (.I0(Imm5_SE[15:0]), 
-                                                 .I1(Imm8_SE[15:0]), 
-                                                 .I2(Imm8_ZE[15:0]), 
-                                                 .I3(Imm8_Rd[15:0]), 
-                                                 .S(Imm_Sel[1:0]), 
-                                                 .O(Imm_Out[15:0]));
-   GND  XLXI_9 (.G(Instr_DUMMY[8]));
-   GND  XLXI_10 (.G(Instr_DUMMY[9]));
-   GND  XLXI_11 (.G(Instr_DUMMY[10]));
-   GND  XLXI_12 (.G(Instr_DUMMY[11]));
-   GND  XLXI_14 (.G(Instr_DUMMY[12]));
-   GND  XLXI_15 (.G(Instr_DUMMY[13]));
-   GND  XLXI_16 (.G(Instr_DUMMY[14]));
-   GND  XLXI_17 (.G(Instr_DUMMY[15]));
-   BUF  XLXI_18 (.I(Instr_DUMMY[7]), 
-                .O(Imm8_SE[7]));
-   BUF  XLXI_19 (.I(Instr_DUMMY[6]), 
-                .O(Imm8_SE[6]));
-   BUF  XLXI_20 (.I(Instr_DUMMY[5]), 
-                .O(Imm8_SE[5]));
-   BUF  XLXI_21 (.I(Instr_DUMMY[4]), 
-                .O(Imm8_SE[4]));
-   BUF  XLXI_22 (.I(Instr_DUMMY[3]), 
-                .O(Imm8_SE[3]));
-   BUF  XLXI_23 (.I(Instr_DUMMY[2]), 
-                .O(Imm8_SE[2]));
-   BUF  XLXI_24 (.I(Instr_DUMMY[1]), 
-                .O(Imm8_SE[1]));
-   BUF  XLXI_25 (.I(Instr_DUMMY[0]), 
-                .O(Imm8_SE[0]));
-   BUF  XLXI_42 (.I(Instr_DUMMY[7]), 
-                .O(Imm8_ZE[7]));
-   BUF  XLXI_43 (.I(Instr_DUMMY[6]), 
-                .O(Imm8_ZE[6]));
-   BUF  XLXI_44 (.I(Instr_DUMMY[5]), 
-                .O(Imm8_ZE[5]));
-   BUF  XLXI_45 (.I(Instr_DUMMY[4]), 
-                .O(Imm8_ZE[4]));
-   BUF  XLXI_46 (.I(Instr_DUMMY[3]), 
-                .O(Imm8_ZE[3]));
-   BUF  XLXI_47 (.I(Instr_DUMMY[2]), 
-                .O(Imm8_ZE[2]));
-   BUF  XLXI_48 (.I(Instr_DUMMY[1]), 
-                .O(Imm8_ZE[1]));
-   BUF  XLXI_49 (.I(Instr_DUMMY[0]), 
-                .O(Imm8_ZE[0]));
-   BUF  XLXI_50 (.I(Instr_DUMMY[0]), 
-                .O(Imm5_SE[0]));
-   BUF  XLXI_51 (.I(Instr_DUMMY[1]), 
-                .O(Imm5_SE[1]));
-   BUF  XLXI_52 (.I(Instr_DUMMY[2]), 
-                .O(Imm5_SE[2]));
-   BUF  XLXI_53 (.I(Instr_DUMMY[3]), 
-                .O(Imm5_SE[3]));
-   BUF  XLXI_54 (.I(Instr_DUMMY[4]), 
-                .O(Imm5_SE[4]));
-   BUF  XLXI_55 (.I(Instr_DUMMY[7]), 
-                .O(Imm8_SE[8]));
-   BUF  XLXI_56 (.I(Instr_DUMMY[7]), 
-                .O(Imm8_SE[9]));
-   BUF  XLXI_57 (.I(Instr_DUMMY[7]), 
-                .O(Imm8_SE[10]));
-   BUF  XLXI_58 (.I(Instr_DUMMY[7]), 
-                .O(Imm8_SE[11]));
-   BUF  XLXI_59 (.I(Instr_DUMMY[7]), 
-                .O(Imm8_SE[12]));
-   BUF  XLXI_60 (.I(Instr_DUMMY[7]), 
-                .O(Imm8_SE[13]));
-   BUF  XLXI_61 (.I(Instr_DUMMY[7]), 
-                .O(Imm8_SE[14]));
-   BUF  XLXI_62 (.I(Instr_DUMMY[7]), 
-                .O(Imm8_SE[15]));
-   GND  XLXI_63 (.G(Imm8_ZE[8]));
-   GND  XLXI_64 (.G(Imm8_ZE[9]));
-   GND  XLXI_65 (.G(Imm8_ZE[10]));
-   GND  XLXI_66 (.G(Imm8_ZE[11]));
-   GND  XLXI_67 (.G(Imm8_ZE[12]));
-   GND  XLXI_68 (.G(Imm8_ZE[13]));
-   GND  XLXI_69 (.G(Imm8_ZE[14]));
-   GND  XLXI_70 (.G(Imm8_ZE[15]));
-   BUF  XLXI_71 (.I(Instr_DUMMY[4]), 
-                .O(Imm5_SE[5]));
-   BUF  XLXI_72 (.I(Instr_DUMMY[4]), 
-                .O(Imm5_SE[6]));
-   BUF  XLXI_73 (.I(Instr_DUMMY[4]), 
-                .O(Imm5_SE[7]));
-   BUF  XLXI_74 (.I(Instr_DUMMY[4]), 
-                .O(Imm5_SE[8]));
-   BUF  XLXI_75 (.I(Instr_DUMMY[4]), 
-                .O(Imm5_SE[9]));
-   BUF  XLXI_76 (.I(Instr_DUMMY[4]), 
-                .O(Imm5_SE[10]));
-   BUF  XLXI_77 (.I(Instr_DUMMY[4]), 
-                .O(Imm5_SE[11]));
-   BUF  XLXI_78 (.I(Instr_DUMMY[4]), 
-                .O(Imm5_SE[12]));
-   BUF  XLXI_79 (.I(Instr_DUMMY[4]), 
-                .O(Imm5_SE[13]));
-   BUF  XLXI_80 (.I(Instr_DUMMY[4]), 
-                .O(Imm5_SE[14]));
-   BUF  XLXI_81 (.I(Instr_DUMMY[4]), 
-                .O(Imm5_SE[15]));
-   BUF  XLXI_83 (.I(Instr_DUMMY[7]), 
-                .O(Imm8_Rd[15]));
-   BUF  XLXI_84 (.I(Instr_DUMMY[6]), 
-                .O(Imm8_Rd[14]));
-   BUF  XLXI_85 (.I(Instr_DUMMY[5]), 
-                .O(Imm8_Rd[13]));
-   BUF  XLXI_86 (.I(Instr_DUMMY[4]), 
-                .O(Imm8_Rd[12]));
-   BUF  XLXI_87 (.I(Instr_DUMMY[3]), 
-                .O(Imm8_Rd[11]));
-   BUF  XLXI_88 (.I(Instr_DUMMY[2]), 
-                .O(Imm8_Rd[10]));
-   BUF  XLXI_89 (.I(Instr_DUMMY[1]), 
-                .O(Imm8_Rd[9]));
-   BUF  XLXI_90 (.I(Instr_DUMMY[0]), 
-                .O(Imm8_Rd[8]));
-   BUF  XLXI_91 (.I(Rd_DUMMY[7]), 
-                .O(Imm8_Rd[7]));
-   BUF  XLXI_92 (.I(Rd_DUMMY[6]), 
-                .O(Imm8_Rd[6]));
-   BUF  XLXI_93 (.I(Rd_DUMMY[5]), 
-                .O(Imm8_Rd[5]));
-   BUF  XLXI_94 (.I(Rd_DUMMY[4]), 
-                .O(Imm8_Rd[4]));
-   BUF  XLXI_95 (.I(Rd_DUMMY[3]), 
-                .O(Imm8_Rd[3]));
-   BUF  XLXI_96 (.I(Rd_DUMMY[2]), 
-                .O(Imm8_Rd[2]));
-   BUF  XLXI_97 (.I(Rd_DUMMY[1]), 
-                .O(Imm8_Rd[1]));
-   BUF  XLXI_98 (.I(Rd_DUMMY[0]), 
-                .O(Imm8_Rd[0]));
-   GND  XLXI_99 (.G(Rd_DUMMY[15]));
-   GND  XLXI_100 (.G(Rd_DUMMY[14]));
-   GND  XLXI_101 (.G(Rd_DUMMY[13]));
-   GND  XLXI_102 (.G(Rd_DUMMY[12]));
-   GND  XLXI_103 (.G(Rd_DUMMY[11]));
-   GND  XLXI_104 (.G(Rd_DUMMY[10]));
-   GND  XLXI_105 (.G(Rd_DUMMY[9]));
-   GND  XLXI_106 (.G(Rd_DUMMY[8]));
-endmodule
-`timescale 1ns / 1ps
-
 module ALU_16bits_MUSER_Complete_Datapath(A, 
                                           ALU_CTRL, 
                                           B, 
@@ -1146,7 +606,7 @@ module ALU_16bits_MUSER_Complete_Datapath(A,
                                               .C_in(ALU_CTRL), 
                                               .C_out(NZVC[0]), 
                                               .S(S_DUMMY[15:0]));
-   (* HU_SET = "XLXI_72_0" *) 
+   (* HU_SET = "XLXI_72_4" *) 
    NOR16_HXILINX_Complete_Datapath  XLXI_72 (.I0(S_DUMMY[0]), 
                                             .I1(S_DUMMY[1]), 
                                             .I2(S_DUMMY[2]), 
@@ -1175,6 +635,144 @@ module ALU_16bits_MUSER_Complete_Datapath(A,
                  .O(NZVC[1]));
    BUF  XLXI_77 (.I(S_DUMMY[15]), 
                 .O(NZVC[3]));
+endmodule
+`timescale 1ns / 1ps
+
+module DFF_Reg_16bits_MUSER_Complete_Datapath(CE, 
+                                              clk, 
+                                              D_0, 
+                                              D_1, 
+                                              D_2, 
+                                              D_3, 
+                                              D_4, 
+                                              D_5, 
+                                              D_6, 
+                                              D_7, 
+                                              D_8, 
+                                              D_9, 
+                                              D_10, 
+                                              D_11, 
+                                              D_12, 
+                                              D_13, 
+                                              D_14, 
+                                              D_15, 
+                                              Q_0, 
+                                              Q_1, 
+                                              Q_2, 
+                                              Q_3, 
+                                              Q_4, 
+                                              Q_5, 
+                                              Q_6, 
+                                              Q_7, 
+                                              Q_8, 
+                                              Q_9, 
+                                              Q_10, 
+                                              Q_11, 
+                                              Q_12, 
+                                              Q_13, 
+                                              Q_14, 
+                                              Q_15);
+
+    input CE;
+    input clk;
+    input D_0;
+    input D_1;
+    input D_2;
+    input D_3;
+    input D_4;
+    input D_5;
+    input D_6;
+    input D_7;
+    input D_8;
+    input D_9;
+    input D_10;
+    input D_11;
+    input D_12;
+    input D_13;
+    input D_14;
+    input D_15;
+   output Q_0;
+   output Q_1;
+   output Q_2;
+   output Q_3;
+   output Q_4;
+   output Q_5;
+   output Q_6;
+   output Q_7;
+   output Q_8;
+   output Q_9;
+   output Q_10;
+   output Q_11;
+   output Q_12;
+   output Q_13;
+   output Q_14;
+   output Q_15;
+   
+   
+   FDE #( .INIT(1'b0) ) XLXI_18 (.C(clk), 
+                .CE(CE), 
+                .D(D_15), 
+                .Q(Q_15));
+   FDE #( .INIT(1'b0) ) XLXI_19 (.C(clk), 
+                .CE(CE), 
+                .D(D_14), 
+                .Q(Q_14));
+   FDE #( .INIT(1'b0) ) XLXI_20 (.C(clk), 
+                .CE(CE), 
+                .D(D_13), 
+                .Q(Q_13));
+   FDE #( .INIT(1'b0) ) XLXI_21 (.C(clk), 
+                .CE(CE), 
+                .D(D_12), 
+                .Q(Q_12));
+   FDE #( .INIT(1'b0) ) XLXI_22 (.C(clk), 
+                .CE(CE), 
+                .D(D_11), 
+                .Q(Q_11));
+   FDE #( .INIT(1'b0) ) XLXI_23 (.C(clk), 
+                .CE(CE), 
+                .D(D_10), 
+                .Q(Q_10));
+   FDE #( .INIT(1'b0) ) XLXI_24 (.C(clk), 
+                .CE(CE), 
+                .D(D_9), 
+                .Q(Q_9));
+   FDE #( .INIT(1'b0) ) XLXI_25 (.C(clk), 
+                .CE(CE), 
+                .D(D_8), 
+                .Q(Q_8));
+   FDE #( .INIT(1'b0) ) XLXI_26 (.C(clk), 
+                .CE(CE), 
+                .D(D_7), 
+                .Q(Q_7));
+   FDE #( .INIT(1'b0) ) XLXI_27 (.C(clk), 
+                .CE(CE), 
+                .D(D_6), 
+                .Q(Q_6));
+   FDE #( .INIT(1'b0) ) XLXI_28 (.C(clk), 
+                .CE(CE), 
+                .D(D_5), 
+                .Q(Q_5));
+   FDE #( .INIT(1'b0) ) XLXI_29 (.C(clk), 
+                .CE(CE), 
+                .D(D_4), 
+                .Q(Q_4));
+   FDE #( .INIT(1'b0) ) XLXI_30 (.C(clk), 
+                .CE(CE), 
+                .D(D_3), 
+                .Q(Q_3));
+   FDE #( .INIT(1'b0) ) XLXI_31 (.C(clk), 
+                .CE(CE), 
+                .D(D_2), 
+                .Q(Q_2));
+   FDE #( .INIT(1'b0) ) XLXI_32 (.C(clk), 
+                .CE(CE), 
+                .D(D_1), 
+                .Q(Q_1));
+   FDE #( .INIT(1'b0) ) XLXI_33 (.C(clk), 
+                .CE(CE), 
+                .D(D_0), 
+                .Q(Q_0));
 endmodule
 `timescale 1ns / 1ps
 
@@ -1327,7 +925,7 @@ module MUX8_1_MUSER_Complete_Datapath(I0,
                 .O(XLXN_9));
    INV  XLXI_7 (.I(S1), 
                .O(XLXN_52));
-   (* HU_SET = "XLXI_8_1" *) 
+   (* HU_SET = "XLXI_8_5" *) 
    OR8_HXILINX_Complete_Datapath  XLXI_8 (.I0(XLXN_11), 
                                          .I1(XLXN_9), 
                                          .I2(XLXN_7), 
@@ -2403,13 +2001,11 @@ endmodule
 `timescale 1ns / 1ps
 
 module A_16bits_RF_plus_ALU_MUSER_Complete_Datapath(ALUOut_CE, 
-                                                    ALU_A_Sel, 
                                                     ALU_B_Sel, 
                                                     ALU_Control, 
                                                     clk, 
                                                     Imm_Sel, 
                                                     Instr, 
-                                                    PC_to_ALU_A, 
                                                     Rd, 
                                                     Rd_to_RF, 
                                                     RF_Write_en, 
@@ -2422,13 +2018,11 @@ module A_16bits_RF_plus_ALU_MUSER_Complete_Datapath(ALUOut_CE,
                                                     ReadA_data);
 
     input ALUOut_CE;
-    input ALU_A_Sel;
     input [1:0] ALU_B_Sel;
     input ALU_Control;
     input clk;
     input [1:0] Imm_Sel;
     input [15:0] Instr;
-    input [15:0] PC_to_ALU_A;
     input [15:0] Rd;
     input [2:0] Rd_to_RF;
     input RF_Write_en;
@@ -2440,20 +2034,17 @@ module A_16bits_RF_plus_ALU_MUSER_Complete_Datapath(ALUOut_CE,
    output [3:0] NZVC;
    output [15:0] ReadA_data;
    
-   wire [15:0] A;
    wire [15:0] ALU_S;
    wire [15:0] B;
-   wire [15:0] XLXN_78;
    wire [15:0] XLXN_79;
    wire [15:0] XLXN_94;
    wire [15:0] Imm_Out_DUMMY;
    wire [15:0] ReadA_data_DUMMY;
    
-   assign XLXN_78 = 16'h0000;
    assign XLXN_79 = 16'h0000;
    assign Imm_Out[15:0] = Imm_Out_DUMMY[15:0];
    assign ReadA_data[15:0] = ReadA_data_DUMMY[15:0];
-   ALU_16bits_MUSER_Complete_Datapath  ALU (.A(A[15:0]), 
+   ALU_16bits_MUSER_Complete_Datapath  ALU (.A(ReadA_data_DUMMY[15:0]), 
                                            .ALU_CTRL(ALU_Control), 
                                            .B(B[15:0]), 
                                            .NZVC(NZVC[3:0]), 
@@ -2492,14 +2083,9 @@ module A_16bits_RF_plus_ALU_MUSER_Complete_Datapath(ALUOut_CE,
                                                   .Q_13(ALU_Out[13]), 
                                                   .Q_14(ALU_Out[14]), 
                                                   .Q_15(ALU_Out[15]));
-   MUX2_1_16bits_MUSER_Complete_Datapath  DataA_MUX (.I0(PC_to_ALU_A[15:0]), 
-                                                    
-         .I1(ReadA_data_DUMMY[15:0]), 
-                                                    .S(ALU_A_Sel), 
-                                                    .Output(A[15:0]));
    MUX4_1_16bits_MUSER_Complete_Datapath  DataB_MUX (.I0(XLXN_94[15:0]), 
                                                     .I1(Imm_Out_DUMMY[15:0]), 
-                                                    .I2(XLXN_78[15:0]), 
+                                                    .I2(XLXN_79[15:0]), 
                                                     .I3(XLXN_79[15:0]), 
                                                     .S(ALU_B_Sel[1:0]), 
                                                     .O(B[15:0]));
@@ -2516,6 +2102,397 @@ module A_16bits_RF_plus_ALU_MUSER_Complete_Datapath(ALUOut_CE,
                                            .Instr(Instr[15:0]), 
                                            .Rd(Rd[15:0]), 
                                            .Imm_Out(Imm_Out_DUMMY[15:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module MUX2_1_MUSER_Complete_Datapath(I0, 
+                                      I1, 
+                                      S, 
+                                      Output);
+
+    input I0;
+    input I1;
+    input S;
+   output Output;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_7;
+   
+   AND2  XLXI_1 (.I0(XLXN_7), 
+                .I1(I0), 
+                .O(XLXN_1));
+   AND2  XLXI_2 (.I0(S), 
+                .I1(I1), 
+                .O(XLXN_2));
+   OR2  XLXI_3 (.I0(XLXN_2), 
+               .I1(XLXN_1), 
+               .O(Output));
+   INV  XLXI_4 (.I(S), 
+               .O(XLXN_7));
+endmodule
+`timescale 1ns / 1ps
+
+module MUX2_1_16bits_MUSER_Complete_Datapath(I0, 
+                                             I1, 
+                                             S, 
+                                             Output);
+
+    input [15:0] I0;
+    input [15:0] I1;
+    input S;
+   output [15:0] Output;
+   
+   
+   MUX2_1_MUSER_Complete_Datapath  XLXI_1 (.I0(I0[15]), 
+                                          .I1(I1[15]), 
+                                          .S(S), 
+                                          .Output(Output[15]));
+   MUX2_1_MUSER_Complete_Datapath  XLXI_2 (.I0(I0[14]), 
+                                          .I1(I1[14]), 
+                                          .S(S), 
+                                          .Output(Output[14]));
+   MUX2_1_MUSER_Complete_Datapath  XLXI_3 (.I0(I0[13]), 
+                                          .I1(I1[13]), 
+                                          .S(S), 
+                                          .Output(Output[13]));
+   MUX2_1_MUSER_Complete_Datapath  XLXI_4 (.I0(I0[12]), 
+                                          .I1(I1[12]), 
+                                          .S(S), 
+                                          .Output(Output[12]));
+   MUX2_1_MUSER_Complete_Datapath  XLXI_5 (.I0(I0[11]), 
+                                          .I1(I1[11]), 
+                                          .S(S), 
+                                          .Output(Output[11]));
+   MUX2_1_MUSER_Complete_Datapath  XLXI_6 (.I0(I0[10]), 
+                                          .I1(I1[10]), 
+                                          .S(S), 
+                                          .Output(Output[10]));
+   MUX2_1_MUSER_Complete_Datapath  XLXI_7 (.I0(I0[9]), 
+                                          .I1(I1[9]), 
+                                          .S(S), 
+                                          .Output(Output[9]));
+   MUX2_1_MUSER_Complete_Datapath  XLXI_8 (.I0(I0[8]), 
+                                          .I1(I1[8]), 
+                                          .S(S), 
+                                          .Output(Output[8]));
+   MUX2_1_MUSER_Complete_Datapath  XLXI_9 (.I0(I0[7]), 
+                                          .I1(I1[7]), 
+                                          .S(S), 
+                                          .Output(Output[7]));
+   MUX2_1_MUSER_Complete_Datapath  XLXI_10 (.I0(I0[6]), 
+                                           .I1(I1[6]), 
+                                           .S(S), 
+                                           .Output(Output[6]));
+   MUX2_1_MUSER_Complete_Datapath  XLXI_11 (.I0(I0[5]), 
+                                           .I1(I1[5]), 
+                                           .S(S), 
+                                           .Output(Output[5]));
+   MUX2_1_MUSER_Complete_Datapath  XLXI_12 (.I0(I0[4]), 
+                                           .I1(I1[4]), 
+                                           .S(S), 
+                                           .Output(Output[4]));
+   MUX2_1_MUSER_Complete_Datapath  XLXI_13 (.I0(I0[3]), 
+                                           .I1(I1[3]), 
+                                           .S(S), 
+                                           .Output(Output[3]));
+   MUX2_1_MUSER_Complete_Datapath  XLXI_14 (.I0(I0[2]), 
+                                           .I1(I1[2]), 
+                                           .S(S), 
+                                           .Output(Output[2]));
+   MUX2_1_MUSER_Complete_Datapath  XLXI_15 (.I0(I0[1]), 
+                                           .I1(I1[1]), 
+                                           .S(S), 
+                                           .Output(Output[1]));
+   MUX2_1_MUSER_Complete_Datapath  XLXI_16 (.I0(I0[0]), 
+                                           .I1(I1[0]), 
+                                           .S(S), 
+                                           .Output(Output[0]));
+endmodule
+`timescale 1ns / 1ps
+
+module MUX2_1_3bits_MUSER_Complete_Datapath(I0, 
+                                            I1, 
+                                            S, 
+                                            Output);
+
+    input [2:0] I0;
+    input [2:0] I1;
+    input S;
+   output [2:0] Output;
+   
+   
+   MUX2_1_MUSER_Complete_Datapath  XLXI_1 (.I0(I0[2]), 
+                                          .I1(I1[2]), 
+                                          .S(S), 
+                                          .Output(Output[2]));
+   MUX2_1_MUSER_Complete_Datapath  XLXI_2 (.I0(I0[1]), 
+                                          .I1(I1[1]), 
+                                          .S(S), 
+                                          .Output(Output[1]));
+   MUX2_1_MUSER_Complete_Datapath  XLXI_3 (.I0(I0[0]), 
+                                          .I1(I1[0]), 
+                                          .S(S), 
+                                          .Output(Output[0]));
+endmodule
+`timescale 1ns / 1ps
+
+module Instr_Parser_MUSER_Complete_Datapath(Instr_Input, 
+                                            ALU_Op, 
+                                            Label11, 
+                                            Opcode, 
+                                            Rd, 
+                                            Rm, 
+                                            Rn);
+
+    input [15:0] Instr_Input;
+   output [1:0] ALU_Op;
+   output [10:0] Label11;
+   output [4:0] Opcode;
+   output [2:0] Rd;
+   output [2:0] Rm;
+   output [2:0] Rn;
+   
+   
+   BUF  XLXI_3 (.I(Instr_Input[15]), 
+               .O(Opcode[4]));
+   BUF  XLXI_4 (.I(Instr_Input[14]), 
+               .O(Opcode[3]));
+   BUF  XLXI_5 (.I(Instr_Input[13]), 
+               .O(Opcode[2]));
+   BUF  XLXI_6 (.I(Instr_Input[12]), 
+               .O(Opcode[1]));
+   BUF  XLXI_7 (.I(Instr_Input[11]), 
+               .O(Opcode[0]));
+   BUF  XLXI_8 (.I(Instr_Input[10]), 
+               .O(Rd[2]));
+   BUF  XLXI_9 (.I(Instr_Input[9]), 
+               .O(Rd[1]));
+   BUF  XLXI_10 (.I(Instr_Input[8]), 
+                .O(Rd[0]));
+   BUF  XLXI_11 (.I(Instr_Input[7]), 
+                .O(Rm[2]));
+   BUF  XLXI_12 (.I(Instr_Input[6]), 
+                .O(Rm[1]));
+   BUF  XLXI_13 (.I(Instr_Input[5]), 
+                .O(Rm[0]));
+   BUF  XLXI_14 (.I(Instr_Input[4]), 
+                .O(Rn[2]));
+   BUF  XLXI_15 (.I(Instr_Input[3]), 
+                .O(Rn[1]));
+   BUF  XLXI_16 (.I(Instr_Input[2]), 
+                .O(Rn[0]));
+   BUF  XLXI_17 (.I(Instr_Input[1]), 
+                .O(ALU_Op[1]));
+   BUF  XLXI_18 (.I(Instr_Input[0]), 
+                .O(ALU_Op[0]));
+   BUF  XLXI_19 (.I(Instr_Input[10]), 
+                .O(Label11[10]));
+   BUF  XLXI_20 (.I(Instr_Input[9]), 
+                .O(Label11[9]));
+   BUF  XLXI_21 (.I(Instr_Input[8]), 
+                .O(Label11[8]));
+   BUF  XLXI_22 (.I(Instr_Input[7]), 
+                .O(Label11[7]));
+   BUF  XLXI_23 (.I(Instr_Input[6]), 
+                .O(Label11[6]));
+   BUF  XLXI_24 (.I(Instr_Input[5]), 
+                .O(Label11[5]));
+   BUF  XLXI_25 (.I(Instr_Input[4]), 
+                .O(Label11[4]));
+   BUF  XLXI_26 (.I(Instr_Input[3]), 
+                .O(Label11[3]));
+   BUF  XLXI_27 (.I(Instr_Input[2]), 
+                .O(Label11[2]));
+   BUF  XLXI_28 (.I(Instr_Input[1]), 
+                .O(Label11[1]));
+   BUF  XLXI_29 (.I(Instr_Input[0]), 
+                .O(Label11[0]));
+endmodule
+`timescale 1ns / 1ps
+
+module FA_2s_16bits_MUSER_Complete_Datapath(A, 
+                                            B, 
+                                            CTRL, 
+                                            C_out, 
+                                            S);
+
+    input [15:0] A;
+    input [15:0] B;
+    input CTRL;
+   output C_out;
+   output [15:0] S;
+   
+   wire [15:0] Bs;
+   
+   XOR2  XLXI_2 (.I0(CTRL), 
+                .I1(B[15]), 
+                .O(Bs[15]));
+   XOR2  XLXI_3 (.I0(CTRL), 
+                .I1(B[14]), 
+                .O(Bs[14]));
+   XOR2  XLXI_4 (.I0(CTRL), 
+                .I1(B[13]), 
+                .O(Bs[13]));
+   XOR2  XLXI_5 (.I0(CTRL), 
+                .I1(B[12]), 
+                .O(Bs[12]));
+   XOR2  XLXI_6 (.I0(CTRL), 
+                .I1(B[11]), 
+                .O(Bs[11]));
+   XOR2  XLXI_7 (.I0(CTRL), 
+                .I1(B[10]), 
+                .O(Bs[10]));
+   XOR2  XLXI_8 (.I0(CTRL), 
+                .I1(B[9]), 
+                .O(Bs[9]));
+   XOR2  XLXI_9 (.I0(CTRL), 
+                .I1(B[8]), 
+                .O(Bs[8]));
+   XOR2  XLXI_11 (.I0(CTRL), 
+                 .I1(B[7]), 
+                 .O(Bs[7]));
+   XOR2  XLXI_12 (.I0(CTRL), 
+                 .I1(B[6]), 
+                 .O(Bs[6]));
+   XOR2  XLXI_13 (.I0(CTRL), 
+                 .I1(B[5]), 
+                 .O(Bs[5]));
+   XOR2  XLXI_14 (.I0(CTRL), 
+                 .I1(B[4]), 
+                 .O(Bs[4]));
+   XOR2  XLXI_15 (.I0(CTRL), 
+                 .I1(B[3]), 
+                 .O(Bs[3]));
+   XOR2  XLXI_16 (.I0(CTRL), 
+                 .I1(B[2]), 
+                 .O(Bs[2]));
+   XOR2  XLXI_17 (.I0(CTRL), 
+                 .I1(B[1]), 
+                 .O(Bs[1]));
+   XOR2  XLXI_18 (.I0(CTRL), 
+                 .I1(B[0]), 
+                 .O(Bs[0]));
+   FA_16bits_MUSER_Complete_Datapath  XLXI_19 (.A(A[15:0]), 
+                                              .B(Bs[15:0]), 
+                                              .C_in(CTRL), 
+                                              .C_out(C_out), 
+                                              .S(S[15:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module PC_MUSER_Complete_Datapath(CE, 
+                                  clk, 
+                                  label11, 
+                                  one_or_label, 
+                                  PC_Label, 
+                                  PC_sel, 
+                                  Rd_Rm, 
+                                  PC_out);
+
+    input CE;
+    input clk;
+    input [10:0] label11;
+    input one_or_label;
+    input [15:0] PC_Label;
+    input [1:0] PC_sel;
+    input [15:0] Rd_Rm;
+   output [15:0] PC_out;
+   
+   wire [15:0] D;
+   wire [15:0] label11_PC;
+   wire [15:0] XLXN_234;
+   wire [15:0] XLXN_237;
+   wire [15:0] XLXN_238;
+   wire [15:0] XLXN_316;
+   wire XLXN_358;
+   wire [15:0] PC_out_DUMMY;
+   
+   assign XLXN_238 = 16'h0001;
+   assign XLXN_316 = 16'h0000;
+   assign PC_out[15:0] = PC_out_DUMMY[15:0];
+   FA_2s_16bits_MUSER_Complete_Datapath  XLXI_79 (.A(PC_out_DUMMY[15:0]), 
+                                                 .B(XLXN_234[15:0]), 
+                                                 .CTRL(XLXN_358), 
+                                                 .C_out(), 
+                                                 .S(XLXN_237[15:0]));
+   DFF_Reg_16bits_MUSER_Complete_Datapath  XLXI_80 (.CE(CE), 
+                                                   .clk(clk), 
+                                                   .D_0(D[0]), 
+                                                   .D_1(D[1]), 
+                                                   .D_2(D[2]), 
+                                                   .D_3(D[3]), 
+                                                   .D_4(D[4]), 
+                                                   .D_5(D[5]), 
+                                                   .D_6(D[6]), 
+                                                   .D_7(D[7]), 
+                                                   .D_8(D[8]), 
+                                                   .D_9(D[9]), 
+                                                   .D_10(D[10]), 
+                                                   .D_11(D[11]), 
+                                                   .D_12(D[12]), 
+                                                   .D_13(D[13]), 
+                                                   .D_14(D[14]), 
+                                                   .D_15(D[15]), 
+                                                   .Q_0(PC_out_DUMMY[0]), 
+                                                   .Q_1(PC_out_DUMMY[1]), 
+                                                   .Q_2(PC_out_DUMMY[2]), 
+                                                   .Q_3(PC_out_DUMMY[3]), 
+                                                   .Q_4(PC_out_DUMMY[4]), 
+                                                   .Q_5(PC_out_DUMMY[5]), 
+                                                   .Q_6(PC_out_DUMMY[6]), 
+                                                   .Q_7(PC_out_DUMMY[7]), 
+                                                   .Q_8(PC_out_DUMMY[8]), 
+                                                   .Q_9(PC_out_DUMMY[9]), 
+                                                   .Q_10(PC_out_DUMMY[10]), 
+                                                   .Q_11(PC_out_DUMMY[11]), 
+                                                   .Q_12(PC_out_DUMMY[12]), 
+                                                   .Q_13(PC_out_DUMMY[13]), 
+                                                   .Q_14(PC_out_DUMMY[14]), 
+                                                   .Q_15(PC_out_DUMMY[15]));
+   MUX4_1_16bits_MUSER_Complete_Datapath  XLXI_81 (.I0(XLXN_237[15:0]), 
+                                                  .I1(label11_PC[15:0]), 
+                                                  .I2(Rd_Rm[15:0]), 
+                                                  .I3(XLXN_316[15:0]), 
+                                                  .S(PC_sel[1:0]), 
+                                                  .O(D[15:0]));
+   MUX2_1_16bits_MUSER_Complete_Datapath  XLXI_82 (.I0(XLXN_238[15:0]), 
+                                                  .I1(PC_Label[15:0]), 
+                                                  .S(one_or_label), 
+                                                  .Output(XLXN_234[15:0]));
+   BUF  XLXI_149 (.I(label11[10]), 
+                 .O(label11_PC[10]));
+   BUF  XLXI_150 (.I(label11[9]), 
+                 .O(label11_PC[9]));
+   BUF  XLXI_151 (.I(label11[8]), 
+                 .O(label11_PC[8]));
+   BUF  XLXI_152 (.I(label11[7]), 
+                 .O(label11_PC[7]));
+   BUF  XLXI_153 (.I(label11[6]), 
+                 .O(label11_PC[6]));
+   BUF  XLXI_154 (.I(label11[5]), 
+                 .O(label11_PC[5]));
+   BUF  XLXI_155 (.I(label11[4]), 
+                 .O(label11_PC[4]));
+   BUF  XLXI_156 (.I(label11[3]), 
+                 .O(label11_PC[3]));
+   BUF  XLXI_157 (.I(PC_out_DUMMY[11]), 
+                 .O(label11_PC[11]));
+   BUF  XLXI_158 (.I(PC_out_DUMMY[12]), 
+                 .O(label11_PC[12]));
+   BUF  XLXI_159 (.I(PC_out_DUMMY[13]), 
+                 .O(label11_PC[13]));
+   BUF  XLXI_160 (.I(PC_out_DUMMY[14]), 
+                 .O(label11_PC[14]));
+   BUF  XLXI_161 (.I(PC_out_DUMMY[15]), 
+                 .O(label11_PC[15]));
+   BUF  XLXI_163 (.I(label11[2]), 
+                 .O(label11_PC[2]));
+   BUF  XLXI_164 (.I(label11[1]), 
+                 .O(label11_PC[1]));
+   BUF  XLXI_165 (.I(label11[0]), 
+                 .O(label11_PC[0]));
+   GND  XLXI_166 (.G(XLXN_358));
 endmodule
 `timescale 1ns / 1ps
 
@@ -2924,7 +2901,6 @@ endmodule
 `timescale 1ns / 1ps
 
 module Complete_Datapath(ALUOut_Reg_CE, 
-                         ALU_A_Sel, 
                          ALU_B_Sel, 
                          ALU_Control, 
                          clk, 
@@ -2932,6 +2908,7 @@ module Complete_Datapath(ALUOut_Reg_CE,
                          Ext_MemW_Data, 
                          Ext_Mem_Addr, 
                          Imm_Sel, 
+                         MemDataReg_CE, 
                          MemW_Data_Sel, 
                          MemW_en, 
                          Mem_Addr_Sel, 
@@ -2952,13 +2929,13 @@ module Complete_Datapath(ALUOut_Reg_CE,
                          Opcode, 
                          Out_R, 
                          PC_Label11, 
+                         PC_out, 
                          Rd_Addr, 
                          Rm_Addr, 
                          Rn_Addr, 
                          Z_Reg);
 
     input ALUOut_Reg_CE;
-    input ALU_A_Sel;
     input [1:0] ALU_B_Sel;
     input ALU_Control;
     input clk;
@@ -2966,6 +2943,7 @@ module Complete_Datapath(ALUOut_Reg_CE,
     input [15:0] Ext_MemW_Data;
     input [15:0] Ext_Mem_Addr;
     input [1:0] Imm_Sel;
+    input MemDataReg_CE;
     input MemW_Data_Sel;
     input MemW_en;
     input Mem_Addr_Sel;
@@ -2986,19 +2964,18 @@ module Complete_Datapath(ALUOut_Reg_CE,
    output [4:0] Opcode;
    output [15:0] Out_R;
    output [10:0] PC_Label11;
+   output [15:0] PC_out;
    output [2:0] Rd_Addr;
    output [2:0] Rm_Addr;
    output [2:0] Rn_Addr;
    output Z_Reg;
    
    wire [15:0] ALU_Out;
-   wire MemDataReg_CE;
    wire [15:0] MemR_Data;
    wire [15:0] MemW_Data;
    wire [7:0] MemW_Data_b;
    wire [15:8] MemW_Data_f;
    wire [3:0] NZVC;
-   wire [15:0] PC_out;
    wire [15:0] Rd_Reg;
    wire [15:0] ReadA_Data;
    wire [2:0] Rm_Rd_Addr;
@@ -3010,11 +2987,13 @@ module Complete_Datapath(ALUOut_Reg_CE,
    wire [2:0] Rm_Addr_DUMMY;
    wire [2:0] Rn_Addr_DUMMY;
    wire [10:0] PC_Label11_DUMMY;
+   wire [15:0] PC_out_DUMMY;
    wire [2:0] Rd_Addr_DUMMY;
    
    assign Imm_Out[15:0] = Imm_Out_DUMMY[15:0];
    assign Mem_Data_Reg[15:0] = Mem_Data_Reg_DUMMY[15:0];
    assign PC_Label11[10:0] = PC_Label11_DUMMY[10:0];
+   assign PC_out[15:0] = PC_out_DUMMY[15:0];
    assign Rd_Addr[2:0] = Rd_Addr_DUMMY[2:0];
    assign Rm_Addr[2:0] = Rm_Addr_DUMMY[2:0];
    assign Rn_Addr[2:0] = Rn_Addr_DUMMY[2:0];
@@ -3121,7 +3100,7 @@ module Complete_Datapath(ALUOut_Reg_CE,
                                                    .Q_13(Out_R[13]), 
                                                    .Q_14(Out_R[14]), 
                                                    .Q_15(Out_R[15]));
-   MUX2_1_16bits_MUSER_Complete_Datapath  PC_or_ALU (.I0(PC_out[15:0]), 
+   MUX2_1_16bits_MUSER_Complete_Datapath  PC_or_ALU (.I0(PC_out_DUMMY[15:0]), 
                                                     .I1(ALU_Out[15:0]), 
                                                     .S(PC_ALU_Sel), 
                                                     .Output(XLXN_227[15:0]));
@@ -3132,7 +3111,7 @@ module Complete_Datapath(ALUOut_Reg_CE,
                                    .PC_Label(Imm_Out_DUMMY[15:0]), 
                                    .PC_sel(PC_Sel[1:0]), 
                                    .Rd_Rm(Rd_Reg[15:0]), 
-                                   .PC_out(PC_out[15:0]));
+                                   .PC_out(PC_out_DUMMY[15:0]));
    MUX2_1_3bits_MUSER_Complete_Datapath  Rd_Rm_Src (.I0(Rd_Addr_DUMMY[2:0]), 
                                                    .I1(Rm_Addr_DUMMY[2:0]), 
                                                    .S(Rd_Rm_Sel), 
@@ -3177,42 +3156,12 @@ module Complete_Datapath(ALUOut_Reg_CE,
                                                           .Q_13(Rd_Reg[13]), 
                                                           .Q_14(Rd_Reg[14]), 
                                                           .Q_15(Rd_Reg[15]));
-   A_16bits_RF_plus_ALU_MUSER_Complete_Datapath  RF_ALU 
-         (.ALUOut_CE(ALUOut_Reg_CE), 
-                                                        .ALU_A_Sel(ALU_A_Sel), 
-                                                        
-         .ALU_B_Sel(ALU_B_Sel[1:0]), 
-                                                        
-         .ALU_Control(ALU_Control), 
-                                                        .clk(clk), 
-                                                        .Imm_Sel(Imm_Sel[1:0]), 
-                                                        
-         .Instr(Mem_Data_Reg_DUMMY[15:0]), 
-                                                        
-         .PC_to_ALU_A(PC_out[15:0]), 
-                                                        .Rd(Rd_Reg[15:0]), 
-                                                        
-         .Rd_to_RF(Rd_Addr_DUMMY[2:0]), 
-                                                        
-         .RF_Write_en(RF_Write_en), 
-                                                        
-         .Rm_Rd_to_RF(Rm_Rd_Addr[2:0]), 
-                                                        
-         .Rn_to_RF(Rn_Addr_DUMMY[2:0]), 
-                                                        
-         .Write_Data(XLXN_142[15:0]), 
-                                                        
-         .ALU_Out(ALU_Out[15:0]), 
-                                                        
-         .Imm_Out(Imm_Out_DUMMY[15:0]), 
-                                                        .NZVC(NZVC[3:0]), 
-                                                        
-         .ReadA_data(ReadA_Data[15:0]));
    MUX4_1_16bits_MUSER_Complete_Datapath  Write_Data_MUX (.I0(MemR_Data[15:0]), 
                                                          
          .I1(Imm_Out_DUMMY[15:0]), 
                                                          .I2(ALU_Out[15:0]), 
-                                                         .I3(PC_out[15:0]), 
+                                                         
+         .I3(PC_out_DUMMY[15:0]), 
                                                          
          .S(RF_Write_Data_Sel[1:0]), 
                                                          .O(XLXN_142[15:0]));
@@ -3222,7 +3171,6 @@ module Complete_Datapath(ALUOut_Reg_CE,
                                                .MemW_en(MemW_en), 
                                                .Mem_Addr(XLXN_228[15:0]), 
                                                .MemR_Data(MemR_Data[15:0]));
-   VCC  XLXI_26 (.P(MemDataReg_CE));
    FDE #( .INIT(1'b0) ) XLXI_33 (.C(clk), 
                 .CE(Z_CE), 
                 .D(NZVC[2]), 
@@ -3263,4 +3211,33 @@ module Complete_Datapath(ALUOut_Reg_CE,
                 .O(MemW_Data_b[1]));
    BUF  XLXI_61 (.I(MemW_Data[0]), 
                 .O(MemW_Data_b[0]));
+   A_16bits_RF_plus_ALU_MUSER_Complete_Datapath  XLXI_62 
+         (.ALUOut_CE(ALUOut_Reg_CE), 
+                                                         
+         .ALU_B_Sel(ALU_B_Sel[1:0]), 
+                                                         
+         .ALU_Control(ALU_Control), 
+                                                         .clk(clk), 
+                                                         
+         .Imm_Sel(Imm_Sel[1:0]), 
+                                                         
+         .Instr(Mem_Data_Reg_DUMMY[15:0]), 
+                                                         .Rd(Rd_Reg[15:0]), 
+                                                         
+         .Rd_to_RF(Rd_Addr_DUMMY[2:0]), 
+                                                         
+         .RF_Write_en(RF_Write_en), 
+                                                         
+         .Rm_Rd_to_RF(Rm_Rd_Addr[2:0]), 
+                                                         
+         .Rn_to_RF(Rn_Addr_DUMMY[2:0]), 
+                                                         
+         .Write_Data(XLXN_142[15:0]), 
+                                                         
+         .ALU_Out(ALU_Out[15:0]), 
+                                                         
+         .Imm_Out(Imm_Out_DUMMY[15:0]), 
+                                                         .NZVC(NZVC[3:0]), 
+                                                         
+         .ReadA_data(ReadA_Data[15:0]));
 endmodule
