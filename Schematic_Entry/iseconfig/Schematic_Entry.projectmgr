@@ -82,12 +82,14 @@
          <ClosedNode>/Mem_256x16 |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Mem_256x16.sch/XLXI_21 - MUX8_1_16bits</ClosedNode>
          <ClosedNode>/PC |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|PC.sch</ClosedNode>
       </ClosedNodes>
-      <SelectedItems/>
+      <SelectedItems>
+         <SelectedItem>Complete_Datapath (/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Complete_Datapath.sch)</SelectedItem>
+      </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001df000000020000000000000000000000000200000064ffffffff000000810000000300000002000001df0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>XLXI_1 - Imm_Gen (/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Imm_Gen.sch)</CurrentItem>
+      <CurrentItem>Complete_Datapath (/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Schematic_Entry/Complete_Datapath.sch)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_SCHEMATIC" guiview="Process" >
       <ClosedNodes>
@@ -162,7 +164,14 @@
          <ClosedNode>/A_16bits_RF_plus_ALU |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|A_16bits_RF_plus_ALU.sch</ClosedNode>
          <ClosedNode>/A_16bits_RF_plus_ALU_A_16bits_RF_plus_ALU_sch_tb |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|A_16bits_RF_plus_ALU_tb.v</ClosedNode>
          <ClosedNode>/Complete_Datapath |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath.sch</ClosedNode>
-         <ClosedNode>/Complete_Datapath_Complete_Datapath_sch_tb |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath_tb.v</ClosedNode>
+         <ClosedNode>/Complete_Datapath_Complete_Datapath_sch_tb |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath_tb.v/UUT - Complete_Datapath/MemW_Data_Src - MUX2_1_16bits</ClosedNode>
+         <ClosedNode>/Complete_Datapath_Complete_Datapath_sch_tb |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath_tb.v/UUT - Complete_Datapath/Mem_Addr_Src - MUX2_1_16bits</ClosedNode>
+         <ClosedNode>/Complete_Datapath_Complete_Datapath_sch_tb |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath_tb.v/UUT - Complete_Datapath/PC1 - PC</ClosedNode>
+         <ClosedNode>/Complete_Datapath_Complete_Datapath_sch_tb |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath_tb.v/UUT - Complete_Datapath/PC_or_ALU - MUX2_1_16bits</ClosedNode>
+         <ClosedNode>/Complete_Datapath_Complete_Datapath_sch_tb |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath_tb.v/UUT - Complete_Datapath/RF_ALU - A_16bits_RF_plus_ALU</ClosedNode>
+         <ClosedNode>/Complete_Datapath_Complete_Datapath_sch_tb |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath_tb.v/UUT - Complete_Datapath/Rd_Rm_Src - MUX2_1_3bits</ClosedNode>
+         <ClosedNode>/Complete_Datapath_Complete_Datapath_sch_tb |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath_tb.v/UUT - Complete_Datapath/Write_Data_MUX - MUX4_1_16bits</ClosedNode>
+         <ClosedNode>/Complete_Datapath_Complete_Datapath_sch_tb |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Complete_Datapath_tb.v/UUT - Complete_Datapath/XLXI_25 - Mem_256x16</ClosedNode>
          <ClosedNode>/D3_8E_D3_8E_sch_tb |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|D3_8E_tb.v</ClosedNode>
          <ClosedNode>/DFF_Reg_16bits_DFF_Reg_16bits_sch_tb |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|DFF_Reg_16bits_tb.v</ClosedNode>
          <ClosedNode>/Eight_Reg_16bits |home|ise|ISE|Multiple_Cycle_16_Bit_RISC_Computer|Schematic_Entry|Eight_Reg_16bits.sch</ClosedNode>
@@ -238,13 +247,13 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000026e000000010000000100000000000000000000000064ffffffff0000008100000000000000010000026e0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="ManualCompile" >
       <ClosedNodes>
