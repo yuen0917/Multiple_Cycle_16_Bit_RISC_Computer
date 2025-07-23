@@ -10,22 +10,22 @@ module Complete_Datapath_Complete_Datapath_sch_tb();
    reg [1:0] PC_Sel;            // PC Select, 00: PC+(1 or Label), 01: PC[10:0] = PC_Label11, 10: PC = (Rd or Rm), 11: PC = 0
    reg clk;                     // Clock
    reg PC_ALU_Sel;              // PC ALU Select, 0: PC_Out, 1: ALU_Out
-   reg Z_CE;                    // Z Register Clock Enable, 0: No Change, 1: Clock Enable
-   reg C_CE;                    // C Register Clock Enable, 0: No Change, 1: Clock Enable
+   reg Z_CE;                    // Zero Flag Register Clock Enable, 0: No Change, 1: Clock Enable
+   reg C_CE;                    // Carry Flag Register Clock Enable, 0: No Change, 1: Clock Enable
    reg [1:0] RF_Write_Data_Sel; // RF Write Data Select, 00: MemR_Data, 01: Imm_Out, 10: ALU_Out, 11: PC_Out
    reg Rd_Reg_CE;               // Rd Register(ReadA_Data) Clock Enable, 0: No Change, 1: Clock Enable
    reg [1:0] Imm_Sel;           // Imm_Out Select, 00: {11{1'b0}, Imm5}, 01: {Imm8(7)*9, Imm8[6:0]}, 10: {8{1'b0}, Imm8}, 11: {Imm8, Rd[7:0]}
    reg ALUOut_Reg_CE;           // ALU_Out Register Clock Enable, 0: No Change, 1: Clock Enable
-   reg [1:0] ALU_B_Sel;
-   reg ALU_Control;
-   reg RF_Write_en;
-   reg Out_R_CE;
-   reg Rd_Rm_Sel;
-   reg [15:0] Ext_Mem_Addr;
-   reg Mem_Addr_Sel;
-   reg [15:0] Ext_MemW_Data;
-   reg MemW_Data_Sel;
-   reg PC_CE;
+   reg [1:0] ALU_B_Sel;         // ALU B Select, 00: ReadB_Data, 01: Imm_Out, 10: 0, 11: 0
+   reg ALU_Control;             // ALU Control, 0: ADD, 1: SUB
+   reg RF_Write_en;             // RF Write Enable, 0: No Write, 1: Write
+   reg Out_R_CE;                // OutR Register Clock Enable(for testbench), 0: No Change, 1: Clock Enable
+   reg Rd_Rm_Sel;               // Rd or Rm Select, 0: Rd, 1: Rm
+   reg [15:0] Ext_Mem_Addr;     // External Memory Address(for testbench)
+   reg Mem_Addr_Sel;            // Memory Address Select, 0: PC or ALU Output, 1: Ext_Mem_Addr
+   reg [15:0] Ext_MemW_Data;    // External Memory Write Data(for testbench)
+   reg MemW_Data_Sel;           // Memory Write Data Select, 0: ReadA_Data, 1: Ext_MemW_Data
+   reg PC_CE;                   // PC Register Clock Enable, 0: No Change, 1: Clock Enable
 
 
 
@@ -206,23 +206,23 @@ module Complete_Datapath_Complete_Datapath_sch_tb();
 	////////////////////////////////////////////////
 	// tasks
 	////////////////////////////////////////////////
-	// task to write to memory
-	task write_mem(
+
+	task write_mem( // task to write to memory
 		input [15:0] addr,
 		input [15:0] data
 	);
 	begin
 		@(posedge clk) #10 begin
-			Mem_Addr_Sel = 1'b1;
-			MemW_Data_Sel = 1'b1;
-			MemW_en = 1'b1;
+			Mem_Addr_Sel = 1'b1; // 1: Ext_Mem_Addr
+			MemW_Data_Sel = 1'b1; // 1: Ext_MemW_Data
+			MemW_en = 1'b1; // 1: Write
 			Ext_Mem_Addr = addr;
 			Ext_MemW_Data = data;
 		end
 	end
 	endtask
 
-  task PC_plus_1_cmd;
+  task PC_plus_1_cmd; // task to increment PC by 1
 		begin
 			PC_Add_Src = 1'b0;
 			PC_Sel = 2'b00;
@@ -231,38 +231,131 @@ module Complete_Datapath_Complete_Datapath_sch_tb();
 			PC_CE = 1'b1;
 			#PERIOD;
 			PC_CE = 1'b0;
-			$display("PC_plus_1: %h", PC_Out);
+			$display("PC_plus_1 completed: %h", PC_Out);
 		end
 	endtask
 
-	task LHI_cmd;
+  task PC_reset_cmd; // task to reset PC to 0
 		begin
-
+			PC_Sel = 2'b11; // 11: PC = 0
+			PC_CE = 1'b1;
+			#PERIOD;
+			PC_CE = 1'b0;
+			$display("PC_reset completed: %h", PC_Out);
 		end
 	endtask
 
-	task LLI_cmd;
+	task LHI_cmd; // LHI Rd,#imm8 | Rd ← {imm8, Rd[7:0]}
 		begin
+			Imm_Sel = 2'b11; // {Imm8, Rd[7:0]}
+			RF_Write_Data_Sel = 2'b01; // 01: Imm_Out
+      RF_Write_en = 1'b1; // 1: Write
+			#PERIOD;
+			RF_Write_en = 1'b0;
+			$display("LHI completed");
 		end
 	endtask
 
-	task LDR_cmd;
+	task LLI_cmd; // LLI Rd,#imm8 | Rd ← {8’h0, imm8}
 		begin
+			Imm_Sel = 2'b10; // {8{1'b0}, Imm8}
+			RF_Write_Data_Sel = 2'b01; // 01: Imm_Out
+			RF_Write_en = 1'b1; // 1: Write
+			#PERIOD;
+			RF_Write_en = 1'b0;
+			$display("LLI completed");
 		end
 	endtask
 
-	task STR_cmd;
+	task LDR_cmd(
+		input [4:0] opcode
+	); // LDR Rd,[Rm,#imm5] | Rd ← Mem[Rm + imm5] or LDR Rd,[Rm,Rn] | Rd ← Mem[Rm + Rn]
 		begin
+			// Rm
+			Imm_Sel = 2'b00; // {11{1'b0}, Imm5}
+			Rd_Rm_Sel = 1'b1; // 1: Rm
+			if (opcode == 5'b00011) begin // LDR Rd,[Rm,#imm5] | Rd ← Mem[Rm + imm5]
+			  ALU_B_Sel = 2'b01; // 01: Imm_Out
+			end else if (opcode == 5'b00100) begin // LDR Rd,[Rm,Rn] | Rd ← Mem[Rm + Rn]
+				ALU_B_Sel = 2'b00; // 00: ReadB_Data(Rn)
+			end
+			ALU_Control = 1'b0; // 0: ADD
+			ALUOut_Reg_CE = 1'b1; // 1: Clock Enable
+			#PERIOD;
+			ALUOut_Reg_CE = 1'b0;
+
+			// Find MemR_Data data and write to Rd address
+			PC_ALU_Sel = 1'b1;         // 1: ALU_Out
+			Mem_Addr_Sel = 1'b0;       // 0: PC or ALU Output
+			RF_Write_Data_Sel = 2'b00; // 00: MemR_Data
+			RF_Write_en = 1'b1;        // 1: Write
+			#PERIOD;
+			RF_Write_en = 1'b0;
+			$display("LDR completed");
 		end
 	endtask
 
-	task ADD_cmd;
+	task STR_cmd(
+		input [4:0] opcode
+	); // STR Rd,[Rm,#imm5] | Mem[Rm + imm5] ← Rd or STR Rd,[Rm,Rn] | Mem[Rm + Rn] ← Rd
 		begin
+			// Rm + imm5 or Rm + Rn
+			Imm_Sel = 2'b00; // {11{1'b0}, Imm5}
+			Rd_Rm_Sel = 1'b1; // 1: Rm
+			if (opcode == 5'b00101) begin // STR Rd,[Rm,#imm5] | Mem[Rm + imm5] ← Rd
+				ALU_B_Sel = 2'b01; // 01: Imm_Out
+			end else if (opcode == 5'b00110) begin // STR Rd,[Rm,Rn] | Mem[Rm + Rn] ← Rd
+				ALU_B_Sel = 2'b00; // 00: ReadB_Data(Rn)
+			end
+			ALU_Control = 1'b0; // 0: ADD
+			ALUOut_Reg_CE = 1'b1; // 1: Clock Enable
+			#PERIOD;
+			ALUOut_Reg_CE = 1'b0;
+
+			// Find Rd data and write to Mem address
+			PC_ALU_Sel = 1'b1;         // 1: ALU_Out
+			Mem_Addr_Sel = 1'b0;       // 0: PC or ALU Output
+			MemW_Data_Sel = 1'b0;      // 0: ReadA_Data(Rd)
+			MemW_en = 1'b1;            // 1: Write
+			#PERIOD;
+			MemW_en = 1'b0;
+			$display("STR completed");
 		end
 	endtask
 
-	task ADC_cmd;
+	task ADD_cmd; // ADD Rd,Rm,Rn | Rd ← Rm + Rn
 		begin
+			// Rm + Rn
+			ALU_B_Sel = 2'b00; // 00: ReadB_Data(Rn)
+			ALU_Control = 1'b0; // 0: ADD
+			ALUOut_Reg_CE = 1'b1; // 1: Clock Enable
+			#PERIOD;
+			ALUOut_Reg_CE = 1'b0;
+
+      // Find ALU_Out data and write to Rd address
+			RF_Write_Data_Sel = 2'b10; // 10: ALU_Out
+			RF_Write_en = 1'b1;        // 1: Write
+			#PERIOD;
+			RF_Write_en = 1'b0;
+			$display("ADD completed");
+		end
+	endtask
+
+	task ADC_cmd; // ADC Rd,Rm,Rn | Rd ← Rm + Rn + C
+		begin
+			// Rm + Rn + C
+			ALU_B_Sel = 2'b00; // 00: ReadB_Data(Rn)
+			ALU_Control = 1'b0; // 0: ADD
+			ALUOut_Reg_CE = 1'b1; // 1: Clock Enable
+			#PERIOD;
+			ALUOut_Reg_CE = 1'b0;
+
+			// Find ALU_Out data and write to Rd address
+			RF_Write_Data_Sel = 2'b10; // 10: ALU_Out
+			RF_Write_en = 1'b1;        // 1: Write
+			#PERIOD;
+			RF_Write_en = 1'b0;
+			$display("ADC completed");
 		end
 	endtask
 
