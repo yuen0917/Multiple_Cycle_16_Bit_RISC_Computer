@@ -13,7 +13,7 @@ module A_16bits_RF_plus_ALU_A_16bits_RF_plus_ALU_sch_tb();
    reg [2:0] Rd_to_RF;
    reg [2:0] Rm_Rd_to_RF;
    reg [2:0] Rn_to_RF;
-   reg ALU_Control;
+   reg [1:0] ALU_Control;
    reg [15:0] Instr;
    reg [1:0] Imm_Sel;
    reg [15:0] Rd;
@@ -61,7 +61,7 @@ module A_16bits_RF_plus_ALU_A_16bits_RF_plus_ALU_sch_tb();
       Rd_to_RF = 3'b000;
       Rm_Rd_to_RF = 3'b000;
       Rn_to_RF = 3'b000;
-      ALU_Control = 1'b0;
+      ALU_Control = 2'b00;
       Instr = 16'h0000;
       Imm_Sel = 2'b00;
       Rd = 16'h0000;
@@ -131,7 +131,7 @@ module A_16bits_RF_plus_ALU_A_16bits_RF_plus_ALU_sch_tb();
       #10;
 
       ALU_B_Sel = 2'b00;       // Select RF data
-      ALU_Control = 1'b0;      // Addition operation
+      ALU_Control = 2'b00;      // Addition operation
       ALUOut_CE = 1'b1;
       #20;
 
@@ -228,7 +228,7 @@ module A_16bits_RF_plus_ALU_A_16bits_RF_plus_ALU_sch_tb();
       #10;
 
       ALU_B_Sel = 2'b00;       // Select RF data
-      ALU_Control = 1'b1;      // Subtraction operation
+      ALU_Control = 2'b10;      // Subtraction operation
       ALUOut_CE = 1'b1;
       #20;
 
@@ -264,7 +264,7 @@ module A_16bits_RF_plus_ALU_A_16bits_RF_plus_ALU_sch_tb();
       Rn_to_RF = 3'b110;   // Select R6 (6) for B
       #10;
 
-      ALU_Control = 1'b0;      // Addition operation
+      ALU_Control = 2'b00;      // Addition operation
       ALUOut_CE = 1'b1;
       #20;
 
@@ -333,7 +333,7 @@ module A_16bits_RF_plus_ALU_A_16bits_RF_plus_ALU_sch_tb();
       Instr = 16'b0000_0000_0000_0111;  // Immediate value +7 (01111)
       Imm_Sel = 2'b00;         // Select 5-bit immediate with sign extend
       ALU_B_Sel = 2'b01;       // Select immediate
-      ALU_Control = 1'b0;      // Addition operation
+      ALU_Control = 2'b00;      // Addition operation
       #10;
 
       ALUOut_CE = 1'b1;
@@ -413,6 +413,74 @@ module A_16bits_RF_plus_ALU_A_16bits_RF_plus_ALU_sch_tb();
 
       ALUOut_CE = 1'b0;
       #20;
+
+      ///////////////////////////////
+      // Test 13-6: ALU_Control = 01(Rm + Rn + Carry), Rm = 110, Rn = 111
+      ///////////////////////////////
+      Rm_Rd_to_RF = 3'b110;   // Select R6 (6) for A
+      Rn_to_RF = 3'b111;   // Select R7 (7) for B
+      ALU_Control = 2'b01;      // Addition operation
+      ALU_B_Sel = 2'b00;       // Select RF data
+      #10;
+
+      ALUOut_CE = 1'b1;
+      #20;
+
+      if (ALU_Out !== 16'h000D)  // 6 + 7 + 0 = 13 (0x000D)
+         $display("/////////////////////////////Error: Addition R6 + R7 + 0 failed. Expected 000D, got %h", ALU_Out);
+
+
+      ALUOut_CE = 1'b0;
+      #20;
+
+      ///////////////////////////////
+      // Test 13-7: ALU_Control = 01(Rm + Rn + Carry), Rm = 110, Rn = 111
+      ///////////////////////////////
+      RF_Write_en = 1'b1;      // Enable register write
+
+      // R7 = FFFF
+      Rd_to_RF = 3'b111;
+      #1;
+      Write_Data = 16'hFFFF;
+      #20;
+
+      RF_Write_en = 1'b0;      // Disable register write
+      #20;
+
+      Rm_Rd_to_RF = 3'b011;   // Select R3 (3) for A
+      Rn_to_RF = 3'b111;   // Select R7 (FFFF) for B
+      ALU_Control = 2'b01;      // Addition operation plus carry
+      ALU_B_Sel = 2'b00;       // Select RF data
+      #10;
+
+      ALUOut_CE = 1'b1;
+      #20;
+
+      if (ALU_Out !== 16'h0003)  // 3 + FFFF + 1 = 0003
+         $display("/////////////////////////////Error: Addition R3 + R7 + 0 failed. Expected 0003, got %h", ALU_Out);
+
+
+      ALUOut_CE = 1'b0;
+      #20;
+
+      ///////////////////////////////
+      // Test 13-8: ALU_Control = 11(Rm - Rn - ~Carry), Rm = 110, Rn = 111
+      ///////////////////////////////
+      Rm_Rd_to_RF = 3'b110;   // Select R6 (6) for A
+      Rn_to_RF = 3'b111;   // Select R7 (FFFF) for B
+      ALU_Control = 2'b11;      // Subtraction operation and minus ~Carry
+      ALU_B_Sel = 2'b00;       // Select RF data
+      #10;
+
+      ALUOut_CE = 1'b1;
+      #20;
+
+      if (ALU_Out !== 16'h0007)  // 6 - FFFF - ~1 = 0007
+         $display("/////////////////////////////Error: Addition R6 + R7 + ~Carry failed. Expected 0007, got %h", ALU_Out);
+
+      ALUOut_CE = 1'b0;
+      #20;
+
 
       $display("/////////////////////////////////////////////////////////////");
       $display("All tests completed");

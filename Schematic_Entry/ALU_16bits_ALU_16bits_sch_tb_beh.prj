@@ -1,0 +1,6 @@
+verilog work "FA.vf"
+verilog work "MUX2_1.vf"
+verilog work "FA_16bits.vf"
+verilog work "ALU_16bits.vf"
+verilog work "ALU_16bits_tb.v"
+verilog work "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"
