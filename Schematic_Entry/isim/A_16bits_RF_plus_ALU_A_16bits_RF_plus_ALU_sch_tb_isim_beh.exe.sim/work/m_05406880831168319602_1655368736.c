@@ -25,7 +25,7 @@ static const char *ng0 = "/home/ise/ISE/Multiple_Cycle_16_Bit_RISC_Computer/Sche
 
 
 
-static void Cont_249_0(char *t0)
+static void Cont_546_0(char *t0)
 {
     char t3[8];
     char *t1;
@@ -60,7 +60,7 @@ LAB0:    t1 = (t0 + 3640U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(249, ng0);
+LAB2:    xsi_set_current_line(546, ng0);
     t2 = (t0 + 1208U);
     t4 = *((char **)t2);
     memset(t3, 0, 8);
@@ -101,7 +101,7 @@ LAB2:    xsi_set_current_line(249, ng0);
 LAB1:    return;
 }
 
-static void Cont_250_1(char *t0)
+static void Cont_547_1(char *t0)
 {
     char t3[8];
     char *t1;
@@ -136,7 +136,7 @@ LAB0:    t1 = (t0 + 3888U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(250, ng0);
+LAB2:    xsi_set_current_line(547, ng0);
     t2 = (t0 + 1368U);
     t4 = *((char **)t2);
     memset(t3, 0, 8);
@@ -180,7 +180,7 @@ LAB1:    return;
 
 extern void work_m_05406880831168319602_1655368736_init()
 {
-	static char *pe[] = {(void *)Cont_249_0,(void *)Cont_250_1};
+	static char *pe[] = {(void *)Cont_546_0,(void *)Cont_547_1};
 	xsi_register_didat("work_m_05406880831168319602_1655368736", "isim/A_16bits_RF_plus_ALU_A_16bits_RF_plus_ALU_sch_tb_isim_beh.exe.sim/work/m_05406880831168319602_1655368736.didat");
 	xsi_register_executes(pe);
 }
