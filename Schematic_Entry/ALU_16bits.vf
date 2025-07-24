@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : ALU_16bits.vf
-// /___/   /\     Timestamp : 04/16/2025 09:15:56
+// /___/   /\     Timestamp : 07/23/2025 17:00:55
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -44,6 +44,34 @@ module NOR16_HXILINX_ALU_16bits (O, I0, I1, I2, I3, I4, I5, I6, I7, I8, I9, I10,
 
 assign O = !(I0 || I1 || I2 || I3 || I4 || I5 || I6 || I7 || I8 || I9 || I10 || I11 || I12 || I13 || I14 || I15 );
 
+endmodule
+`timescale 1ns / 1ps
+
+module MUX2_1_MUSER_ALU_16bits(I0, 
+                               I1, 
+                               S, 
+                               Output);
+
+    input I0;
+    input I1;
+    input S;
+   output Output;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_7;
+   
+   AND2  XLXI_1 (.I0(XLXN_7), 
+                .I1(I0), 
+                .O(XLXN_1));
+   AND2  XLXI_2 (.I0(S), 
+                .I1(I1), 
+                .O(XLXN_2));
+   OR2  XLXI_3 (.I0(XLXN_2), 
+               .I1(XLXN_1), 
+               .O(Output));
+   INV  XLXI_4 (.I(S), 
+               .O(XLXN_7));
 endmodule
 `timescale 1ns / 1ps
 
@@ -195,12 +223,14 @@ endmodule
 module ALU_16bits(A, 
                   ALU_CTRL, 
                   B, 
+                  Cin_Ctrl, 
                   NZVC, 
                   S);
 
     input [15:0] A;
     input ALU_CTRL;
     input [15:0] B;
+    input Cin_Ctrl;
    output [3:0] NZVC;
    output [15:0] S;
    
@@ -208,11 +238,18 @@ module ALU_16bits(A,
    wire [15:0] B2s;
    wire XLXN_196;
    wire XLXN_197;
+   wire XLXN_204;
+   wire XLXN_207;
    wire [15:0] ZERO;
    wire [15:0] S_DUMMY;
+   wire [3:0] NZVC_DUMMY;
    
    assign ZERO = 16'h0000;
+   assign NZVC[3:0] = NZVC_DUMMY[3:0];
    assign S[15:0] = S_DUMMY[15:0];
+   XOR2  ADC_SBB (.I0(ALU_CTRL), 
+                 .I1(NZVC_DUMMY[0]), 
+                 .O(XLXN_207));
    FA_16bits_MUSER_ALU_16bits  For_B2s (.A(ZERO[15:0]), 
                                        .B(B1s[15:0]), 
                                        .C_in(ALU_CTRL), 
@@ -266,12 +303,7 @@ module ALU_16bits(A,
    XOR2  XLXI_28 (.I0(ALU_CTRL), 
                  .I1(B[13]), 
                  .O(B1s[13]));
-   FA_16bits_MUSER_ALU_16bits  XLXI_29 (.A(A[15:0]), 
-                                       .B(B1s[15:0]), 
-                                       .C_in(ALU_CTRL), 
-                                       .C_out(NZVC[0]), 
-                                       .S(S_DUMMY[15:0]));
-   (* HU_SET = "XLXI_72_11" *) 
+   (* HU_SET = "XLXI_72_0" *) 
    NOR16_HXILINX_ALU_16bits  XLXI_72 (.I0(S_DUMMY[0]), 
                                      .I1(S_DUMMY[1]), 
                                      .I2(S_DUMMY[2]), 
@@ -288,7 +320,7 @@ module ALU_16bits(A,
                                      .I13(S_DUMMY[13]), 
                                      .I14(S_DUMMY[14]), 
                                      .I15(S_DUMMY[15]), 
-                                     .O(NZVC[2]));
+                                     .O(NZVC_DUMMY[2]));
    XNOR2  XLXI_74 (.I0(B2s[15]), 
                   .I1(A[15]), 
                   .O(XLXN_197));
@@ -297,7 +329,16 @@ module ALU_16bits(A,
                  .O(XLXN_196));
    AND2  XLXI_76 (.I0(XLXN_197), 
                  .I1(XLXN_196), 
-                 .O(NZVC[1]));
+                 .O(NZVC_DUMMY[1]));
    BUF  XLXI_77 (.I(S_DUMMY[15]), 
-                .O(NZVC[3]));
+                .O(NZVC_DUMMY[3]));
+   FA_16bits_MUSER_ALU_16bits  XLXI_81 (.A(A[15:0]), 
+                                       .B(B1s[15:0]), 
+                                       .C_in(XLXN_204), 
+                                       .C_out(NZVC_DUMMY[0]), 
+                                       .S(S_DUMMY[15:0]));
+   MUX2_1_MUSER_ALU_16bits  XLXI_82 (.I0(ALU_CTRL), 
+                                    .I1(XLXN_207), 
+                                    .S(Cin_Ctrl), 
+                                    .Output(XLXN_204));
 endmodule

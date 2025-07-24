@@ -17,7 +17,7 @@ module Complete_Datapath_Complete_Datapath_sch_tb();
    reg [1:0] Imm_Sel;           // Imm_Out Select, 00: {11{1'b0}, Imm5}, 01: {Imm8(7)*9, Imm8[6:0]}, 10: {8{1'b0}, Imm8}, 11: {Imm8, Rd[7:0]}
    reg ALUOut_Reg_CE;           // ALU_Out Register Clock Enable, 0: No Change, 1: Clock Enable
    reg [1:0] ALU_B_Sel;         // ALU B Select, 00: ReadB_Data, 01: Imm_Out, 10: 0, 11: 0
-   reg ALU_Control;             // ALU Control, 0: ADD, 1: SUB
+   reg [1:0] ALU_Control;       // ALU Control, 00: ADD, 01: ADC, 10: SUB, 11: SBB
    reg RF_Write_en;             // RF Write Enable, 0: No Write, 1: Write
    reg Out_R_CE;                // OutR Register Clock Enable(for testbench), 0: No Change, 1: Clock Enable
    reg Rd_Rm_Sel;               // Rd or Rm Select, 0: Rd, 1: Rm
@@ -103,7 +103,7 @@ module Complete_Datapath_Complete_Datapath_sch_tb();
 		Imm_Sel = 0;
 		ALUOut_Reg_CE = 0;
 		ALU_B_Sel = 0;
-		ALU_Control = 0;
+		ALU_Control = 2'b00;
 		RF_Write_en = 0;
 		Out_R_CE = 0;
 		Rd_Rm_Sel = 0;
@@ -279,7 +279,7 @@ module Complete_Datapath_Complete_Datapath_sch_tb();
 			end else if (opcode == 5'b00100) begin // LDR Rd,[Rm,Rn] | Rd ← Mem[Rm + Rn]
 				ALU_B_Sel = 2'b00; // 00: ReadB_Data(Rn)
 			end
-			ALU_Control = 1'b0; // 0: ADD
+			ALU_Control = 2'b00; // 00: ADD
 			ALUOut_Reg_CE = 1'b1; // 1: Clock Enable
 			#PERIOD;
 			ALUOut_Reg_CE = 1'b0;
@@ -307,7 +307,7 @@ module Complete_Datapath_Complete_Datapath_sch_tb();
 			end else if (opcode == 5'b00110) begin // STR Rd,[Rm,Rn] | Mem[Rm + Rn] ← Rd
 				ALU_B_Sel = 2'b00; // 00: ReadB_Data(Rn)
 			end
-			ALU_Control = 1'b0; // 0: ADD
+			ALU_Control = 2'b00; // 00: ADD
 			ALUOut_Reg_CE = 1'b1; // 1: Clock Enable
 			#PERIOD;
 			ALUOut_Reg_CE = 1'b0;
@@ -327,7 +327,7 @@ module Complete_Datapath_Complete_Datapath_sch_tb();
 		begin
 			// Rm + Rn
 			ALU_B_Sel = 2'b00; // 00: ReadB_Data(Rn)
-			ALU_Control = 1'b0; // 0: ADD
+			ALU_Control = 2'b00; // 00: ADD
 			ALUOut_Reg_CE = 1'b1; // 1: Clock Enable
 			#PERIOD;
 			ALUOut_Reg_CE = 1'b0;
@@ -345,7 +345,7 @@ module Complete_Datapath_Complete_Datapath_sch_tb();
 		begin
 			// Rm + Rn + C
 			ALU_B_Sel = 2'b00; // 00: ReadB_Data(Rn)
-			ALU_Control = 1'b0; // 0: ADD
+			ALU_Control = 2'b01; // 01: ADC
 			ALUOut_Reg_CE = 1'b1; // 1: Clock Enable
 			#PERIOD;
 			ALUOut_Reg_CE = 1'b0;
